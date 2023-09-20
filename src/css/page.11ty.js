@@ -4,8 +4,8 @@ const postcss = require('postcss');
 
 module.exports = class {
   async data() {
-    const cssDir = path.join(__dirname, '..', '_includes', 'css');
-    const rawFilepath = path.join(cssDir, '_page.css');
+    const cssDir = path.join(__dirname);
+    const rawFilepath = path.join(cssDir, '00page.css');
 
     return {
       permalink: `css/page.css`,

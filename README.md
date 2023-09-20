@@ -36,8 +36,6 @@ Please note that this CSS build _does not_ include the `normalize.css` file used
 Page content is stored in
 
 - `./src/`
-  - `imprint.md`
-  - `privacy.md`
 - `./src/sections/`
 - `./src/_data/features.json`
 

@@ -2,9 +2,6 @@
 layout: base.njk
 ---
 
-<h3>Future index content</h3>
-
-{#
 <header class="header w-full flex flex-col justify-between">
   {% include "site-navbar.njk" %}
   {% include "header-splash.njk" %}
@@ -12,9 +9,11 @@ layout: base.njk
 <main class="page-content-wrapper">
   {% include "section.features.njk" %}
 </main>
+{#
 <main class="page-content-wrapper">
   {% include "section.advantages.njk" %}
 </main>
+#}
 <main class="page-content-wrapper page-content-wrapper--gray">
   {% include "section.benefits.njk" %}
 </main>
@@ -24,4 +23,3 @@ layout: base.njk
 <main class="page-content-wrapper page-content-wrapper--dark-gray">
   {% include "section.bottom-splash.njk" %}
 </main>
-#}
