@@ -1,0 +1,21 @@
+.lo-res,
+.hi-res {
+  transition: opacity .5s;
+}
+.hi-res-source.hidden {
+  display: none;
+}
+.hi-res {
+  &.inited {
+    opacity: 0;
+    &.visible {
+      opacity: 1;
+    }
+  }
+}
+.lo-res {
+  &.unused {
+    opacity: 0;
+  }
+}
+

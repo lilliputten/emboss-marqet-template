@@ -1,0 +1,62 @@
+.benefits {
+  gap: 16px;
+  &-list {
+    /* @apply self-center w-full flex flex-col md:flex-row; */
+    @apply self-center w-full py-4;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    @media (min-width: theme(screens.sm)) {
+      /* gap: 48px; */
+    }
+    @media (min-width: theme(screens.md)) {
+      gap: 48px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: theme(screens.lg)) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  &-list-item {
+    /* w-full sm:w-1/2 flex flex-row flex-no-wrap hover:shadow-lg hover:bg-blue-800 hover:bg-opacity-50 px-4 sm:px-8 py-6 sm:py-12 */
+    /* @apply w-full sm:w-1/2 flex flex-row px-4 sm:px-8 py-6 sm:py-12; */
+    /* @apply w-full flex flex-col md:flex-row items-center md:items-start; */
+    @apply w-full;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: theme(screens.sm)) {
+      /* Use horizontal layout */
+      /* flex-direction: row; */
+    }
+    @media (min-width: theme(screens.md)) {
+      gap: 32px;
+    }
+  }
+  &-list-item-image {
+    overflow: hidden;
+    position: relative;
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+    height: 80px;
+    flex-shrink: 0;
+    @media (min-width: theme(screens.sm)) {
+      /* Use horizontal layout */
+      /* width: 100px; */
+      /* height: auto; */
+    }
+  }
+  &-list-item-text {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    justify-content: flex-start; /* Align texts to top */
+    &-title {
+      @apply tracking-wide text-gray-700 text-3xl mb-4;
+    }
+    &-content {
+      @apply tracking-wide text-gray-700 text-lg;
+    }
+  }
+}

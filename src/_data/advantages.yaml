@@ -1,0 +1,33 @@
+items:
+  -
+    id: picture-quality
+    title: Picture quality (Visual material quality)
+    content: For the tour, a high-resolution VR / 360 scene is used, which, in terms of image quality and details, is many times superior to the highest quality video.
+  -
+    id: optimized-loading
+    title: Optimized loading of content to users
+    content: The user is loaded only that part of the scene, which he directly views on his screen at any given time.
+  -
+    id: integration-into
+    title: Integration into the existing site of the museum
+    content: The function of conducting group tours can be integrated into the existing site of the museum.
+  -
+    id: new-opportunities
+    title: New opportunities for independent tour guides
+    content: Museum content with permission can be used by independent guides, teachers, lecturers for their programs, lectures, classes.
+  -
+    id: content-loading
+    title: Content loading speed
+    content: The download speed of a VR/360 scene is many times higher than the download speed of a video stream. At the same time, the content transfer rate does not depend on the communication channel from the guide to the visitor.
+  -
+    id: automated-workplace
+    title: Automated workplace for an online guide
+    content: A specialized online guide workplace contains the necessary tools to automate the tour. The guide can record the movement of the virtual scene, and play the recorded movement sequences during the tour. * Audio recordings may also be used in the tour.
+  -
+    id: freedom-of-movement
+    title: Freedom of movement for visitors
+    content: The use of virtual scenes gives the visitor the freedom to view the exhibition, comparable to a physical visit to the museum with the presence of the tour guide. A visitor to an online tour can independently view the virtual scene, if desired, while maintaining the audio accompaniment of the guide, and also, if desired, resume following the guide.
+  -
+    id: automated-tours
+    title: Automated tours
+    content: A mode of automated tours is provided, in which the guide forms the program of the tour in advance and pre-records audio accompaniment for virtual scenes. And visitors can play the prepared program in automatic mode, while being able to switch to independent viewing mode and return to automatic mode again.

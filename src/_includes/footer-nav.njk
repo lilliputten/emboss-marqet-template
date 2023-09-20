@@ -1,0 +1,23 @@
+<div class="footer-nav page-content-container default-content-container default-content-container--slim">
+  <div class="footer-nav-content">
+    <div class="footer-nav-logo">
+      <a href="/" class="no-underline"><img src="/img/360logo.svg" alt="360caster Logo" class="h-12 py-1"></a>
+    </div>
+    <span class="footer-nav-text">
+      <span class="footer-nav-copyright">{{ footerNav.copyright }}</span>
+      <span class="footer-nav-reserved">{{ footerNav.reserved }}</span>
+    </span>
+    <span class="footer-nav-menu">
+      {% for item in footerNav.menu %}
+        <a class="footer-nav-menu-item button button-transparent" href="{{ item.link }}">{{ item.title }}</a>
+        {#
+        <span class="footer-nav-menu-item">
+          {% if item.link %}<a class="footer-nav-menu-item-link" href="{{ item.link }}">{% endif %}
+            {{ item.title }}
+          {% if item.link %}</a>{% endif %}
+        </span>
+        #}
+      {% endfor %}
+    </span>
+  </div>
+</div>

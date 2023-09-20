@@ -1,0 +1,4 @@
+body {
+  @apply text-base;
+  /* font-size: theme(fontSize.base); */
+}

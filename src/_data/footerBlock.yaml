@@ -1,0 +1,42 @@
+---
+  menu:
+    -
+      title: Menu 1
+      link: /link1
+      items:
+        -
+          title: Submenu 1
+          # link: /sublink1
+        -
+          title: Submenu 2
+          link: /sublink2
+        -
+          title: Submenu 3
+          link: /sublink3
+    -
+      title: Menu 2
+      link: /link1
+      items:
+        -
+          title: Submenu 1
+          # link: /sublink1
+        -
+          title: Submenu 2
+          link: /sublink2
+        -
+          title: Submenu 3
+          link: /sublink3
+    -
+      title: Menu 4
+      link: /link1
+      items:
+        -
+          title: Submenu 1
+          # link: /sublink1
+        -
+          title: Submenu 2
+          link: /sublink2
+        -
+          title: Submenu 3
+          link: /sublink3
+

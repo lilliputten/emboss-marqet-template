@@ -1,0 +1,43 @@
+{# @see src/sections/features.md #}
+
+{% for section in collections.sections %}
+  {% if section.data.type === 'features' %}
+
+    {# TODO: Section wrapper, title, content classes #}
+
+    <div id="features" class="features page-content-container default-content-container">
+      <div class="features-title section-title">
+        <h2 class="section-title-header">{{ section.data.title }}</h2>
+        {% if section.templateContent %}<div class="section-title-content">
+          {{ section.templateContent | safe }}
+        </div>{% endif %}
+      </div>
+      <div class="features-list">
+
+        {% for item in features.items %}
+          <div class="features-list-item">
+            {#
+            <div class="features-list-item-image"{% if item.id %} style="background-image: url({{ section.data.iconsPath }}{{ item.id }}{{ section.data.iconsExt }})"{% endif %}></div>
+            #}
+            <div class="features-list-item-image">
+              {% if item.icon or item.id %}
+                <img
+                  {% if item.iconClass or section.data.iconsClass %}class="{{ item.iconClass or section.data.iconsClass }}" {% endif %}
+                  src="{{ item.iconPath or section.data.iconsPath }}{{ item.icon or item.id }}.{{ item.iconExt or section.data.iconsExt }}"
+                />
+              {% endif %}
+            </div>
+            <div class="features-list-item-text">
+              {% if item.title %}<h3 class="features-list-item-text-title">{{ item.title }}</h3>{% endif %}
+              {% if item.content %}<div class="features-list-item-text-content">
+                {{ item.content | markdown | safe }}
+              </div>{% endif %}
+            </div>
+          </div>
+        {% endfor %}
+
+      </div>
+    </div>
+
+  {% endif %}
+{% endfor %}

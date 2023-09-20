@@ -1,0 +1,16 @@
+.partners {
+  gap: 16px;
+  &-list {
+    @apply self-center justify-center items-center w-full flex flex-row flex-wrap;
+    gap: 24px;
+  }
+  &-list img {
+    /* max-height: 55px; */
+    @media (max-width: theme(screens.sm)) {
+      max-height: 45px;
+    }
+  }
+  &-list a:hover {
+    opacity: .7;
+  }
+}

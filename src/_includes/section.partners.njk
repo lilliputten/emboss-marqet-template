@@ -1,0 +1,22 @@
+{% for item in collections.sections %}
+  {% if item.data.type === 'partners' %}
+
+    <div id="partners" class="partners page-content-container default-content-container">
+      <div class="partners-title section-title">
+        <h2 class="section-title-header">{{ item.data.title }}</h2>
+        <div class="section-title-content">
+          {{ item.templateContent | safe }}
+        </div>
+      </div>
+      <div class="partners-list">
+
+        {% for item in partners %}
+          {% if item.link %}<a href="{{ item.link }}">{% endif %}<img src="/img/partner-logos/{{ item.image }}" alt="{{ item.title }}" />{% if item.link %}</a>{% endif %}
+        {% endfor %}
+
+      </div>
+    </div>
+
+  {% endif %}
+{% endfor %}
+

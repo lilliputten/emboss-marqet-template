@@ -1,0 +1,33 @@
+items:
+  -
+    id: "01"
+    title: Image quality and level of detail
+    content: High-resolution VR/360 scenes provide several advantages for museum tours compared to traditional video formats. The superior image quality and level of detail in high-resolution VR/360 scenes enhance the viewer's immersion, allowing them to explore exhibits with exceptional visual fidelity.
+  -
+    id: "02"
+    title: Content Loading Speed
+    content: The VR/360 scene loading speed is many times faster than the video stream loading speed. The speed and quality of content transfer does not depend on the Internet connection between the guide and the visitor. The number of visitors does not affect the speed of downloading content to users.
+  -
+    id: "03"
+    title: Optimized loading of content to users
+    content: The user is loaded only that part of the scene, which he directly views on his screen at any given time.
+  -
+    id: "04"
+    title: Automated workplace for an online guide
+    content: A specialized online guide workplace contains the necessary tools to automate the tour. The guide can record the movement of the virtual scene, and play the recorded movement sequences during the tour. * Audio recordings may also be used in the tour.
+  -
+    id: "05"
+    title: Integration into the existing site of the museum
+    content: The function of conducting group tours can be integrated into the existing site of the museum.
+  -
+    id: "06"
+    title: Freedom of movement for visitors
+    content: The use of virtual scenes gives the visitor the freedom to view the exhibition, comparable to a physical visit to the museum with the presence of the tour guide. A visitor to an online tour can independently view the virtual scene, if desired, while maintaining the audio accompaniment of the guide, and also, if desired, resume following the guide.
+  -
+    id: "07"
+    title: New opportunities for independent tour guides
+    content: Museum content with permission can be used by independent guides, teachers, lecturers for their programs, lectures, classes.
+  -
+    id: "08"
+    title: Automated tours
+    content: A mode of automated tours is provided, in which the guide forms the program of the tour in advance and pre-records audio accompaniment for virtual scenes. And visitors can play the prepared program in automatic mode, while being able to switch to independent viewing mode and return to automatic mode again.

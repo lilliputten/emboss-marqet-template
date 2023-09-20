@@ -1,0 +1,16 @@
+---
+  baseURL: 'https://360caster.com'
+  author: '360caster'
+  description: 'VR/360 platform for group online tours'
+  title: '360caster - VR/360 platform for group online tours'
+  language: 'en'
+  mainSitePrefix: 'https://360caster.com/private'
+  test: 'XXX'
+  social:
+    -
+      title: 'Twitter'
+      url: 'https://twitter.com/#'
+    -
+      title: 'LinkedIn'
+      url: 'https://linkedin.com/company/#'
+

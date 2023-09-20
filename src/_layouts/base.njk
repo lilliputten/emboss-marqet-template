@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+  {% include "head.njk" %}
+</head>
+<body class="font-sans text-gray-800 bg-gray-100 noscript" onLoad="onLoad()">
+  {{ content | safe }}
+  {% include "footer.njk" %}
+  <script src="{{ '/js/scripts.js' | url }}"></script>
+</body>
+</html>

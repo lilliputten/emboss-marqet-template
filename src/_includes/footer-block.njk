@@ -1,0 +1,33 @@
+<div class="footer-block page-content-container default-content-container default-content-container--slim">
+  <div class="footer-block-logo">
+    <a href="/" class="no-underline"><img src="/img/360logo.svg" alt="360caster Logo" class="h-12 py-1"></a>
+  </div>
+  <div class="footer-block-menu">
+    {% for menu in footerBlock.menu %}
+      <ul class="footer-block-menu-section">
+        {% if menu.title %}
+          <span class="footer-block-menu-section-title footer-block-menu-item{% if menu.link %} has-link{% endif %}">
+            {% if menu.link %}<a class="footer-block-menu-item-link" href="{{ menu.link }}">{% endif %}
+              {{ menu.title }}
+            {% if menu.link %}</a>{% endif %}
+          </span>
+        {% endif %}
+        {% for item in menu.items %}
+          <li class="footer-block-menu-item{% if item.link %} has-link{% endif %}">
+            {% if item.link %}<a class="footer-block-menu-item-link" href="{{ item.link }}">{% endif %}
+              {{ item.title }}
+            {% if item.link %}</a>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+      {#
+      <a class="footer-block-menu-item button button-transparent" href="{{ menu.link }}">{{ menu.title }}</a>
+      <span class="footer-block-menu-item">
+        {% if item.link %}<a class="footer-block-menu-item-link" href="{{ item.link }}">{% endif %}
+          {{ item.title }}
+        {% if item.link %}</a>{% endif %}
+      </span>
+      #}
+    {% endfor %}
+  </div>
+</div>
