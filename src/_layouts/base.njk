@@ -4,8 +4,40 @@
   {% include "head.njk" %}
 </head>
 <body class="font-sans text-gray-800 bg-gray-100 noscript" onLoad="onLoad()">
-  {{ content | safe }}
-  {% include "footer.njk" %}
+
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+    <noscript>JavaScript is off. Please enable to view full site.</noscript>
+  </div>
+
+  <div class="wrapper">
+
+    {{ content | safe }}
+
+    {% include "footer.njk" %}
+
+  </div>
+
+  <a class="goto-top" href="#gotop"></a>
+
+  {# Template scripts... #}
+  <script type="text/javascript" src="/vendor/js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="/vendor/js/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="/vendor/css/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/vendor/js/twitter-bootstrap-hover-dropdown.min.js"></script>
+  <script type="text/javascript" src="/vendor/js/css_browser_selector.js"></script>
+  <script type="text/javascript" src="/vendor/js/jquery.easing-1.3.js"></script>
+  <script type="text/javascript" src="/vendor/js/jquery.prettyPhoto.js"></script>
+  <script type="text/javascript" src="/vendor/js/jquery.validate.js"></script>
+  <script type="text/javascript" src="/vendor/js/jquery.isotope.min.js"></script>
+  <script type="text/javascript" src="/vendor/js/wow.min.js"></script>
+  <script type="text/javascript" src="/vendor/js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="/vendor/js/jquery.raty.min.js"></script>
+  <script type="text/javascript" src="/vendor/js/jquery.lazyload.min.js"></script>
+  <script type="text/javascript" src="/vendor/js/script.js"></script>
+
+  {# Custom scripts... #}
   <script src="{{ '/js/scripts.js' | url }}"></script>
+
 </body>
 </html>
