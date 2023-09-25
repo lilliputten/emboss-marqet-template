@@ -2,7 +2,7 @@
   &-logo {
     padding-right: 32px;
     &:hover {
-      opacity: .8;
+      opacity: 0.8;
     }
   }
   &-content,
@@ -12,7 +12,7 @@
   &-content {
     /* @apply flex-col sm:flex-row py-3 gap-2 sm:gap-8; */
     @apply flex-row flex-wrap;
-    gap: .25rem 1.5rem;
+    gap: 0.25rem 1.5rem;
   }
   &-menu {
     @apply flex-row gap-1;

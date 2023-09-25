@@ -1,6 +1,6 @@
 .lo-res,
 .hi-res {
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 .hi-res-source.hidden {
   display: none;
@@ -18,4 +18,3 @@
     opacity: 0;
   }
 }
-

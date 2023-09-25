@@ -53,8 +53,8 @@
       box-sizing: border-box;
       &.frame-effect {
         margin: 10px;
-        border: 1px solid rgba(0,0,0,.5);
-        box-shadow: 2px 2px 8px rgba(0,0,0,.4);
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
         border-radius: 8px;
       }
     }
@@ -75,4 +75,3 @@
     }
   }
 }
-

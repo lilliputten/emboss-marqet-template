@@ -17,6 +17,9 @@
 /types
 /utils
 
+/src/static/vendor
+/src/_data
+
 package-lock.*
 **/*_
 

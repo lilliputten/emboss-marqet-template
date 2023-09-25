@@ -20,7 +20,8 @@
     pointer-events: none;
     display: inline-block;
   }
-  &, &[class*="text-"] {
+  &,
+  &[class*='text-'] {
     /* Override text- tw rules. */
     /* line-height: 1.75rem; */
   }

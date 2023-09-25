@@ -15,7 +15,7 @@
     @apply w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none justify-between items-center;
     user-select: none;
     &:hover {
-      opacity: .8;
+      opacity: 0.8;
     }
     img {
       max-height: 36px;
@@ -55,7 +55,7 @@
     transition: all 0.5s;
   }
 
-  .hamburger:hover [class*="-bun"] {
+  .hamburger:hover [class*='-bun'] {
     background: #333;
   }
 
@@ -73,14 +73,10 @@
   }
 
   .open .hamburger__top-bun {
-    transform:
-    rotate(45deg)
-    translateY(0px);
+    transform: rotate(45deg) translateY(0px);
   }
 
   .open .hamburger__bottom-bun {
-    transform:
-    rotate(-45deg)
-    translateY(0px);
+    transform: rotate(-45deg) translateY(0px);
   }
 }

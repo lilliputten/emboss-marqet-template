@@ -8,7 +8,7 @@
     a {
       user-select: none;
       &:hover {
-        opacity: .8;
+        opacity: 0.8;
       }
     }
   }
@@ -24,7 +24,7 @@
     }
     &-item {
       margin: 8px 0;
-      opacity: .5;
+      opacity: 0.5;
       &.has-link {
         opacity: 1;
       }

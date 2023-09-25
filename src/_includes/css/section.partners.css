@@ -11,6 +11,6 @@
     }
   }
   &-list a:hover {
-    opacity: .7;
+    opacity: 0.7;
   }
 }
