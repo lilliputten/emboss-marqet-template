@@ -17,8 +17,9 @@
 /types
 /utils
 
-/src/static/vendor
-/src/_data
+# /src/static/vendor
+# /src/_data
+# !src/static/vendor/js/script.js
 
 package-lock.*
 **/*_
