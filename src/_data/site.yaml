@@ -1,11 +1,11 @@
 ---
   baseURL: 'https://emboss.studio'
   author: 'emboss.studio'
-  description: 'VR/360 platform for group online tours'
-  title: 'emboss.studio - VR/360 platform for group online tours'
+  description: 'Site description'
+  title: 'emboss.studio - Brief site name'
   language: 'en'
-  mainSitePrefix: 'https://emboss.studio/private'
-  test: 'XXX'
+  mainSitePrefix: 'https://emboss.studio'
+  test: 'Test'
   social:
     -
       title: 'Twitter'
