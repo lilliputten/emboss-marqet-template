@@ -4,19 +4,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | htmlBaseUrl }}" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="description" content="{{ description or site.description }}" />
-<meta name="author" content="{{ site.author }}" />
+<meta name="description" content="{{ description or 'site.description' | i18n }}" />
+<meta name="author" content="{{ 'site.author' | i18n }}" />
 <meta name="robots" content="index,follow" />
 <link rel="preload" href="/css/page.css" as="style" />
 <link rel="stylesheet" href="/css/page.css" />
-{#
-<link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" as="style" />
-<link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" as="font" type="font/woff2" crossorigin>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css" />
-#}
-<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800' rel='stylesheet' type='text/css'>
-<!-- Marqet template sources... -->
+{# Fonts... #}
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="preload" as="style" />
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800"  rel="preload" as="style" />
+<link href="http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800" rel="stylesheet" type="text/css" />
+{# Marqet template sources... #}
 <link rel="stylesheet" href="/vendor/css/prettyPhoto.css">
 <link rel="stylesheet" href="/vendor/css/animate.css">
 <link rel="stylesheet" href="/vendor/css/owl.carousel.css">
@@ -25,9 +23,9 @@
 <link rel="stylesheet" href="/vendor/css/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="/vendor/css/stylesheet.css">
 <!-- BEGIN SOCIAL META DATA -->
-<meta property="og:site_name" content="{{ site.title }}" />
-<meta property="og:title" content="{{ title or site.title }}" />
-<meta property="og:description" content="{{ description  or site.description }}" />
+<meta property="og:site_name" content="{{ 'site.name' | i18n }}" />
+<meta property="og:title" content="{{ title or 'site.name' | i18n }}" />
+<meta property="og:description" content="{{ description or 'site.description' | i18n }}" />
 <meta property="og:url" content="{{ absolutePageUrl }}" />
 <meta name="twitter:card" content="{% if image -%}summary_large_image{% else %}summary{% endif %}" />
 {%- if image -%}
@@ -35,4 +33,4 @@
 {%- endif -%}
 <!-- ./END SOCIAL META DATA -->
 <meta name="theme-color" content="#ffffff" />
-<title>{{ title or site.title }}</title>
+<title>{{ title or 'site.name' | i18n }}</title>

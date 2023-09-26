@@ -3,6 +3,8 @@
 const eleventy = require('@11ty/eleventy');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 
+const i18n = require('eleventy-plugin-i18n');
+
 // const htmlmin = require('html-minifier');
 const markdownIt = require('markdown-it');
 const yaml = require('js-yaml');
@@ -13,16 +15,28 @@ const prettier = require('prettier');
  * const isDev = !!envDev;
  */
 
+const translations = require('./src/_data/i18n');
+
 module.exports = function (eleventyConfig) {
   // PLUGINS
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventy.EleventyHtmlBasePlugin);
 
+  // i18n
+  eleventyConfig.addPlugin(i18n, {
+    // @see: https://github.com/adamduncan/eleventy-plugin-i18n
+    translations,
+    fallbackLocales: {
+      '*': 'ru',
+    },
+  });
+
   eleventyConfig.addDataExtension('yaml', (contents) => yaml.load(contents));
 
   // shortcode to render markdown from string => {{ STRING | markdown | safe }}
   eleventyConfig.addFilter('markdown', function (value) {
-    const markdown = require('markdown-it')({
+    // const markdown = require('markdown-it')({
+    const markdown = markdownIt({
       html: true,
     });
     return markdown.render(value);

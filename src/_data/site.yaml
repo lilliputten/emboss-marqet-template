@@ -1,0 +1,18 @@
+---
+  baseURL: 'https://emboss.studio'
+  # TODO: Use i18n for common texts...
+  author: 'emboss.studio'
+  description: 'Site description'
+  title: 'emboss.studio - Brief site name'
+  # language: 'ru'
+  # lang: 'ru'
+  mainSitePrefix: 'https://emboss.studio'
+  test: 'Test'
+  social:
+    -
+      title: 'Twitter'
+      url: 'https://twitter.com/#'
+    -
+      title: 'LinkedIn'
+      url: 'https://linkedin.com/company/#'
+
