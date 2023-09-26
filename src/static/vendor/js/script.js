@@ -4,14 +4,29 @@
 (function ($) {
   'use strict';
 
-  $(window).bind('load', function () {
+  function onLoad() {
+    // console.log('[script:onLoad]');
     $('#status').fadeOut(); // will first fade out the loading animation
     $('#preloader').delay(1000).fadeOut('slow'); // will fade out the white DIV that covers the website.
     // $('body').delay(1000).css({'overflow-x': 'hidden'}).css({'overflow-y': 'auto'});
     // checkContactForm();
-  });
+  }
 
-  $(window).ready(function () {
+  $(window).bind('load', onLoad);
+
+  // NOTE: Emulate on-load event on live-reload (in debug mode).
+  window.hasReady && onLoad();
+
+  // onReady method begin
+  function onReady() {
+    // console.log('[script:onReady]', window.hasReady);
+    // NOTE: Avoid re-initialization on live-reload (in debug mode)
+    if (window.hasReady) {
+      return;
+    }
+    // Set loaded flag
+    window.hasReady = true;
+
     new WOW({
       boxClass: 'wow', // animated element css class (default is wow)
       animateClass: 'animated', // animation css class (default is animated)
@@ -108,14 +123,12 @@
         paginationSpeed: 400,
       });
       var defowl = $(this).data('owlCarousel');
-
       $(this)
         .find('.btn-prev')
         .click(function (e) {
           e.preventDefault();
           defowl.prev();
         });
-
       $(this)
         .find('.btn-next')
         .click(function (e) {
@@ -138,7 +151,13 @@
           checkBasketDropdown(true);
         });
     });
-    $('[data-hover="dropdown"]').dropdownHover();
+    const basketDropdown = $('[data-hover="dropdown"]');
+    if (basketDropdown && basketDropdown.dropdownHover) {
+      basketDropdown.dropdownHover();
+    } else {
+      // DEBUG?
+      console.warn('No basket dropdown has initialized!');
+    }
     checkBasketDropdown();
     function checkBasketDropdown(remove) {
       if (remove) {
@@ -394,6 +413,14 @@
             }
           });
       });
+  }
+  // onReady method end
+
+  $(document).ready(onReady);
+
+  // DEBUG: 11thy live-reload handler...
+  (window.__onDebugReload = window.__onDebugReload || []).push(function delayedOnLoad() {
+    // setTimeout(onLoad, 20);
   });
 
   $('.goto-top').click(function (e) {
