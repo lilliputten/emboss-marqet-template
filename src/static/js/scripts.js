@@ -8,21 +8,17 @@ function onLoad() {
   if (!loaded) {
     loaded = true;
     window.removeEventListener('load', onLoad);
-    const body = document.body;
+    var body = document.body;
     body.classList.add('loaded');
   }
 }
 
+function started() {
+  var body = document.body;
+  body.classList.add('inited');
+  body.classList.remove('noscript');
+}
+
 window.addEventListener('load', onLoad);
 
-const body = document.body;
-body.classList.add('inited');
-body.classList.remove('noscript');
-
-/*
- * if (typeof module === 'object') {
- *   module.exports = {
- *     // ...
- *   };
- * }
- */
+started();

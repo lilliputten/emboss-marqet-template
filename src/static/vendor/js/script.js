@@ -12,7 +12,7 @@
   });
 
   $(window).ready(function () {
-    var wow = new WOW({
+    new WOW({
       boxClass: 'wow', // animated element css class (default is wow)
       animateClass: 'animated', // animation css class (default is animated)
       offset: '-200px', // distance to the element when triggering the animation (default is 0)
@@ -20,13 +20,12 @@
       live: true, // act on asynchronously loaded content (default is true)
     });
 
-    wow.init();
-    // new WOW().init(); // ???
+    new WOW().init(); // NOTE: It's not a mistake: if we use previosly created wow here it causes errors (not all carousels are initialized)
 
     if ($('.bg-image[data-bg-image]').length > 0) {
       $('.bg-image[data-bg-image]').each(function () {
         var el = $(this);
-        // var sz = getImgSize(el, el.attr("data-bg-image"));
+        // var sz = getImgSize(el, el.attr('data-bg-image'));
         el.css('background-position', 'center')
           .css('background-image', "url('" + el.attr('data-bg-image') + "')")
           .css('background-size', 'cover')
@@ -69,7 +68,7 @@
         owl.next();
       });
 
-    // slider carousel
+    // Banner slider carousel
     $('.banner-carousel').owlCarousel({
       afterInit: function (el) {
         // console.log(el.find('.banner-carousel'));
@@ -177,20 +176,20 @@
     if ($('.star').length > 0) {
       $('.star').raty({
         space: false,
-        starOff: 'images/star-off.png',
-        starOn: 'images/star-on.png',
+        starOff: '/vendor/images/star-off.png',
+        starOn: '/vendor/images/star-on.png',
         score: function () {
           return $(this).attr('data-score');
         },
       });
     }
 
-    /* // UNUSED
+    /* // UNUSED?
      * function getImgSize(el, imgSrc) {
      *   var newImg = new Image();
      *   newImg.onload = function () {
      *     var height = newImg.height;
-     *     var width = newImg.width;
+     *     // var width = newImg.width;
      *     el.css('height', height);
      *   };
      *   newImg.src = imgSrc;
@@ -209,13 +208,13 @@
 
       var gallery = singlePSlider.data('owlCarousel');
 
-      /* // UNUSED
+      /* // UNUSED?
        * var thumbSlider = $('.single-product-gallery .gallery-thumbs ul').owlCarousel({
        *   items: 5, // 10 items above 1000px browser width
        *   itemsDesktop: [1000, 4], // 5 items between 1000px and 901px
        *   itemsDesktopSmall: [900, 3], // betweem 900px and 601px
        *   itemsTablet: [400, 2], // 2 items between 600 and 0
-       *   itemsMobile: false // itemsMobile disabled - inherit from itemsTablet option
+       *   itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
        * });
        * var thumbCtrls = thumbSlider.data('owlCarousel');
        */
@@ -414,29 +413,26 @@
     $('a[data-rel="prettyPhoto"]').prettyPhoto();
   }
 
-  /* // UNUSED
+  /* // UNUSED?
    * // Contact form setup
    * function checkContactForm() {
-   *   if ($(".contact-form").length > 0) {
-   *     var formStatus = $(".contact-form").validate();
+   *   if ($('.contact-form').length > 0) {
+   *     var formStatus = $('.contact-form').validate();
    *     // =====================================================
    *     // sending contact form
-   *     $(".contact-form").submit(function (e) {
+   *     $('.contact-form').submit(function (e) {
    *       e.preventDefault();
    *       // triggers contact form validation
-   *       if (formStatus.errorList.length === 0)
-   *       {
-   *         $(".contact-form .submit").fadeOut(function () {
+   *       if (formStatus.errorList.length === 0) {
+   *         $('.contact-form .submit').fadeOut(function () {
    *           $('#loading').css('visibility', 'visible');
-   *           $.post('submit.php', $(".contact-form").serialize(),
-   *                   function (data) {
-   *                     $(".contact-form input,.contact-form textarea").not('.submit').val('');
-   *                     $('.message-box').html(data);
-   *                     $('#loading').css('visibility', 'hidden');
-   *                     $(".contact-form").css('display', 'none');
-   *                     // $(".contact-form .submit").removeClass('disabled').css('display', 'block');
-   *                   }
-   *           );
+   *           $.post('submit.php', $('.contact-form').serialize(), function (data) {
+   *             $('.contact-form input,.contact-form textarea').not('.submit').val('');
+   *             $('.message-box').html(data);
+   *             $('#loading').css('visibility', 'hidden');
+   *             $('.contact-form').css('display', 'none');
+   *             // $(".contact-form .submit").removeClass('disabled').css('display', 'block');
+   *           });
    *         });
    *       }
    *     });
@@ -471,18 +467,18 @@
 
   function scrollToSection(destSection) {
     location.href = destSection;
-    //    $('html, body').stop().animate({
-    //      scrollTop: $(destSection).offset().top + scrollOffset
-    //    }, 2000, 'easeInOutExpo');
+    // $('html, body').stop().animate({
+    // scrollTop: $(destSection).offset().top + scrollOffset
+    // }, 2000, 'easeInOutExpo');
   }
 
-  //  $('.nav-menu a').bind('click', function (event) {
-  //    event.preventDefault();
-  //    var clickedMenu = $(this);
-  //    $('.nav-menu .active').toggleClass('active');
-  //    clickedMenu.parent().toggleClass('active');
-  //    scrollToSection(clickedMenu.attr('href'));
-  //  });
+  // $('.nav-menu a').bind('click', function (event) {
+  // event.preventDefault();
+  // var clickedMenu = $(this);
+  // $('.nav-menu .active').toggleClass('active');
+  // clickedMenu.parent().toggleClass('active');
+  // scrollToSection(clickedMenu.attr('href'));
+  // });
 })(jQuery);
 
 (function ($) {
@@ -574,27 +570,17 @@
 
 // Sticky Nav
 $(window).scroll(function () {
-  var navAnchor = $('.top-menu-holder');
-  var gotoTop = $('.goto-top');
+  var nav_anchor = $('.top-menu-holder');
   // var gotop = $(document);
-  var gotoLimit = 500;
-  var scrollTop = $(this).scrollTop();
-  /* console.log('scroll', {
-   *   scrollTop,
-   *   navAnchor,
-   *   gotoTop,
-   * });
-   */
-  if (scrollTop >= gotoLimit) {
-    gotoTop.css({ opacity: 1 });
-  } else if (scrollTop < gotoLimit) {
-    gotoTop.css({ opacity: 0 });
+  if ($(this).scrollTop() >= 500) {
+    $('.goto-top').css({ opacity: 1 });
+  } else if ($(this).scrollTop() < 500) {
+    $('.goto-top').css({ opacity: 0 });
   }
-  var headerHeight = $('header').height();
-  if (scrollTop >= headerHeight) {
-    navAnchor.addClass('split');
-  } else if (scrollTop < headerHeight) {
-    navAnchor.removeClass('split');
+  if ($(this).scrollTop() >= $('header').height()) {
+    nav_anchor.addClass('split');
+  } else if ($(this).scrollTop() < $('header').height()) {
+    nav_anchor.removeClass('split');
   }
 });
 
