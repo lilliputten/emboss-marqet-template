@@ -30,6 +30,7 @@ module.exports = function (eleventyConfig) {
 
   // rebuild on CSS changes
   eleventyConfig.addWatchTarget('./src/_includes/css/');
+  eleventyConfig.addWatchTarget('./src/css/');
 
   // Markdown
   eleventyConfig.setLibrary(

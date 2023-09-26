@@ -1,0 +1,16 @@
+:root {
+  /* Global variables from `src/static/vendor/css/stylesheet.less` */
+
+  --black: #000000;
+  --dark: #323232;
+  --gray-dark: #747474;
+  --gray: #ABB0AC;
+  --white: #fff;
+  --milky: #F4f4f4;
+  --gray-light: #F0F0F1;
+  --orange: #FA8411;
+  --light: #E3E8E4;
+
+  --primary-color: #1DA796; /* color1 */
+  --secondary-color: #8BB040; /* color2 */
+}

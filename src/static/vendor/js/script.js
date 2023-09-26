@@ -574,20 +574,27 @@
 
 // Sticky Nav
 $(window).scroll(function () {
-  var nav_anchor = $('.top-menu-holder');
+  var navAnchor = $('.top-menu-holder');
+  var gotoTop = $('.goto-top');
   // var gotop = $(document);
   var gotoLimit = 500;
   var scrollTop = $(this).scrollTop();
+  /* console.log('scroll', {
+   *   scrollTop,
+   *   navAnchor,
+   *   gotoTop,
+   * });
+   */
   if (scrollTop >= gotoLimit) {
-    $('.goto-top').css({ opacity: 1 });
+    gotoTop.css({ opacity: 1 });
   } else if (scrollTop < gotoLimit) {
-    $('.goto-top').css({ opacity: 0 });
+    gotoTop.css({ opacity: 0 });
   }
   var headerHeight = $('header').height();
   if (scrollTop >= headerHeight) {
-    nav_anchor.addClass('split');
+    navAnchor.addClass('split');
   } else if (scrollTop < headerHeight) {
-    nav_anchor.removeClass('split');
+    navAnchor.removeClass('split');
   }
 });
 
