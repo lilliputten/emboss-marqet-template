@@ -13,4 +13,7 @@
 
   --primary-color: #1da796; /* color1 */
   --secondary-color: #8bb040; /* color2 */
+  --active-color: #59b210;
+
+  --transition-timeout: 250ms;
 }

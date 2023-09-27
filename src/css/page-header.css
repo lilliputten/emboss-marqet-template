@@ -1,0 +1,20 @@
+.page-header {
+  .logo img {
+    /* See other styles for `header .logo` in `src/static/vendor/css/stylesheet.css` */
+    height: 75px;
+    transition: all var(--transition-timeout);
+  }
+  .logo a:hover img {
+    opacity: .7;
+  }
+  .info-inline {
+    a {
+      color: #fff;
+      opacity: 1;
+      &:hover {
+        color: var(--active-color);
+        color: var(--secondary-color);
+      }
+    }
+  }
+}

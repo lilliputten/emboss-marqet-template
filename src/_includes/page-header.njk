@@ -1,19 +1,17 @@
 {% set langRootUrl = '/' + ( lang + '/' if lang !== defaultLang else '' ) %}
-
-<header>
+<header class="page-header">
   <div class="top-bar">
     <div class="container">
       <div class="col-xs-12 col-sm-6">
         <ul class="info-inline">
           <li>
-            <i class="fa fa-phone"></i> (+90 212) 123 4567
+            <a href="tel:{{ site.phone }}"><i class="fa fa-phone"></i> {{ site.phone }}</a>
           </li>
           <li>
-            <i class="fa fa-envelope"></i> info@example.com
+            <a href="mailto:{{ site.email }}"><i class="fa fa-envelope"></i> {{ site.email }}</a>
           </li>
         </ul>
       </div>
-
       <div class="col-xs-12 col-sm-6">
         <ul class="social-icons small">
           <li>
@@ -33,13 +31,9 @@
           </li>
         </ul>
       </div>
-
-
     </div>
   </div>
   <div class="container header-row">
-
-
     <div class="col-xs-12 col-md-3">
       <div class="buttons-holder">
         <div class="btn-group le-dropdown">
@@ -57,7 +51,6 @@
             {% endif %}
           </ul>
         </div>
-
         <div class="btn-group le-dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
             <i class="fa fa-usd"></i> usd
@@ -69,15 +62,11 @@
           </ul>
         </div>
       </div>
-
     </div>
-
-
     <div class="col-xs-12 col-md-6">
       <div class="logo">
         <a href="{{ langRootUrl }}">
-          <img src="/vendor/images/logo.png" alt="logo" />
-          <span>MarQet</span>
+          <img src="/images/logo/logo.svg" alt="{{ 'site.briefName' | i18n }}" />
         </a>
       </div>
     </div>
@@ -88,28 +77,21 @@
         <li><a href="#">log in</a></li>
       </ul>
     </div>
-
-
   </div>
   <div class="container ">
-
     <div class="top-nav-holder">
       <div class="row">
-
         <div class="col-xs-12 col-md-6 col-lg-8  nav-menu top-menu-holder">
           <nav class="hidden-xs visible-sm visible-lg visible-md ">
             <ul class="nav">
               <li class=" le-dropdown">
-
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown">
                   homepage
                 </a>
                 <ul class="dropdown-menu">
                   <li><a href="{{ langRootUrl }}">homepage</a></li>
                   <li><a href="{{ langRootUrl }}test">test page</a></li>
-
                 </ul>
-
               </li>
               <li>
                 <a  href="#">men</a>
@@ -121,9 +103,6 @@
                 <a  href="#">sports</a>
               </li>
               <li class="yamm megamenu le-dropdown" >
-
-
-
                 <ul class="nav">
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -132,7 +111,6 @@
                     <ul class="dropdown-menu">
                       <li>
                         <div class="yamm-content">
-
                           <div class="row">
                             <div class="col-xs-12 col-md-3">
                               <h2 class="iconic-head">
@@ -145,17 +123,12 @@
                                 <li>
                                   <a href="index.html">homepage 1</a>
                                 </li>
-
                                 <li>
                                   <a href="index-2.html">homepage 2
                                   </a>
                                 </li>
-
                                 <li class="clearfix">
-
                                 </li>
-
-
                               </ul>
                               <h2 class="iconic-head">
                                 <span class="icon-holder">
@@ -163,15 +136,11 @@
                                   <span class="triangle"></span>
                                 </span>
                                 products pages</h2>
-
                               <ul>
                                 <li>
                                   <a href="products-grid.html">products grid/list
                                   </a>
                                 </li>
-
-
-
                                 <li>
                                   <a href="single-product-sidebar.html">single product (sidebar)
                                   </a>
@@ -180,15 +149,8 @@
                                   <a href="single-product.html">single product
                                   </a>
                                 </li>
-
-
                               </ul>
-
                             </div>
-
-
-
-
                             <div class="col-xs-12 col-md-3">
                               <h2 class="iconic-head">
                                 <span class="icon-holder">
@@ -200,7 +162,6 @@
                                 <li>
                                   <a href="shopping-cart.html">cart page </a>
                                 </li>
-
                                 <li>
                                   <a href="checkout.html">checkout
                                   </a>
@@ -209,12 +170,7 @@
                                   <a href="payment.html">payment
                                   </a>
                                 </li>
-
-
-
                               </ul>
-
-
                               <h2 class="iconic-head">
                                 <span class="icon-holder">
                                   <i class="fa fa-chain"></i>
@@ -225,7 +181,6 @@
                                 <li>
                                   <a href="#">Lorem ipsum dolor sit amet</a>
                                 </li>
-
                                 <li>
                                   <a href="#">consectetur adipiscing
                                   </a>
@@ -241,16 +196,12 @@
                                 <li>
                                   <a href="#">Lorem ipsum dolor sit amet</a>
                                 </li>
-
                                 <li>
                                   <a href="#">consectetur adipiscing
                                   </a>
                                 </li>
-
-
                               </ul>
                             </div>
-
                             <div class="col-xs-12 col-md-6 ">
                               <div class="mosaic-holder">
                                 <div class="mosaic-banner big">
@@ -262,32 +213,18 @@
                                     </h1>
                                     <a class="le-btn big" href="#">learn more</a>
                                   </div>
-
-
                                 </div>
-
-
                               </div>
                             </div>
-
-
-
                           </div>
                         </div>
                       </li>
                     </ul>
-
                   </li>
                 </ul>
-
               </li>
-
-
-
             </ul>
-
           </nav>
-
           <select class="top-drop-menu nav hidden-md hidden-sm visible-xs hidden-lg">
             <optgroup label="Homepage">
               <option value="index.html" selected="selected">
@@ -309,9 +246,7 @@
             <option value="#">
               Sport
             </option>
-
-
-<optgroup label="Pages">
+            <optgroup label="Pages">
               <option value="products-grid.html" >
                Products Grid/List
               </option>
@@ -321,31 +256,21 @@
               <option value="single-product.html" >
                Single Product
               </option>
-
                <option value="shopping-cart.html" >
                Cart Page
               </option>
-
                <option value="checkout.html" >
               Checkout
               </option>
-
                <option value="payment.html" >
                Payment
               </option>
-
-
             </optgroup>
-
-
-
           </select>
         </div>
-
         <div class="col-xs-12 col-md-3 col-lg-2 no-margin search-holder">
           <div class="searchbox">
             <a href="" class="fa fa-search search-button">
-
             </a>
             <div class="field">
               <form>
@@ -356,7 +281,6 @@
         </div>
         <div class="col-xs-12 col-md-3 col-lg-2 basket-holder">
           <div class="basket">
-
             <div class="dropdown">
               <a class="dropdown-toggle" data-hover="dropdown" href="#">
                 <div class="basket-icon">
@@ -365,7 +289,6 @@
                     3
                   </span>
                 </div>
-
                 <span class="total-price">
                   $389.99
                 </span>
@@ -387,7 +310,6 @@
                     <a class="close-btn" href="#"></a>
                   </div>
                 </li>
-
                 <li>
                   <div class="basket-item">
                     <div class="row">
@@ -404,7 +326,6 @@
                     <a class="close-btn" href="#"></a>
                   </div>
                 </li>
-
                 <li>
                   <div class="basket-item">
                     <div class="row">
@@ -421,23 +342,17 @@
                     <a class="close-btn" href="#"></a>
                   </div>
                 </li>
-
                 <li class="checkout">
                   <div class="merged-buttons">
                     <a href="shopping-cart.html" class="btn-add-to-cart le-btn ">checkout</a>
                     <a href="shopping-cart.html" class="btn-add-to-wishlist le-btn ">show cart</a>
-
                   </div>
-
                 </li>
               </ul>
-
             </div>
-
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </header>
