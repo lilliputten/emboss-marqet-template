@@ -40,7 +40,8 @@
     "prettier": "^3.0.3",
     "serve": "^14.2.1",
     "tailwindcss": "^3.3.3",
-    "tinycolor2": "^1.6.0"
+    "tinycolor2": "^1.6.0",
+    "typescript": "^5.2.2"
   },
   "scripts": {
     "prettier": "echo --Run prettier-- && prettier --write --cache . | grep -v '(cached)' || true",

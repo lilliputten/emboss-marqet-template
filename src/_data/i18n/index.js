@@ -1,3 +1,5 @@
+// @ts-check
+
 // @see: https://github.com/adamduncan/eleventy-plugin-i18n
 
 const langCodes = require('../langCodes.js'); // ['ru', 'en'];
@@ -5,11 +7,16 @@ const langCodes = require('../langCodes.js'); // ['ru', 'en'];
 const ru = require('./ru.js');
 const en = require('./en.js');
 
+/** @type TLangObjs */
 const lngObjs = {
   ru,
   en,
 };
 
+/**
+ * @param {any[]} objs
+ * @return string[]
+ */
 function getObjKeys(objs) {
   const keys = [];
   let hasScalars = false;
@@ -32,12 +39,18 @@ function getObjKeys(objs) {
   return keys;
 }
 
+/**
+ * @param {TOptionalLangObjs} lngObjs
+ * @return TMergedLngDef
+ */
 function mergeLngObjs(lngObjs) {
   const objs = Object.values(lngObjs);
   const keys = getObjKeys(objs);
+  /** @type TMergedLngDef */
   const result = {};
   keys.forEach((key) => {
     let hasObjects = false;
+    /** @type TOptionalLangObjs */
     let keyResult = langCodes.reduce((res, lng) => {
       const obj = lngObjs[lng];
       const val = key === '_' && typeof obj !== 'object' ? obj : obj && obj[key];
@@ -75,10 +88,11 @@ const result = mergeLngObjs(lngObjs);
 module.exports = result;
 
 /* // Data lang sample:
-module.exports = {
+//* @type TMergedLngDef
+const sample = {
   // General
   website: {
-    en: 'Website',
+    en: 1, // 'Website',
     ru: 'Вебсайт',
   },
   select_language: {

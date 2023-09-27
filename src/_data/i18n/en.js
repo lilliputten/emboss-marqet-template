@@ -1,4 +1,5 @@
-module.exports = {
+/** @type TLngDef */
+const en = {
   // General
   siteName: 'Site name',
   site: {
@@ -10,3 +11,4 @@ module.exports = {
   },
   hello: 'Hello!',
 };
+module.exports = en;
