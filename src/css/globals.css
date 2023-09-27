@@ -4,13 +4,13 @@
   --black: #000000;
   --dark: #323232;
   --gray-dark: #747474;
-  --gray: #ABB0AC;
+  --gray: #abb0ac;
   --white: #fff;
-  --milky: #F4f4f4;
-  --gray-light: #F0F0F1;
-  --orange: #FA8411;
-  --light: #E3E8E4;
+  --milky: #f4f4f4;
+  --gray-light: #f0f0f1;
+  --orange: #fa8411;
+  --light: #e3e8e4;
 
-  --primary-color: #1DA796; /* color1 */
-  --secondary-color: #8BB040; /* color2 */
+  --primary-color: #1da796; /* color1 */
+  --secondary-color: #8bb040; /* color2 */
 }
