@@ -1,0 +1,8 @@
+.section-footer {
+  .footer-links-holder {
+    li {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

@@ -1,4 +1,5 @@
-{% set langRootUrl = '/' + ( lang + '/' if lang !== defaultLang else '' ) %}
+{% set langRootUrl = '/' + lang + '/' if lang !== defaultLang else '/' %}
+
 <header class="page-header">
   <div class="top-bar">
     <div class="container">
@@ -78,11 +79,11 @@
       </ul>
     </div>
   </div>
-  <div class="container ">
+  <div class="container">
     <div class="top-nav-holder">
       <div class="row">
         <div class="col-xs-12 col-md-6 col-lg-8  nav-menu top-menu-holder">
-          <nav class="hidden-xs visible-sm visible-lg visible-md ">
+          <nav class="hidden-xs visible-sm visible-lg visible-md">
             <ul class="nav">
               <li class=" le-dropdown">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown">
@@ -102,7 +103,7 @@
               <li>
                 <a  href="#">sports</a>
               </li>
-              <li class="yamm megamenu le-dropdown" >
+              <li class="yamm megamenu le-dropdown">
                 <ul class="nav">
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -121,11 +122,10 @@
                                 homepages</h2>
                               <ul>
                                 <li>
-                                  <a href="index.html">homepage 1</a>
+                                  <a href="{{ langRootUrl }}">homepage</a>
                                 </li>
                                 <li>
-                                  <a href="index-2.html">homepage 2
-                                  </a>
+                                  <a href="{{ langRootUrl }}test">test page</a>
                                 </li>
                                 <li class="clearfix">
                                 </li>
@@ -138,16 +138,13 @@
                                 products pages</h2>
                               <ul>
                                 <li>
-                                  <a href="products-grid.html">products grid/list
-                                  </a>
+                                  <a href="{{ langRootUrl }}products-grid">products grid/list</a>
                                 </li>
                                 <li>
-                                  <a href="single-product-sidebar.html">single product (sidebar)
-                                  </a>
+                                  <a href="{{ langRootUrl }}single-product-sidebar">single product (sidebar)</a>
                                 </li>
                                 <li>
-                                  <a href="single-product.html">single product
-                                  </a>
+                                  <a href="{{ langRootUrl }}single-product">single product</a>
                                 </li>
                               </ul>
                             </div>
@@ -160,15 +157,13 @@
                                 checkout</h2>
                               <ul>
                                 <li>
-                                  <a href="shopping-cart.html">cart page </a>
+                                  <a href="{{ langRootUrl }}shopping-cart">cart page</a>
                                 </li>
                                 <li>
-                                  <a href="checkout.html">checkout
-                                  </a>
+                                  <a href="{{ langRootUrl }}checkout">checkout</a>
                                 </li>
                                 <li>
-                                  <a href="payment.html">payment
-                                  </a>
+                                  <a href="{{ langRootUrl }}payment">payment</a>
                                 </li>
                               </ul>
                               <h2 class="iconic-head">
@@ -182,31 +177,27 @@
                                   <a href="#">Lorem ipsum dolor sit amet</a>
                                 </li>
                                 <li>
-                                  <a href="#">consectetur adipiscing
-                                  </a>
+                                  <a href="#">consectetur adipiscing</a>
                                 </li>
                                 <li>
-                                  <a href="#">Nunc cursus
-                                  </a>
+                                  <a href="#">Nunc cursus</a>
                                 </li>
                                 <li>
-                                  <a href="#">auctor pellentesque
-                                  </a>
+                                  <a href="#">auctor pellentesque</a>
                                 </li>
                                 <li>
                                   <a href="#">Lorem ipsum dolor sit amet</a>
                                 </li>
                                 <li>
-                                  <a href="#">consectetur adipiscing
-                                  </a>
+                                  <a href="#">consectetur adipiscing</a>
                                 </li>
                               </ul>
                             </div>
-                            <div class="col-xs-12 col-md-6 ">
+                            <div class="col-xs-12 col-md-6">
                               <div class="mosaic-holder">
                                 <div class="mosaic-banner big">
                                   <img alt="" src="/vendor/images/mosaic06.jpg" />
-                                  <div class="caption ">
+                                  <div class="caption">
                                     <h1>
                                       <span class="light">special</span><br>
                                       off
@@ -230,10 +221,10 @@
               <option value="index.html" selected="selected">
                 Homepage Default
               </option>
-               <option value="index-2.html" >
+               <option value="index-2.html">
                 Homepage Version 2
                </option>
-              <option value="index-3.html" >
+              <option value="index-3.html">
                 Homepage Version 3
               </option>
             </optgroup>
@@ -247,22 +238,22 @@
               Sport
             </option>
             <optgroup label="Pages">
-              <option value="products-grid.html" >
+              <option value="products-grid.html">
                Products Grid/List
               </option>
-               <option value="single-product-sidebar.html" >
+               <option value="single-product-sidebar.html">
                 Single Product (sidebar)
                </option>
-              <option value="single-product.html" >
+              <option value="single-product.html">
                Single Product
               </option>
-               <option value="shopping-cart.html" >
+               <option value="shopping-cart.html">
                Cart Page
               </option>
-               <option value="checkout.html" >
+               <option value="checkout.html">
               Checkout
               </option>
-               <option value="payment.html" >
+               <option value="payment.html">
                Payment
               </option>
             </optgroup>
@@ -270,8 +261,7 @@
         </div>
         <div class="col-xs-12 col-md-3 col-lg-2 no-margin search-holder">
           <div class="searchbox">
-            <a href="" class="fa fa-search search-button">
-            </a>
+            <a href="" class="fa fa-search search-button"></a>
             <div class="field">
               <form>
                 <input type="text" data-placeholder="Enter Keyword Here..." />
@@ -293,7 +283,7 @@
                   $389.99
                 </span>
               </a>
-              <ul class="dropdown-menu" >
+              <ul class="dropdown-menu">
                 <li>
                   <div class="basket-item">
                     <div class="row">
@@ -344,8 +334,8 @@
                 </li>
                 <li class="checkout">
                   <div class="merged-buttons">
-                    <a href="shopping-cart.html" class="btn-add-to-cart le-btn ">checkout</a>
-                    <a href="shopping-cart.html" class="btn-add-to-wishlist le-btn ">show cart</a>
+                    <a href="{{ langRootUrl }}shopping-cart" class="btn-add-to-cart le-btn">checkout</a>
+                    <a href="{{ langRootUrl }}shopping-cart" class="btn-add-to-wishlist le-btn">show cart</a>
                   </div>
                 </li>
               </ul>

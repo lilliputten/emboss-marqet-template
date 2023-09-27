@@ -1,5 +1,5 @@
 /*
-MarQet - Responsive eCommerce Template
+Responsive eCommerce Template
 
 Content Tabel
 +---------------+
@@ -8428,7 +8428,7 @@ header .link-list {
 .section-footer .footer-column .footer-links-holder li {
   line-height: 30px;
   font-size: 13px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 .section-footer .footer-column .footer-links-holder li:before {
   font-family: fontawesome;
@@ -8460,7 +8460,7 @@ header .link-list {
   margin: 12px 0;
 }
 .copyright-links {
-  margin: 20px 0 0 0;
+  /* margin: 20px 0 0 0; */
   list-style: none;
 }
 .copyright-links li {
