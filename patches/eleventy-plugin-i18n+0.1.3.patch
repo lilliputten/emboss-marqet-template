@@ -1,0 +1,27 @@
+diff --git a/node_modules/eleventy-plugin-i18n/.i18n.js.swp b/node_modules/eleventy-plugin-i18n/.i18n.js.swp
+new file mode 100644
+index 0000000..5c4dd3a
+Binary files /dev/null and b/node_modules/eleventy-plugin-i18n/.i18n.js.swp differ
+diff --git a/node_modules/eleventy-plugin-i18n/i18n.js b/node_modules/eleventy-plugin-i18n/i18n.js
+index f8c4165..b106045 100644
+--- a/node_modules/eleventy-plugin-i18n/i18n.js
++++ b/node_modules/eleventy-plugin-i18n/i18n.js
+@@ -11,13 +11,16 @@ module.exports = function (
+   pluginOptions = {},
+   page
+ ) {
+-  const { translations = {}, fallbackLocales: fallbackLocales = {} } =
++  const { translations = {}, fallbackLocales: fallbackLocales = {}, defaultLocale, locales } =
+     pluginOptions;
+ 
+   // Use explicit `locale` argument if passed in, otherwise infer it from URL prefix segment
+   const url = get(page, 'url', '');
+   const contextLocale = url.split('/')[1];
+-  const locale = localeOverride || contextLocale;
++  let locale = localeOverride || contextLocale;
++  if (!locales.includes(locale)) {
++    locale = defaultLocale;
++  }
+ 
+   // Preferred translation
+   const translation = get(translations, `[${key}][${locale}]`);

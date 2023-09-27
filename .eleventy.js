@@ -3,6 +3,9 @@
 const eleventy = require('@11ty/eleventy');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 
+const defaultLang = require('./src/_data/defaultLang.js');
+const langCodes = require('./src/_data/langCodes.js');
+
 const i18n = require('eleventy-plugin-i18n');
 
 // const htmlmin = require('html-minifier');
@@ -26,8 +29,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(i18n, {
     // @see: https://github.com/adamduncan/eleventy-plugin-i18n
     translations,
+    locales: langCodes,
+    defaultLocale: defaultLang,
     fallbackLocales: {
-      '*': 'ru',
+      '*': defaultLang,
     },
   });
 

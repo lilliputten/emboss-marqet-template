@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "timetag": "230927-1307",
   "timestamp": "2023.09.27, 13:07 GMT+3",
-  "changed": "2023.06.23, 15:43",
+  "changed": "2023.09.27, 20:39",
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
@@ -44,6 +44,7 @@
     "typescript": "^5.2.2"
   },
   "scripts": {
+    "postinstall-patch-libs": "patch-package",
     "prettier": "echo --Run prettier-- && prettier --write --cache . | grep -v '(cached)' || true",
     "lint": "echo --Lint sources-- && eslint src --ext ts --ext tsx --ext js",
     "patch-build": "echo --Patch build-- && gulp patchBuild",
