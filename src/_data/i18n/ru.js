@@ -76,10 +76,12 @@ const ru = {
     wishlist: 'Отложить',
     discount50: '50% off', // Any longer text can't be fit in the circle.
     new: 'New',
+    newExclam: 'New!',
+    halfPrice: '50%',
   },
   newsletter: {
     signUp: 'Подпишитесь на нашу рассылку, чтобы получать лучшие предложения и новости.',
-    enterEmail: 'Введите свой адрес электронной почты...',
+    enterEmail: 'Введите адрес электронной почты...',
   },
   sections: {
     bestSellers: 'Хиты <span class="bold">продаж</span>',

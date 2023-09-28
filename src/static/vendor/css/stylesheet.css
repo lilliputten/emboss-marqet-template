@@ -8027,7 +8027,9 @@ header .link-list {
 .products-holder.simple-grid .product-item {
   float: none;
   padding: 0;
-  width: auto;
+  /* ??? */
+  /* width: auto; */
+  width: 100%;
   margin-bottom: 30px;
 }
 /*newsletter Form*/

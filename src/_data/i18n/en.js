@@ -74,6 +74,8 @@ const en = {
     wishlist: 'Wishlist',
     discount50: '50% off',
     new: 'New',
+    newExclam: 'New!',
+    halfPrice: '50%',
   },
   newsletter: {
     signUp: 'Sign up for our newsletter to get best offers and news.',

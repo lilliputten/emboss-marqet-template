@@ -17,9 +17,7 @@
       }
     }
   }
-  .top-nav-holder {
-  }
-  .yamm-content ul > li > a {
+  .top-nav-holder .yamm-content ul > li > a {
     display: block;
     line-height: 1.5;
   }
