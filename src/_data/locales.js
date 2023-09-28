@@ -1,4 +1,7 @@
-module.exports = [
+// @ts-check
+
+/** @type TLocale[] */
+const locales = [
   {
     label: 'Русский',
     code: 'ru',
@@ -8,3 +11,5 @@ module.exports = [
     code: 'en',
   },
 ];
+
+module.exports = locales;

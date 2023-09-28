@@ -1,4 +1,8 @@
+// @ts-check
+
 const locales = require('./locales.js');
-/** @type TLangList */
+
+/** @type TLang[] */
 const langCodes = locales.map(({ code }) => code);
+
 module.exports = langCodes;
