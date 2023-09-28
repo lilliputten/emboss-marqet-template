@@ -81,6 +81,10 @@ const ru = {
     signUp: 'Подпишитесь на нашу рассылку, чтобы получать лучшие предложения и новости.',
     enterEmail: 'Введите свой адрес электронной почты...',
   },
+  sections: {
+    bestSellers: 'Хиты <span class="bold">продаж</span>',
+    featuredProducts: 'Рекомендуемые <span class="bold">товары</span>',
+  },
 };
 
 module.exports = ru;

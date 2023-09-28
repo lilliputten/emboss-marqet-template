@@ -79,6 +79,10 @@ const en = {
     signUp: 'Sign up for our newsletter to get best offers and news.',
     enterEmail: 'Enter your email here...',
   },
+  sections: {
+    bestSellers: 'Best <span class="bold">sellers</span>',
+    featuredProducts: 'Featured <span class="bold">products</span>',
+  },
 };
 
 module.exports = en;
