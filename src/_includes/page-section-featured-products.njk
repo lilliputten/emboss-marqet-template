@@ -1,3 +1,5 @@
+{% set langRootUrl = '/' + lang + '/' if lang !== defaultLang else '/' %}
+
 <section id="featured-products">
   <div class="container">
     <div class="iconic-nav-bar">
@@ -7,24 +9,19 @@
       </div>
       <div class="bar">
         <h2>featured <span class="bold">products</span></h2>
-
         <div class="nav-buttons">
           <a class="btn-prev" href="#prev"></a>
           <a class="btn-next" href="#next"></a>
         </div>
       </div>
-
     </div>
-
     <div  class="products-holder product-carousel owl-carousel">
       <div class="product-item">
         <div class="head">
           <div class="le-ribbon green right"><span>50%</span></div>
-
           <div class="thumb">
             <img alt="" src="/vendor/images/products/product01.png" />
           </div>
-
           <div class="price">
             <div class="price-old">
               <span class="currency">$</span>250
@@ -43,21 +40,17 @@
           <div class="excerpt">
             Looking lorem round, to ascertain that they...
           </div>
-
           <div class="merged-buttons">
-            <button class="btn-add-to-cart le-btn btn-iconic ">to cart</button>
-            <button class="btn-add-to-wishlist le-btn btn-iconic">wishlist</button>
+            <button class="btn-add-to-cart le-btn btn-iconic ">{{ 'products.toCart' | i18n }}</button>
+            <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
           </div>
         </div>
       </div>
-
       <div class="product-item">
         <div class="head">
-
           <div class="thumb">
             <img alt="" src="/vendor/images/products/product02.png" />
           </div>
-
           <div class="price">
             <div class="price-old">
               <span class="currency">$</span>350
@@ -73,26 +66,21 @@
         </div>
         <div class="body">
           <h3><a href="single-product.html">Man sport Hiking shoe</a></h3>
-
           <div class="excerpt">
             Looking lorem round, to ascertain that they...
           </div>
-
           <div class="merged-buttons">
-            <button class="btn-add-to-cart le-btn btn-iconic ">to cart</button>
-            <button class="btn-add-to-wishlist le-btn btn-iconic">wishlist</button>
+            <button class="btn-add-to-cart le-btn btn-iconic ">{{ 'products.toCart' | i18n }}</button>
+            <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
           </div>
         </div>
       </div>
-
       <div class="product-item">
         <div class="head">
           <div class="le-badge orange"><span>50% off</span></div>
-
           <div class="thumb">
             <img alt="" src="/vendor/images/products/product03.png" />
           </div>
-
           <div class="price">
             <div class="price-old">
               <span class="currency">$</span>450
@@ -108,25 +96,21 @@
         </div>
         <div class="body">
            <h3><a href="single-product.html">Woman highheel shoe</a></h3>
-
           <div class="excerpt">
             Looking lorem round, to ascertain that they...
           </div>
-
           <div class="merged-buttons">
-            <button class="btn-add-to-cart le-btn btn-iconic ">to cart</button>
-            <button class="btn-add-to-wishlist le-btn btn-iconic">wishlist</button>
+            <button class="btn-add-to-cart le-btn btn-iconic ">{{ 'products.toCart' | i18n }}</button>
+            <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
           </div>
         </div>
       </div>
-
       <div class="product-item">
         <div class="head">
           <div class="le-badge green"><span>new</span></div>
           <div class="thumb">
             <img alt="" src="/vendor/images/products/product04.png" />
           </div>
-
           <div class="price">
             <div class="price-old">
               <span class="currency">$</span>120
@@ -142,25 +126,20 @@
         </div>
         <div class="body">
           <h3><a href="single-product.html">Woman highheel shoe</a></h3>
-
           <div class="excerpt">
             Looking lorem round, to ascertain that they...
           </div>
-
           <div class="merged-buttons">
-            <button class="btn-add-to-cart le-btn btn-iconic ">to cart</button>
-            <button class="btn-add-to-wishlist le-btn btn-iconic">wishlist</button>
+            <button class="btn-add-to-cart le-btn btn-iconic ">{{ 'products.toCart' | i18n }}</button>
+            <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
           </div>
         </div>
       </div>
-
       <div class="product-item">
         <div class="head">
-
           <div class="thumb">
             <img alt="" src="/vendor/images/products/product03.png" />
           </div>
-
           <div class="price">
             <div class="price-old">
               <span class="currency">$</span>450
@@ -176,27 +155,21 @@
         </div>
         <div class="body">
            <h3><a href="single-product.html">Woman highheel shoe</a></h3>
-
           <div class="excerpt">
             Looking lorem round, to ascertain that they...
           </div>
-
           <div class="merged-buttons">
-            <button class="btn-add-to-cart le-btn btn-iconic ">to cart</button>
-            <button class="btn-add-to-wishlist le-btn btn-iconic">wishlist</button>
+            <button class="btn-add-to-cart le-btn btn-iconic ">{{ 'products.toCart' | i18n }}</button>
+            <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
           </div>
         </div>
       </div>
-
       <div class="product-item">
         <div class="head">
-
           <div class="thumb">
             <img alt="" src="/vendor/images/products/product02.png" />
           </div>
-
           <div class="price">
-
             <div class="price-current">
               <span class="currency">$</span>245
             </div>
@@ -208,28 +181,21 @@
         </div>
         <div class="body">
           <h3><a href="single-product.html">Man sport Hiking shoe</a></h3>
-
           <div class="excerpt">
             Looking lorem round, to ascertain that they...
           </div>
-
           <div class="merged-buttons">
-            <button class="btn-add-to-cart le-btn btn-iconic ">to cart</button>
-            <button class="btn-add-to-wishlist le-btn btn-iconic">wishlist</button>
+            <button class="btn-add-to-cart le-btn btn-iconic ">{{ 'products.toCart' | i18n }}</button>
+            <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
           </div>
         </div>
       </div>
-
-
       <div class="product-item">
         <div class="head">
-
           <div class="thumb">
             <img alt="" src="/vendor/images/products/product04.png" />
           </div>
-
           <div class="price">
-
             <div class="price-current">
               <span class="currency">$</span>95
             </div>
@@ -241,27 +207,21 @@
         </div>
         <div class="body">
           <h3><a href="single-product.html">colorful cool runnig shoes</a></h3>
-
           <div class="excerpt">
             Looking lorem round, to ascertain that they...
           </div>
-
           <div class="merged-buttons">
-            <button class="btn-add-to-cart le-btn btn-iconic ">to cart</button>
-            <button class="btn-add-to-wishlist le-btn btn-iconic">wishlist</button>
+            <button class="btn-add-to-cart le-btn btn-iconic ">{{ 'products.toCart' | i18n }}</button>
+            <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
           </div>
         </div>
       </div>
-
       <div class="product-item">
         <div class="head">
-
           <div class="thumb">
             <img alt="" src="/vendor/images/products/product01.png" />
           </div>
-
           <div class="price">
-
             <div class="price-current">
               <span class="currency">$</span>145
             </div>
@@ -273,20 +233,15 @@
         </div>
         <div class="body">
           <h3><a href="single-product.html">consectetur adipiscing elit</a></h3>
-
           <div class="excerpt">
             Looking lorem round, to ascertain that they...
           </div>
-
           <div class="merged-buttons">
-            <button class="btn-add-to-cart le-btn btn-iconic ">to cart</button>
-            <button class="btn-add-to-wishlist le-btn btn-iconic">wishlist</button>
+            <button class="btn-add-to-cart le-btn btn-iconic ">{{ 'products.toCart' | i18n }}</button>
+            <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
           </div>
         </div>
       </div>
-
     </div>
-
-
   </div>
 </section>

@@ -71,6 +71,10 @@ const ru = {
     enterKeyword: 'Введите текст для поиска...',
     learnMore: 'Learn more',
   },
+  products: {
+    toCart: 'Купить',
+    wishlist: 'В желания',
+  },
 };
 
 module.exports = ru;
