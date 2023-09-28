@@ -10,13 +10,12 @@
     </div>
       <div class="col-xs-12 col-md-4">
       <div class="text">
-        sign up for our newsletter to<br>
-        get best offers and news.
+        {{ 'newsletter.signUp' | i18n }}
       </div>
     </div>
     <div class="col-xs-12 col-md-7">
       <form class="subscribe-form">
-        <input data-placeholder="Enter Your Email Here..." class="le-input col-xs-12 col-md-10">
+        <input data-placeholder="{{ 'newsletter.enterEmail' | i18n }}" class="le-input col-xs-12 col-md-10">
         <button type="submit" class="le-btn icon-btn fa fa-send"></button>
       </form>
     </div>

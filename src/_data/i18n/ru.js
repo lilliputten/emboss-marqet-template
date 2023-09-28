@@ -42,7 +42,7 @@ const ru = {
     giftVouchers: 'Подарочные сертификаты',
     bestSellers: 'Бестселлеры',
     orderStatus: 'Статус заказа',
-    myWishlist: 'Мой список желаний',
+    myWishlist: 'Список желаний',
     deliveryAddress: 'Адрес доставки',
     orderHistory: 'История заказов',
     newsletter: 'Новостная рассылка',
@@ -61,19 +61,25 @@ const ru = {
     cartPage: 'Корзина',
     checkout: 'Оформить',
     payment: 'Платеж',
-    showCart: 'В корзину',
+    showCart: 'Купить',
     men: 'Мужчины',
     women: 'Женщины',
     sports: 'Спорт',
     pages: 'Страницы',
     otherLinks: 'Другое',
     products: 'Продукция',
-    enterKeyword: 'Введите текст для поиска...',
-    learnMore: 'Learn more',
+    enterKeyword: 'Введите текст...',
+    learnMore: 'Узнать больше',
   },
   products: {
     toCart: 'Купить',
-    wishlist: 'В желания',
+    wishlist: 'Отложить',
+    discount50: '50% off', // Any longer text can't be fit in the circle.
+    new: 'New',
+  },
+  newsletter: {
+    signUp: 'Подпишитесь на нашу рассылку, чтобы получать лучшие предложения и новости.',
+    enterEmail: 'Введите свой адрес электронной почты...',
   },
 };
 

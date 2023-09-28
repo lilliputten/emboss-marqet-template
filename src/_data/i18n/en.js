@@ -72,6 +72,12 @@ const en = {
   products: {
     toCart: 'To cart',
     wishlist: 'Wishlist',
+    discount50: '50% off',
+    new: 'New',
+  },
+  newsletter: {
+    signUp: 'Sign up for our newsletter to get best offers and news.',
+    enterEmail: 'Enter your email here...',
   },
 };
 
