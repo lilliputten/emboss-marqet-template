@@ -489,22 +489,23 @@
 
   $('select.nav').change(function () {
     var loc = $(this).find('option:selected').val();
-    scrollToSection(loc);
+    // TODO: Process select option handler...
+    goToSection(loc);
   });
 
-  function scrollToSection(destSection) {
+  function goToSection(destSection) {
     location.href = destSection;
     // $('html, body').stop().animate({
-    // scrollTop: $(destSection).offset().top + scrollOffset
+    //   scrollTop: $(destSection).offset().top + scrollOffset
     // }, 2000, 'easeInOutExpo');
   }
 
   // $('.nav-menu a').bind('click', function (event) {
-  // event.preventDefault();
-  // var clickedMenu = $(this);
-  // $('.nav-menu .active').toggleClass('active');
-  // clickedMenu.parent().toggleClass('active');
-  // scrollToSection(clickedMenu.attr('href'));
+  //   event.preventDefault();
+  //   var clickedMenu = $(this);
+  //   $('.nav-menu .active').toggleClass('active');
+  //   clickedMenu.parent().toggleClass('active');
+  //   goToSection(clickedMenu.attr('href'));
   // });
 })(jQuery);
 

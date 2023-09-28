@@ -10,6 +10,7 @@
     <meta name="description" content="Описание сайта" />
     <meta name="author" content="Автор" />
     <meta name="robots" content="index,follow" />
+
     <link rel="preload" href="css/page.css" as="style" />
     <link rel="stylesheet" href="css/page.css" />
 
@@ -44,13 +45,12 @@
       href="vendor/css/font-awesome/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="vendor/css/stylesheet.css" />
-    <!-- BEGIN SOCIAL META DATA -->
+
     <meta property="og:site_name" content="Название сайта" />
     <meta property="og:title" content="Название сайта" />
     <meta property="og:description" content="Описание сайта" />
     <meta property="og:url" content="/" />
     <meta name="twitter:card" content="summary" />
-    <!-- ./END SOCIAL META DATA -->
     <meta name="theme-color" content="#ffffff" />
     <title>Название сайта</title>
   </head>
@@ -65,16 +65,23 @@
 lang="ru"
 -->
 
-      <header>
+      <header class="page-header">
         <div class="top-bar">
           <div class="container">
             <div class="col-xs-12 col-sm-6">
               <ul class="info-inline">
-                <li><i class="fa fa-phone"></i> (+90 212) 123 4567</li>
-                <li><i class="fa fa-envelope"></i> info@example.com</li>
+                <li>
+                  <a href="tel:+7 (800) 333-04-41"
+                    ><i class="fa fa-phone"></i> +7 (800) 333-04-41</a
+                  >
+                </li>
+                <li>
+                  <a href="mailto:info@emboss.studio"
+                    ><i class="fa fa-envelope"></i> info@emboss.studio</a
+                  >
+                </li>
               </ul>
             </div>
-
             <div class="col-xs-12 col-sm-6">
               <ul class="social-icons small">
                 <li>
@@ -111,39 +118,33 @@ lang="ru"
                   </li>
                 </ul>
               </div>
-
               <div class="btn-group le-dropdown">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                  <i class="fa fa-usd"></i> usd
+                  <i class="fa fa-rub"></i> rub
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a href="#"><i class="fa fa-try"></i> try</a>
+                    <a href="#"><i class="fa fa-rub"></i> rub</a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-gbp"></i> gbp</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-euro"></i> eur</a>
+                    <a href="#"><i class="fa fa-usd"></i> usd</a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-
           <div class="col-xs-12 col-md-6">
             <div class="logo">
               <a href="/">
-                <img src="vendor/images/logo.png" alt="logo" />
-                <span>MarQet</span>
+                <img src="images/logo/logo.svg" alt="emboss.studio" />
               </a>
             </div>
           </div>
           <div class="col-xs-12 col-md-3">
             <ul class="link-list inline">
-              <li><a href="#">my account</a></li>
-              <li><a href="#">my wishlist</a></li>
-              <li><a href="#">log in</a></li>
+              <li><a href="/user/account">Профиль</a></li>
+              <li><a href="/user/wishlist">Желания</a></li>
+              <li><a href="/user/login">Войти</a></li>
             </ul>
           </div>
         </div>
@@ -159,21 +160,21 @@ lang="ru"
                         href="#"
                         data-toggle="dropdown"
                       >
-                        homepage
+                        Домашняя страница
                       </a>
                       <ul class="dropdown-menu">
-                        <li><a href="/">homepage</a></li>
-                        <li><a href="/test">test page</a></li>
+                        <li><a href="/">Домашняя страница</a></li>
+                        <li><a href="/test">Тестовая страница</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#">men</a>
+                      <a href="/products/men">Мужчины</a>
                     </li>
                     <li>
-                      <a href="#">women</a>
+                      <a href="/products/women">Женщины</a>
                     </li>
                     <li>
-                      <a href="#">sports</a>
+                      <a href="/products/sports">Спорт</a>
                     </li>
                     <li class="yamm megamenu le-dropdown">
                       <ul class="nav">
@@ -183,7 +184,7 @@ lang="ru"
                             class="dropdown-toggle"
                             data-toggle="dropdown"
                           >
-                            Pages
+                            Страницы
                           </a>
                           <ul class="dropdown-menu">
                             <li>
@@ -195,76 +196,64 @@ lang="ru"
                                         <i class="fa fa-home"></i>
                                         <span class="triangle"></span>
                                       </span>
-                                      homepages
+                                      Основные
                                     </h2>
                                     <ul>
                                       <li>
-                                        <a href="index.html">homepage 1</a>
+                                        <a href="/">Домашняя страница</a>
                                       </li>
-
                                       <li>
-                                        <a href="index-2.html">homepage 2 </a>
+                                        <a href="/test">Тестовая страница</a>
                                       </li>
-
-                                      <li class="clearfix"></li>
                                     </ul>
                                     <h2 class="iconic-head">
                                       <span class="icon-holder">
                                         <i class="fa fa-files-o"></i>
                                         <span class="triangle"></span>
                                       </span>
-                                      products pages
+                                      Продукция
                                     </h2>
-
                                     <ul>
                                       <li>
-                                        <a href="products-grid.html"
-                                          >products grid/list
-                                        </a>
-                                      </li>
-
-                                      <li>
-                                        <a href="single-product-sidebar.html"
-                                          >single product (sidebar)
-                                        </a>
+                                        <a href="/products-grid"
+                                          >Таблица/список продуктов</a
+                                        >
                                       </li>
                                       <li>
-                                        <a href="single-product.html"
-                                          >single product
-                                        </a>
+                                        <a href="/single-product-sidebar"
+                                          >Продукт (боковая панель)</a
+                                        >
+                                      </li>
+                                      <li>
+                                        <a href="/single-product">Продукт</a>
                                       </li>
                                     </ul>
                                   </div>
-
                                   <div class="col-xs-12 col-md-3">
                                     <h2 class="iconic-head">
                                       <span class="icon-holder">
                                         <i class="fa fa-credit-card"></i>
                                         <span class="triangle"></span>
                                       </span>
-                                      checkout
+                                      Оформить
                                     </h2>
                                     <ul>
                                       <li>
-                                        <a href="shopping-cart.html"
-                                          >cart page
-                                        </a>
-                                      </li>
-
-                                      <li>
-                                        <a href="checkout.html">checkout </a>
+                                        <a href="/shopping-cart">Корзина</a>
                                       </li>
                                       <li>
-                                        <a href="payment.html">payment </a>
+                                        <a href="/checkout">Оформить</a>
+                                      </li>
+                                      <li>
+                                        <a href="/payment">Платеж</a>
                                       </li>
                                     </ul>
-
                                     <h2 class="iconic-head">
                                       <span class="icon-holder">
                                         <i class="fa fa-chain"></i>
                                         <span class="triangle"></span>
                                       </span>
-                                      other links
+                                      Другое
                                     </h2>
                                     <ul>
                                       <li>
@@ -272,28 +261,25 @@ lang="ru"
                                           >Lorem ipsum dolor sit amet</a
                                         >
                                       </li>
-
                                       <li>
-                                        <a href="#">consectetur adipiscing </a>
+                                        <a href="#">consectetur adipiscing</a>
                                       </li>
                                       <li>
-                                        <a href="#">Nunc cursus </a>
+                                        <a href="#">Nunc cursus</a>
                                       </li>
                                       <li>
-                                        <a href="#">auctor pellentesque </a>
+                                        <a href="#">auctor pellentesque</a>
                                       </li>
                                       <li>
                                         <a href="#"
                                           >Lorem ipsum dolor sit amet</a
                                         >
                                       </li>
-
                                       <li>
-                                        <a href="#">consectetur adipiscing </a>
+                                        <a href="#">consectetur adipiscing</a>
                                       </li>
                                     </ul>
                                   </div>
-
                                   <div class="col-xs-12 col-md-6">
                                     <div class="mosaic-holder">
                                       <div class="mosaic-banner big">
@@ -308,7 +294,7 @@ lang="ru"
                                             off
                                           </h1>
                                           <a class="le-btn big" href="#"
-                                            >learn more</a
+                                            >Узнать больше</a
                                           >
                                         </div>
                                       </div>
@@ -323,48 +309,38 @@ lang="ru"
                     </li>
                   </ul>
                 </nav>
-
                 <select
                   class="top-drop-menu nav hidden-md hidden-sm visible-xs hidden-lg"
                 >
-                  <optgroup label="Homepage">
-                    <option value="index.html" selected="selected">
-                      Homepage Default
+                  <optgroup label="Домашняя страница">
+                    <option value="/" selected="selected">
+                      Домашняя страница
                     </option>
-                    <option value="index-2.html">Homepage Version 2</option>
-                    <option value="index-3.html">Homepage Version 3</option>
+                    <option value="/test">Тестовая страница</option>
                   </optgroup>
-                  <option value="#">Men</option>
-                  <option value="#">Women</option>
-                  <option value="#">Sport</option>
-
-                  <optgroup label="Pages">
-                    <option value="products-grid.html">
-                      Products Grid/List
+                  <option value="/products/men">Мужчины</option>
+                  <option value="/products/women">Женщины</option>
+                  <option value="/products/sports">Спорт</option>
+                  <optgroup label="Страницы">
+                    <option value="/products-grid">
+                      Таблица/список продуктов
                     </option>
-                    <option value="single-product-sidebar.html">
-                      Single Product (sidebar)
+                    <option value="/single-product-sidebar">
+                      Продукт (боковая панель)
                     </option>
-                    <option value="single-product.html">Single Product</option>
-
-                    <option value="shopping-cart.html">Cart Page</option>
-
-                    <option value="checkout.html">Checkout</option>
-
-                    <option value="payment.html">Payment</option>
+                    <option value="/single-product">Продукт</option>
+                    <option value="/shopping-cart">Корзина</option>
+                    <option value="/checkout">Оформить</option>
+                    <option value="/payment">Платеж</option>
                   </optgroup>
                 </select>
               </div>
-
               <div class="col-xs-12 col-md-3 col-lg-2 no-margin search-holder">
                 <div class="searchbox">
-                  <a href="" class="fa fa-search search-button"> </a>
+                  <a href="" class="fa fa-search search-button"></a>
                   <div class="field">
                     <form>
-                      <input
-                        type="text"
-                        data-placeholder="Enter Keyword Here..."
-                      />
+                      <input type="text" data-placeholder="Введите текст..." />
                     </form>
                   </div>
                 </div>
@@ -381,7 +357,6 @@ lang="ru"
                         />
                         <span class="item-count"> 3 </span>
                       </div>
-
                       <span class="total-price"> $389.99 </span>
                     </a>
                     <ul class="dropdown-menu">
@@ -404,7 +379,6 @@ lang="ru"
                           <a class="close-btn" href="#"></a>
                         </div>
                       </li>
-
                       <li>
                         <div class="basket-item">
                           <div class="row">
@@ -424,7 +398,6 @@ lang="ru"
                           <a class="close-btn" href="#"></a>
                         </div>
                       </li>
-
                       <li>
                         <div class="basket-item">
                           <div class="row">
@@ -444,18 +417,15 @@ lang="ru"
                           <a class="close-btn" href="#"></a>
                         </div>
                       </li>
-
                       <li class="checkout">
                         <div class="merged-buttons">
-                          <a
-                            href="shopping-cart.html"
-                            class="btn-add-to-cart le-btn"
-                            >checkout</a
+                          <a href="/checkout" class="btn-add-to-cart le-btn"
+                            >Оформить</a
                           >
                           <a
-                            href="shopping-cart.html"
+                            href="/shopping-cart"
                             class="btn-add-to-wishlist le-btn"
-                            >show cart</a
+                            >Купить</a
                           >
                         </div>
                       </li>
@@ -480,24 +450,20 @@ lang="ru"
               <span class="triangle"></span>
             </div>
             <div class="bar">
-              <h2>featured <span class="bold">products</span></h2>
-
+              <h2>Рекомендуемые <span class="bold">товары</span></h2>
               <div class="nav-buttons">
                 <a class="btn-prev" href="#prev"></a>
                 <a class="btn-next" href="#next"></a>
               </div>
             </div>
           </div>
-
           <div class="products-holder product-carousel owl-carousel">
             <div class="product-item">
               <div class="head">
                 <div class="le-ribbon green right"><span>50%</span></div>
-
                 <div class="thumb">
                   <img alt="" src="vendor/images/products/product01.png" />
                 </div>
-
                 <div class="price">
                   <div class="price-old">
                     <span class="currency">$</span>250
@@ -518,24 +484,21 @@ lang="ru"
                 <div class="excerpt">
                   Looking lorem round, to ascertain that they...
                 </div>
-
                 <div class="merged-buttons">
                   <button class="btn-add-to-cart le-btn btn-iconic">
-                    to cart
+                    Купить
                   </button>
                   <button class="btn-add-to-wishlist le-btn btn-iconic">
-                    wishlist
+                    Отложить
                   </button>
                 </div>
               </div>
             </div>
-
             <div class="product-item">
               <div class="head">
                 <div class="thumb">
                   <img alt="" src="vendor/images/products/product02.png" />
                 </div>
-
                 <div class="price">
                   <div class="price-old">
                     <span class="currency">$</span>350
@@ -551,30 +514,25 @@ lang="ru"
               </div>
               <div class="body">
                 <h3><a href="single-product.html">Man sport Hiking shoe</a></h3>
-
                 <div class="excerpt">
                   Looking lorem round, to ascertain that they...
                 </div>
-
                 <div class="merged-buttons">
                   <button class="btn-add-to-cart le-btn btn-iconic">
-                    to cart
+                    Купить
                   </button>
                   <button class="btn-add-to-wishlist le-btn btn-iconic">
-                    wishlist
+                    Отложить
                   </button>
                 </div>
               </div>
             </div>
-
             <div class="product-item">
               <div class="head">
                 <div class="le-badge orange"><span>50% off</span></div>
-
                 <div class="thumb">
                   <img alt="" src="vendor/images/products/product03.png" />
                 </div>
-
                 <div class="price">
                   <div class="price-old">
                     <span class="currency">$</span>450
@@ -590,29 +548,25 @@ lang="ru"
               </div>
               <div class="body">
                 <h3><a href="single-product.html">Woman highheel shoe</a></h3>
-
                 <div class="excerpt">
                   Looking lorem round, to ascertain that they...
                 </div>
-
                 <div class="merged-buttons">
                   <button class="btn-add-to-cart le-btn btn-iconic">
-                    to cart
+                    Купить
                   </button>
                   <button class="btn-add-to-wishlist le-btn btn-iconic">
-                    wishlist
+                    Отложить
                   </button>
                 </div>
               </div>
             </div>
-
             <div class="product-item">
               <div class="head">
-                <div class="le-badge green"><span>new</span></div>
+                <div class="le-badge green"><span>New</span></div>
                 <div class="thumb">
                   <img alt="" src="vendor/images/products/product04.png" />
                 </div>
-
                 <div class="price">
                   <div class="price-old">
                     <span class="currency">$</span>120
@@ -628,28 +582,24 @@ lang="ru"
               </div>
               <div class="body">
                 <h3><a href="single-product.html">Woman highheel shoe</a></h3>
-
                 <div class="excerpt">
                   Looking lorem round, to ascertain that they...
                 </div>
-
                 <div class="merged-buttons">
                   <button class="btn-add-to-cart le-btn btn-iconic">
-                    to cart
+                    Купить
                   </button>
                   <button class="btn-add-to-wishlist le-btn btn-iconic">
-                    wishlist
+                    Отложить
                   </button>
                 </div>
               </div>
             </div>
-
             <div class="product-item">
               <div class="head">
                 <div class="thumb">
                   <img alt="" src="vendor/images/products/product03.png" />
                 </div>
-
                 <div class="price">
                   <div class="price-old">
                     <span class="currency">$</span>450
@@ -665,28 +615,24 @@ lang="ru"
               </div>
               <div class="body">
                 <h3><a href="single-product.html">Woman highheel shoe</a></h3>
-
                 <div class="excerpt">
                   Looking lorem round, to ascertain that they...
                 </div>
-
                 <div class="merged-buttons">
                   <button class="btn-add-to-cart le-btn btn-iconic">
-                    to cart
+                    Купить
                   </button>
                   <button class="btn-add-to-wishlist le-btn btn-iconic">
-                    wishlist
+                    Отложить
                   </button>
                 </div>
               </div>
             </div>
-
             <div class="product-item">
               <div class="head">
                 <div class="thumb">
                   <img alt="" src="vendor/images/products/product02.png" />
                 </div>
-
                 <div class="price">
                   <div class="price-current">
                     <span class="currency">$</span>245
@@ -699,28 +645,24 @@ lang="ru"
               </div>
               <div class="body">
                 <h3><a href="single-product.html">Man sport Hiking shoe</a></h3>
-
                 <div class="excerpt">
                   Looking lorem round, to ascertain that they...
                 </div>
-
                 <div class="merged-buttons">
                   <button class="btn-add-to-cart le-btn btn-iconic">
-                    to cart
+                    Купить
                   </button>
                   <button class="btn-add-to-wishlist le-btn btn-iconic">
-                    wishlist
+                    Отложить
                   </button>
                 </div>
               </div>
             </div>
-
             <div class="product-item">
               <div class="head">
                 <div class="thumb">
                   <img alt="" src="vendor/images/products/product04.png" />
                 </div>
-
                 <div class="price">
                   <div class="price-current">
                     <span class="currency">$</span>95
@@ -735,28 +677,24 @@ lang="ru"
                 <h3>
                   <a href="single-product.html">colorful cool runnig shoes</a>
                 </h3>
-
                 <div class="excerpt">
                   Looking lorem round, to ascertain that they...
                 </div>
-
                 <div class="merged-buttons">
                   <button class="btn-add-to-cart le-btn btn-iconic">
-                    to cart
+                    Купить
                   </button>
                   <button class="btn-add-to-wishlist le-btn btn-iconic">
-                    wishlist
+                    Отложить
                   </button>
                 </div>
               </div>
             </div>
-
             <div class="product-item">
               <div class="head">
                 <div class="thumb">
                   <img alt="" src="vendor/images/products/product01.png" />
                 </div>
-
                 <div class="price">
                   <div class="price-current">
                     <span class="currency">$</span>145
@@ -771,17 +709,15 @@ lang="ru"
                 <h3>
                   <a href="single-product.html">consectetur adipiscing elit</a>
                 </h3>
-
                 <div class="excerpt">
                   Looking lorem round, to ascertain that they...
                 </div>
-
                 <div class="merged-buttons">
                   <button class="btn-add-to-cart le-btn btn-iconic">
-                    to cart
+                    Купить
                   </button>
                   <button class="btn-add-to-wishlist le-btn btn-iconic">
-                    wishlist
+                    Отложить
                   </button>
                 </div>
               </div>
@@ -798,10 +734,9 @@ lang="ru"
               <span class="triangle"></span>
             </div>
             <div class="bar">
-              <h2>best <span class="bold">sellers</span></h2>
+              <h2>Хиты <span class="bold">продаж</span></h2>
             </div>
           </div>
-
           <div class="products-holder simple-grid">
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
               <div class="product-item">
@@ -810,7 +745,6 @@ lang="ru"
                   <div class="thumb">
                     <img alt="" src="vendor/images/products/product01.png" />
                   </div>
-
                   <div class="price">
                     <div class="price-old">
                       <span class="currency">$</span>250
@@ -830,30 +764,26 @@ lang="ru"
                       >consectetur adipiscing elit</a
                     >
                   </h3>
-
                   <div class="excerpt">
                     Looking lorem round, to ascertain that they...
                   </div>
-
                   <div class="merged-buttons">
                     <button class="btn-add-to-cart le-btn btn-iconic">
-                      to cart
+                      Купить
                     </button>
                     <button class="btn-add-to-wishlist le-btn btn-iconic">
-                      wishlist
+                      Отложить
                     </button>
                   </div>
                 </div>
               </div>
             </div>
-
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
               <div class="product-item">
                 <div class="head">
                   <div class="thumb">
                     <img alt="" src="vendor/images/products/product02.png" />
                   </div>
-
                   <div class="price">
                     <div class="price-old">
                       <span class="currency">$</span>350
@@ -874,13 +804,12 @@ lang="ru"
                   <div class="excerpt">
                     Looking lorem round, to ascertain that they...
                   </div>
-
                   <div class="merged-buttons">
                     <button class="btn-add-to-cart le-btn btn-iconic">
-                      to cart
+                      Купить
                     </button>
                     <button class="btn-add-to-wishlist le-btn btn-iconic">
-                      wishlist
+                      Отложить
                     </button>
                   </div>
                 </div>
@@ -890,11 +819,9 @@ lang="ru"
               <div class="product-item">
                 <div class="head">
                   <div class="le-badge orange"><span>50% off</span></div>
-
                   <div class="thumb">
                     <img alt="" src="vendor/images/products/product03.png" />
                   </div>
-
                   <div class="price">
                     <div class="price-old">
                       <span class="currency">$</span>450
@@ -913,13 +840,12 @@ lang="ru"
                   <div class="excerpt">
                     Looking lorem round, to ascertain that they...
                   </div>
-
                   <div class="merged-buttons">
                     <button class="btn-add-to-cart le-btn btn-iconic">
-                      to cart
+                      Купить
                     </button>
                     <button class="btn-add-to-wishlist le-btn btn-iconic">
-                      wishlist
+                      Отложить
                     </button>
                   </div>
                 </div>
@@ -928,11 +854,10 @@ lang="ru"
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
               <div class="product-item">
                 <div class="head">
-                  <div class="le-badge green"><span>new</span></div>
+                  <div class="le-badge green"><span>New</span></div>
                   <div class="thumb">
                     <img alt="" src="vendor/images/products/product04.png" />
                   </div>
-
                   <div class="price">
                     <div class="price-old">
                       <span class="currency">$</span>120
@@ -953,13 +878,12 @@ lang="ru"
                   <div class="excerpt">
                     Looking lorem round, to ascertain that they...
                   </div>
-
                   <div class="merged-buttons">
                     <button class="btn-add-to-cart le-btn btn-iconic">
-                      to cart
+                      Купить
                     </button>
                     <button class="btn-add-to-wishlist le-btn btn-iconic">
-                      wishlist
+                      Отложить
                     </button>
                   </div>
                 </div>
@@ -971,7 +895,6 @@ lang="ru"
                   <div class="thumb">
                     <img alt="" src="vendor/images/products/product03.png" />
                   </div>
-
                   <div class="price">
                     <div class="price-old">
                       <span class="currency">$</span>450
@@ -990,13 +913,12 @@ lang="ru"
                   <div class="excerpt">
                     Looking lorem round, to ascertain that they...
                   </div>
-
                   <div class="merged-buttons">
                     <button class="btn-add-to-cart le-btn btn-iconic">
-                      to cart
+                      Купить
                     </button>
                     <button class="btn-add-to-wishlist le-btn btn-iconic">
-                      wishlist
+                      Отложить
                     </button>
                   </div>
                 </div>
@@ -1008,7 +930,6 @@ lang="ru"
                   <div class="thumb">
                     <img alt="" src="vendor/images/products/product02.png" />
                   </div>
-
                   <div class="price">
                     <div class="price-current">
                       <span class="currency">$</span>245
@@ -1026,13 +947,12 @@ lang="ru"
                   <div class="excerpt">
                     Looking lorem round, to ascertain that they...
                   </div>
-
                   <div class="merged-buttons">
                     <button class="btn-add-to-cart le-btn btn-iconic">
-                      to cart
+                      Купить
                     </button>
                     <button class="btn-add-to-wishlist le-btn btn-iconic">
-                      wishlist
+                      Отложить
                     </button>
                   </div>
                 </div>
@@ -1044,7 +964,6 @@ lang="ru"
                   <div class="thumb">
                     <img alt="" src="vendor/images/products/product04.png" />
                   </div>
-
                   <div class="price">
                     <div class="price-current">
                       <span class="currency">$</span>95
@@ -1062,13 +981,12 @@ lang="ru"
                   <div class="excerpt">
                     Looking lorem round, to ascertain that they...
                   </div>
-
                   <div class="merged-buttons">
                     <button class="btn-add-to-cart le-btn btn-iconic">
-                      to cart
+                      Купить
                     </button>
                     <button class="btn-add-to-wishlist le-btn btn-iconic">
-                      wishlist
+                      Отложить
                     </button>
                   </div>
                 </div>
@@ -1080,7 +998,6 @@ lang="ru"
                   <div class="thumb">
                     <img alt="" src="vendor/images/products/product01.png" />
                   </div>
-
                   <div class="price">
                     <div class="price-current">
                       <span class="currency">$</span>145
@@ -1100,13 +1017,12 @@ lang="ru"
                   <div class="excerpt">
                     Looking lorem round, to ascertain that they...
                   </div>
-
                   <div class="merged-buttons">
                     <button class="btn-add-to-cart le-btn btn-iconic">
-                      to cart
+                      Купить
                     </button>
                     <button class="btn-add-to-wishlist le-btn btn-iconic">
-                      wishlist
+                      Отложить
                     </button>
                   </div>
                 </div>
@@ -1126,14 +1042,14 @@ lang="ru"
           </div>
           <div class="col-xs-12 col-md-4">
             <div class="text">
-              sign up for our newsletter to<br />
-              get best offers and news.
+              Подпишитесь на нашу рассылку, чтобы получать лучшие предложения и
+              новости.
             </div>
           </div>
           <div class="col-xs-12 col-md-7">
             <form class="subscribe-form">
               <input
-                data-placeholder="Enter Your Email Here..."
+                data-placeholder="Введите свой адрес электронной почты..."
                 class="le-input col-xs-12 col-md-10"
               />
               <button type="submit" class="le-btn icon-btn fa fa-send"></button>
@@ -1209,7 +1125,6 @@ lang="ru"
                 <img alt="" src="vendor/images/brands05.png" />
               </a>
             </div>
-
             <div class="brand-item">
               <a href="#">
                 <img alt="" src="vendor/images/brands02.png" />
@@ -1243,18 +1158,14 @@ lang="ru"
         <div class="container">
           <div class="copyright col-xs-12 col-sm-5">
             <p>
-              <strong>© MarQet 2014</strong>. All rights reserved.<br />
-              Designed and Made by
-              <a href="http://themeforest.net/user/LeAmino?ref=LeAmino"
-                >Amin Diary</a
-              >
+              <strong>© Название компании 2023</strong>. All rights reserved.
             </p>
           </div>
           <div class="copyright-links col-xs-12 col-sm-7">
             <ul class="inline">
-              <li><a href="#">privacy policy</a></li>
-              <li><a href="#">terms & conditions</a></li>
-              <li><a href="#">site map</a></li>
+              <li><a href="/privacy-policy">Политика конфиденциальности</a></li>
+              <li><a href="/terms-conditions">Правила и условия</a></li>
+              <li><a href="/site-map">Карта сайта</a></li>
             </ul>
           </div>
         </div>
@@ -1269,14 +1180,18 @@ lang="ru"
                   <i class="fa fa-info"></i>
                   <span class="triangle"></span>
                 </span>
-                informations
+                Информация
               </h2>
               <ul class="footer-links-holder">
-                <li><a href="#">our blog</a></li>
-                <li><a href="#">about our shop</a></li>
-                <li><a href="#">secure shopping</a></li>
-                <li><a href="#">privacy policy</a></li>
-                <li><a href="#">delivery informations</a></li>
+                <li><a href="/our-blog">Наш блог</a></li>
+                <li><a href="/about-our-shop">О нашем магазине</a></li>
+                <li><a href="/secure-shopping">Безопасный шопинг</a></li>
+                <li>
+                  <a href="/privacy-policy">Политика конфиденциальности</a>
+                </li>
+                <li>
+                  <a href="/delivery-informations">Информация о доставке</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -1287,14 +1202,18 @@ lang="ru"
                   <i class="fa fa-check"></i>
                   <span class="triangle"></span>
                 </span>
-                customer care
+                Клиентам
               </h2>
               <ul class="footer-links-holder">
-                <li><a href="#">contact us</a></li>
-                <li><a href="#">site map</a></li>
-                <li><a href="#">top sales & bestsellers</a></li>
-                <li><a href="#">gift vouchers</a></li>
-                <li><a href="#">best sellers</a></li>
+                <li><a href="/contact-us">Связаться с нами</a></li>
+                <li><a href="/site-map">Карта сайта</a></li>
+                <li>
+                  <a href="/top-sales-bestsellers"
+                    >Лучшие продажи и бестселлеры</a
+                  >
+                </li>
+                <li><a href="/gift-vouchers">Подарочные сертификаты</a></li>
+                <li><a href="/best-sellers">Бестселлеры</a></li>
               </ul>
             </div>
           </div>
@@ -1305,14 +1224,14 @@ lang="ru"
                   <i class="fa fa-user"></i>
                   <span class="triangle"></span>
                 </span>
-                your account
+                Профиль
               </h2>
               <ul class="footer-links-holder">
-                <li><a href="#">order status</a></li>
-                <li><a href="#">my wishlist</a></li>
-                <li><a href="#">delivery address</a></li>
-                <li><a href="#">order history</a></li>
-                <li><a href="#">newsletter</a></li>
+                <li><a href="/user/order-status">Статус заказа</a></li>
+                <li><a href="/user/wishlist">Список желаний</a></li>
+                <li><a href="/user/delivery-address">Адрес доставки</a></li>
+                <li><a href="/user/order-history">История заказов</a></li>
+                <li><a href="/user/newsletter">Новостная рассылка</a></li>
               </ul>
             </div>
           </div>
@@ -1323,18 +1242,17 @@ lang="ru"
                   <i class="fa fa-phone"></i>
                   <span class="triangle"></span>
                 </span>
-                get in touch
+                Контакты
               </h2>
               <p>
-                <strong>MarQet Shop</strong><br />
-                Ataturk Blvd, 6543 St. Istanbul,Turkey<br />
-                (212) 123 456 78
+                <strong>Название сайта</strong><br />
+                Адрес компании<br />
+                +7 (800) 333-04-41
               </p>
               <ul class="social-icons triangled">
                 <li><a href="#" class="fa fa-facebook"></a></li>
                 <li><a href="#" class="fa fa-google-plus"></a></li>
                 <li><a href="#" class="fa fa-rss"></a></li>
-
                 <li><a href="#" class="fa fa-linkedin"></a></li>
               </ul>
             </div>
