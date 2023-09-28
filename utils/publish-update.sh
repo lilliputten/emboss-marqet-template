@@ -25,6 +25,7 @@ cd "$PUBLISH_FOLDER" && \
   pwd && \
   rm -Rf * && \
   cp -Rfu ../$BUILD_FOLDER/* . && \
+  cp -Rfu ../$BUILD_FOLDER/.[^.]* . && \
   cd .. && \
   echo OK
   # If we have dot (`.*`, hidden) files in build:
