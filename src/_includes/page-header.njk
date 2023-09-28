@@ -73,9 +73,9 @@
     </div>
     <div class="col-xs-12 col-md-3">
       <ul class="link-list inline">
-        <li><a href="#">my account</a></li>
-        <li><a href="#">my wishlist</a></li>
-        <li><a href="#">log in</a></li>
+        <li><a href="{{ langRootUrl }}user/account">{{ 'headerLinks.myAccount' | i18n }}</a></li>
+        <li><a href="{{ langRootUrl }}user/wishlist">{{ 'headerLinks.myWishlist' | i18n }}</a></li>
+        <li><a href="{{ langRootUrl }}user/login">{{ 'headerLinks.logIn' | i18n }}</a></li>
       </ul>
     </div>
   </div>
@@ -87,27 +87,27 @@
             <ul class="nav">
               <li class=" le-dropdown">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                  homepage
+                  {{ 'headerLinks.homepage' | i18n }}
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a href="{{ langRootUrl }}">homepage</a></li>
-                  <li><a href="{{ langRootUrl }}test">test page</a></li>
+                  <li><a href="{{ langRootUrl }}">{{ 'headerLinks.homepage' | i18n }}</a></li>
+                  <li><a href="{{ langRootUrl }}test">{{ 'headerLinks.testPage' | i18n }}</a></li>
                 </ul>
               </li>
               <li>
-                <a  href="#">men</a>
+                <a  href="{{ langRootUrl }}products/men">{{ 'headerLinks.men' | i18n }}</a>
               </li>
               <li>
-                <a  href="#">women</a>
+                <a  href="{{ langRootUrl }}products/women">{{ 'headerLinks.women' | i18n }}</a>
               </li>
               <li>
-                <a  href="#">sports</a>
+                <a  href="{{ langRootUrl }}products/sports">{{ 'headerLinks.sports' | i18n }}</a>
               </li>
               <li class="yamm megamenu le-dropdown">
                 <ul class="nav">
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      Pages
+                      {{ 'headerLinks.pages' | i18n }}
                     </a>
                     <ul class="dropdown-menu">
                       <li>
@@ -119,15 +119,13 @@
                                   <i class="fa fa-home"></i>
                                   <span class="triangle"></span>
                                 </span>
-                                homepages</h2>
+                                {{ 'headerLinks.homepages' | i18n }}</h2>
                               <ul>
                                 <li>
-                                  <a href="{{ langRootUrl }}">homepage</a>
+                                  <a href="{{ langRootUrl }}">{{ 'headerLinks.homepage' | i18n }}</a>
                                 </li>
                                 <li>
-                                  <a href="{{ langRootUrl }}test">test page</a>
-                                </li>
-                                <li class="clearfix">
+                                  <a href="{{ langRootUrl }}test">{{ 'headerLinks.testPage' | i18n }}</a>
                                 </li>
                               </ul>
                               <h2 class="iconic-head">
@@ -135,16 +133,16 @@
                                   <i class="fa fa-files-o"></i>
                                   <span class="triangle"></span>
                                 </span>
-                                products pages</h2>
+                                {{ 'headerLinks.products' | i18n }}</h2>
                               <ul>
                                 <li>
-                                  <a href="{{ langRootUrl }}products-grid">products grid/list</a>
+                                  <a href="{{ langRootUrl }}products-grid">{{ 'headerLinks.productsGridList' | i18n }}</a>
                                 </li>
                                 <li>
-                                  <a href="{{ langRootUrl }}single-product-sidebar">single product (sidebar)</a>
+                                  <a href="{{ langRootUrl }}single-product-sidebar">{{ 'headerLinks.singleProductSidebar' | i18n }}</a>
                                 </li>
                                 <li>
-                                  <a href="{{ langRootUrl }}single-product">single product</a>
+                                  <a href="{{ langRootUrl }}single-product">{{ 'headerLinks.singleProduct' | i18n }}</a>
                                 </li>
                               </ul>
                             </div>
@@ -154,16 +152,16 @@
                                   <i class="fa fa-credit-card"></i>
                                   <span class="triangle"></span>
                                 </span>
-                                checkout</h2>
+                                {{ 'headerLinks.checkout' | i18n }}</h2>
                               <ul>
                                 <li>
-                                  <a href="{{ langRootUrl }}shopping-cart">cart page</a>
+                                  <a href="{{ langRootUrl }}shopping-cart">{{ 'headerLinks.cartPage' | i18n }}</a>
                                 </li>
                                 <li>
-                                  <a href="{{ langRootUrl }}checkout">checkout</a>
+                                  <a href="{{ langRootUrl }}checkout">{{ 'headerLinks.checkout' | i18n }}</a>
                                 </li>
                                 <li>
-                                  <a href="{{ langRootUrl }}payment">payment</a>
+                                  <a href="{{ langRootUrl }}payment">{{ 'headerLinks.payment' | i18n }}</a>
                                 </li>
                               </ul>
                               <h2 class="iconic-head">
@@ -171,7 +169,7 @@
                                   <i class="fa fa-chain"></i>
                                   <span class="triangle"></span>
                                 </span>
-                                other links</h2>
+                                {{ 'headerLinks.otherLinks' | i18n }}</h2>
                               <ul>
                                 <li>
                                   <a href="#">Lorem ipsum dolor sit amet</a>
@@ -202,7 +200,7 @@
                                       <span class="light">special</span><br>
                                       off
                                     </h1>
-                                    <a class="le-btn big" href="#">learn more</a>
+                                    <a class="le-btn big" href="#">{{ 'headerLinks.learnMore' | i18n }}</a>
                                   </div>
                                 </div>
                               </div>
@@ -217,44 +215,41 @@
             </ul>
           </nav>
           <select class="top-drop-menu nav hidden-md hidden-sm visible-xs hidden-lg">
-            <optgroup label="Homepage">
-              <option value="index.html" selected="selected">
-                Homepage Default
+            <optgroup label="{{ 'headerLinks.homepage' | i18n }}">
+              <option value="{{ langRootUrl }}" selected="selected">
+                {{ 'headerLinks.homepage' | i18n }}
               </option>
-               <option value="index-2.html">
-                Homepage Version 2
+               <option value="{{ langRootUrl }}test">
+                {{ 'headerLinks.testPage' | i18n }}
                </option>
-              <option value="index-3.html">
-                Homepage Version 3
-              </option>
             </optgroup>
-            <option value="#">
-              Men
+            <option value="{{ langRootUrl }}products/men">
+              {{ 'headerLinks.men' | i18n }}
             </option>
-            <option value="#">
-              Women
+            <option value="{{ langRootUrl }}products/women">
+              {{ 'headerLinks.women' | i18n }}
             </option>
-            <option value="#">
-              Sport
+            <option value="{{ langRootUrl }}products/sports">
+              {{ 'headerLinks.sports' | i18n }}
             </option>
-            <optgroup label="Pages">
-              <option value="products-grid.html">
-               Products Grid/List
+            <optgroup label="{{ 'headerLinks.pages' | i18n }}">
+              <option value="{{ langRootUrl }}products-grid">
+               {{ 'headerLinks.productsGridList' | i18n }}
               </option>
-               <option value="single-product-sidebar.html">
-                Single Product (sidebar)
+               <option value="{{ langRootUrl }}single-product-sidebar">
+                {{ 'headerLinks.singleProductSidebar' | i18n }}
                </option>
-              <option value="single-product.html">
-               Single Product
+              <option value="{{ langRootUrl }}single-product">
+               {{ 'headerLinks.singleProduct' | i18n }}
               </option>
-               <option value="shopping-cart.html">
-               Cart Page
+               <option value="{{ langRootUrl }}shopping-cart">
+               {{ 'headerLinks.cartPage' | i18n }}
               </option>
-               <option value="checkout.html">
-              Checkout
+               <option value="{{ langRootUrl }}checkout">
+              {{ 'headerLinks.checkout' | i18n }}
               </option>
-               <option value="payment.html">
-               Payment
+               <option value="{{ langRootUrl }}payment">
+               {{ 'headerLinks.payment' | i18n }}
               </option>
             </optgroup>
           </select>
@@ -264,7 +259,7 @@
             <a href="" class="fa fa-search search-button"></a>
             <div class="field">
               <form>
-                <input type="text" data-placeholder="Enter Keyword Here..." />
+                <input type="text" data-placeholder="{{ 'headerLinks.enterKeyword' | i18n }}" />
               </form>
             </div>
           </div>
@@ -334,8 +329,8 @@
                 </li>
                 <li class="checkout">
                   <div class="merged-buttons">
-                    <a href="{{ langRootUrl }}shopping-cart" class="btn-add-to-cart le-btn">checkout</a>
-                    <a href="{{ langRootUrl }}shopping-cart" class="btn-add-to-wishlist le-btn">show cart</a>
+                    <a href="{{ langRootUrl }}checkout" class="btn-add-to-cart le-btn">{{ 'headerLinks.checkout' | i18n }}</a>
+                    <a href="{{ langRootUrl }}shopping-cart" class="btn-add-to-wishlist le-btn">{{ 'headerLinks.showCart' | i18n }}</a>
                   </div>
                 </li>
               </ul>
