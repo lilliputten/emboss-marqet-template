@@ -15,5 +15,10 @@
   --secondary-color: #8bb040; /* color2 */
   --active-color: #59b210;
 
+  /* Custom variables... */
+
+  --product-item-background: #fff;
+  --product-item-height: 220px;
+
   --transition-timeout: 250ms;
 }

@@ -2,12 +2,6 @@
 layout: base.njk
 ---
 
-<!--
-lang="{{ locale }}"
--->
-
-{% include "page-header.njk" %}
-
 <main>
   {# // DEBUG
   {% set pageUrl = page.url %}
@@ -26,9 +20,14 @@ lang="{{ locale }}"
   {{ content | safe }}
 </main>
 
+{# // DEBUG: Omit some sections #}
+
+{% include "page-header.njk" %}
 {% include "page-section-banners-mosaic.njk" %}
+
 {% include "page-section-featured-products.njk" %}
 {% include "page-section-bestsellers.njk" %}
+
 {% include "page-section-newsletter.njk" %}
 {% include "page-section-banner-slider.njk" %}
 {% include "page-section-brands-slider.njk" %}
