@@ -210,7 +210,9 @@
 .product-item .body {
   border: 5px solid rgba(0, 0, 0, 0.07);
   border-top: 0;
-  background-color: #f4f4f4;
+  /* background-color: var(--milky); */
+  background-color: var(--product-item-background);
+  /* background-color: var(--product-item-body-background); */
   padding: 20px;
   border-radius: 0 0 6px 6px;
 }

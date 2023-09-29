@@ -6978,7 +6978,7 @@ header .link-list {
   display: none;
 }
 .megamenu .dropdown-menu .yamm-content ul {
-  background-color: #f4f4f4;
+  background-color: var(--milky);
   border-radius: 6px;
   padding: 5px;
   margin-bottom: 25px;
@@ -7058,7 +7058,7 @@ header .link-list {
   -moz-background-clip: padding-box;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  background-color: #f4f4f4;
+  background-color: var(--milky);
 }
 .top-nav-holder .nav-menu:before {
   content: "\f015";
@@ -7492,7 +7492,7 @@ header .link-list {
   line-height: 20px;
 }
 .iconic-nav-bar .bar {
-  background-color: #f4f4f4;
+  background-color: var(--milky);
   display: block;
   padding: 3px 0 3px 50px;
   position: relative;
@@ -8362,7 +8362,7 @@ header .link-list {
 .sidebar .widget {
   border: 5px solid rgba(0, 0, 0, 0.07);
   position: relative;
-  background-color: #f4f4f4;
+  background-color: var(--milky);
   padding: 10px;
   border-radius: 4px;
   margin-bottom: 20px;
@@ -8515,7 +8515,7 @@ header .link-list {
 }
 .box {
   position: relative;
-  background-color: #f4f4f4;
+  background-color: var(--milky);
   padding: 10px;
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
@@ -8560,7 +8560,7 @@ header .link-list {
 }
 #single-product {
   border: 5px solid rgba(0, 0, 0, 0.07);
-  background-color: #f4f4f4;
+  background-color: var(--milky);
   padding: 20px;
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
@@ -8721,7 +8721,7 @@ header .link-list {
 .section-review-comment .nav-tabs li:hover a,
 .section-review-comment .nav-tabs li:focus a {
   color: #000000;
-  background-color: #f4f4f4;
+  background-color: var(--milky);
 }
 .section-review-comment .nav-tabs li,
 .section-review-comment .nav-tabs li:hover,
@@ -8738,7 +8738,7 @@ header .link-list {
 .section-review-comment .nav-tabs li a {
   margin: 0;
   color: #000000;
-  background-color: #f4f4f4;
+  background-color: var(--milky);
   line-height: 25px;
 }
 .section-review-comment .nav-tabs li a,
@@ -8749,7 +8749,7 @@ header .link-list {
   border-radius: 6px 0 0 6px;
 }
 .section-review-comment .tab-content {
-  background-color: #f4f4f4;
+  background-color: var(--milky);
   padding: 20px;
   border-radius: 0 6px 6px 6px;
   position: relative;
@@ -9094,7 +9094,7 @@ header .link-list {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #f4f4f4;
+  background-color: var(--milky);
   /* change if the mask should have another color then white */
   z-index: 9999;
   /* makes sure it stays on top */

@@ -18,6 +18,7 @@
   /* Custom variables... */
 
   --product-item-background: #fff;
+  --product-item-body-background: #f8f8f8;
   --product-item-height: 220px;
 
   --transition-timeout: 250ms;
