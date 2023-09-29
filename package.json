@@ -50,7 +50,7 @@
     "lint": "echo --Lint sources-- && eslint src --ext ts --ext tsx --ext js",
     "patch-build": "echo --Patch build-- && gulp patchBuild",
     "build-and-publish": "echo --Build and publish-- && npm-run-all build publish",
-    "build-clean": "echo --Remove build folder-- && $ rimraf build",
+    "build-clean": "echo --Remove build folder-- && rimraf build",
     "build": "echo --Make build and patch-- && npm-run-all build-clean eleventy-build patch-build",
     "serve-build": "echo --Serve build /at alternate port 3003/-- && serve build -l 3003",
     "publish": "echo --Publish build /posix commands used/-- && sh ./utils/publish.sh",
