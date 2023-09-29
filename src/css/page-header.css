@@ -5,7 +5,7 @@
     transition: all var(--transition-timeout);
   }
   .logo a:hover img {
-    opacity: .7;
+    opacity: 0.7;
   }
   .info-inline {
     a {

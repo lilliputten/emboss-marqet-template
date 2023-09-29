@@ -21,12 +21,12 @@
   /* &:hover .head .thumb img { */
   :hover .thumb img {
     transform: scale(1.1);
-    opacity: .9;
+    opacity: 0.9;
   }
 
   .head .star-holder {
     /* background-color: rgba(255,255,255,.5); */
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 2px 8px;
     border-radius: 20px;
     &:hover {
