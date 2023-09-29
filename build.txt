@@ -1,6 +1,6 @@
 Project: emboss-studio-site
-Version: 0.0.2
-Branch: master
-Commit: 62e5fe3
-Fixed: 2023.09.28, 13:49 GMT+3
-Built: 2023.09.28, 19:44 GMT+3
+Version: 0.0.3
+Branch: dev-230929-issue-2-product-item-layout
+Commit: 61ba54a
+Fixed: 2023.09.29, 17:18 GMT+3
+Built: 2023.09.29, 17:19 GMT+3
