@@ -1,4 +1,4 @@
-{% set langRootUrl = '/' + lang + '/' if lang !== defaultLang else '/' %}
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
 <section class="section-copyright">
   <div class="container">
@@ -9,9 +9,9 @@
     </div>
     <div class="copyright-links col-xs-12 col-sm-7">
       <ul class="inline">
-        <li><a href="{{ langRootUrl }}privacy-policy">{{ 'servicesMenu.privacyPolicy' | i18n }}</a></li>
-        <li><a href="{{ langRootUrl }}terms-conditions">{{ 'servicesMenu.termsConditions' | i18n }}</a></li>
-        <li><a href="{{ langRootUrl }}site-map">{{ 'servicesMenu.siteMap' | i18n }}</a></li>
+        <li><a href="{{ langRootUrl }}/privacy-policy">{{ 'servicesMenu.privacyPolicy' | i18n }}</a></li>
+        <li><a href="{{ langRootUrl }}/terms-conditions">{{ 'servicesMenu.termsConditions' | i18n }}</a></li>
+        <li><a href="{{ langRootUrl }}/site-map">{{ 'servicesMenu.siteMap' | i18n }}</a></li>
       </ul>
     </div>
   </div>
