@@ -1,8 +1,8 @@
 .product-item {
-  overflow: hidden;
+  /* overflow: hidden; */
   div.body {
     padding: 15px;
-    overflow: hidden;
+    /* overflow: hidden; */
     .excerpt,
     h3 {
       overflow: hidden;
