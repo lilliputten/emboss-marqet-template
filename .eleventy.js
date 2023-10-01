@@ -21,7 +21,12 @@ const prettier = require('prettier');
 const translations = require('./src/_data/i18n');
 
 module.exports = function (eleventyConfig) {
-  // PLUGINS
+  // Enable subfolders for includes...
+  eleventyConfig.setLiquidOptions({
+    dynamicPartials: true
+  });
+
+  // Plugins...
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventy.EleventyHtmlBasePlugin);
 

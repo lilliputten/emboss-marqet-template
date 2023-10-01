@@ -2,11 +2,9 @@
 layout: base.njk
 ---
 
-{# // DEBUG: Omit some sections #}
-
-{% include "page-header.njk" %}
+{% include "layout/page-header.njk" %}
 
 {{ content | safe }}
 
-{% include "page-section-copyright.njk" %}
-{% include "page-section-footer.njk" %}
+{% include "layout/page-section-copyright.njk" %}
+{% include "layout/page-section-footer.njk" %}
