@@ -1244,7 +1244,7 @@ a.bg-danger:hover {
   padding-bottom: 9px;
   /* margin: 40px 0 20px; */
   margin-bottom: 20px;
-  border-bottom: 1px solid #eeeeee;
+  /* border-bottom: 1px solid #eeeeee; */
 }
 ul,
 ol {

@@ -1,0 +1,34 @@
+{# Expecting external variable:
+@param {{ name: string; link?: string; class?: 'active' }[]} breadcrumb
+#}
+
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+
+<section id="breadcrumb">
+  <div class="container">
+    <div class="le-breadcrumb inline">
+      <div class="iconic-nav-bar">
+        <div class="icon-holder">
+          <i class="fa fa-chain"></i>
+          <span class="triangle"></span>
+        </div>
+        <div class="bar">
+          <ul>
+            {% for item in breadcrumb -%}
+              <li class="{{ item.class }}">
+                {% if item.link %}
+                  <a href="{{ langRootUrl }}{{ item.link }}">
+                {% endif %}
+                {{ item.name }}
+                {% if item.link %}
+                  </a>
+                {% endif %}
+              </li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
