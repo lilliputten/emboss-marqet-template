@@ -3,4 +3,4 @@ Version: 0.0.3
 Branch: dev-231001-issue-5-catalogue-pages
 Commit: 35a9fa9
 Fixed: 2023.09.29, 17:18 GMT+3
-Built: 2023.10.02, 13:23 GMT+3
+Built: 2023.10.02, 13:32 GMT+3
