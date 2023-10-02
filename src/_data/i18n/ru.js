@@ -72,6 +72,14 @@ const ru = {
     enterKeyword: 'Введите текст...',
     learnMore: 'Узнать больше',
   },
+  newsletter: {
+    signUp: 'Подпишитесь на нашу рассылку, чтобы получать лучшие предложения и новости.',
+    enterEmail: 'Введите адрес электронной почты...',
+  },
+  sections: {
+    bestSellers: 'Хиты <span class="bold">продаж</span>',
+    featuredProducts: 'Рекомендуемые <span class="bold">товары</span>',
+  },
   products: {
     toCart: 'Купить',
     wishlist: 'Отложить',
@@ -118,13 +126,11 @@ const ru = {
     winterIsComing: 'Зима близко',
     womenShoes: 'Женская обувь',
   },
-  newsletter: {
-    signUp: 'Подпишитесь на нашу рассылку, чтобы получать лучшие предложения и новости.',
-    enterEmail: 'Введите адрес электронной почты...',
-  },
-  sections: {
-    bestSellers: 'Хиты <span class="bold">продаж</span>',
-    featuredProducts: 'Рекомендуемые <span class="bold">товары</span>',
+  singleProduct: {
+    editorReview: 'Отзыв редактора',
+    returnPolicy: 'Условия возврата',
+    description: 'Описание',
+    highQualityAndComfort: 'Высокое качество и комфорт',
   },
 };
 

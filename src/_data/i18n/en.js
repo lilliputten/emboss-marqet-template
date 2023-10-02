@@ -70,6 +70,14 @@ const en = {
     enterKeyword: 'Enter keyword here...',
     learnMore: 'Learn more',
   },
+  newsletter: {
+    signUp: 'Sign up for our newsletter to get best offers and news.',
+    enterEmail: 'Enter your email here...',
+  },
+  sections: {
+    bestSellers: 'Best <span class="bold">sellers</span>',
+    featuredProducts: 'Featured <span class="bold">products</span>',
+  },
   products: {
     toCart: 'To cart',
     wishlist: 'Wishlist',
@@ -116,13 +124,11 @@ const en = {
     winterIsComing: 'Winter is coming',
     womenShoes: 'Women shoes',
   },
-  newsletter: {
-    signUp: 'Sign up for our newsletter to get best offers and news.',
-    enterEmail: 'Enter your email here...',
-  },
-  sections: {
-    bestSellers: 'Best <span class="bold">sellers</span>',
-    featuredProducts: 'Featured <span class="bold">products</span>',
+  singleProduct: {
+    editorReview: 'Editor review',
+    returnPolicy: 'Return policy',
+    description: 'Description',
+    highQualityAndComfort: 'High quality and comfort',
   },
 };
 
