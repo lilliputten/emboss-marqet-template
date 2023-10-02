@@ -1,13 +1,13 @@
 ---
-title: Catalogue
+title: Каталог
 layout: page.njk
-:changed: 2023.10.01, 22:17
+:changed: 2023.10.02, 16:52
 ---
 
 {% set breadcrumb = [
-  { link: '/', name: 'Homepage' },
-  { link: '/products', name: 'Products' },
-  { name: 'Product grid', class: 'active' }
+  { link: '/', name: 'headerLinks.homepage' | i18n },
+  { link: '/products', name: 'headerLinks.products' | i18n },
+  { name: 'headerLinks.productsGrid' | i18n, class: 'active' }
 ] %}
 {% include "shared/section-breadcrumb.njk" %}
 
