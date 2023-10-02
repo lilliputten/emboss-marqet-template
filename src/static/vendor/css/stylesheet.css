@@ -8267,16 +8267,20 @@ header .link-list {
   display: inline-block;
   text-transform: uppercase;
   color: #abb0ac;
+  /* position: relative; */
 }
 .le-breadcrumb ul li:after {
   font-family: fontawesome;
   color: #ffffff;
   font-size: 35px;
   position: absolute;
+  /* position: relative; */
   top: -12px;
   margin: 0 5px;
   display: inline-block;
   content: "\f054";
+  border: 1px solid red;
+  /* right: 0; */
 }
 .le-breadcrumb ul li:last-child {
   margin-right: 15px;
@@ -8289,9 +8293,7 @@ header .link-list {
   font-weight: 700!important;
 }
 /*
-
 * Filter Slider for Bootstrap *
-
 */
 .slider {
   display: inline-block;
