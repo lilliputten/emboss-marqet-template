@@ -384,3 +384,16 @@
         /** Add space for stars */
         padding-right: 110px;
       }
+#single-product .owl-carousel .owl-wrapper {
+      display: flex !important;
+      align-items: center;
+    }
+#single-product .owl-carousel .owl-item {
+      text-align: center;
+    }
+#single-product .body-holder .desc {
+    line-height: 1.5;
+  }
+#single-product {
+    background-color: var(--product-item-background);
+  }
