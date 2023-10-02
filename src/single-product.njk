@@ -1,0 +1,18 @@
+---
+title: Продукт
+layout: page.njk
+:changed: 2023.10.02, 21:40
+---
+
+{% set breadcrumb = [
+  { link: '/', name: 'headerLinks.homepage' | i18n },
+  { link: '/products', name: 'headerLinks.products' | i18n },
+  { name: 'headerLinks.productsGrid' | i18n, class: 'active' }
+] %}
+{% include "shared/section-breadcrumb.njk" %}
+
+{% include "catalogue/section-single-product-wide.njk" %}
+
+{% include "section-newsletter.njk" %}
+{% include "section-banner-slider.njk" %}
+{% include "section-brands-slider.njk" %}
