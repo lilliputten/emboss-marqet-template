@@ -8267,16 +8267,21 @@ header .link-list {
   display: inline-block;
   text-transform: uppercase;
   color: #abb0ac;
+  /* NOTE: Fixed (?) bug with wrong position of white arrows in FF */
+  position: relative;
 }
 .le-breadcrumb ul li:after {
   font-family: fontawesome;
   color: #ffffff;
   font-size: 35px;
   position: absolute;
-  top: -12px;
   margin: 0 5px;
   display: inline-block;
   content: "\f054";
+  /* NOTE: Fixed (?) bug with wrong position of white arrows in FF */
+  /* top: -12px; */
+  top: -15px;
+  right: -36px;
 }
 .le-breadcrumb ul li:last-child {
   margin-right: 15px;
@@ -8289,9 +8294,7 @@ header .link-list {
   font-weight: 700!important;
 }
 /*
-
 * Filter Slider for Bootstrap *
-
 */
 .slider {
   display: inline-block;
