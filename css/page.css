@@ -397,3 +397,10 @@
 #single-product {
     background-color: var(--product-item-background);
   }
+.shopping-cart-page.box {
+    background-color: var(--product-item-background);
+  }
+.shopping-cart-page tbody .delete .close-btn {
+    top: -8px;
+    right: auto;
+  }

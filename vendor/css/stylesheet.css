@@ -6804,7 +6804,7 @@ section {
   width: 100%;
 }
 .dropdown-menu li a {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   padding: 3px 10px;
 }
 .dropdown-menu li a i {
@@ -7776,7 +7776,8 @@ header .link-list {
   left: 60px;
 }
 .banner-carousel {
-  min-height: 300px;
+  /* NOTE: Don't fix the height of carousel? */
+  /* min-height: 300px; */
 }
 .banner-carousel .item {
   text-align: center;
@@ -8804,7 +8805,7 @@ header .link-list {
 }
 .shopping-cart-page tbody .pid {
   color: #abb0ac;
-  font-style: italic;
+  /* font-style: italic; */
 }
 .shopping-cart-page tbody .price {
   font-size: 16px;
@@ -8832,7 +8833,7 @@ header .link-list {
 }
 .field-group label {
   display: block;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   font-size: 14px;
   font-weight: 100!important;
   margin: 5px 0;

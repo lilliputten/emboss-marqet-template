@@ -49,12 +49,12 @@
     <link rel="stylesheet" href="../css/page.css" />
 
     <meta property="og:site_name" content="Название сайта" />
-    <meta property="og:title" content="Продукт" />
+    <meta property="og:title" content="Платёж" />
     <meta property="og:description" content="Описание сайта" />
-    <meta property="og:url" content="/single-product/" />
+    <meta property="og:url" content="/payment/" />
     <meta name="twitter:card" content="summary" />
     <meta name="theme-color" content="#ffffff" />
-    <title>Продукт</title>
+    <title>Платёж</title>
   </head>
   <body
     class="font-sans text-gray-800 bg-gray-100 noscript"
@@ -114,13 +114,13 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a href="/single-product/" rel="alternate" hreflang="ru"
+                    <a href="/payment/" rel="alternate" hreflang="ru"
                       >Русский</a
                     >
                   </li>
 
                   <li>
-                    <a href="/en/single-product/" rel="alternate" hreflang="en"
+                    <a href="/en/payment/" rel="alternate" hreflang="en"
                       >English</a
                     >
                   </li>
@@ -457,10 +457,7 @@
                   <li>
                     <a href="/"> Домашняя страница </a>
                   </li>
-                  <li>
-                    <a href="/products"> Продукция </a>
-                  </li>
-                  <li class="active">Таблица продуктов</li>
+                  <li class="active">Платеж</li>
                 </ul>
               </div>
             </div>
@@ -468,417 +465,152 @@
         </div>
       </section>
 
-      <section id="single-product-wide" class="page-holder full-width">
-        <div class="container">
-          <div class="col-xs-12">
-            <div id="single-product" class="row">
-              <div class="no-margin col-xs-12 col-sm-5 gallery-holder">
-                <div
-                  class="product-item-holder size-big single-product-gallery small-gallery"
-                >
-                  <div class="icon-holder small">
-                    <i class="fa fa-search-plus"></i>
-                    <span class="triangle"></span>
-                  </div>
-
-                  <div class="single-product-slider">
-                    <div class="single-product-gallery-item" id="slide1">
-                      <a
-                        data-rel="prettyphoto"
-                        href="/images/i-modelist-samples/uaz/large/01.jpg"
-                      >
-                        <img
-                          class="lazy"
-                          alt=""
-                          src="../images/i-modelist-samples/uaz/medium/01.jpg"
-                        />
-                      </a>
-                    </div>
-                    <div class="single-product-gallery-item" id="slide2">
-                      <a
-                        data-rel="prettyphoto"
-                        href="/images/i-modelist-samples/uaz/large/02.jpg"
-                      >
-                        <img
-                          class="lazy"
-                          alt=""
-                          src="../images/i-modelist-samples/uaz/medium/02.jpg"
-                        />
-                      </a>
-                    </div>
-                    <div class="single-product-gallery-item" id="slide3">
-                      <a
-                        data-rel="prettyphoto"
-                        href="/images/i-modelist-samples/uaz/large/03.jpg"
-                      >
-                        <img
-                          class="lazy"
-                          alt=""
-                          src="../images/i-modelist-samples/uaz/medium/03.jpg"
-                        />
-                      </a>
-                    </div>
-                    <div class="single-product-gallery-item" id="slide4">
-                      <a
-                        data-rel="prettyphoto"
-                        href="/images/i-modelist-samples/uaz/large/04.jpg"
-                      >
-                        <img
-                          class="lazy"
-                          alt=""
-                          src="../images/i-modelist-samples/uaz/medium/04.jpg"
-                        />
-                      </a>
-                    </div>
-                    <div class="single-product-gallery-item" id="slide5">
-                      <a
-                        data-rel="prettyphoto"
-                        href="/images/i-modelist-samples/uaz/large/05.jpg"
-                      >
-                        <img
-                          class="lazy"
-                          alt=""
-                          src="../images/i-modelist-samples/uaz/medium/05.jpg"
-                        />
-                      </a>
-                    </div>
-                    <div class="single-product-gallery-item" id="slide6">
-                      <a
-                        data-rel="prettyphoto"
-                        href="/images/i-modelist-samples/uaz/large/06.jpg"
-                      >
-                        <img
-                          class="lazy"
-                          alt=""
-                          src="../images/i-modelist-samples/uaz/medium/06.jpg"
-                        />
-                      </a>
-                    </div>
-                    <div class="single-product-gallery-item" id="slide7">
-                      <a
-                        data-rel="prettyphoto"
-                        href="/images/i-modelist-samples/uaz/large/07.jpg"
-                      >
-                        <img
-                          class="lazy"
-                          alt=""
-                          src="../images/i-modelist-samples/uaz/medium/07.jpg"
-                        />
-                      </a>
+      <section id="payment" class="page-holder">
+        <div class="container no-padding">
+          <div class="col-xs-12 col-md-8">
+            <div class="box">
+              <div class="icon-holder small badge-style">
+                <i class="fa fa-dollar"></i>
+                <span class="triangle"></span>
+              </div>
+              <div class="box-holder">
+                <div class="row">
+                  <div class="col-xs-12 col-md-6">
+                    <h2>Платежная информация</h2>
+                    <div class="table-form">
+                      <form>
+                        <div class="field-group">
+                          <label>Номер кредитной карты</label>
+                          <input
+                            type="text"
+                            class="le-input"
+                            data-placeholder="xxxx xxxx xxxx xxxx"
+                          />
+                        </div>
+                        <div class="field-group">
+                          <label>Полное имя владельца карты</label>
+                          <input
+                            type="text"
+                            class="le-input"
+                            data-placeholder="Иван Петров"
+                          />
+                        </div>
+                        <div class="field-group">
+                          <label>Срок действия</label>
+                          <select
+                            class="variation-btn inline selectpicker"
+                            data-width="49%"
+                            data-style="le-btn no-shadow"
+                          >
+                            <option value="">Месяц</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                          </select>
+                          <select
+                            class="variation-btn inline selectpicker"
+                            data-width="49%"
+                            data-style=" le-btn no-shadow"
+                          >
+                            <option value="">Год</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                            <option value="2031">2031</option>
+                            <option value="2032">2032</option>
+                            <option value="2033">2033</option>
+                            <option value="2034">2034</option>
+                            <option value="2035">2035</option>
+                            <option value="2036">2036</option>
+                            <option value="2037">2037</option>
+                            <option value="2038">2038</option>
+                            <option value="2039">2039</option>
+                          </select>
+                        </div>
+                        <div class="field-group">
+                          <label>CCV</label>
+                          <input
+                            type="text"
+                            class="le-input col-xs-2"
+                            data-placeholder="000"
+                          />
+                        </div>
+                      </form>
                     </div>
                   </div>
-
-                  <div class="gallery-thumbs">
-                    <ul>
-                      <li class="active">
-                        <a class="horizontal-thumb" href="#slide1">
-                          <img
-                            class="lazy"
-                            alt=""
-                            src="../images/i-modelist-samples/uaz/small-thumbs-55x/01.jpg"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a class="horizontal-thumb" href="#slide2">
-                          <img
-                            class="lazy"
-                            alt=""
-                            src="../images/i-modelist-samples/uaz/small-thumbs-55x/02.jpg"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a class="horizontal-thumb" href="#slide3">
-                          <img
-                            class="lazy"
-                            alt=""
-                            src="../images/i-modelist-samples/uaz/small-thumbs-55x/03.jpg"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a class="horizontal-thumb" href="#slide4">
-                          <img
-                            class="lazy"
-                            alt=""
-                            src="../images/i-modelist-samples/uaz/small-thumbs-55x/04.jpg"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a class="horizontal-thumb" href="#slide5">
-                          <img
-                            class="lazy"
-                            alt=""
-                            src="../images/i-modelist-samples/uaz/small-thumbs-55x/05.jpg"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a class="horizontal-thumb" href="#slide6">
-                          <img
-                            class="lazy"
-                            alt=""
-                            src="../images/i-modelist-samples/uaz/small-thumbs-55x/06.jpg"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a class="horizontal-thumb" href="#slide7">
-                          <img
-                            class="lazy"
-                            alt=""
-                            src="../images/i-modelist-samples/uaz/small-thumbs-55x/07.jpg"
-                          />
-                        </a>
-                      </li>
-                    </ul>
+                  <div class="col-xs-12 col-md-6">
+                    <h2>Дополнительная информация</h2>
+                    <div class="table-form">
+                      <form>
+                        <div class="field-group">
+                          <label>Любые дополнительные сведения</label>
+                          <textarea
+                            class="le-input"
+                            rows="5"
+                            cols="30"
+                          ></textarea>
+                          <div class="caption">
+                            <strong>Примечание:</strong>
+                            <p>
+                              Nunc ut risus orci. Nam condimentum sagittis
+                              venenatis. Nullam non augue nulla. Ut eu lorem
+                              varius, fringilla lacus eget, hendrerit massa.
+                            </p>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div class="no-margin col-xs-12 col-sm-7 body-holder">
-                <div class="body">
-                  <div class="star-holder">
-                    <div class="star" data-score="3"></div>
-                  </div>
-                  <h3>
-                    3629 Звезда 1/35 ПРЕДЗАКАЗ Советский военный внедорожник
-                    УАЗ-469
-                  </h3>
-                  <div class="desc">
-                    <p>
-                      Друзья, встречайте военный отечественный внедорожник,
-                      который знает практически каждый - тот самый легендарный
-                      УАЗ-469 в масштабе 1/35 от легендарной "Звезды".
-                      Разумеется, в нашей фирменной прокачке с актуальными
-                      дополнениями и эксклюзивными спецпредложениями в рамках
-                      максимально выгодного upgrade-предзаказа.
-                    </p>
-                    <p>
-                      I. Каждый оформивший предзаказ на новую модель УАЗ-469 от
-                      фирмы "Звезда" в масштабе 1/35 получит в ПОДАРОК
-                      уникальный фирменный большой набор фототравления от фирмы
-                      "Микродизайн" (арт. 035530), включающий в себя
-                      дополнительную цветную плату с номерами, имитацией фар и
-                      элементами приборной панели, а так же фирменный набор
-                      окрасочных масок от "SX-Art"!
-                    </p>
-                    <p>
-                      II. При оформлении предзаказа каждый клиент получит купон
-                      на скидку 15% на следующую покупку (купон может быть
-                      использован единожды, срок действия 30 календарных дней);
-                    </p>
-                    <p>
-                      III. А так же при оформлении предзаказа на сайте будет
-                      действовать скидка в размере 30% на целый ряд топовых
-                      дополнений!
-                    </p>
-                    <p>
-                      Успейте воспользоваться предложением для Вашей
-                      максимальной выгоды! В этом предложении Вы найдете
-                      уникальный расширенный конверсионный набор для служебного
-                      УАЗ 3151,настоящий маст-хэв в виде корректировочного
-                      набора под военную версию внедорожника (колеса "Я-192" с
-                      запаской + военные мосты), несколько вариантов колес,
-                      капот с "жабрами", декаль на различные варианты служб,
-                      максимально реалистичную оптику от "Три А Студио",
-                      окрасочные маски, краски и многое - многое другое!
-                    </p>
-                    <p>
-                      Просто добавьте предзаказ в корзину и наблюдайте за
-                      преображением цен на дополнения!
-                    </p>
-                    <p>
-                      Цена модели составляет 2200 руб. Отправки подарочных
-                      наборов начнутся в течение 14 дней с момента старта
-                      предзаказа, а наборов с конверсиям – через 3-4 недели с
-                      момента старта предзаказа.
-                    </p>
-                    <p>
-                      *скидка не суммируется с личной скидкой, не действует на
-                      спецпредложения.
-                    </p>
-                    <p>
-                      **срок хранения предзаказа с момента выставления счета 14
-                      дней.
-                    </p>
-                  </div>
-                  <div class="price">
-                    <div class="price-current">
-                      <span class="currency">₽</span>145
-                    </div>
-                    <div class="price-old">
-                      <span class="currency">₽</span>250
-                    </div>
-                  </div>
-                  <div class="buttons-holder">
-                    <select
-                      class="variation-btn inline selectpicker capital"
-                      title="Size"
-                      data-width="70px"
-                      data-style="btn-inverse"
-                    >
-                      <option>39</option>
-                      <option>40</option>
-                      <option>41</option>
-                      <option>42</option>
-                      <option>43</option>
-                    </select>
-                    <div class="inline qnt-holder">
-                      <div class="le-quantity">
-                        <form>
-                          <a class="minus" href="#reduce"></a>
-                          <input
-                            name="quantity"
-                            readonly="readonly"
-                            type="text"
-                            value="1"
-                          />
-                          <a class="plus" href="#add"></a>
-                        </form>
-                      </div>
-                    </div>
-                    <div class="merged-buttons">
-                      <button class="btn-add-to-cart le-btn btn-iconic">
-                        Купить
-                      </button>
-                      <button class="btn-add-to-wishlist le-btn btn-iconic">
-                        Отложить
-                      </button>
-                    </div>
-                  </div>
-                  <div class="social-row">
-                    <span class="st_facebook_hcount"></span>
-                    <span class="st_twitter_hcount"></span>
-                    <span class="st_pinterest_hcount"></span>
-                  </div>
+                <div class="text-right button-holder">
+                  <a href="#" class="le-btn small">Разместить заказ</a>
                 </div>
               </div>
             </div>
-
-            <section class="section-review-comment">
-              <div class="tabbable tabs-left">
-                <div class="row">
-                  <div class="col-xs-12 col-sm-4 no-margin">
-                    <ul class="nav nav-tabs">
-                      <li class="active">
-                        <a href="#editor-review" data-toggle="tab"
-                          >Отзыв редактора</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#return" data-toggle="tab">Условия возврата</a>
-                      </li>
-                      <li>
-                        <a href="#description" data-toggle="tab">Описание</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-xs-12 col-sm-8 no-margin">
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                      <div class="tab-pane active" id="editor-review">
-                        <h3 class="inline">Высокое качество и комфорт</h3>
-                        <div class="star-holder pull-right">
-                          <div class="star" data-score="2"></div>
-                        </div>
-                        <hr />
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Pellentesque iaculis orci id tellus consequat
-                          facilisis. Phasellus dapibus nibh et erat aliquam,
-                          fermentum auctor risus ultrices. Maecenas lobortis
-                          elit sed tempus volutpat. Donec ultricies fringilla
-                          leo ac consequat.
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Pellentesque iaculis orci id tellus consequat
-                          facilisis. Phasellus dapibus nibh et erat aliquam,
-                          fermentum auctor risus ultrices. Maecenas lobortis
-                          elit sed tempus volutpat. Donec ultricies fringilla
-                          leo ac consequat.
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Pellentesque iaculis orci id tellus consequat
-                          facilisis. Phasellus dapibus nibh et erat aliquam,
-                          fermentum auctor risus ultrices. Maecenas lobortis
-                          elit sed tempus volutpat. Donec ultricies fringilla
-                          leo ac consequat.
-                        </p>
-                      </div>
-                      <div class="tab-pane" id="return">
-                        <h3>Условия возврата</h3>
-                        <hr />
-                        <p>
-                          Contrary to popular belief, Lorem Ipsum is not simply
-                          random text. It has roots in a piece of classical
-                          Latin literature from 45 BC, making it over 2000 years
-                          old. Richard McClintock, a Latin professor at
-                          Hampden-Sydney College in Virginia, looked up one of
-                          the more obscure Latin words, consectetur, from a
-                          Lorem Ipsum passage, and going through the cites of
-                          the word in classical literature, discovered the
-                          undoubtable source. Lorem Ipsum comes from sections
-                          1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
-                          (The Extremes of Good and Evil) by Cicero, written in
-                          45 BC. This book is a treatise on the theory of
-                          ethics, very popular during the Renaissance. The first
-                          line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
-                          comes from a line in section 1.10.32.
-                        </p>
-                      </div>
-                      <div class="tab-pane" id="description">
-                        <h3>Описание</h3>
-                        <hr />
-                        <p>
-                          It is a long established fact that a reader will be
-                          distracted by the readable content of a page when
-                          looking at its layout. The point of using Lorem Ipsum
-                          is that it has a more-or-less normal distribution of
-                          letters, as opposed to using 'Content here, content
-                          here', making it look like readable English. Many
-                          desktop publishing packages and web page editors now
-                          use Lorem Ipsum as their default model text, and a
-                          search for 'lorem ipsum' will uncover many web sites
-                          still in their infancy. Various versions have evolved
-                          over the years, sometimes by accident, sometimes on
-                          purpose (injected humour and the like).
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Interdum et malesuada fames ac ante ipsum primis
-                          in faucibus. Duis blandit interdum velit id viverra.
-                          Nunc sed dictum diam, sed interdum elit. Quisque quis
-                          dui id nulla malesuada viverra id in ante. Suspendisse
-                          potenti. Cras a purus id leo molestie pulvinar.
-                          Curabitur nec neque enim. Integer ornare sagittis diam
-                          a aliquam. Donec nec lorem lectus.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <div class="box sidebar">
+              <div class="widget simple-widget">
+                <div class="icon-holder small">
+                  <i class="fa fa-dollar"></i>
+                  <span class="triangle"></span>
+                </div>
+                <h2>Условия возврата</h2>
+                <div class="body">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    sed elementum nisl. In hac habitasse platea dictumst. Donec
+                    aliquet dolor in libero euismod, ac dapibus turpis euismod.
+                    Phasellus ac risus turpis. Duis quis ultricies nisi. Lorem
+                    ipsum dolor sit amet
+                  </p>
+                  <ul class="normal-ul">
+                    <li>Proin ut pharetra turpis</li>
+                    <li>Consectetur adipiscing elit</li>
+                    <li>Sed sed elementum nisl</li>
+                  </ul>
+                  <p>
+                    Nunc ut risus orci. Nam condimentum sagittis venenatis.
+                    Nullam non augue nulla. Ut eu lorem varius, fringilla lacus
+                    eget, hendrerit massa
+                  </p>
                 </div>
               </div>
-            </section>
-
-            <!-- disqus_thread- - >
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'marqet'; // required: replace example with your forum shortname
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      <! - - END disqus_thread-->
+            </div>
           </div>
         </div>
       </section>

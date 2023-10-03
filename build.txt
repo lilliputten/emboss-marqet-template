@@ -1,6 +1,6 @@
 Project: emboss-studio-site
 Version: 0.0.4
-Branch: dev-231001-issue-5-catalogue-pages
-Commit: 51c6bc0
-Fixed: 2023.10.02, 19:49 GMT+3
-Built: 2023.10.02, 19:57 GMT+3
+Branch: dev-231003-issue-6-internal-pages
+Commit: 07bd2ca
+Fixed: 2023.10.03, 12:55 GMT+3
+Built: 2023.10.03, 12:56 GMT+3

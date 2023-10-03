@@ -49,12 +49,12 @@
     <link rel="stylesheet" href="../css/page.css" />
 
     <meta property="og:site_name" content="Название сайта" />
-    <meta property="og:title" content="Продукт" />
+    <meta property="og:title" content="Оформление" />
     <meta property="og:description" content="Описание сайта" />
-    <meta property="og:url" content="/single-product/" />
+    <meta property="og:url" content="/checkout/" />
     <meta name="twitter:card" content="summary" />
     <meta name="theme-color" content="#ffffff" />
-    <title>Продукт</title>
+    <title>Оформление</title>
   </head>
   <body
     class="font-sans text-gray-800 bg-gray-100 noscript"
@@ -114,13 +114,13 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a href="/single-product/" rel="alternate" hreflang="ru"
+                    <a href="/checkout/" rel="alternate" hreflang="ru"
                       >Русский</a
                     >
                   </li>
 
                   <li>
-                    <a href="/en/single-product/" rel="alternate" hreflang="en"
+                    <a href="/en/checkout/" rel="alternate" hreflang="en"
                       >English</a
                     >
                   </li>
@@ -457,10 +457,7 @@
                   <li>
                     <a href="/"> Домашняя страница </a>
                   </li>
-                  <li>
-                    <a href="/products"> Продукция </a>
-                  </li>
-                  <li class="active">Таблица продуктов</li>
+                  <li class="active">Оформить</li>
                 </ul>
               </div>
             </div>
@@ -468,417 +465,381 @@
         </div>
       </section>
 
-      <section id="single-product-wide" class="page-holder full-width">
-        <div class="container">
-          <div class="col-xs-12">
-            <div id="single-product" class="row">
-              <div class="no-margin col-xs-12 col-sm-5 gallery-holder">
-                <div
-                  class="product-item-holder size-big single-product-gallery small-gallery"
-                >
-                  <div class="icon-holder small">
-                    <i class="fa fa-search-plus"></i>
-                    <span class="triangle"></span>
+      <section id="checkout" class="page-holder">
+        <div class="container no-padding">
+          <div class="col-xs-12 col-md-8">
+            <div class="box">
+              <div class="icon-holder small badge-style">
+                <i class="fa fa-check-circle-o"></i>
+                <span class="triangle"></span>
+              </div>
+              <div class="box-holder">
+                <h2>Информация о доставке</h2>
+                <div class="table-form">
+                  <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                      <div class="field-group">
+                        <label>Выберите страну</label>
+                        <select
+                          class="variation-btn inline selectpicker"
+                          data-width="100%"
+                          data-style="le-btn no-shadow"
+                        >
+                          <option value="AFG">Afghanistan</option>
+                          <option value="ALA">Åland Islands</option>
+                          <option value="ALB">Albania</option>
+                          <option value="DZA">Algeria</option>
+                          <option value="ASM">American Samoa</option>
+                          <option value="AND">Andorra</option>
+                          <option value="AGO">Angola</option>
+                          <option value="AIA">Anguilla</option>
+                          <option value="ATA">Antarctica</option>
+                          <option value="ATG">Antigua and Barbuda</option>
+                          <option value="ARG">Argentina</option>
+                          <option value="ARM">Armenia</option>
+                          <option value="ABW">Aruba</option>
+                          <option value="AUS">Australia</option>
+                          <option value="AUT">Austria</option>
+                          <option value="AZE">Azerbaijan</option>
+                          <option value="BHS">Bahamas</option>
+                          <option value="BHR">Bahrain</option>
+                          <option value="BGD">Bangladesh</option>
+                          <option value="BRB">Barbados</option>
+                          <option value="BLR">Belarus</option>
+                          <option value="BEL">Belgium</option>
+                          <option value="BLZ">Belize</option>
+                          <option value="BEN">Benin</option>
+                          <option value="BMU">Bermuda</option>
+                          <option value="BTN">Bhutan</option>
+                          <option value="BOL">Bolivia</option>
+                          <option value="BES">Bonaire</option>
+                          <option value="BWA">Botswana</option>
+                          <option value="BVT">Bouvet Island</option>
+                          <option value="BRA">Brazil</option>
+                          <option value="BRN">Brunei Darussalam</option>
+                          <option value="BGR">Bulgaria</option>
+                          <option value="BFA">Burkina Faso</option>
+                          <option value="BDI">Burundi</option>
+                          <option value="KHM">Cambodia</option>
+                          <option value="CMR">Cameroon</option>
+                          <option value="CAN">Canada</option>
+                          <option value="CPV">Cape Verde</option>
+                          <option value="CYM">Cayman Islands</option>
+                          <option value="TCD">Chad</option>
+                          <option value="CHL">Chile</option>
+                          <option value="CHN">China</option>
+                          <option value="CXR">Christmas Island</option>
+                          <option value="COL">Colombia</option>
+                          <option value="COM">Comoros</option>
+                          <option value="COG">Congo</option>
+                          <option value="COK">Cook Islands</option>
+                          <option value="CRI">Costa Rica</option>
+                          <option value="CIV">Côte d'Ivoire</option>
+                          <option value="HRV">Croatia</option>
+                          <option value="CUB">Cuba</option>
+                          <option value="CUW">Curaçao</option>
+                          <option value="CYP">Cyprus</option>
+                          <option value="CZE">Czech Republic</option>
+                          <option value="DNK">Denmark</option>
+                          <option value="DJI">Djibouti</option>
+                          <option value="DMA">Dominica</option>
+                          <option value="DOM">Dominican Republic</option>
+                          <option value="ECU">Ecuador</option>
+                          <option value="EGY">Egypt</option>
+                          <option value="SLV">El Salvador</option>
+                          <option value="GNQ">Equatorial Guinea</option>
+                          <option value="ERI">Eritrea</option>
+                          <option value="EST">Estonia</option>
+                          <option value="ETH">Ethiopia</option>
+                          <option value="FRO">Faroe Islands</option>
+                          <option value="FJI">Fiji</option>
+                          <option value="FIN">Finland</option>
+                          <option value="FRA">France</option>
+                          <option value="GUF">French Guiana</option>
+                          <option value="PYF">French Polynesia</option>
+                          <option value="GAB">Gabon</option>
+                          <option value="GMB">Gambia</option>
+                          <option value="GEO">Georgia</option>
+                          <option value="DEU">Germany</option>
+                          <option value="GHA">Ghana</option>
+                          <option value="GIB">Gibraltar</option>
+                          <option value="GRC">Greece</option>
+                          <option value="GRL">Greenland</option>
+                          <option value="GRD">Grenada</option>
+                          <option value="GLP">Guadeloupe</option>
+                          <option value="GUM">Guam</option>
+                          <option value="GTM">Guatemala</option>
+                          <option value="GGY">Guernsey</option>
+                          <option value="GIN">Guinea</option>
+                          <option value="GNB">Guinea-Bissau</option>
+                          <option value="GUY">Guyana</option>
+                          <option value="HTI">Haiti</option>
+                          <option value="HND">Honduras</option>
+                          <option value="HKG">Hong Kong</option>
+                          <option value="HUN">Hungary</option>
+                          <option value="ISL">Iceland</option>
+                          <option value="IND">India</option>
+                          <option value="IDN">Indonesia</option>
+                          <option value="IRN">Iran</option>
+                          <option value="IRQ">Iraq</option>
+                          <option value="IRL">Ireland</option>
+                          <option value="IMN">Isle of Man</option>
+                          <option value="ISR">Israel</option>
+                          <option value="ITA">Italy</option>
+                          <option value="JAM">Jamaica</option>
+                          <option value="JPN">Japan</option>
+                          <option value="JEY">Jersey</option>
+                          <option value="JOR">Jordan</option>
+                          <option value="KAZ">Kazakhstan</option>
+                          <option value="KEN">Kenya</option>
+                          <option value="KIR">Kiribati</option>
+                          <option value="KOR">Korea, Republic of</option>
+                          <option value="KWT">Kuwait</option>
+                          <option value="KGZ">Kyrgyzstan</option>
+                          <option value="LVA">Latvia</option>
+                          <option value="LBN">Lebanon</option>
+                          <option value="LSO">Lesotho</option>
+                          <option value="LBR">Liberia</option>
+                          <option value="LBY">Libya</option>
+                          <option value="LIE">Liechtenstein</option>
+                          <option value="LTU">Lithuania</option>
+                          <option value="LUX">Luxembourg</option>
+                          <option value="MAC">Macao</option>
+                          <option value="MKD">Macedonia</option>
+                          <option value="MDG">Madagascar</option>
+                          <option value="MWI">Malawi</option>
+                          <option value="MYS">Malaysia</option>
+                          <option value="MDV">Maldives</option>
+                          <option value="MLI">Mali</option>
+                          <option value="MLT">Malta</option>
+                          <option value="MHL">Marshall Islands</option>
+                          <option value="MTQ">Martinique</option>
+                          <option value="MRT">Mauritania</option>
+                          <option value="MUS">Mauritius</option>
+                          <option value="MYT">Mayotte</option>
+                          <option value="MEX">Mexico</option>
+                          <option value="FSM">Micronesia</option>
+                          <option value="MDA">Moldova</option>
+                          <option value="MCO">Monaco</option>
+                          <option value="MNG">Mongolia</option>
+                          <option value="MNE">Montenegro</option>
+                          <option value="MSR">Montserrat</option>
+                          <option value="MAR">Morocco</option>
+                          <option value="MOZ">Mozambique</option>
+                          <option value="MMR">Myanmar</option>
+                          <option value="NAM">Namibia</option>
+                          <option value="NRU">Nauru</option>
+                          <option value="NPL">Nepal</option>
+                          <option value="NLD">Netherlands</option>
+                          <option value="NCL">New Caledonia</option>
+                          <option value="NZL">New Zealand</option>
+                          <option value="NIC">Nicaragua</option>
+                          <option value="NER">Niger</option>
+                          <option value="NGA">Nigeria</option>
+                          <option value="NIU">Niue</option>
+                          <option value="NFK">Norfolk Island</option>
+                          <option value="NOR">Norway</option>
+                          <option value="OMN">Oman</option>
+                          <option value="PAK">Pakistan</option>
+                          <option value="PLW">Palau</option>
+                          <option value="PAN">Panama</option>
+                          <option value="PNG">Papua New Guinea</option>
+                          <option value="PRY">Paraguay</option>
+                          <option value="PER">Peru</option>
+                          <option value="PHL">Philippines</option>
+                          <option value="PCN">Pitcairn</option>
+                          <option value="POL">Poland</option>
+                          <option value="PRT">Portugal</option>
+                          <option value="PRI">Puerto Rico</option>
+                          <option value="QAT">Qatar</option>
+                          <option value="REU">Réunion</option>
+                          <option value="ROU">Romania</option>
+                          <option value="RUS">Russian Federation</option>
+                          <option value="RWA">Rwanda</option>
+                          <option value="WSM">Samoa</option>
+                          <option value="SMR">San Marino</option>
+                          <option value="STP">Sao Tome and Principe</option>
+                          <option value="SAU">Saudi Arabia</option>
+                          <option value="SEN">Senegal</option>
+                          <option value="SRB">Serbia</option>
+                          <option value="SYC">Seychelles</option>
+                          <option value="SLE">Sierra Leone</option>
+                          <option value="SGP">Singapore</option>
+                          <option value="SVK">Slovakia</option>
+                          <option value="SVN">Slovenia</option>
+                          <option value="SLB">Solomon Islands</option>
+                          <option value="SOM">Somalia</option>
+                          <option value="ZAF">South Africa</option>
+                          <option value="SSD">South Sudan</option>
+                          <option value="ESP">Spain</option>
+                          <option value="LKA">Sri Lanka</option>
+                          <option value="SDN">Sudan</option>
+                          <option value="SUR">Suriname</option>
+                          <option value="SJM">Svalbard and Jan Mayen</option>
+                          <option value="SWZ">Swaziland</option>
+                          <option value="SWE">Sweden</option>
+                          <option value="CHE">Switzerland</option>
+                          <option value="SYR">Syrian Arab Republic</option>
+                          <option value="TWN">Taiwan</option>
+                          <option value="TJK">Tajikistan</option>
+                          <option value="TZA">Tanzania</option>
+                          <option value="THA">Thailand</option>
+                          <option value="TLS">Timor-Leste</option>
+                          <option value="TGO">Togo</option>
+                          <option value="TKL">Tokelau</option>
+                          <option value="TON">Tonga</option>
+                          <option value="TUN">Tunisia</option>
+                          <option value="TUR">Turkey</option>
+                          <option value="TKM">Turkmenistan</option>
+                          <option value="TUV">Tuvalu</option>
+                          <option value="UGA">Uganda</option>
+                          <option value="UKR">Ukraine</option>
+                          <option value="ARE">United Arab Emirates</option>
+                          <option value="GBR">United Kingdom</option>
+                          <option value="USA">United States</option>
+                          <option value="URY">Uruguay</option>
+                          <option value="UZB">Uzbekistan</option>
+                          <option value="VUT">Vanuatu</option>
+                          <option value="VNM">Viet Nam</option>
+                          <option value="VGB">Virgin Islands, British</option>
+                          <option value="VIR">Virgin Islands, U.S.</option>
+                          <option value="WLF">Wallis and Futuna</option>
+                          <option value="ESH">Western Sahara</option>
+                          <option value="YEM">Yemen</option>
+                          <option value="ZMB">Zambia</option>
+                          <option value="ZWE">Zimbabwe</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                      <div class="field-group">
+                        <label>Адрес 1</label>
+                        <input
+                          type="text"
+                          class="le-input"
+                          data-placeholder="Адресная строка 1"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                      <div class="field-group">
+                        <label>Адрес 2</label>
+                        <input
+                          type="text"
+                          class="le-input"
+                          data-placeholder="Адресная строка 2"
+                        />
+                      </div>
+                    </div>
                   </div>
-
-                  <div class="single-product-slider">
-                    <div class="single-product-gallery-item" id="slide1">
-                      <a
-                        data-rel="prettyphoto"
-                        href="/images/i-modelist-samples/uaz/large/01.jpg"
-                      >
-                        <img
-                          class="lazy"
-                          alt=""
-                          src="../images/i-modelist-samples/uaz/medium/01.jpg"
-                        />
-                      </a>
+                  <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                      <div class="field-group">
+                        <label>Тип доставки</label>
+                        <select
+                          class="variation-btn inline selectpicker"
+                          data-width="100%"
+                          data-style="btn-inverse"
+                        >
+                          <option value="express">Экспресс</option>
+                          <option value="standard">Стандартный</option>
+                        </select>
+                      </div>
                     </div>
-                    <div class="single-product-gallery-item" id="slide2">
-                      <a
-                        data-rel="prettyphoto"
-                        href="/images/i-modelist-samples/uaz/large/02.jpg"
-                      >
-                        <img
-                          class="lazy"
-                          alt=""
-                          src="../images/i-modelist-samples/uaz/medium/02.jpg"
+                    <div class="col-xs-12 col-md-4">
+                      <div class="field-group">
+                        <label>Телефон</label>
+                        <input
+                          type="text"
+                          class="le-input"
+                          data-placeholder="Пример:  +1 123 456 7890"
                         />
-                      </a>
+                      </div>
                     </div>
-                    <div class="single-product-gallery-item" id="slide3">
-                      <a
-                        data-rel="prettyphoto"
-                        href="/images/i-modelist-samples/uaz/large/03.jpg"
-                      >
-                        <img
-                          class="lazy"
-                          alt=""
-                          src="../images/i-modelist-samples/uaz/medium/03.jpg"
+                    <div class="col-xs-12 col-md-4">
+                      <div class="field-group">
+                        <label>Почтовый индекс</label>
+                        <input
+                          type="text"
+                          class="le-input"
+                          data-placeholder="Пример: 33461"
                         />
-                      </a>
+                      </div>
                     </div>
-                    <div class="single-product-gallery-item" id="slide4">
-                      <a
-                        data-rel="prettyphoto"
-                        href="/images/i-modelist-samples/uaz/large/04.jpg"
-                      >
-                        <img
-                          class="lazy"
-                          alt=""
-                          src="../images/i-modelist-samples/uaz/medium/04.jpg"
-                        />
-                      </a>
-                    </div>
-                    <div class="single-product-gallery-item" id="slide5">
-                      <a
-                        data-rel="prettyphoto"
-                        href="/images/i-modelist-samples/uaz/large/05.jpg"
-                      >
-                        <img
-                          class="lazy"
-                          alt=""
-                          src="../images/i-modelist-samples/uaz/medium/05.jpg"
-                        />
-                      </a>
-                    </div>
-                    <div class="single-product-gallery-item" id="slide6">
-                      <a
-                        data-rel="prettyphoto"
-                        href="/images/i-modelist-samples/uaz/large/06.jpg"
-                      >
-                        <img
-                          class="lazy"
-                          alt=""
-                          src="../images/i-modelist-samples/uaz/medium/06.jpg"
-                        />
-                      </a>
-                    </div>
-                    <div class="single-product-gallery-item" id="slide7">
-                      <a
-                        data-rel="prettyphoto"
-                        href="/images/i-modelist-samples/uaz/large/07.jpg"
-                      >
-                        <img
-                          class="lazy"
-                          alt=""
-                          src="../images/i-modelist-samples/uaz/medium/07.jpg"
-                        />
-                      </a>
-                    </div>
-                  </div>
-
-                  <div class="gallery-thumbs">
-                    <ul>
-                      <li class="active">
-                        <a class="horizontal-thumb" href="#slide1">
-                          <img
-                            class="lazy"
-                            alt=""
-                            src="../images/i-modelist-samples/uaz/small-thumbs-55x/01.jpg"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a class="horizontal-thumb" href="#slide2">
-                          <img
-                            class="lazy"
-                            alt=""
-                            src="../images/i-modelist-samples/uaz/small-thumbs-55x/02.jpg"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a class="horizontal-thumb" href="#slide3">
-                          <img
-                            class="lazy"
-                            alt=""
-                            src="../images/i-modelist-samples/uaz/small-thumbs-55x/03.jpg"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a class="horizontal-thumb" href="#slide4">
-                          <img
-                            class="lazy"
-                            alt=""
-                            src="../images/i-modelist-samples/uaz/small-thumbs-55x/04.jpg"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a class="horizontal-thumb" href="#slide5">
-                          <img
-                            class="lazy"
-                            alt=""
-                            src="../images/i-modelist-samples/uaz/small-thumbs-55x/05.jpg"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a class="horizontal-thumb" href="#slide6">
-                          <img
-                            class="lazy"
-                            alt=""
-                            src="../images/i-modelist-samples/uaz/small-thumbs-55x/06.jpg"
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a class="horizontal-thumb" href="#slide7">
-                          <img
-                            class="lazy"
-                            alt=""
-                            src="../images/i-modelist-samples/uaz/small-thumbs-55x/07.jpg"
-                          />
-                        </a>
-                      </li>
-                    </ul>
                   </div>
                 </div>
               </div>
-
-              <div class="no-margin col-xs-12 col-sm-7 body-holder">
-                <div class="body">
-                  <div class="star-holder">
-                    <div class="star" data-score="3"></div>
-                  </div>
-                  <h3>
-                    3629 Звезда 1/35 ПРЕДЗАКАЗ Советский военный внедорожник
-                    УАЗ-469
-                  </h3>
-                  <div class="desc">
-                    <p>
-                      Друзья, встречайте военный отечественный внедорожник,
-                      который знает практически каждый - тот самый легендарный
-                      УАЗ-469 в масштабе 1/35 от легендарной "Звезды".
-                      Разумеется, в нашей фирменной прокачке с актуальными
-                      дополнениями и эксклюзивными спецпредложениями в рамках
-                      максимально выгодного upgrade-предзаказа.
-                    </p>
-                    <p>
-                      I. Каждый оформивший предзаказ на новую модель УАЗ-469 от
-                      фирмы "Звезда" в масштабе 1/35 получит в ПОДАРОК
-                      уникальный фирменный большой набор фототравления от фирмы
-                      "Микродизайн" (арт. 035530), включающий в себя
-                      дополнительную цветную плату с номерами, имитацией фар и
-                      элементами приборной панели, а так же фирменный набор
-                      окрасочных масок от "SX-Art"!
-                    </p>
-                    <p>
-                      II. При оформлении предзаказа каждый клиент получит купон
-                      на скидку 15% на следующую покупку (купон может быть
-                      использован единожды, срок действия 30 календарных дней);
-                    </p>
-                    <p>
-                      III. А так же при оформлении предзаказа на сайте будет
-                      действовать скидка в размере 30% на целый ряд топовых
-                      дополнений!
-                    </p>
-                    <p>
-                      Успейте воспользоваться предложением для Вашей
-                      максимальной выгоды! В этом предложении Вы найдете
-                      уникальный расширенный конверсионный набор для служебного
-                      УАЗ 3151,настоящий маст-хэв в виде корректировочного
-                      набора под военную версию внедорожника (колеса "Я-192" с
-                      запаской + военные мосты), несколько вариантов колес,
-                      капот с "жабрами", декаль на различные варианты служб,
-                      максимально реалистичную оптику от "Три А Студио",
-                      окрасочные маски, краски и многое - многое другое!
-                    </p>
-                    <p>
-                      Просто добавьте предзаказ в корзину и наблюдайте за
-                      преображением цен на дополнения!
-                    </p>
-                    <p>
-                      Цена модели составляет 2200 руб. Отправки подарочных
-                      наборов начнутся в течение 14 дней с момента старта
-                      предзаказа, а наборов с конверсиям – через 3-4 недели с
-                      момента старта предзаказа.
-                    </p>
-                    <p>
-                      *скидка не суммируется с личной скидкой, не действует на
-                      спецпредложения.
-                    </p>
-                    <p>
-                      **срок хранения предзаказа с момента выставления счета 14
-                      дней.
-                    </p>
-                  </div>
-                  <div class="price">
-                    <div class="price-current">
-                      <span class="currency">₽</span>145
-                    </div>
-                    <div class="price-old">
-                      <span class="currency">₽</span>250
-                    </div>
-                  </div>
-                  <div class="buttons-holder">
-                    <select
-                      class="variation-btn inline selectpicker capital"
-                      title="Size"
-                      data-width="70px"
-                      data-style="btn-inverse"
-                    >
-                      <option>39</option>
-                      <option>40</option>
-                      <option>41</option>
-                      <option>42</option>
-                      <option>43</option>
-                    </select>
-                    <div class="inline qnt-holder">
-                      <div class="le-quantity">
-                        <form>
-                          <a class="minus" href="#reduce"></a>
-                          <input
-                            name="quantity"
-                            readonly="readonly"
-                            type="text"
-                            value="1"
-                          />
-                          <a class="plus" href="#add"></a>
-                        </form>
+              <div class="box-holder">
+                <h2>Контактная информация</h2>
+                <div class="table-form">
+                  <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                      <div class="field-group">
+                        <input
+                          type="text"
+                          class="le-input"
+                          data-placeholder="Полное имя"
+                        />
                       </div>
                     </div>
-                    <div class="merged-buttons">
-                      <button class="btn-add-to-cart le-btn btn-iconic">
-                        Купить
-                      </button>
-                      <button class="btn-add-to-wishlist le-btn btn-iconic">
-                        Отложить
-                      </button>
+                    <div class="col-xs-12 col-md-4">
+                      <div class="field-group">
+                        <input
+                          type="text"
+                          class="le-input"
+                          data-placeholder="Email"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                      <div class="field-group">
+                        <input
+                          type="text"
+                          class="le-input"
+                          data-placeholder="Телефон"
+                        />
+                      </div>
                     </div>
                   </div>
-                  <div class="social-row">
-                    <span class="st_facebook_hcount"></span>
-                    <span class="st_twitter_hcount"></span>
-                    <span class="st_pinterest_hcount"></span>
+                  <div class="merged-buttons">
+                    <a href="/shopping-cart" class="le-btn small"
+                      >Вернуться в корзину</a
+                    >
+                    <a href="/payment" class="le-btn small">Платеж</a>
                   </div>
                 </div>
               </div>
             </div>
-
-            <section class="section-review-comment">
-              <div class="tabbable tabs-left">
-                <div class="row">
-                  <div class="col-xs-12 col-sm-4 no-margin">
-                    <ul class="nav nav-tabs">
-                      <li class="active">
-                        <a href="#editor-review" data-toggle="tab"
-                          >Отзыв редактора</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#return" data-toggle="tab">Условия возврата</a>
-                      </li>
-                      <li>
-                        <a href="#description" data-toggle="tab">Описание</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-xs-12 col-sm-8 no-margin">
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                      <div class="tab-pane active" id="editor-review">
-                        <h3 class="inline">Высокое качество и комфорт</h3>
-                        <div class="star-holder pull-right">
-                          <div class="star" data-score="2"></div>
-                        </div>
-                        <hr />
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Pellentesque iaculis orci id tellus consequat
-                          facilisis. Phasellus dapibus nibh et erat aliquam,
-                          fermentum auctor risus ultrices. Maecenas lobortis
-                          elit sed tempus volutpat. Donec ultricies fringilla
-                          leo ac consequat.
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Pellentesque iaculis orci id tellus consequat
-                          facilisis. Phasellus dapibus nibh et erat aliquam,
-                          fermentum auctor risus ultrices. Maecenas lobortis
-                          elit sed tempus volutpat. Donec ultricies fringilla
-                          leo ac consequat.
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Pellentesque iaculis orci id tellus consequat
-                          facilisis. Phasellus dapibus nibh et erat aliquam,
-                          fermentum auctor risus ultrices. Maecenas lobortis
-                          elit sed tempus volutpat. Donec ultricies fringilla
-                          leo ac consequat.
-                        </p>
-                      </div>
-                      <div class="tab-pane" id="return">
-                        <h3>Условия возврата</h3>
-                        <hr />
-                        <p>
-                          Contrary to popular belief, Lorem Ipsum is not simply
-                          random text. It has roots in a piece of classical
-                          Latin literature from 45 BC, making it over 2000 years
-                          old. Richard McClintock, a Latin professor at
-                          Hampden-Sydney College in Virginia, looked up one of
-                          the more obscure Latin words, consectetur, from a
-                          Lorem Ipsum passage, and going through the cites of
-                          the word in classical literature, discovered the
-                          undoubtable source. Lorem Ipsum comes from sections
-                          1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
-                          (The Extremes of Good and Evil) by Cicero, written in
-                          45 BC. This book is a treatise on the theory of
-                          ethics, very popular during the Renaissance. The first
-                          line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
-                          comes from a line in section 1.10.32.
-                        </p>
-                      </div>
-                      <div class="tab-pane" id="description">
-                        <h3>Описание</h3>
-                        <hr />
-                        <p>
-                          It is a long established fact that a reader will be
-                          distracted by the readable content of a page when
-                          looking at its layout. The point of using Lorem Ipsum
-                          is that it has a more-or-less normal distribution of
-                          letters, as opposed to using 'Content here, content
-                          here', making it look like readable English. Many
-                          desktop publishing packages and web page editors now
-                          use Lorem Ipsum as their default model text, and a
-                          search for 'lorem ipsum' will uncover many web sites
-                          still in their infancy. Various versions have evolved
-                          over the years, sometimes by accident, sometimes on
-                          purpose (injected humour and the like).
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Interdum et malesuada fames ac ante ipsum primis
-                          in faucibus. Duis blandit interdum velit id viverra.
-                          Nunc sed dictum diam, sed interdum elit. Quisque quis
-                          dui id nulla malesuada viverra id in ante. Suspendisse
-                          potenti. Cras a purus id leo molestie pulvinar.
-                          Curabitur nec neque enim. Integer ornare sagittis diam
-                          a aliquam. Donec nec lorem lectus.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <div class="box sidebar">
+              <div class="widget simple-widget">
+                <div class="icon-holder small">
+                  <i class="fa fa-dollar"></i>
+                  <span class="triangle"></span>
+                </div>
+                <h2>Условия возврата</h2>
+                <div class="body">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    sed elementum nisl. In hac habitasse platea dictumst. Donec
+                    aliquet dolor in libero euismod, ac dapibus turpis euismod.
+                    Phasellus ac risus turpis. Duis quis ultricies nisi. Lorem
+                    ipsum dolor sit amet
+                  </p>
+                  <ul class="normal-ul">
+                    <li>Proin ut pharetra turpis</li>
+                    <li>Consectetur adipiscing elit</li>
+                    <li>Sed sed elementum nisl</li>
+                  </ul>
+                  <p>
+                    Nunc ut risus orci. Nam condimentum sagittis venenatis.
+                    Nullam non augue nulla. Ut eu lorem varius, fringilla lacus
+                    eget, hendrerit massa
+                  </p>
                 </div>
               </div>
-            </section>
-
-            <!-- disqus_thread- - >
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'marqet'; // required: replace example with your forum shortname
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      <! - - END disqus_thread-->
+            </div>
           </div>
         </div>
       </section>
