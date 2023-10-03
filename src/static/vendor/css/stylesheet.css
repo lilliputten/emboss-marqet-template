@@ -8833,7 +8833,7 @@ header .link-list {
 }
 .field-group label {
   display: block;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   font-size: 14px;
   font-weight: 100!important;
   margin: 5px 0;

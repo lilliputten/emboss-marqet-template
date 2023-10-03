@@ -1,0 +1,124 @@
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+
+<section id="payment" class="page-holder">
+  <div class="container no-padding">
+    <div class="col-xs-12 col-md-8">
+      <div class="box">
+        <div class="icon-holder small badge-style">
+          <i class="fa fa-dollar"></i>
+          <span class="triangle"></span>
+        </div>
+        <div class="box-holder">
+          <div class="row">
+            <div class="col-xs-12 col-md-6">
+              <h2>{{ 'payment.paymentInfo' | i18n }}</h2>
+              <div class="table-form">
+                <form>
+                  <div class="field-group">
+                    <label>{{ 'payment.creditCardNumber' | i18n }}</label>
+                    <input type="text" class="le-input" data-placeholder="xxxx xxxx xxxx xxxx">
+                  </div>
+                  <div class="field-group">
+                    <label>{{ 'payment.cardholderFullName' | i18n }}</label>
+                    <input type="text" class="le-input" data-placeholder="{{ 'payment.sampleName' | i18n }}">
+                  </div>
+                  <div class="field-group">
+                    <label>{{ 'payment.expire' | i18n }}</label>
+                    <select class="variation-btn inline selectpicker" data-width="49%"
+                      data-style="le-btn no-shadow">
+                      <option value="">{{ 'payment.month' | i18n }}</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                    <select class="variation-btn inline selectpicker" data-width="49%"
+                      data-style=" le-btn no-shadow">
+                      <option value="">{{ 'payment.year' | i18n }}</option>
+                      <option value="2023">2023</option>
+                      <option value="2024">2024</option>
+                      <option value="2025">2025</option>
+                      <option value="2026">2026</option>
+                      <option value="2027">2027</option>
+                      <option value="2028">2028</option>
+                      <option value="2029">2029</option>
+                      <option value="2030">2030</option>
+                      <option value="2031">2031</option>
+                      <option value="2032">2032</option>
+                      <option value="2033">2033</option>
+                      <option value="2034">2034</option>
+                      <option value="2035">2035</option>
+                      <option value="2036">2036</option>
+                      <option value="2037">2037</option>
+                      <option value="2038">2038</option>
+                      <option value="2039">2039</option>
+                    </select>
+                  </div>
+                  <div class="field-group">
+                    <label>{{ 'payment.ccv' | i18n }}</label>
+                    <input type="text" class="le-input col-xs-2" data-placeholder="000">
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <h2>{{ 'payment.moreInfo' | i18n }}</h2>
+              <div class="table-form">
+                <form>
+                  <div class="field-group">
+                    <label>{{ 'payment.anyNoteToUs' | i18n }}</label>
+                    <textarea class="le-input" rows="5" cols="30"></textarea>
+                    <div class="caption"><strong>{{ 'payment.note' | i18n }}:</strong>
+                      <p>
+                        Nunc ut risus orci. Nam condimentum sagittis venenatis. Nullam non augue nulla. Ut eu lorem
+                        varius, fringilla lacus eget, hendrerit massa.
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="text-right button-holder">
+            <a href="#" class="le-btn small">{{ 'payment.placeOrder' | i18n }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="box sidebar">
+        <div class="widget simple-widget">
+          <div class="icon-holder small">
+            <i class="fa fa-dollar"></i>
+            <span class="triangle"></span>
+          </div>
+          <h2>{{ 'payment.returnPolicy' | i18n }}</h2>
+          <div class="body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed elementum nisl. In hac habitasse platea
+              dictumst. Donec aliquet dolor in libero euismod, ac dapibus turpis euismod. Phasellus ac risus turpis.
+              Duis quis ultricies nisi. Lorem ipsum dolor sit amet
+            </p>
+            <ul class="normal-ul">
+              <li>Proin ut pharetra turpis</li>
+              <li>Consectetur adipiscing elit</li>
+              <li>Sed sed elementum nisl</li>
+            </ul>
+            <p>
+              Nunc ut risus orci. Nam condimentum sagittis venenatis. Nullam non augue nulla. Ut eu lorem varius,
+              fringilla lacus eget, hendrerit massa
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
