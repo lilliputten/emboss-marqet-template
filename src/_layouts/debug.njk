@@ -1,0 +1,21 @@
+---
+layout: base.njk
+---
+
+<main>
+  {# // DEBUG
+  {% set pageUrl = page.url %}
+  {% set purePageUrl = page.url.substring(lang.length + 1) if page.url.startsWith('/' + lang) else page.url %}
+  <pre>
+  pageUrl="{{ pageUrl }}"
+  purePageUrl="{{ purePageUrl }}"
+  langNames="{{ langNames[lang] }}"
+  langCodes="{{ langCodes }}"
+  defaultLang="{{ defaultLang }}"
+  locale="{{ locale }}"
+  lang="{{ lang }}"
+  {{ 'hello' | i18n }}
+  </pre>
+  #}
+  {{ content | safe }}
+</main>

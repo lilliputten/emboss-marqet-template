@@ -1,8 +1,6 @@
 .product-item {
-  overflow: hidden;
   div.body {
     padding: 15px;
-    overflow: hidden;
     .excerpt,
     h3 {
       overflow: hidden;
@@ -18,19 +16,25 @@
     align-items: center;
     align-content: center;
   }
-  /* &:hover .head .thumb img { */
   :hover .thumb img {
     transform: scale(1.1);
     opacity: 0.9;
   }
 
   .head .star-holder {
-    /* background-color: rgba(255,255,255,.5); */
     background-color: rgba(0, 0, 0, 0.5);
     padding: 2px 8px;
     border-radius: 20px;
     &:hover {
       background-color: var(--secondary-color);
+    }
+  }
+  &.wide {
+    .body {
+      h3 {
+        /** Add space for stars */
+        padding-right: 110px;
+      }
     }
   }
 }

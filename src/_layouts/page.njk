@@ -2,34 +2,9 @@
 layout: base.njk
 ---
 
-<main>
-  {# // DEBUG
-  {% set pageUrl = page.url %}
-  {% set purePageUrl = page.url.substring(lang.length + 1) if page.url.startsWith('/' + lang) else page.url %}
-  <pre>
-  pageUrl="{{ pageUrl }}"
-  purePageUrl="{{ purePageUrl }}"
-  langNames="{{ langNames[lang] }}"
-  langCodes="{{ langCodes }}"
-  defaultLang="{{ defaultLang }}"
-  locale="{{ locale }}"
-  lang="{{ lang }}"
-  {{ 'hello' | i18n }}
-  </pre>
-  #}
-  {{ content | safe }}
-</main>
+{% include "layout/page-header.njk" %}
 
-{# // DEBUG: Omit some sections #}
+{{ content | safe }}
 
-{% include "page-header.njk" %}
-{% include "page-section-banners-mosaic.njk" %}
-
-{% include "page-section-featured-products.njk" %}
-{% include "page-section-bestsellers.njk" %}
-
-{% include "page-section-newsletter.njk" %}
-{% include "page-section-banner-slider.njk" %}
-{% include "page-section-brands-slider.njk" %}
-{% include "page-section-copyright.njk" %}
-{% include "page-section-footer.njk" %}
+{% include "layout/page-section-copyright.njk" %}
+{% include "layout/page-section-footer.njk" %}

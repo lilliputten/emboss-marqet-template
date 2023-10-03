@@ -4,9 +4,9 @@
 #}
 <html lang="{{ locale }}" dir="{{ dir }}">
 <head>
-  {% include "html-head.njk" %}
+  {% include "base/html-head.njk" %}
 </head>
-<body class="font-sans text-gray-800 bg-gray-100 noscript" onLoad="onLoad()">
+<body class="font-sans text-gray-800 bg-gray-100 noscript" bgcolor="#fff" onLoad="onLoad()">
 
   <div id="preloader">
     <div id="status">&nbsp;</div>
@@ -17,17 +17,12 @@
 
     {{ content | safe }}
 
-    {# include "footer.njk" #}
-
   </div>
 
   <a class="goto-top" href="#gotop"></a>
 
   {# Project scripts... #}
-  {% include "html-scripts.njk" %}
-
-  {# Custom scripts... #}
-  <script src="{{ '/js/scripts.js' | url }}"></script>
+  {% include "base/html-scripts.njk" %}
 
 </body>
 </html>

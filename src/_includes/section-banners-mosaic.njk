@@ -1,4 +1,4 @@
-{% set langRootUrl = '/' + lang + '/' if lang !== defaultLang else '/' %}
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
 <section id="banners-mosaic">
   <div class="container no-padding mosaic-holder">

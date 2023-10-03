@@ -1244,7 +1244,7 @@ a.bg-danger:hover {
   padding-bottom: 9px;
   /* margin: 40px 0 20px; */
   margin-bottom: 20px;
-  border-bottom: 1px solid #eeeeee;
+  /* border-bottom: 1px solid #eeeeee; */
 }
 ul,
 ol {
@@ -8267,16 +8267,21 @@ header .link-list {
   display: inline-block;
   text-transform: uppercase;
   color: #abb0ac;
+  /* NOTE: Fixed (?) bug with wrong position of white arrows in FF */
+  position: relative;
 }
 .le-breadcrumb ul li:after {
   font-family: fontawesome;
   color: #ffffff;
   font-size: 35px;
   position: absolute;
-  top: -12px;
   margin: 0 5px;
   display: inline-block;
   content: "\f054";
+  /* NOTE: Fixed (?) bug with wrong position of white arrows in FF */
+  /* top: -12px; */
+  top: -15px;
+  right: -36px;
 }
 .le-breadcrumb ul li:last-child {
   margin-right: 15px;
@@ -8289,9 +8294,7 @@ header .link-list {
   font-weight: 700!important;
 }
 /*
-
 * Filter Slider for Bootstrap *
-
 */
 .slider {
   display: inline-block;
@@ -8463,7 +8466,7 @@ header .link-list {
 }
 .sidebar .widget .accordion-inner {
   padding-left: 14px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   font-size: 13px;
   line-height: 29px;
 }
@@ -9231,7 +9234,7 @@ select.top-drop-menu {
     top: -38px !important;
   }
   .product-item.wide .buttons-holder .btn-add-to-cart {
-    margin-top: 10px;
+    /* margin-top: 10px; */
   }
   .controller-nav-bar {
     text-align: center;

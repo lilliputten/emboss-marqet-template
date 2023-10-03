@@ -1,19 +1,52 @@
-.products-holder.simple-grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  /* NOTE: Make all items in a rows the same size. */
-  .product-wrapper {
-    flex-grow: 0;
-    flex-shrink: 0;
-    display: flex;
-    align-items: stretch;
+.products-holder {
+  &.simple-grid {
+    &, .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      /* NOTE: Make all items in a rows the same size. */
+      .product-wrapper {
+        flex-grow: 0;
+        flex-shrink: 0;
+        display: flex;
+        align-items: stretch;
+      }
+      .product-item {
+        display: flex;
+        flex-direction: column;
+        .body {
+          flex: 1;
+        }
+      }
+    }
   }
-  .product-item {
-    display: flex;
-    flex-direction: column;
-    .body {
-      flex: 1;
+  &.list-view {
+    .product-item.wide {
+      @media (max-width: 991px) {
+        .body,
+        .head {
+          /* border: 0; */
+        }
+        .buttons-holder .btn-add-to-cart {
+          /* margin-top: 10px; */
+        }
+      }
+      @media (min-width: 992px) {
+        .row, .row > * {
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: stretch;
+        }
+        .body,
+        .head {
+          height: auto;
+          max-height: none;
+          flex: 1;
+        }
+        .body {
+          border-left: 0;
+        }
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
-{% set langRootUrl = '/' + lang + '/' if lang !== defaultLang else '/' %}
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
 <section id="bestsellers">
   <div class="container">
@@ -21,10 +21,10 @@
             </div>
             <div class="price">
               <div class="price-old">
-                <span class="currency">$</span>250
+                <span class="currency">₽</span>250
               </div>
               <div class="price-current">
-                <span class="currency">$</span>145
+                <span class="currency">₽</span>145
               </div>
             </div>
             <div class="star-holder">
@@ -33,7 +33,7 @@
             <button class="btn-compare  btn-iconic"></button>
           </div>
           <div class="body">
-            <h3><a href="{{ langRootUrl }}single-product">consectetur adipiscing elit - extra_long_text_line_for_testing_purposes_only</a></h3>
+            <h3><a href="{{ langRootUrl }}/single-product">consectetur adipiscing elit - extra_long_text_line_for_testing_purposes_only</a></h3>
             <div class="excerpt">
               Looking lorem round, to ascertain that they - extra_long_text_line_for_testing_purposes_only.
             </div>
@@ -52,10 +52,10 @@
             </div>
             <div class="price">
               <div class="price-old">
-                <span class="currency">$</span>350
+                <span class="currency">₽</span>350
               </div>
               <div class="price-current">
-                <span class="currency">$</span>245
+                <span class="currency">₽</span>245
               </div>
             </div>
             <div class="star-holder">
@@ -64,7 +64,7 @@
             <button class="btn-compare  btn-iconic"></button>
           </div>
           <div class="body">
-            <h3><a href="{{ langRootUrl }}single-product">Man sport Hiking shoe</a></h3>
+            <h3><a href="{{ langRootUrl }}/single-product">Man sport Hiking shoe</a></h3>
             <div class="excerpt">
               Looking lorem round, to ascertain that they...
             </div>
@@ -84,10 +84,10 @@
             </div>
             <div class="price">
               <div class="price-old">
-                <span class="currency">$</span>450
+                <span class="currency">₽</span>450
               </div>
               <div class="price-current">
-                <span class="currency">$</span>245
+                <span class="currency">₽</span>245
               </div>
             </div>
             <div class="star-holder">
@@ -96,7 +96,7 @@
             <button class="btn-compare  btn-iconic"></button>
           </div>
           <div class="body">
-            <h3><a href="{{ langRootUrl }}single-product">Woman highheel shoe</a></h3>
+            <h3><a href="{{ langRootUrl }}/single-product">Woman highheel shoe</a></h3>
             <div class="excerpt">
               Looking lorem round, to ascertain that they...
             </div>
@@ -116,10 +116,10 @@
             </div>
             <div class="price">
               <div class="price-old">
-                <span class="currency">$</span>120
+                <span class="currency">₽</span>120
               </div>
               <div class="price-current">
-                <span class="currency">$</span>95
+                <span class="currency">₽</span>95
               </div>
             </div>
             <div class="star-holder">
@@ -128,7 +128,7 @@
             <button class="btn-compare  btn-iconic"></button>
           </div>
           <div class="body">
-            <h3><a href="{{ langRootUrl }}single-product">colorful cool runnig shoes</a></h3>
+            <h3><a href="{{ langRootUrl }}/single-product">colorful cool runnig shoes</a></h3>
             <div class="excerpt">
               Looking lorem round, to ascertain that they...
             </div>
@@ -147,10 +147,10 @@
             </div>
             <div class="price">
               <div class="price-old">
-                <span class="currency">$</span>450
+                <span class="currency">₽</span>450
               </div>
               <div class="price-current">
-                <span class="currency">$</span>245
+                <span class="currency">₽</span>245
               </div>
             </div>
             <div class="star-holder">
@@ -159,7 +159,7 @@
             <button class="btn-compare  btn-iconic"></button>
           </div>
           <div class="body">
-            <h3><a href="{{ langRootUrl }}single-product">Woman highheel shoe</a></h3>
+            <h3><a href="{{ langRootUrl }}/single-product">Woman highheel shoe</a></h3>
             <div class="excerpt">
               Looking lorem round, to ascertain that they...
             </div>
@@ -178,7 +178,7 @@
             </div>
             <div class="price">
               <div class="price-current">
-                <span class="currency">$</span>245
+                <span class="currency">₽</span>245
               </div>
             </div>
             <div class="star-holder">
@@ -187,7 +187,7 @@
             <button class="btn-compare  btn-iconic"></button>
           </div>
           <div class="body">
-            <h3><a href="{{ langRootUrl }}single-product">Man sport Hiking shoe</a></h3>
+            <h3><a href="{{ langRootUrl }}/single-product">Man sport Hiking shoe</a></h3>
             <div class="excerpt">
               Looking lorem round, to ascertain that they...
             </div>
@@ -206,7 +206,7 @@
             </div>
             <div class="price">
               <div class="price-current">
-                <span class="currency">$</span>95
+                <span class="currency">₽</span>95
               </div>
             </div>
             <div class="star-holder">
@@ -215,7 +215,7 @@
             <button class="btn-compare  btn-iconic"></button>
           </div>
           <div class="body">
-            <h3><a href="{{ langRootUrl }}single-product">colorful cool runnig shoes</a></h3>
+            <h3><a href="{{ langRootUrl }}/single-product">colorful cool runnig shoes</a></h3>
             <div class="excerpt">
               Looking lorem round, to ascertain that they...
             </div>
@@ -234,7 +234,7 @@
             </div>
             <div class="price">
               <div class="price-current">
-                <span class="currency">$</span>145
+                <span class="currency">₽</span>145
               </div>
             </div>
             <div class="star-holder">
@@ -243,7 +243,7 @@
             <button class="btn-compare  btn-iconic"></button>
           </div>
           <div class="body">
-            <h3><a href="{{ langRootUrl }}single-product">consectetur adipiscing elit</a></h3>
+            <h3><a href="{{ langRootUrl }}/single-product">consectetur adipiscing elit</a></h3>
             <div class="excerpt">
               Looking lorem round, to ascertain that they...
             </div>
