@@ -132,6 +132,16 @@ const ru = {
     description: 'Описание',
     highQualityAndComfort: 'Высокое качество и комфорт',
   },
+  shoppingCart: {
+    productCode: 'Артикул',
+    checkout: 'Оформить',
+    continueShopping: 'Продолжить покупки',
+    preview: 'Предпросмотр',
+    price: 'Цена',
+    product: 'Продукт',
+    quantity: 'Количество',
+    total: 'Итого',
+  },
 };
 
 module.exports = ru;

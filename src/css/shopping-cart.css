@@ -1,0 +1,9 @@
+.shopping-cart-page {
+  &.box {
+    background-color: var(--product-item-background);
+  }
+  tbody .delete .close-btn {
+    top: -8px;
+    right: auto;
+  }
+}

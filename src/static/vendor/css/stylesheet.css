@@ -7776,7 +7776,8 @@ header .link-list {
   left: 60px;
 }
 .banner-carousel {
-  min-height: 300px;
+  /* NOTE: Don't fix the height of carousel? */
+  /* min-height: 300px; */
 }
 .banner-carousel .item {
   text-align: center;
@@ -8804,7 +8805,7 @@ header .link-list {
 }
 .shopping-cart-page tbody .pid {
   color: #abb0ac;
-  font-style: italic;
+  /* font-style: italic; */
 }
 .shopping-cart-page tbody .price {
   font-size: 16px;

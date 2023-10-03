@@ -15,7 +15,7 @@
         <div class="bar">
           <ul>
             {% for item in breadcrumb -%}
-              <li class="{{ item.class }}">
+              <li{% if item.class %} class="{{ item.class }}"{% endif %}>
                 {% if item.link %}
                   <a href="{{ langRootUrl }}{{ item.link }}">
                 {% endif %}

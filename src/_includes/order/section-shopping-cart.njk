@@ -1,0 +1,125 @@
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+
+<section id="cart" class="page-holder">
+  <div class="container">
+
+    <div class="row ">
+      <div class="col-xs-12">
+        <div class="shopping-cart-page box">
+          <div class="icon-holder small badge-style">
+            <i class="fa fa-shopping-cart "></i>
+            <span class="triangle"></span>
+          </div>
+          <div class="table-responsive">
+            <table class="table ">
+              <thead>
+                <tr>
+                  <th class="col-xs-12 col-md-2">{{ 'shoppingCart.preview' | i18n }}</th>
+                  <th class="col-xs-12 col-md-5">{{ 'shoppingCart.product' | i18n }}</th>
+                  <th class="col-xs-12 col-md-2 price-column">{{ 'shoppingCart.price' | i18n }}</th>
+                  <th class="col-xs-12 col-md-2">{{ 'shoppingCart.quantity' | i18n }}</th>
+                  <th class="col-xs-12 col-md-1 price-column">{{ 'shoppingCart.total' | i18n }}</th>
+                  <th class="col-xs-12 col-md-2">&nbsp;</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="thumb">
+                      <img alt="" src="/images/i-modelist-samples/uaz/medium/02.jpg" />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="desc">
+                      <h3>3629 Звезда 1/35 ПРЕДЗАКАЗ Советский военный внедорожник УАЗ-469</h3>
+                      {#
+                      <div class="tag-line">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed
+                        elementum nisl.
+                      </div>
+                      #}
+                      <div class="pid">{{ 'shoppingCart.productCode' | i18n }}: 4564789</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="price">
+                      ₽122.00
+                    </div>
+                  </td>
+                  <td>
+                    <div class="le-quantity">
+                      <form>
+                        <a class="minus" href="#reduce"></a>
+                        <input name="quantity" readonly="readonly" type="text" value="1" />
+                        <a class="plus" href="#add"></a>
+                      </form>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="price">
+                      ₽122.00
+                    </div>
+                  </td>
+                  <td>
+                    <div class="delete">
+                      <a class="close-btn" href="#"></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="thumb">
+                      <img alt="" src="/images/i-modelist-samples/uaz/medium/03.jpg" />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="desc">
+                      <h3>4645 Tiger Models 1/35 Российский ЗРПК 9к6</h3>
+                      {#
+                      <div class="tag-line">
+                        In hac habitasse platea dictumst. Donec aliquet dolor in libero euismod,
+                        ac dapibus turpis euismod.
+                      </div>
+                      #}
+                      <div class="pid">{{ 'shoppingCart.productCode' | i18n }}: 56879456</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="price">
+                      ₽112.00
+                    </div>
+                  </td>
+                  <td>
+                    <div class="le-quantity">
+                      <form>
+                        <a class="minus" href="#reduce"></a>
+                        <input name="quantity" readonly="readonly" type="text" value="2" />
+                        <a class="plus" href="#add"></a>
+                      </form>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="price">
+                      ₽224.00
+                    </div>
+                  </td>
+                  <td>
+                    <div class="delete">
+                      <a class="close-btn" href="#"></a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="merged-buttons">
+            <a href="{{ langRootUrl }}/products-grid" class="le-btn small ">{{ 'shoppingCart.continueShopping' | i18n }}</a>
+            <a href="{{ langRootUrl }}/checkout" class="le-btn small">{{ 'shoppingCart.checkout' | i18n }}</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

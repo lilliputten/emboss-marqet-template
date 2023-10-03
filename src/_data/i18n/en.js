@@ -130,6 +130,16 @@ const en = {
     description: 'Description',
     highQualityAndComfort: 'High quality and comfort',
   },
+  shoppingCart: {
+    productCode: 'Product code',
+    checkout: 'Checkout',
+    continueShopping: 'Continue shopping',
+    preview: 'Preview',
+    price: 'Price',
+    product: 'Product',
+    quantity: 'Quantity',
+    total: 'Total',
+  },
 };
 
 module.exports = en;
