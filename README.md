@@ -1,6 +1,6 @@
 <!--
 @since 2023.10.01, 12:00
-@changed 2023.10.03, 14:35
+@changed 2023.10.03, 17:02
 -->
 
 # README
@@ -31,11 +31,25 @@ Viewable builds are posted to site:
 
 ## Ready pages:
 
+### Main:
+
 - [Main](https://emboss-studio.lilliputten.ru/)
 - [Main - EN](https://emboss-studio.lilliputten.ru/en/)
+
+### Catalogue:
+
 - [Products grid](https://emboss-studio.lilliputten.ru/products-grid/)
 - [Products grid - EN](https://emboss-studio.lilliputten.ru/en/products-grid/)
 - [Single product](https://emboss-studio.lilliputten.ru/single-product/)
 - [Single product - EN](https://emboss-studio.lilliputten.ru/single-product/en/)
 
+### Order:
+
+- [Checkout](https://emboss-studio.lilliputten.ru/checkout/)
+- [Payment](https://emboss-studio.lilliputten.ru/payment/)
+- [Shopping cart](https://emboss-studio.lilliputten.ru/shopping-cart/)
+
+- [Checkout - EN](https://emboss-studio.lilliputten.ru/checkout/)
+- [Payment - EN](https://emboss-studio.lilliputten.ru/payment/)
+- [Shopping cart - EN](https://emboss-studio.lilliputten.ru/shopping-cart/)
 
