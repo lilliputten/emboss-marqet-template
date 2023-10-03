@@ -49,7 +49,7 @@ Viewable builds are posted to site:
 - [Payment](https://emboss-studio.lilliputten.ru/payment/)
 - [Shopping cart](https://emboss-studio.lilliputten.ru/shopping-cart/)
 
-- [Checkout - EN](https://emboss-studio.lilliputten.ru/checkout/)
-- [Payment - EN](https://emboss-studio.lilliputten.ru/payment/)
-- [Shopping cart - EN](https://emboss-studio.lilliputten.ru/shopping-cart/)
+- [Checkout - EN](https://emboss-studio.lilliputten.ru/en/checkout/)
+- [Payment - EN](https://emboss-studio.lilliputten.ru/en/payment/)
+- [Shopping cart - EN](https://emboss-studio.lilliputten.ru/en/shopping-cart/)
 
