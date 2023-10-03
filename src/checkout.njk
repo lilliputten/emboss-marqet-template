@@ -1,0 +1,17 @@
+---
+title: Оформление
+layout: page.njk
+:changed: 2023.10.03, 15:46
+---
+
+{% set breadcrumb = [
+  { link: '/', name: 'headerLinks.homepage' | i18n },
+  { name: 'headerLinks.checkout' | i18n, class: 'active' }
+] %}
+{% include "shared/section-breadcrumb.njk" %}
+
+{% include "order/section-checkout.njk" %}
+
+{% include "section-newsletter.njk" %}
+{% include "section-banner-slider.njk" %}
+{% include "section-brands-slider.njk" %}
