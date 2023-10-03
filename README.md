@@ -1,52 +1,41 @@
-# 11ty-landing-page
+<!--
+@since 2023.10.01, 12:00
+@changed 2023.10.03, 14:35
+-->
 
-A simple landing page built with 11ty and Tailwind CSS.
+# README
 
-> Port of the [Hugo Version](https://github.com/ttntm/hugo-landing-page)
+- Version: 0.0.4
+- Last changes timestamp: 2023.10.03, 10:35 GMT+3
 
-## How to use this template
+## See also
 
-**Requirements:**
+- [Original 11ty readme](README.11ty.md)
 
-1. Eleventy (developed and tested with version 0.12.1)
-2. Tailwind CSS
+## Resources
 
-All other dependencies are either linked from a CDN or included in this repository.
+Working repository:
 
-**Setup:**
+- [Repository](https://github.com/lilliputten/emboss-studio-site)
 
-1. Fork, clone or download
-2. `cd` into the root folder
-3. run `npm install`
-4. run `npm run serve`
-5. open a browser and go to `http://localhost:8080`
+Publish branch (for production-ready builds):
 
-**Basic configuration:**
+- [Publish branch](https://github.com/lilliputten/emboss-studio-site/tree/publish)
 
-1. Eleventy -> `./.eleventy.js`
-2. Tailwind -> `./tailwind.config.js`
-3. Netlify -> `./netlify.toml`
+Master branch is for sources only.
 
-CSS is built via PostCSS and based on `./src/_includes/css/_page.css`. Building CSS gets triggered by `./src/css/page.11ty.js` and Tailwind's config is set to JIT (see: [Tailwind docs](https://tailwindcss.com/docs/just-in-time-mode))
+Viewable builds are posted to site:
 
-Please note that this CSS build _does not_ include the `normalize.css` file used for the 2 regular pages (imprint, privacy) - a minified production version is stored in `./src/static/css` and gets included in the build by default.
+- [Public preview RU](https://emboss-studio.lilliputten.ru/)
+- [Public preview EN](https://emboss-studio.lilliputten.ru/en/)
 
-**Change Content:**
+## Ready pages:
 
-Page content is stored in
+- [Main](https://emboss-studio.lilliputten.ru/)
+- [Main - EN](https://emboss-studio.lilliputten.ru/en/)
+- [Products grid](https://emboss-studio.lilliputten.ru/products-grid/)
+- [Products grid - EN](https://emboss-studio.lilliputten.ru/en/products-grid/)
+- [Single product](https://emboss-studio.lilliputten.ru/single-product/)
+- [Single product - EN](https://emboss-studio.lilliputten.ru/single-product/en/)
 
-- `./src/`
-- `./src/sections/`
-- `./src/_data/features.json`
 
-**Change Templates/Layout:**
-
-Page structure and templates are stored in `./src/_layouts/` and can be edited there.
-
-Best have a look at `./layouts/base.njk` first to understand how it all comes together - the page itself is constructed from partial templates stored in `./src/includes/` and each section has a corresponding template file (`section.**.njk`) stored there.
-
-`index.njk` in `./src/` arranges everything, meaning that sections can be added/re-ordered/removed/... there.
-
-**Change images:**
-
-Images are stored in `./static/img/`; everything in there can be considered a placeholder that should eventually be replaced with your actual production images.
