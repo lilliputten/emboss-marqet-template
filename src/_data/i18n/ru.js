@@ -83,6 +83,7 @@ const ru = {
   products: {
     toCart: 'Купить',
     wishlist: 'Отложить',
+    wishlistFull: 'В лист желаний',
     discount50: '50% off', // Any longer text can't be fit in the circle.
     new: 'New',
     newExclam: 'New!',
@@ -93,7 +94,7 @@ const ru = {
     collection: 'Коллекция',
     collections: 'Коллекции',
     kids: 'Дети',
-    grid: 'Сетка',
+    grid: 'Таблица',
     list: 'Список',
     yearsOld: 'лет',
     sale: 'Sale!',
@@ -106,9 +107,10 @@ const ru = {
     priceFilter: 'Цена',
     sizeFilter: 'Размер',
     sortAZ: 'Сортировка от А до Я',
+    sortByAvailability: 'Сортировать по наличию',
     sortByPrice: 'Сортировать по цене',
-    ascending: 'Восходящий',
-    descending: 'Нисходящий',
+    ascending: 'восходящий',
+    descending: 'нисходящий',
     sortZA: 'Сортировка от Я до А',
   },
   productsSample: {

@@ -1,0 +1,32 @@
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+
+<div class="col-xs-12 col-sm-9 col-md-9">
+  <select id="--id-sort-products" class="ctrl-item selectpicker" data-style="btn-inverse">
+    <option>{{ 'products.sortByPrice' | i18n }} - {{ 'products.ascending' | i18n }}</option>
+    <option>{{ 'products.sortByPrice' | i18n }} - {{ 'products.descending' | i18n }}</option>
+    <option>{{ 'products.sortAZ' | i18n }}</option>
+    <option>{{ 'products.sortZA' | i18n }}</option>
+    <option>{{ 'products.sortByAvailability' | i18n }} - {{ 'products.ascending' | i18n }}</option>
+    <option>{{ 'products.sortByAvailability' | i18n }} - {{ 'products.descending' | i18n }}</option>
+  </select>
+  <div id="--id-items-amount" class="ctrl-item inline">
+    {{ 'products.show' | i18n }}
+    <select class="selectpicker"  data-width="70px" data-style="btn-inverse">
+      <option>10</option>
+      <option>20</option>
+      <option>30</option>
+      <option>40</option>
+      <option>{{ 'products.all' | i18n }}</option>
+    </select>
+    {{ 'products.productsPerPage' | i18n }}
+  </div>
+</div>
+
+<div class="col-xs-12 col-sm-3 col-md-3">
+  <div id="--id-view-mode" class="grid-list-buttons">
+    <ul class="list-inline">
+      <li class="active"><a data-toggle="tab" href="#grid-view"><i class="fa fa-th-large"></i> {{ 'products.grid' | i18n }}</a></li>
+      <li><a data-toggle="tab" href="#list-view"><i class="fa fa-th-list"></i> {{ 'products.list' | i18n }}</a></li>
+    </ul>
+  </div>
+</div>

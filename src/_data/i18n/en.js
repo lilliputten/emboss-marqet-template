@@ -81,6 +81,7 @@ const en = {
   products: {
     toCart: 'To cart',
     wishlist: 'Wishlist',
+    wishlistFull: 'Save to wishlist',
     discount50: '50% off',
     new: 'New',
     newExclam: 'New!',
@@ -104,9 +105,10 @@ const en = {
     priceFilter: 'Price filter',
     sizeFilter: 'Size filter',
     sortAZ: 'Sort A-Z',
+    sortByAvailability: 'Sort by availability',
     sortByPrice: 'Sort by price',
-    ascending: 'Ascending',
-    descending: 'Descending',
+    ascending: 'ascending',
+    descending: 'descending',
     sortZA: 'Sort Z-A',
   },
   productsSample: {

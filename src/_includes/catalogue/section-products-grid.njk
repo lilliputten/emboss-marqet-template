@@ -11,19 +11,19 @@
             <span class="triangle"></span>
           </div>
           <h2>{{ 'products.categories' | i18n }}</h2>
-          <div class="accordion" >
+          <div class="accordion">
             {# Main products menu content #}
             {% include "catalogue/section-products-menu-content.njk" %}
           </div>
         </div>
-        <div class="price-filter widget" >
+        <div class="price-filter widget">
           <div class="icon-holder small">
             <i class="fa fa-dollar"></i>
             <span class="triangle"></span>
           </div>
           <h2>{{ 'products.priceFilter' | i18n }}</h2>
           <div class="price-range-holder">
-            <input type="text" class="price-slider" value="" >
+            <input type="text" class="price-slider" value="">
             <span class="min-max">
               {{ 'products.price' | i18n }}: ₽100 - ₽700
             </span>
@@ -32,7 +32,8 @@
             </span>
           </div>
         </div>
-        <div class="size-filter widget" >
+        {# NOTE: Issue #9: Sizes is unused
+        <div class="size-filter widget">
           <div class="icon-holder small">
             <i class="fa fa-cube"></i>
             <span class="triangle"></span>
@@ -47,6 +48,7 @@
             <li><a href="#">xxl <span>(1)</span></a></li>
           </ul>
         </div>
+        #}
       </div>
     </div>
     <div class="section-products-grid-content col-xs-12 col-md-9">
@@ -66,33 +68,7 @@
         </div>
       </div>
       <div class="controller-nav-bar row">
-        <div class="col-xs-12 col-sm-9 col-md-9">
-          <select class="ctrl-item selectpicker" data-style="btn-inverse">
-            <option>{{ 'products.sortByPrice' | i18n }} - {{ 'products.ascending' | i18n }}</option>
-            <option>{{ 'products.sortByPrice' | i18n }} - {{ 'products.descending' | i18n }}</option>
-            <option>{{ 'products.sortAZ' | i18n }}</option>
-            <option>{{ 'products.sortZA' | i18n }}</option>
-          </select>
-          <div class="ctrl-item inline">
-            {{ 'products.show' | i18n }}
-            <select class="selectpicker"  data-width="70px" data-style="btn-inverse">
-              <option>10</option>
-              <option>20</option>
-              <option>30</option>
-              <option>40</option>
-              <option>{{ 'products.all' | i18n }}</option>
-            </select>
-            {{ 'products.productsPerPage' | i18n }}
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-3 col-md-3">
-          <div class="grid-list-buttons">
-            <ul class="list-inline">
-              <li class="active"><a data-toggle="tab" href="#grid-view"><i class="fa fa-th-large"></i> {{ 'products.grid' | i18n }}</a></li>
-              <li><a data-toggle="tab" href="#list-view"><i class="fa fa-th-list"></i> {{ 'products.list' | i18n }}</a></li>
-            </ul>
-          </div>
-        </div>
+        {% include "catalogue/section-products-controls.njk" %}
       </div>
       <div class="product-grid tab-content">
         <!--grid view starts here-->
