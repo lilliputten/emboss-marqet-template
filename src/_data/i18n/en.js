@@ -124,6 +124,16 @@ const en = {
     winterIsComing: 'Winter is coming',
     womenShoes: 'Women shoes',
   },
+  productsMenu: {
+    decals: '3D decals',
+    aircrafts: 'Aircraft',
+    helicopters: 'Helicopters',
+    cars: 'Cars',
+    scale: 'Scale',
+    discounts: 'Discounts and promotions',
+    new: 'New products',
+    hits: 'Hit of sales',
+  },
   singleProduct: {
     editorReview: 'Editor review',
     returnPolicy: 'Return policy',

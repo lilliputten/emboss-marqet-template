@@ -1,0 +1,54 @@
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+
+<div class="accordion-group">
+  <div class="accordion-heading">
+    <a class="accordion-toggle" data-toggle="collapse" href="#decals">
+      {{ 'productsMenu.decals' | i18n }}
+    </a>
+  </div>
+  <div id="decals" class="accordion-body collapse in">
+    <div class="accordion-inner">
+      <ul>
+        <li><a href="{{ langRootUrl }}/products/decals/aircrafts">{{ 'productsMenu.aircrafts' | i18n }}</a></li>
+        <li><a href="{{ langRootUrl }}/products/decals/helicopters">{{ 'productsMenu.helicopters' | i18n }}</a></li>
+        <li><a href="{{ langRootUrl }}/products/decals/cars">{{ 'productsMenu.cars' | i18n }}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="accordion-group">
+  <div class="accordion-heading">
+    <a class="accordion-toggle" data-toggle="collapse" href="#scale">
+      {{ 'productsMenu.scale' | i18n }}
+    </a>
+  </div>
+  <div id="scale" class="accordion-body collapse in">
+    <div class="accordion-inner">
+      <ul>
+        <li><a href="{{ langRootUrl }}/products/scale/1-144">1/144</a></li>
+        <li><a href="{{ langRootUrl }}/products/scale/1-24">1/24</a></li>
+        <li><a href="{{ langRootUrl }}/products/scale/1-32">1/32</a></li>
+        <li><a href="{{ langRootUrl }}/products/scale/1-35">1/35</a></li>
+        <li><a href="{{ langRootUrl }}/products/scale/1-43">1/43</a></li>
+        <li><a href="{{ langRootUrl }}/products/scale/1-48">1/48</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="accordion-group">
+  <div class="accordion-heading">
+    <a class="accordion-toggle" data-toggle="collapse" href="#discounts">
+      {{ 'productsMenu.discounts' | i18n }}
+    </a>
+  </div>
+  <div id="discounts" class="accordion-body collapse in">
+    <div class="accordion-inner">
+      <ul>
+        <li><a href="{{ langRootUrl }}/products/discounts/new">{{ 'productsMenu.new' | i18n }}</a></li>
+        <li><a href="{{ langRootUrl }}/products/discounts/hits">{{ 'productsMenu.hits' | i18n }}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

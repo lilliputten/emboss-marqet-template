@@ -4,6 +4,7 @@
   <div class="container">
     <div class="section-products-grid-sidebar col-xs-12 col-md-3">
       <div class="sidebar">
+        {# Main products menu #}
         <div class="accordion-widget category-accordions widget">
           <div class="icon-holder small">
             <i class="fa fa-chain"></i>
@@ -11,58 +12,8 @@
           </div>
           <h2>{{ 'products.categories' | i18n }}</h2>
           <div class="accordion" >
-            <div class="accordion-group">
-              <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse"  href="#collapseOne">
-                  {{ 'productsSample.shoesAndClothes' | i18n }}
-                </a>
-              </div>
-              <div id="collapseOne" class="accordion-body collapse in">
-                <div class="accordion-inner">
-                  <ul>
-                    <li><a href="#">{{ 'productsSample.menShoes' | i18n }}</a></li>
-                    <li><a href="#">{{ 'productsSample.womenShoes' | i18n }}</a></li>
-                    <li><a href="#">{{ 'productsSample.sexyClothes' | i18n }}</a></li>
-                    <li><a href="#">{{ 'productsSample.sportWears' | i18n }}</a></li>
-                    <li><a href="#">{{ 'productsSample.otherStuff' | i18n }}</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-group">
-              <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse"  href="#collapseTwo">
-                  {{ 'products.collections' | i18n }}
-                </a>
-              </div>
-              <div id="collapseTwo" class="accordion-body collapse in">
-                <div class="accordion-inner">
-                  <ul>
-                    <li><a href="#">{{ 'productsSample.sexyNight' | i18n }}</a></li>
-                    <li><a href="#">{{ 'productsSample.partyHard' | i18n }}</a></li>
-                    <li><a href="#">{{ 'productsSample.winterIsComing' | i18n }}</a></li>
-                    <li><a href="#">{{ 'productsSample.classyDate' | i18n }}</a></li>
-                    <li><a href="#">{{ 'products.casualPersons' | i18n }}</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-group">
-              <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse"  href="#collapse3">
-                  {{ 'products.kids' | i18n }}
-                </a>
-              </div>
-              <div id="collapse3" class="accordion-body collapse in">
-                <div class="accordion-inner">
-                  <ul>
-                    <li><a href="#">0-5 {{ 'products.yearsOld' | i18n }}</a></li>
-                    <li><a href="#">5-10 {{ 'products.yearsOld' | i18n }}</a></li>
-                    <li><a href="#">10-15 {{ 'products.yearsOld' | i18n }}</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            {# Main products menu content #}
+            {% include "catalogue/section-products-menu-content.njk" %}
           </div>
         </div>
         <div class="price-filter widget" >

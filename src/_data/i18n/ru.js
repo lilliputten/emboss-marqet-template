@@ -126,6 +126,16 @@ const ru = {
     winterIsComing: 'Зима близко',
     womenShoes: 'Женская обувь',
   },
+  productsMenu: {
+    decals: '3D декали',
+    aircrafts: 'Самолеты',
+    helicopters: 'Вертолеты',
+    cars: 'Автомобили',
+    scale: 'Масштабы',
+    discounts: 'Скидки и акции',
+    new: 'Новинки',
+    hits: 'Хит продаж',
+  },
   singleProduct: {
     editorReview: 'Отзыв редактора',
     returnPolicy: 'Условия возврата',
