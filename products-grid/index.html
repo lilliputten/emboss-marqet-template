@@ -484,61 +484,69 @@
                       <a
                         class="accordion-toggle"
                         data-toggle="collapse"
-                        href="#collapseOne"
+                        href="#decals"
                       >
-                        Обувь и одежда
+                        3D декали
                       </a>
                     </div>
-                    <div id="collapseOne" class="accordion-body collapse in">
+                    <div id="decals" class="accordion-body collapse in">
                       <div class="accordion-inner">
                         <ul>
-                          <li><a href="#">Мужская обувь</a></li>
-                          <li><a href="#">Женская обувь</a></li>
-                          <li><a href="#">Сексуальная одежда</a></li>
-                          <li><a href="#">Спортивная одежда</a></li>
-                          <li><a href="#">Другие вещи</a></li>
+                          <li>
+                            <a href="/products/decals/aircrafts">Самолеты</a>
+                          </li>
+                          <li>
+                            <a href="/products/decals/helicopters">Вертолеты</a>
+                          </li>
+                          <li>
+                            <a href="/products/decals/cars">Автомобили</a>
+                          </li>
                         </ul>
                       </div>
                     </div>
                   </div>
+
                   <div class="accordion-group">
                     <div class="accordion-heading">
                       <a
                         class="accordion-toggle"
                         data-toggle="collapse"
-                        href="#collapseTwo"
+                        href="#scale"
                       >
-                        Коллекции
+                        Масштабы
                       </a>
                     </div>
-                    <div id="collapseTwo" class="accordion-body collapse in">
+                    <div id="scale" class="accordion-body collapse in">
                       <div class="accordion-inner">
                         <ul>
-                          <li><a href="#">Сексуальная ночь</a></li>
-                          <li><a href="#">Вечеринка</a></li>
-                          <li><a href="#">Зима близко</a></li>
-                          <li><a href="#">Классное свидание</a></li>
-                          <li><a href="#">Случайные люди</a></li>
+                          <li><a href="/products/scale/1-144">1/144</a></li>
+                          <li><a href="/products/scale/1-24">1/24</a></li>
+                          <li><a href="/products/scale/1-32">1/32</a></li>
+                          <li><a href="/products/scale/1-35">1/35</a></li>
+                          <li><a href="/products/scale/1-43">1/43</a></li>
+                          <li><a href="/products/scale/1-48">1/48</a></li>
                         </ul>
                       </div>
                     </div>
                   </div>
+
                   <div class="accordion-group">
                     <div class="accordion-heading">
                       <a
                         class="accordion-toggle"
                         data-toggle="collapse"
-                        href="#collapse3"
+                        href="#discounts"
                       >
-                        Дети
+                        Скидки и акции
                       </a>
                     </div>
-                    <div id="collapse3" class="accordion-body collapse in">
+                    <div id="discounts" class="accordion-body collapse in">
                       <div class="accordion-inner">
                         <ul>
-                          <li><a href="#">0-5 лет</a></li>
-                          <li><a href="#">5-10 лет</a></li>
-                          <li><a href="#">10-15 лет</a></li>
+                          <li><a href="/products/discounts/new">Новинки</a></li>
+                          <li>
+                            <a href="/products/discounts/hits">Хит продаж</a>
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -558,33 +566,6 @@
                     <a href="#">Фильтр</a>
                   </span>
                 </div>
-              </div>
-              <div class="size-filter widget">
-                <div class="icon-holder small">
-                  <i class="fa fa-cube"></i>
-                  <span class="triangle"></span>
-                </div>
-                <h2>Размер</h2>
-                <ul>
-                  <li>
-                    <a href="#">xs <span>(2)</span></a>
-                  </li>
-                  <li>
-                    <a href="#">s <span>(1)</span></a>
-                  </li>
-                  <li>
-                    <a href="#">m <span>(2)</span></a>
-                  </li>
-                  <li>
-                    <a href="#">l <span>(4)</span></a>
-                  </li>
-                  <li>
-                    <a href="#">xl <span>(3)</span></a>
-                  </li>
-                  <li>
-                    <a href="#">xxl <span>(1)</span></a>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
@@ -607,13 +588,19 @@
             </div>
             <div class="controller-nav-bar row">
               <div class="col-xs-12 col-sm-9 col-md-9">
-                <select class="ctrl-item selectpicker" data-style="btn-inverse">
-                  <option>Сортировать по цене - Восходящий</option>
-                  <option>Сортировать по цене - Нисходящий</option>
+                <select
+                  id="--id-sort-products"
+                  class="ctrl-item selectpicker"
+                  data-style="btn-inverse"
+                >
+                  <option>Сортировать по цене - восходящий</option>
+                  <option>Сортировать по цене - нисходящий</option>
                   <option>Сортировка от А до Я</option>
                   <option>Сортировка от Я до А</option>
+                  <option>Сортировать по наличию - восходящий</option>
+                  <option>Сортировать по наличию - нисходящий</option>
                 </select>
-                <div class="ctrl-item inline">
+                <div id="--id-items-amount" class="ctrl-item inline">
                   Показать
                   <select
                     class="selectpicker"
@@ -629,12 +616,13 @@
                   Товаров на странице
                 </div>
               </div>
+
               <div class="col-xs-12 col-sm-3 col-md-3">
-                <div class="grid-list-buttons">
+                <div id="--id-view-mode" class="grid-list-buttons">
                   <ul class="list-inline">
                     <li class="active">
                       <a data-toggle="tab" href="#grid-view"
-                        ><i class="fa fa-th-large"></i> Сетка</a
+                        ><i class="fa fa-th-large"></i> Таблица</a
                       >
                     </li>
                     <li>

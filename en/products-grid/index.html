@@ -489,61 +489,75 @@
                       <a
                         class="accordion-toggle"
                         data-toggle="collapse"
-                        href="#collapseOne"
+                        href="#decals"
                       >
-                        Shoes and clothes
+                        3D decals
                       </a>
                     </div>
-                    <div id="collapseOne" class="accordion-body collapse in">
+                    <div id="decals" class="accordion-body collapse in">
                       <div class="accordion-inner">
                         <ul>
-                          <li><a href="#">Men shoes</a></li>
-                          <li><a href="#">Women shoes</a></li>
-                          <li><a href="#">Sexy clothes</a></li>
-                          <li><a href="#">Sport wears</a></li>
-                          <li><a href="#">Other stuff</a></li>
+                          <li>
+                            <a href="/en/products/decals/aircrafts">Aircraft</a>
+                          </li>
+                          <li>
+                            <a href="/en/products/decals/helicopters"
+                              >Helicopters</a
+                            >
+                          </li>
+                          <li><a href="/en/products/decals/cars">Cars</a></li>
                         </ul>
                       </div>
                     </div>
                   </div>
+
                   <div class="accordion-group">
                     <div class="accordion-heading">
                       <a
                         class="accordion-toggle"
                         data-toggle="collapse"
-                        href="#collapseTwo"
+                        href="#scale"
                       >
-                        Collections
+                        Scale
                       </a>
                     </div>
-                    <div id="collapseTwo" class="accordion-body collapse in">
+                    <div id="scale" class="accordion-body collapse in">
                       <div class="accordion-inner">
                         <ul>
-                          <li><a href="#">Sexy night</a></li>
-                          <li><a href="#">Party hard</a></li>
-                          <li><a href="#">Winter is coming</a></li>
-                          <li><a href="#">Classy date</a></li>
-                          <li><a href="#">Casual persons</a></li>
+                          <li><a href="/en/products/scale/1-144">1/144</a></li>
+                          <li><a href="/en/products/scale/1-24">1/24</a></li>
+                          <li><a href="/en/products/scale/1-32">1/32</a></li>
+                          <li><a href="/en/products/scale/1-35">1/35</a></li>
+                          <li><a href="/en/products/scale/1-43">1/43</a></li>
+                          <li><a href="/en/products/scale/1-48">1/48</a></li>
                         </ul>
                       </div>
                     </div>
                   </div>
+
                   <div class="accordion-group">
                     <div class="accordion-heading">
                       <a
                         class="accordion-toggle"
                         data-toggle="collapse"
-                        href="#collapse3"
+                        href="#discounts"
                       >
-                        Kids
+                        Discounts and promotions
                       </a>
                     </div>
-                    <div id="collapse3" class="accordion-body collapse in">
+                    <div id="discounts" class="accordion-body collapse in">
                       <div class="accordion-inner">
                         <ul>
-                          <li><a href="#">0-5 years old</a></li>
-                          <li><a href="#">5-10 years old</a></li>
-                          <li><a href="#">10-15 years old</a></li>
+                          <li>
+                            <a href="/en/products/discounts/new"
+                              >New products</a
+                            >
+                          </li>
+                          <li>
+                            <a href="/en/products/discounts/hits"
+                              >Hit of sales</a
+                            >
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -564,33 +578,6 @@
                   </span>
                 </div>
               </div>
-              <div class="size-filter widget">
-                <div class="icon-holder small">
-                  <i class="fa fa-cube"></i>
-                  <span class="triangle"></span>
-                </div>
-                <h2>Size filter</h2>
-                <ul>
-                  <li>
-                    <a href="#">xs <span>(2)</span></a>
-                  </li>
-                  <li>
-                    <a href="#">s <span>(1)</span></a>
-                  </li>
-                  <li>
-                    <a href="#">m <span>(2)</span></a>
-                  </li>
-                  <li>
-                    <a href="#">l <span>(4)</span></a>
-                  </li>
-                  <li>
-                    <a href="#">xl <span>(3)</span></a>
-                  </li>
-                  <li>
-                    <a href="#">xxl <span>(1)</span></a>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
           <div class="section-products-grid-content col-xs-12 col-md-9">
@@ -610,13 +597,19 @@
             </div>
             <div class="controller-nav-bar row">
               <div class="col-xs-12 col-sm-9 col-md-9">
-                <select class="ctrl-item selectpicker" data-style="btn-inverse">
-                  <option>Sort by price - Ascending</option>
-                  <option>Sort by price - Descending</option>
+                <select
+                  id="--id-sort-products"
+                  class="ctrl-item selectpicker"
+                  data-style="btn-inverse"
+                >
+                  <option>Sort by price - ascending</option>
+                  <option>Sort by price - descending</option>
                   <option>Sort A-Z</option>
                   <option>Sort Z-A</option>
+                  <option>Sort by availability - ascending</option>
+                  <option>Sort by availability - descending</option>
                 </select>
-                <div class="ctrl-item inline">
+                <div id="--id-items-amount" class="ctrl-item inline">
                   Show
                   <select
                     class="selectpicker"
@@ -632,8 +625,9 @@
                   Products per page
                 </div>
               </div>
+
               <div class="col-xs-12 col-sm-3 col-md-3">
-                <div class="grid-list-buttons">
+                <div id="--id-view-mode" class="grid-list-buttons">
                   <ul class="list-inline">
                     <li class="active">
                       <a data-toggle="tab" href="#grid-view"
