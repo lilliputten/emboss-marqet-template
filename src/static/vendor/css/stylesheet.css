@@ -8375,7 +8375,7 @@ header .link-list {
   line-height: 20px;
 }
 .sidebar .widget .price-range-holder {
-  padding: 18px 0px 47px 0px;
+  /* padding: 18px 0px 47px 0px; */
   position: relative;
 }
 .sidebar .widget .price-range-holder .filter-button a {
