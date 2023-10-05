@@ -1,0 +1,42 @@
+{#
+<select class="mobile-dropdown selectpicker top-drop-menu nav hidden-md hidden-sm visible-xs hidden-lg">
+#}
+<select class="mobile-dropdown selectpicker top-drop-menu nav hidden-md hidden-sm visible-xs hidden-lg" data-style="btn">
+  <optgroup label="{{ 'headerLinks.homepage' | i18n }}">
+    <option value="{{ langRootUrl }}/" selected="selected">
+      {{ 'headerLinks.homepage' | i18n }}
+    </option>
+     <option value="{{ langRootUrl }}/test">
+      {{ 'headerLinks.testPage' | i18n }}
+     </option>
+  </optgroup>
+  <option value="{{ langRootUrl }}/products/men">
+    {{ 'headerLinks.men' | i18n }}
+  </option>
+  <option value="{{ langRootUrl }}/products/women">
+    {{ 'headerLinks.women' | i18n }}
+  </option>
+  <option value="{{ langRootUrl }}/products/sports">
+    {{ 'headerLinks.sports' | i18n }}
+  </option>
+  <optgroup label="{{ 'headerLinks.pages' | i18n }}">
+    <option value="{{ langRootUrl }}/products-grid">
+     {{ 'headerLinks.productsGridList' | i18n }}
+    </option>
+     <option value="{{ langRootUrl }}/single-product-sidebar">
+      {{ 'headerLinks.singleProductSidebar' | i18n }}
+     </option>
+    <option value="{{ langRootUrl }}/single-product">
+     {{ 'headerLinks.singleProduct' | i18n }}
+    </option>
+     <option value="{{ langRootUrl }}/shopping-cart">
+     {{ 'headerLinks.cartPage' | i18n }}
+    </option>
+     <option value="{{ langRootUrl }}/checkout">
+    {{ 'headerLinks.checkout' | i18n }}
+    </option>
+     <option value="{{ langRootUrl }}/payment">
+     {{ 'headerLinks.payment' | i18n }}
+    </option>
+  </optgroup>
+</select>

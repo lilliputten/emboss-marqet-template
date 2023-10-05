@@ -1,0 +1,14 @@
+.mobile-dropdown {
+  select& {
+    display: none !important;
+  }
+  div&.bootstrap-select {
+    width: auto !important;
+    padding: 8px;
+    .dropdown-header {
+      color: #ccc;
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+}
