@@ -1,6 +1,6 @@
 Project: emboss-studio-site
 Version: 0.0.4
-Branch: dev-231004-issue-9-Catalogue-page-menu-fixes
-Commit: 686cca9
+Branch: 10-create-mobile-dropdown-navigation-mobile-friendly
+Commit: 364f1d3
 Fixed: 2023.10.04, 19:49 GMT+3
-Built: 2023.10.04, 19:49 GMT+3
+Built: 2023.10.05, 12:54 GMT+3

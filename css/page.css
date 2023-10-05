@@ -47,6 +47,10 @@
       text-align: right;
       white-space: nowrap;
     }
+.page-header .top-menu-holder .mobile-dropdown,
+    .page-header .top-menu-holder nav {
+      margin-left: 36px;
+    }
 .section-copyright .container {
     display: flex;
     align-items: center;
@@ -408,3 +412,15 @@
     top: -8px;
     right: auto;
   }
+select.mobile-dropdown {
+    display: none !important;
+  }
+div.mobile-dropdown.bootstrap-select {
+    width: auto !important;
+    padding: 8px;
+  }
+div.mobile-dropdown.bootstrap-select .dropdown-header {
+      color: #ccc;
+      padding: 10px;
+      font-size: 14px;
+    }
