@@ -27,4 +27,10 @@
       white-space: nowrap;
     }
   }
+  .top-menu-holder {
+    .mobile-dropdown,
+    nav {
+      margin-left: 36px;
+    }
+  }
 }
