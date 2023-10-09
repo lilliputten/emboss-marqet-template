@@ -1,6 +1,6 @@
 Project: emboss-studio-site
 Version: 0.0.4
 Branch: 12-payment-method-page
-Commit: e36bdcf
+Commit: 25a7a1c
 Fixed: 2023.10.04, 19:49 GMT+3
-Built: 2023.10.09, 17:12 GMT+3
+Built: 2023.10.09, 17:22 GMT+3
