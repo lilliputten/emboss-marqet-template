@@ -154,7 +154,10 @@ const en = {
   },
   checkout: {
     payment: 'Payment',
+    choosePaymentMethod: 'Choose Payment Method',
+    paymentMethod: 'Payment Method',
     returnPolicy: 'Return policy',
+    paymentMethodInfo: 'Payment Method Choosing',
     address: 'Address',
     backToCart: 'Back to cart',
     contactInfo: 'Contact info',
@@ -189,6 +192,13 @@ const en = {
     paymentInfo: 'Payment info',
     placeOrder: 'Place order',
     year: 'Year',
+  },
+  paymentMethods: {
+    robokassa: 'Robokassa',
+    bankTransfer: 'Bank transfer',
+    yandexCard: 'Yandex Card',
+    cashOnDelivery: 'Cash on delivery',
+    cashPaymentToTheCourier: 'Cash payment to the courier',
   },
 };
 

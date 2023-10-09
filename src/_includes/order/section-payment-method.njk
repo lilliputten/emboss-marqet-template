@@ -1,0 +1,68 @@
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+
+<section id="checkout" class="page-holder ">
+  <div class="container no-padding">
+    <div class="col-xs-12 col-md-8">
+      <div class="box">
+        <div class="icon-holder small badge-style">
+          <i class="fa fa-check-circle-o "></i>
+          <span class="triangle"></span>
+        </div>
+        <div class="box-holder">
+          <h2>{{ 'checkout.choosePaymentMethod' | i18n }}</h2>
+          <div class="table-form ">
+            <div class="row">
+              <div class="col-xs-12 col-md-4">
+                <div class="field-group">
+                  <label>{{ 'checkout.paymentMethod' | i18n }}</label>
+                  <select class="variation-btn inline selectpicker" data-width="100%" data-style="btn-inverse">
+                    <option value="robokassa">{{ 'paymentMethods.robokassa' | i18n }}</option>
+                    <option value="bankTransfer">{{ 'paymentMethods.bankTransfer' | i18n }}</option>
+                    <option value="yandexCard">{{ 'paymentMethods.yandexCard' | i18n }}</option>
+                    <option value="cashOnDelivery">{{ 'paymentMethods.cashOnDelivery' | i18n }}</option>
+                    <option value="cashPaymentToTheCourier">{{ 'paymentMethods.cashPaymentToTheCourier' | i18n }}</option>
+
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-holder">
+          <div class="merged-buttons">
+            <a href="{{ langRootUrl }}/shopping-cart" class="le-btn small">{{ 'checkout.backToCart' | i18n }}</a>
+            <a href="#" class="le-btn small ">{{ 'payment.placeOrder' | i18n }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-4">
+      <div class="box sidebar">
+        <div class="widget simple-widget">
+          <div class="icon-holder small">
+            <i class="fa fa-dollar"></i>
+            <span class="triangle"></span>
+          </div>
+          <h2>{{ 'checkout.paymentMethodInfo' | i18n }}</h2>
+          <div class="body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed elementum nisl. In hac habitasse platea
+              dictumst. Donec aliquet dolor in libero euismod, ac dapibus turpis euismod. Phasellus ac risus turpis.
+              Duis quis ultricies nisi. Lorem ipsum dolor sit amet
+            </p>
+            <ul class="normal-ul">
+              <li>Proin ut pharetra turpis</li>
+              <li>Consectetur adipiscing elit</li>
+              <li>Sed sed elementum nisl</li>
+            </ul>
+            <p>
+              Nunc ut risus orci. Nam condimentum sagittis venenatis. Nullam non augue nulla. Ut eu lorem varius,
+              fringilla lacus eget, hendrerit massa
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

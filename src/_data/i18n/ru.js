@@ -156,7 +156,10 @@ const ru = {
   },
   checkout: {
     payment: 'Платеж',
+    choosePaymentMethod: 'Выбрать способ оплаты',
+    paymentMethod: 'Способ оплаты',
     returnPolicy: 'Условия возврата',
+    paymentMethodInfo: 'Выбор метода платежа',
     address: 'Адрес',
     backToCart: 'Вернуться в корзину',
     contactInfo: 'Контактная информация',
@@ -189,8 +192,15 @@ const ru = {
     month: 'Месяц',
     moreInfo: 'Дополнительная информация',
     paymentInfo: 'Платежная информация',
-    placeOrder: 'Разместить заказ',
+    placeOrder: 'Оформить заказ',
     year: 'Год',
+  },
+  paymentMethods: {
+    robokassa: 'Робокасса',
+    bankTransfer: 'Банковский перевод',
+    yandexCard: 'Яндекс карта',
+    cashOnDelivery: 'Наложенный платеж',
+    cashPaymentToTheCourier: 'Оплата наличными курьеру',
   },
 };
 

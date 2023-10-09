@@ -15,7 +15,7 @@
               <div class="col-xs-12 col-md-4">
                 <div class="field-group">
                   <label>{{ 'checkout.selectCountry' | i18n }}</label>
-                  {% include "order/section-checkout-countries.njk" %}
+                  {% include "order/section-checkout-countries-" + lang + ".njk" %}
                 </div>
               </div>
               <div class="col-xs-12 col-md-4">
@@ -36,9 +36,9 @@
                 <div class="field-group">
                   <label>{{ 'checkout.shippingType' | i18n }}</label>
                   <select class="variation-btn inline selectpicker" data-width="100%" data-style="btn-inverse">
-                    <option value="express">{{ 'checkout.deliveryRussianPost' | i18n }}</option>
-                    <option value="express">{{ 'checkout.deliverySdek' | i18n }}</option>
-                    <option value="express">{{ 'checkout.deliveryLabirint' | i18n }}</option>
+                    <option value="russianPost">{{ 'checkout.deliveryRussianPost' | i18n }}</option>
+                    <option value="sdek">{{ 'checkout.deliverySdek' | i18n }}</option>
+                    <option value="labirint">{{ 'checkout.deliveryLabirint' | i18n }}</option>
                   </select>
                 </div>
               </div>
@@ -79,7 +79,7 @@
             </div>
             <div class="merged-buttons">
               <a href="{{ langRootUrl }}/shopping-cart" class="le-btn small">{{ 'checkout.backToCart' | i18n }}</a>
-              <a href="{{ langRootUrl }}/payment" class="le-btn small ">{{ 'checkout.payment' | i18n }}</a>
+              <a href="{{ langRootUrl }}/payment-method" class="le-btn small ">{{ 'checkout.choosePaymentMethod' | i18n }}</a>
             </div>
           </div>
         </div>
