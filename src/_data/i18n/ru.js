@@ -71,6 +71,7 @@ const ru = {
     products: 'Продукция',
     enterKeyword: 'Введите текст...',
     learnMore: 'Узнать больше',
+    choosePaymentMethod: 'Выбрать способ оплаты',
   },
   newsletter: {
     signUp: 'Подпишитесь на нашу рассылку, чтобы получать лучшие предложения и новости.',
@@ -156,7 +157,6 @@ const ru = {
   },
   checkout: {
     payment: 'Платеж',
-    choosePaymentMethod: 'Выбрать способ оплаты',
     paymentMethod: 'Способ оплаты',
     returnPolicy: 'Условия возврата',
     paymentMethodInfo: 'Выбор метода платежа',

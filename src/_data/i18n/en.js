@@ -69,6 +69,7 @@ const en = {
     products: 'Products',
     enterKeyword: 'Enter keyword here...',
     learnMore: 'Learn more',
+    choosePaymentMethod: 'Choose Payment Method',
   },
   newsletter: {
     signUp: 'Sign up for our newsletter to get best offers and news.',
@@ -154,7 +155,6 @@ const en = {
   },
   checkout: {
     payment: 'Payment',
-    choosePaymentMethod: 'Choose Payment Method',
     paymentMethod: 'Payment Method',
     returnPolicy: 'Return policy',
     paymentMethodInfo: 'Payment Method Choosing',
