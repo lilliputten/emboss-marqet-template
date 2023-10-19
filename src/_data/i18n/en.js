@@ -16,6 +16,7 @@ const en = {
     author: 'Site author',
     // TODO: Keywords, etc
     meta: 'Meta', // DEBUG:Example of different data formats
+    currency: '$',
   },
   company: {
     name: companyName,
@@ -70,6 +71,18 @@ const en = {
     enterKeyword: 'Enter keyword here...',
     learnMore: 'Learn more',
     choosePaymentMethod: 'Choose Payment Method',
+    catalog: 'Catalog',
+    delivery: 'Delivery and payment',
+    wholesalers: 'Wholesalers',
+    claims: 'Claims',
+    contacts: 'Contacts',
+    back: 'Back',
+  },
+  breadcrumbLinks: {
+    toHomepage: 'To main page',
+    homepage: 'Main page',
+    rubric: 'Specific rubric',
+    product: 'Product',
   },
   newsletter: {
     signUp: 'Sign up for our newsletter to get best offers and news.',
@@ -81,6 +94,7 @@ const en = {
   },
   products: {
     toCart: 'To cart',
+    toCartWide: 'To cart',
     wishlist: 'Wishlist',
     wishlistFull: 'Save to wishlist',
     discount50: '50% off',
@@ -199,6 +213,10 @@ const en = {
     yandexCard: 'Yandex Card',
     cashOnDelivery: 'Cash on delivery',
     cashPaymentToTheCourier: 'Cash payment to the courier',
+  },
+  orderCompleted: {
+    title: 'Order completed',
+    text: 'Ваш заказ № …. сформирован, информация поступит на вашу электронную почту.',
   },
 };
 

@@ -1,0 +1,24 @@
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+
+<section id="checkout" class="page-holder">
+  <div class="container no-padding">
+    <div class="col-12">
+      <div class="box">
+        <div class="icon-holder small badge-style">
+          <i class="fa fa-check-circle-o"></i>
+          <span class="triangle"></span>
+        </div>
+        <div class="box-holder" align="center">
+          <h2>{{ 'orderCompleted.title' | i18n }}</h2>
+          <p>{{ 'orderCompleted.text' | i18n }}</p>
+        </div>
+        <div class="box-holder">
+          <div class="merged-buttons">
+            <a href="{{ langRootUrl }}/" class="le-btn small">{{ 'breadcrumbLinks.toHomepage' | i18n }}</a>
+            <a href="{{ langRootUrl }}/shopping-cart" class="le-btn small">{{ 'checkout.backToCart' | i18n }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

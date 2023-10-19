@@ -5,9 +5,9 @@ layout: page.njk
 ---
 
 {% set breadcrumb = [
-  { link: '/', name: 'headerLinks.homepage' | i18n },
-  { link: '/products', name: 'headerLinks.products' | i18n },
-  { name: 'headerLinks.productsGrid' | i18n, class: 'active' }
+  { link: '/', name: 'breadcrumbLinks.homepage' | i18n },
+  { link: '/products-grid', name: 'breadcrumbLinks.rubric' | i18n },
+  { name: 'breadcrumbLinks.product' | i18n, class: 'active' }
 ] %}
 {% include "shared/section-breadcrumb.njk" %}
 
@@ -15,4 +15,4 @@ layout: page.njk
 
 {% include "section-newsletter.njk" %}
 {% include "section-banner-slider.njk" %}
-{% include "section-brands-slider.njk" %}
+{# section-brands-slider #}

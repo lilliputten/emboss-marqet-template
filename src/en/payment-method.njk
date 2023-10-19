@@ -1,12 +1,13 @@
 ---
-title: Choose Payment Method
+title: Choose payment method
 layout: page.njk
-:changed: 2023.10.09, 21:00
+:changed: 2023.10.19, 23:52
 ---
 
 {% set breadcrumb = [
-  { link: '/', name: 'headerLinks.homepage' | i18n },
-  { name: 'headerLinks.checkout' | i18n, class: 'active' }
+  { link: '/', name: 'breadcrumbLinks.homepage' | i18n },
+  { link: '/products-grid', name: 'breadcrumbLinks.rubric' | i18n },
+  { name: 'breadcrumbLinks.product' | i18n, class: 'active' }
 ] %}
 {% include "shared/section-breadcrumb.njk" %}
 
@@ -14,4 +15,4 @@ layout: page.njk
 
 {% include "section-newsletter.njk" %}
 {% include "section-banner-slider.njk" %}
-{% include "section-brands-slider.njk" %}
+{# {% include "section-brands-slider.njk" %} #}

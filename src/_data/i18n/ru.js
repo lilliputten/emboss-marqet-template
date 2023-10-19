@@ -19,6 +19,7 @@ const ru = {
       // DEBUG: Example of different data formats
       metaName: 'Мета',
     },
+    currency: '₽',
   },
   company: {
     name: companyName,
@@ -72,6 +73,18 @@ const ru = {
     enterKeyword: 'Введите текст...',
     learnMore: 'Узнать больше',
     choosePaymentMethod: 'Выбрать способ оплаты',
+    catalog: 'Каталог',
+    delivery: 'Доставка и оплата',
+    wholesalers: 'Оптовикам',
+    claims: 'Претензии',
+    contacts: 'Контакты',
+    back: 'Назад',
+  },
+  breadcrumbLinks: {
+    toHomepage: 'На главную страницу',
+    homepage: 'Главная',
+    rubric: 'Раздел соответствующий',
+    product: 'Товар',
   },
   newsletter: {
     signUp: 'Подпишитесь на нашу рассылку, чтобы получать лучшие предложения и новости.',
@@ -83,6 +96,7 @@ const ru = {
   },
   products: {
     toCart: 'Купить',
+    toCartWide: 'В корзину',
     wishlist: 'Отложить',
     wishlistFull: 'В лист желаний',
     discount50: '50% off', // Any longer text can't be fit in the circle.
@@ -201,6 +215,10 @@ const ru = {
     yandexCard: 'Яндекс карта',
     cashOnDelivery: 'Наложенный платеж',
     cashPaymentToTheCourier: 'Оплата наличными курьеру',
+  },
+  orderCompleted: {
+    title: 'Заказ завершён',
+    text: 'Ваш заказ № …. сформирован, информация поступит на вашу электронную почту.',
   },
 };
 

@@ -2,6 +2,7 @@ const domainName = 'emboss.studio';
 const baseURL = 'https://' + domainName;
 
 module.exports = {
+  showPagesMenu: true, // Show pages menu (debug only!)
   baseURL,
   domainName,
   author: domainName,

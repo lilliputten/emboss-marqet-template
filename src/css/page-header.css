@@ -33,4 +33,16 @@
       margin-left: 36px;
     }
   }
+  .home-icon-button {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    color: #abb0ac;
+    opacity: 0.5;
+    z-index: 100;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
 }
