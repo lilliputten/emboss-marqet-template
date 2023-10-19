@@ -51,6 +51,18 @@
     .page-header .top-menu-holder nav {
       margin-left: 36px;
     }
+.page-header .home-icon-button {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    color: #abb0ac;
+    opacity: 0.5;
+    z-index: 100;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
 .section-copyright .container {
     display: flex;
     align-items: center;
@@ -427,3 +439,18 @@ div.mobile-dropdown.bootstrap-select .dropdown-header {
       padding: 10px;
       font-size: 14px;
     }
+#breadcrumb .container {
+    display: flex;
+    align-items: flex-start;
+  }
+#breadcrumb .le-breadcrumb {
+    flex: 1;
+  }
+#breadcrumb .le-backlink {
+    margin-top: 8px;
+    background-color: var(--milky);
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }

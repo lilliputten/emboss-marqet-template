@@ -124,8 +124,8 @@
           </div>
           <div class="col-xs-12 col-md-6">
             <div class="logo">
-              <a href="/en/">
-                <img src="../../images/logo/logo.svg" alt="emboss.studio" />
+              <a href="/en/" title="Site name">
+                <img src="../../images/logo/logo2-75h.png" alt="Site name" />
               </a>
             </div>
           </div>
@@ -141,30 +141,19 @@
           <div class="top-nav-holder">
             <div class="row">
               <div class="col-xs-12 col-md-6 col-lg-8 nav-menu top-menu-holder">
+                <div class="home-icon-button">
+                  <a href="/" title="Homepage"
+                    ><i class="fa fa-home" alt="Homepage"></i
+                  ></a>
+                </div>
                 <nav class="hidden-xs visible-sm visible-lg visible-md">
                   <ul class="nav">
-                    <li class="le-dropdown">
-                      <a
-                        class="dropdown-toggle"
-                        href="#"
-                        data-toggle="dropdown"
-                      >
-                        Homepage
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a href="/en/">Homepage</a></li>
-                        <li><a href="/en/test">Test page</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="/en/products/men">Men</a>
-                    </li>
-                    <li>
-                      <a href="/en/products/women">Women</a>
-                    </li>
-                    <li>
-                      <a href="/en/products/sports">Sports</a>
-                    </li>
+                    <li><a href="/en/catalog">Catalog</a></li>
+                    <li><a href="/en/delivery">Delivery and payment</a></li>
+                    <li><a href="/en/wholesalers">Wholesalers</a></li>
+                    <li><a href="/en/claims">Claims</a></li>
+                    <li><a href="/en/contacts">Contacts</a></li>
+
                     <li class="yamm megamenu le-dropdown">
                       <ul class="nav">
                         <li class="dropdown">
@@ -220,10 +209,10 @@
                                   </div>
                                   <div class="col-xs-12 col-md-3">
                                     <h2 class="iconic-head">
-                                      <span class="icon-holder">
-                                        <i class="fa fa-credit-card"></i>
-                                        <span class="triangle"></span>
-                                      </span>
+                                      <span class="icon-holder"
+                                        ><i class="fa fa-credit-card"></i
+                                        ><span class="triangle"></span
+                                      ></span>
                                       Checkout
                                     </h2>
                                     <ul>
@@ -242,10 +231,10 @@
                                       </li>
                                     </ul>
                                     <h2 class="iconic-head">
-                                      <span class="icon-holder">
-                                        <i class="fa fa-chain"></i>
-                                        <span class="triangle"></span>
-                                      </span>
+                                      <span class="icon-holder"
+                                        ><i class="fa fa-chain"></i
+                                        ><span class="triangle"></span
+                                      ></span>
                                       Other links
                                     </h2>
                                     <ul>
@@ -257,9 +246,7 @@
                                       <li>
                                         <a href="#">consectetur adipiscing</a>
                                       </li>
-                                      <li>
-                                        <a href="#">Nunc cursus</a>
-                                      </li>
+                                      <li><a href="#">Nunc cursus</a></li>
                                       <li>
                                         <a href="#">auctor pellentesque</a>
                                       </li>
@@ -302,18 +289,17 @@
                     </li>
                   </ul>
                 </nav>
-
                 <select
                   class="mobile-dropdown selectpicker top-drop-menu nav hidden-md hidden-sm visible-xs hidden-lg"
                   data-style="btn"
                 >
-                  <optgroup label="Homepage">
-                    <option value="/en/" selected="selected">Homepage</option>
-                    <option value="/en/test">Test page</option>
-                  </optgroup>
-                  <option value="/en/products/men">Men</option>
-                  <option value="/en/products/women">Women</option>
-                  <option value="/en/products/sports">Sports</option>
+                  <option value="/en/" selected="selected">Homepage</option>
+                  <option value="/en/catalog">Catalog</option>
+                  <option value="/en/delivery">Delivery and payment</option>
+                  <option value="/en/wholesalers">Wholesalers</option>
+                  <option value="/en/claims">Claims</option>
+                  <option value="/en/contacts">Contacts</option>
+
                   <optgroup label="Pages">
                     <option value="/en/products-grid">
                       Products grid/list
@@ -447,15 +433,21 @@
               <div class="bar">
                 <ul>
                   <li>
-                    <a href="/en/"> Homepage </a>
+                    <a href="/en/"> Main page </a>
                   </li>
                   <li>
-                    <a href="/en/products"> Products </a>
+                    <a href="/en/products-grid"> Specific rubric </a>
                   </li>
-                  <li class="active">Products grid</li>
+                  <li class="active">Product</li>
                 </ul>
               </div>
             </div>
+          </div>
+          <div class="le-backlink">
+            <a href="javascript:history.back()">
+              <i class="fa fa-arrow-left"></i>
+              Back
+            </a>
           </div>
         </div>
       </section>
@@ -511,12 +503,12 @@
                     <div id="scale" class="accordion-body collapse in">
                       <div class="accordion-inner">
                         <ul>
+                          <li><a href="/en/products/scale/1-32">1/32</a></li>
+                          <li><a href="/en/products/scale/1-48">1/48</a></li>
                           <li><a href="/en/products/scale/1-144">1/144</a></li>
                           <li><a href="/en/products/scale/1-24">1/24</a></li>
-                          <li><a href="/en/products/scale/1-32">1/32</a></li>
                           <li><a href="/en/products/scale/1-35">1/35</a></li>
                           <li><a href="/en/products/scale/1-43">1/43</a></li>
-                          <li><a href="/en/products/scale/1-48">1/48</a></li>
                         </ul>
                       </div>
                     </div>
@@ -1248,65 +1240,6 @@
                 <a class="le-btn" href="#">buy now</a>
               </div>
               <img src="../../vendor/images/banner-slide-01.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-brands-slider">
-        <div class="container">
-          <a href="#next" class="brands-next btn-next"></a>
-          <a href="#prev" class="brands-prev btn-prev"></a>
-          <div class="brands-slider default-carousel owl-carousel">
-            <div class="brand-item">
-              <a href="#">
-                <img alt="" src="../../vendor/images/brands01.png" />
-              </a>
-            </div>
-            <div class="brand-item">
-              <a href="#">
-                <img alt="" src="../../vendor/images/brands02.png" />
-              </a>
-            </div>
-            <div class="brand-item">
-              <a href="#">
-                <img alt="" src="../../vendor/images/brands03.png" />
-              </a>
-            </div>
-            <div class="brand-item">
-              <a href="#">
-                <img alt="" src="../../vendor/images/brands04.png" />
-              </a>
-            </div>
-            <div class="brand-item">
-              <a href="#">
-                <img alt="" src="../../vendor/images/brands05.png" />
-              </a>
-            </div>
-            <div class="brand-item">
-              <a href="#">
-                <img alt="" src="../../vendor/images/brands02.png" />
-              </a>
-            </div>
-            <div class="brand-item">
-              <a href="#">
-                <img alt="" src="../../vendor/images/brands04.png" />
-              </a>
-            </div>
-            <div class="brand-item">
-              <a href="#">
-                <img alt="" src="../../vendor/images/brands01.png" />
-              </a>
-            </div>
-            <div class="brand-item">
-              <a href="#">
-                <img alt="" src="../../vendor/images/brands03.png" />
-              </a>
-            </div>
-            <div class="brand-item">
-              <a href="#">
-                <img alt="" src="../../vendor/images/brands05.png" />
-              </a>
             </div>
           </div>
         </div>
