@@ -81,7 +81,7 @@ const en = {
   breadcrumbLinks: {
     toHomepage: 'To main page',
     homepage: 'Main page',
-    rubric: 'Specific rubric',
+    rubric: 'Prefabricated models',
     product: 'Product',
   },
   newsletter: {
@@ -182,7 +182,7 @@ const en = {
     deliveryStandard: 'Standard',
     deliveryRussianPost: 'Russian Post',
     deliverySdek: 'SDEK',
-    deliveryLabirint: 'Labirint',
+    deliveryLPost: 'L Post',
     telephone: 'Telephone',
     zipCode: 'Zip code',
     addressLine1: 'Address line 1',

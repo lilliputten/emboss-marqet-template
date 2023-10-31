@@ -1,8 +1,12 @@
 const domainName = 'emboss.studio';
 const baseURL = 'https://' + domainName;
 
+// Dev mode?
+const envDev = process.env.ELEVENTY_DEV;
+const isDev = !!envDev;
+
 module.exports = {
-  showPagesMenu: false, // Show pages menu (debug only!)
+  showPagesMenu: isDev, // Show pages menu (debug only!)
   baseURL,
   domainName,
   author: domainName,

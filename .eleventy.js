@@ -13,18 +13,19 @@ const markdownIt = require('markdown-it');
 const yaml = require('js-yaml');
 const prettier = require('prettier');
 
-/* // TODO: Dev mode?
- * const envDev = process.env.ELEVENTY_DEV;
- * const isDev = !!envDev;
- */
+// Dev mode?
+const envDev = process.env.ELEVENTY_DEV;
+const isDev = !!envDev;
 
 const translations = require('./src/_data/i18n');
 
 module.exports = function (eleventyConfig) {
   // Enable subfolders for includes...
   eleventyConfig.setLiquidOptions({
-    dynamicPartials: true
+    dynamicPartials: true,
   });
+
+  eleventyConfig.addGlobalData('isDev', isDev);
 
   // Plugins...
   eleventyConfig.addPlugin(pluginRss);
