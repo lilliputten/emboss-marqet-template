@@ -1,20 +1,9 @@
 <select class="mobile-dropdown selectpicker top-drop-menu nav hidden-md hidden-sm visible-xs hidden-lg" data-style="btn">
   {# Mobile droipdown menu... #}
-  {#
-  <optgroup label="{{ 'headerLinks.homepage' | i18n }}">
-    <option value="{{ langRootUrl }}/" selected="selected">{{ 'headerLinks.homepage' | i18n }}</option>
-    <option value="{{ langRootUrl }}/test">{{ 'headerLinks.testPage' | i18n }}</option>
-  </optgroup>
-  <option value="{{ langRootUrl }}/" selected="selected">{{ 'headerLinks.homepage' | i18n }}</option>
-  <option value="{{ langRootUrl }}/products/men">{{ 'headerLinks.men' | i18n }}</option>
-  <option value="{{ langRootUrl }}/products/women">{{ 'headerLinks.women' | i18n }}</option>
-  <option value="{{ langRootUrl }}/products/sports">{{ 'headerLinks.sports' | i18n }}</option>
-  #}
   <option value="{{ langRootUrl }}/" selected="selected">{{ 'headerLinks.homepage' | i18n }}</option>
   <option value="{{ langRootUrl }}/products-grid">{{ 'headerLinks.catalog' | i18n }}</option>
   <option value="{{ langRootUrl }}/delivery">{{ 'headerLinks.delivery' | i18n }}</option>
   <option value="{{ langRootUrl }}/wholesalers">{{ 'headerLinks.wholesalers' | i18n }}</option>
-  <option value="{{ langRootUrl }}/claims">{{ 'headerLinks.claims' | i18n }}</option>
   <option value="{{ langRootUrl }}/contacts">{{ 'headerLinks.contacts' | i18n }}</option>
   {% if site.showPagesMenu %}
   <optgroup label="{{ 'headerLinks.pages' | i18n }}">

@@ -2,7 +2,9 @@
 
 <section id="featured-products">
   <div class="container">
-    <div class="iconic-nav-bar">
+    <div class="iconic-nav-bar no-icon">
+      {# Removed icon: Issue #13
+      #}
       <div class="icon-holder">
         <i class="fa fa-star"></i>
         <span class="triangle"></span>
@@ -16,232 +18,59 @@
       </div>
     </div>
     <div class="products-holder product-carousel owl-carousel">
-      <div class="product-item">
-        <div class="head">
-          <div class="le-ribbon green right"><span>{{ 'products.halfPrice' | i18n }}</span></div>
-          <div class="thumb">
-            <img alt="" src="/vendor/images/products/products-modelist-1/product01.png" />
-          </div>
-          <div class="price">
-            <div class="price-old">
-              <span class="currency">₽</span>250
+
+      {% set currency = '₽' if lang === 'ru' else '$' %}
+
+      {% for item in featuredProducts -%}
+        <div class="product-item">
+          <div class="head">
+            {% if item.extra %}
+              {{ item.extra | safe }}
+            {% endif %}
+            <div class="thumb">
+              <img alt="" src="{{ item.image }}" />
             </div>
-            <div class="price-current">
-              <span class="currency">₽</span>145
+            {#
+            <div class="price">
+              {% if item.priceOld %}
+              <div class="price-old">
+                <span class="currency">{{ currency }}</span>{{ item.priceOld }}
+              </div>
+              {% endif %}
+              <div class="price-current">
+                <span class="currency">{{ currency }}</span>{{ item.price }}
+              </div>
             </div>
-          </div>
-          <div class="star-holder">
-            <div class="star" data-score="3"></div>
-          </div>
-          <button class="btn-compare  btn-iconic"></button>
-        </div>
-        <div class="body">
-          <h3><a href="{{ langRootUrl }}/single-product">consectetur adipiscing elit</a></h3>
-          <div class="excerpt">
-            Looking lorem round, to ascertain that they...
-          </div>
-          <div class="merged-buttons">
-            <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCart' | i18n }}</button>
-            <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
-          </div>
-        </div>
-      </div>
-      <div class="product-item">
-        <div class="head">
-          <div class="thumb">
-            <img alt="" src="/vendor/images/products/products-modelist-1/product02.png" />
-          </div>
-          <div class="price">
-            <div class="price-old">
-              <span class="currency">₽</span>350
+            #}
+            <div class="star-holder">
+              <div class="star" data-score="{{ item.stars }}"></div>
             </div>
-            <div class="price-current">
-              <span class="currency">₽</span>245
+            <button class="btn-compare  btn-iconic"></button>
+          </div>
+          <div class="body">
+            <h3><a href="{{ langRootUrl }}/single-product">{{ item.name }}</a></h3>
+            <div class="excerpt">
+              {{ item.excerpt }}
             </div>
-          </div>
-          <div class="star-holder">
-            <div class="star" data-score="4"></div>
-          </div>
-          <button class="btn-compare  btn-iconic"></button>
-        </div>
-        <div class="body">
-          <h3><a href="{{ langRootUrl }}/single-product">Man sport Hiking shoe</a></h3>
-          <div class="excerpt">
-            Looking lorem round, to ascertain that they...
-          </div>
-          <div class="merged-buttons">
-            <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCart' | i18n }}</button>
-            <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
-          </div>
-        </div>
-      </div>
-      <div class="product-item">
-        <div class="head">
-          <div class="le-badge orange"><span>{{ 'products.discount50' | i18n }}</span></div>
-          <div class="thumb">
-            <img alt="" src="/vendor/images/products/products-modelist-1/product03.png" />
-          </div>
-          <div class="price">
-            <div class="price-old">
-              <span class="currency">₽</span>450
+            <div class="price-plain">
+              <div class="price-current">
+                <span class="currency">{{ currency }}</span>{{ item.price }}
+              </div>
+              {% if item.priceOld %}
+              <div class="price-old">
+                <span class="currency">{{ currency }}</span>{{ item.priceOld }}
+              </div>
+              {% endif %}
             </div>
-            <div class="price-current">
-              <span class="currency">₽</span>245
+            <div class="merged-buttons">
+              <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCartWide' | i18n }}</button>
+              <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
             </div>
           </div>
-          <div class="star-holder">
-            <div class="star" data-score="4"></div>
-          </div>
-          <button class="btn-compare  btn-iconic"></button>
         </div>
-        <div class="body">
-          <h3><a href="{{ langRootUrl }}/single-product">Woman highheel shoe</a></h3>
-          <div class="excerpt">
-            Looking lorem round, to ascertain that they...
-          </div>
-          <div class="merged-buttons">
-            <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCart' | i18n }}</button>
-            <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
-          </div>
-        </div>
-      </div>
-      <div class="product-item">
-        <div class="head">
-          <div class="le-badge green"><span>{{ 'products.new' | i18n }}</span></div>
-          <div class="thumb">
-            <img alt="" src="/vendor/images/products/products-modelist-1/product04.png" />
-          </div>
-          <div class="price">
-            <div class="price-old">
-              <span class="currency">₽</span>120
-            </div>
-            <div class="price-current">
-              <span class="currency">₽</span>95
-            </div>
-          </div>
-          <div class="star-holder">
-            <div class="star" data-score="2"></div>
-          </div>
-          <button class="btn-compare  btn-iconic"></button>
-        </div>
-        <div class="body">
-          <h3><a href="{{ langRootUrl }}/single-product">Woman highheel shoe</a></h3>
-          <div class="excerpt">
-            Looking lorem round, to ascertain that they...
-          </div>
-          <div class="merged-buttons">
-            <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCart' | i18n }}</button>
-            <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
-          </div>
-        </div>
-      </div>
-      <div class="product-item">
-        <div class="head">
-          <div class="thumb">
-            <img alt="" src="/vendor/images/products/products-modelist-1/product03.png" />
-          </div>
-          <div class="price">
-            <div class="price-old">
-              <span class="currency">₽</span>450
-            </div>
-            <div class="price-current">
-              <span class="currency">₽</span>245
-            </div>
-          </div>
-          <div class="star-holder">
-            <div class="star" data-score="4"></div>
-          </div>
-          <button class="btn-compare  btn-iconic"></button>
-        </div>
-        <div class="body">
-          <h3><a href="{{ langRootUrl }}/single-product">Woman highheel shoe</a></h3>
-          <div class="excerpt">
-            Looking lorem round, to ascertain that they...
-          </div>
-          <div class="merged-buttons">
-            <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCart' | i18n }}</button>
-            <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
-          </div>
-        </div>
-      </div>
-      <div class="product-item">
-        <div class="head">
-          <div class="thumb">
-            <img alt="" src="/vendor/images/products/products-modelist-1/product02.png" />
-          </div>
-          <div class="price">
-            <div class="price-current">
-              <span class="currency">₽</span>245
-            </div>
-          </div>
-          <div class="star-holder">
-            <div class="star" data-score="4"></div>
-          </div>
-          <button class="btn-compare  btn-iconic"></button>
-        </div>
-        <div class="body">
-          <h3><a href="{{ langRootUrl }}/single-product">Man sport Hiking shoe</a></h3>
-          <div class="excerpt">
-            Looking lorem round, to ascertain that they...
-          </div>
-          <div class="merged-buttons">
-            <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCart' | i18n }}</button>
-            <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
-          </div>
-        </div>
-      </div>
-      <div class="product-item">
-        <div class="head">
-          <div class="thumb">
-            <img alt="" src="/vendor/images/products/products-modelist-1/product04.png" />
-          </div>
-          <div class="price">
-            <div class="price-current">
-              <span class="currency">₽</span>95
-            </div>
-          </div>
-          <div class="star-holder">
-            <div class="star" data-score="2"></div>
-          </div>
-          <button class="btn-compare  btn-iconic"></button>
-        </div>
-        <div class="body">
-          <h3><a href="{{ langRootUrl }}/single-product">colorful cool runnig shoes</a></h3>
-          <div class="excerpt">
-            Looking lorem round, to ascertain that they...
-          </div>
-          <div class="merged-buttons">
-            <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCart' | i18n }}</button>
-            <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
-          </div>
-        </div>
-      </div>
-      <div class="product-item">
-        <div class="head">
-          <div class="thumb">
-            <img alt="" src="/vendor/images/products/products-modelist-1/product01.png" />
-          </div>
-          <div class="price">
-            <div class="price-current">
-              <span class="currency">₽</span>145
-            </div>
-          </div>
-          <div class="star-holder">
-            <div class="star" data-score="3"></div>
-          </div>
-          <button class="btn-compare  btn-iconic"></button>
-        </div>
-        <div class="body">
-          <h3><a href="{{ langRootUrl }}/single-product">consectetur adipiscing elit</a></h3>
-          <div class="excerpt">
-            Looking lorem round, to ascertain that they...
-          </div>
-          <div class="merged-buttons">
-            <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCart' | i18n }}</button>
-            <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
-          </div>
-        </div>
-      </div>
+      {% endfor -%}
+
+
     </div>
   </div>
 </section>

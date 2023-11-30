@@ -1,0 +1,47 @@
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+
+{% set productColumns = 'col-xs-12 col-sm-6 col-md-6 col-lg-4' %}
+
+{# Expected external params:
+- image
+- priceOld
+- price
+- stars
+- name
+- excerpt
+#}
+
+<div class="product-wrapper {{productColumns}}">
+  <div class="product-item">
+    <div class="head">
+      <div class="le-ribbon blue right"><span>{{ 'products.newExclam' | i18n }}</span></div>
+      <div class="thumb">
+        <img alt="" src="{{image}}" />
+      </div>
+      <div class="price">
+        {% if priceOld %}
+        <div class="price-old">
+          <span class="currency">₽</span>{{priceOld}}
+        </div>
+        {% endif %}
+        <div class="price-current">
+          <span class="currency">₽</span>{{price}}
+        </div>
+      </div>
+      <div class="star-holder">
+        <div class="star" data-score="{{stars}}"></div>
+      </div>
+      <button class="btn-compare  btn-iconic"></button>
+    </div>
+    <div class="body">
+      <h3><a href="{{ langRootUrl }}/single-product">{{name}}</a></h3>
+      <div class="excerpt">
+        {{excerpt}}
+      </div>
+      <div class="merged-buttons">
+        <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCartWide' | i18n }}</button>
+        <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
+      </div>
+    </div>
+  </div>
+</div>
