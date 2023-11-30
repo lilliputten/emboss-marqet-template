@@ -5,8 +5,8 @@
 
 # README
 
-- Version: 0.0.5
-- Last changes timestamp: 2023.10.19, 20:30 GMT+3
+- Version: 0.0.6
+- Last changes timestamp: 2023.11.30, 20:19 GMT+3
 
 ## See also
 
