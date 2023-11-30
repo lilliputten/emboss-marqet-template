@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="../../vendor/css/animate.css" />
     <link rel="stylesheet" href="../../vendor/css/owl.carousel.css" />
     <link rel="stylesheet" href="../../vendor/css/owl.theme.css" />
+    <link rel="stylesheet" href="../../vendor/css/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../../vendor/css/bootstrap-select.min.css" />
     <link rel="stylesheet" href="../../vendor/css/yamm.css" />
     <link
@@ -87,26 +88,23 @@
           </div>
         </div>
         <div class="container header-row">
-          <div class="col-xs-12 col-md-3">
+          <div class="col-xs-12 col-md-4">
             <div class="buttons-holder">
-              <div class="btn-group le-dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                  English
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="/shopping-cart/" rel="alternate" hreflang="ru"
-                      >Русский</a
-                    >
-                  </li>
-
-                  <li>
-                    <a href="/en/shopping-cart/" rel="alternate" hreflang="en"
-                      >English</a
-                    >
-                  </li>
-                </ul>
-              </div>
+              <!-- Languages selector moved to the right side / div class="btn-group le-dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            English
+          </a>
+          <ul class="dropdown-menu">
+            
+            
+            
+              
+                <li><a href="/shopping-cart/" rel="alternate" hreflang="ru">Русский</a></li>
+              
+                <li><a href="/en/shopping-cart/" rel="alternate" hreflang="en">English</a></li>
+              
+          </ul>
+        </div-->
               <div class="btn-group le-dropdown">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown">
                   <i class="fa fa-rub"></i> rub
@@ -122,18 +120,39 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-md-6">
+          <div class="col-xs-12 col-md-4">
             <div class="logo">
               <a href="/en/" title="Site name">
                 <img src="../../images/logo/logo2-75h.png" alt="Site name" />
               </a>
             </div>
           </div>
-          <div class="col-xs-12 col-md-3 last-menu">
+          <div class="col-xs-12 col-md-4 last-menu">
             <ul class="link-list inline">
+              <li>
+                <div class="btn-group le-dropdown">
+                  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                    English
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="/shopping-cart/" rel="alternate" hreflang="ru"
+                        >Русский</a
+                      >
+                    </li>
+
+                    <li>
+                      <a href="/en/shopping-cart/" rel="alternate" hreflang="en"
+                        >English</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
               <li><a href="/en/user/account">My account</a></li>
               <li><a href="/en/user/wishlist">My wishlist</a></li>
-              <li><a href="/en/user/login">Log in</a></li>
+              <li><a href="/en/user/logout">Log out</a></li>
             </ul>
           </div>
         </div>
@@ -151,7 +170,6 @@
                     <li><a href="/en/products-grid">Catalog</a></li>
                     <li><a href="/en/delivery">Delivery and payment</a></li>
                     <li><a href="/en/wholesalers">Wholesalers</a></li>
-                    <li><a href="/en/claims">Claims</a></li>
                     <li><a href="/en/contacts">Contacts</a></li>
                   </ul>
                 </nav>
@@ -163,11 +181,10 @@
                   <option value="/en/products-grid">Catalog</option>
                   <option value="/en/delivery">Delivery and payment</option>
                   <option value="/en/wholesalers">Wholesalers</option>
-                  <option value="/en/claims">Claims</option>
                   <option value="/en/contacts">Contacts</option>
                 </select>
               </div>
-              <div class="col-xs-12 col-md-3 col-lg-2 no-margin search-holder">
+              <div class="col-xs-12 col-md-5 col-lg-3 no-margin search-holder">
                 <div class="searchbox">
                   <a href="" class="fa fa-search search-button"></a>
                   <div class="field">
@@ -180,7 +197,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xs-12 col-md-3 col-lg-2 basket-holder">
+              <div class="col-xs-12 col-md-1 col-lg-1 basket-holder">
                 <div class="basket">
                   <div class="dropdown">
                     <a class="dropdown-toggle" data-hover="dropdown" href="#">
@@ -192,7 +209,6 @@
                         />
                         <span class="item-count"> 3 </span>
                       </div>
-                      <span class="total-price"> $389.99 </span>
                     </a>
                     <ul class="dropdown-menu">
                       <li>

@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="../vendor/css/animate.css" />
     <link rel="stylesheet" href="../vendor/css/owl.carousel.css" />
     <link rel="stylesheet" href="../vendor/css/owl.theme.css" />
+    <link rel="stylesheet" href="../vendor/css/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../vendor/css/bootstrap-select.min.css" />
     <link rel="stylesheet" href="../vendor/css/yamm.css" />
     <link
@@ -87,20 +88,23 @@
           </div>
         </div>
         <div class="container header-row">
-          <div class="col-xs-12 col-md-3">
+          <div class="col-xs-12 col-md-4">
             <div class="buttons-holder">
-              <div class="btn-group le-dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                  English
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a href="/" rel="alternate" hreflang="ru">Русский</a></li>
-
-                  <li>
-                    <a href="/en/" rel="alternate" hreflang="en">English</a>
-                  </li>
-                </ul>
-              </div>
+              <!-- Languages selector moved to the right side / div class="btn-group le-dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            English
+          </a>
+          <ul class="dropdown-menu">
+            
+            
+            
+              
+                <li><a href="/" rel="alternate" hreflang="ru">Русский</a></li>
+              
+                <li><a href="/en/" rel="alternate" hreflang="en">English</a></li>
+              
+          </ul>
+        </div-->
               <div class="btn-group le-dropdown">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown">
                   <i class="fa fa-rub"></i> rub
@@ -116,17 +120,32 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-md-6">
+          <div class="col-xs-12 col-md-4">
             <div class="logo">
               <a href="/en/" title="Site name">
                 <img src="../images/logo/logo2-75h.png" alt="Site name" />
               </a>
             </div>
           </div>
-          <div class="col-xs-12 col-md-3 last-menu">
+          <div class="col-xs-12 col-md-4 last-menu">
             <ul class="link-list inline">
-              <li><a href="/en/user/account">My account</a></li>
-              <li><a href="/en/user/wishlist">My wishlist</a></li>
+              <li>
+                <div class="btn-group le-dropdown">
+                  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                    English
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="/" rel="alternate" hreflang="ru">Русский</a>
+                    </li>
+
+                    <li>
+                      <a href="/en/" rel="alternate" hreflang="en">English</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
               <li><a href="/en/user/login">Log in</a></li>
             </ul>
           </div>
@@ -145,7 +164,6 @@
                     <li><a href="/en/products-grid">Catalog</a></li>
                     <li><a href="/en/delivery">Delivery and payment</a></li>
                     <li><a href="/en/wholesalers">Wholesalers</a></li>
-                    <li><a href="/en/claims">Claims</a></li>
                     <li><a href="/en/contacts">Contacts</a></li>
                   </ul>
                 </nav>
@@ -157,11 +175,10 @@
                   <option value="/en/products-grid">Catalog</option>
                   <option value="/en/delivery">Delivery and payment</option>
                   <option value="/en/wholesalers">Wholesalers</option>
-                  <option value="/en/claims">Claims</option>
                   <option value="/en/contacts">Contacts</option>
                 </select>
               </div>
-              <div class="col-xs-12 col-md-3 col-lg-2 no-margin search-holder">
+              <div class="col-xs-12 col-md-5 col-lg-3 no-margin search-holder">
                 <div class="searchbox">
                   <a href="" class="fa fa-search search-button"></a>
                   <div class="field">
@@ -174,7 +191,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xs-12 col-md-3 col-lg-2 basket-holder">
+              <div class="col-xs-12 col-md-1 col-lg-1 basket-holder">
                 <div class="basket">
                   <div class="dropdown">
                     <a class="dropdown-toggle" data-hover="dropdown" href="#">
@@ -186,7 +203,6 @@
                         />
                         <span class="item-count"> 3 </span>
                       </div>
-                      <span class="total-price"> $389.99 </span>
                     </a>
                     <ul class="dropdown-menu">
                       <li>
@@ -267,11 +283,11 @@
         </div>
       </header>
 
-      <section id="banners-mosaic">
+      <section id="banners-mosaic" style="margin-top: 10px">
         <div class="container no-padding mosaic-holder">
-          <div class="col-xs-12 col-md-6">
-            <div class="mosaic-banner big wow bounceInLeft">
-              <img alt="" src="../vendor/images/mosaic/real/mosaic01.jpg" />
+          <div class="col-12">
+            <div class="mosaic-banner full wow bounceInLeft">
+              <img alt="" src="../vendor/images/banner-slide-01.jpg" />
               <div class="caption">
                 <h1>
                   <span class="light">high heel</span><br />
@@ -281,62 +297,18 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-md-3">
-            <div class="mosaic-banner inverse wow bounceInRight">
-              <img alt="" src="../vendor/images/mosaic/real/mosaic02.jpg" />
-              <div class="caption">
-                <h1>
-                  <span class="light">best style</span><br />
-                  for party
-                </h1>
-                <a class="le-btn small" href="#">Learn more</a>
-              </div>
-            </div>
-            <div class="mosaic-banner wow bounceInRight">
-              <img alt="" src="../vendor/images/mosaic/real/mosaic03.jpg" />
-              <div class="caption">
-                <h1>
-                  <span class="light">very unique</span><br />
-                  collection
-                </h1>
-                <a class="le-btn small" href="#">Learn more</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-3">
-            <div class="mosaic-banner wow bounceInRight" data-wow-delay="0.1s">
-              <img alt="" src="../vendor/images/mosaic/real/mosaic04.jpg" />
-              <div class="caption">
-                <h1>
-                  <span class="light">vintage</span><br />
-                  style
-                </h1>
-                <a class="le-btn small" href="#">Learn more</a>
-              </div>
-            </div>
-            <div class="mosaic-banner wow bounceInRight" data-wow-delay="0.1s">
-              <img alt="" src="../vendor/images/mosaic/real/mosaic05.jpg" />
-              <div class="caption">
-                <h1>
-                  <span class="light">new</span><br />
-                  season
-                </h1>
-                <a class="le-btn small" href="#">Learn more</a>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
       <section id="featured-products">
         <div class="container">
-          <div class="iconic-nav-bar">
+          <div class="iconic-nav-bar no-icon">
             <div class="icon-holder">
               <i class="fa fa-star"></i>
               <span class="triangle"></span>
             </div>
             <div class="bar">
-              <h2>Featured <span class="bold">products</span></h2>
+              <h2><span class="bold">Featured products</span></h2>
               <div class="nav-buttons">
                 <a class="btn-prev" href="#prev"></a>
                 <a class="btn-next" href="#next"></a>
@@ -347,20 +319,14 @@
             <div class="product-item">
               <div class="head">
                 <div class="le-ribbon green right"><span>50%</span></div>
+
                 <div class="thumb">
                   <img
                     alt=""
                     src="../vendor/images/products/products-modelist-1/product01.png"
                   />
                 </div>
-                <div class="price">
-                  <div class="price-old">
-                    <span class="currency">₽</span>250
-                  </div>
-                  <div class="price-current">
-                    <span class="currency">₽</span>145
-                  </div>
-                </div>
+
                 <div class="star-holder">
                   <div class="star" data-score="3"></div>
                 </div>
@@ -372,6 +338,15 @@
                 </h3>
                 <div class="excerpt">
                   Looking lorem round, to ascertain that they...
+                </div>
+                <div class="price-plain">
+                  <div class="price-current">
+                    <span class="currency">$</span>145
+                  </div>
+
+                  <div class="price-old">
+                    <span class="currency">$</span>250
+                  </div>
                 </div>
                 <div class="merged-buttons">
                   <button class="btn-add-to-cart le-btn btn-iconic">
@@ -391,14 +366,7 @@
                     src="../vendor/images/products/products-modelist-1/product02.png"
                   />
                 </div>
-                <div class="price">
-                  <div class="price-old">
-                    <span class="currency">₽</span>350
-                  </div>
-                  <div class="price-current">
-                    <span class="currency">₽</span>245
-                  </div>
-                </div>
+
                 <div class="star-holder">
                   <div class="star" data-score="4"></div>
                 </div>
@@ -408,6 +376,15 @@
                 <h3><a href="/en/single-product">Man sport Hiking shoe</a></h3>
                 <div class="excerpt">
                   Looking lorem round, to ascertain that they...
+                </div>
+                <div class="price-plain">
+                  <div class="price-current">
+                    <span class="currency">$</span>245
+                  </div>
+
+                  <div class="price-old">
+                    <span class="currency">$</span>350
+                  </div>
                 </div>
                 <div class="merged-buttons">
                   <button class="btn-add-to-cart le-btn btn-iconic">
@@ -422,20 +399,14 @@
             <div class="product-item">
               <div class="head">
                 <div class="le-badge orange"><span>50% off</span></div>
+
                 <div class="thumb">
                   <img
                     alt=""
                     src="../vendor/images/products/products-modelist-1/product03.png"
                   />
                 </div>
-                <div class="price">
-                  <div class="price-old">
-                    <span class="currency">₽</span>450
-                  </div>
-                  <div class="price-current">
-                    <span class="currency">₽</span>245
-                  </div>
-                </div>
+
                 <div class="star-holder">
                   <div class="star" data-score="4"></div>
                 </div>
@@ -445,6 +416,15 @@
                 <h3><a href="/en/single-product">Woman highheel shoe</a></h3>
                 <div class="excerpt">
                   Looking lorem round, to ascertain that they...
+                </div>
+                <div class="price-plain">
+                  <div class="price-current">
+                    <span class="currency">$</span>245
+                  </div>
+
+                  <div class="price-old">
+                    <span class="currency">$</span>450
+                  </div>
                 </div>
                 <div class="merged-buttons">
                   <button class="btn-add-to-cart le-btn btn-iconic">
@@ -459,20 +439,14 @@
             <div class="product-item">
               <div class="head">
                 <div class="le-badge green"><span>New</span></div>
+
                 <div class="thumb">
                   <img
                     alt=""
                     src="../vendor/images/products/products-modelist-1/product04.png"
                   />
                 </div>
-                <div class="price">
-                  <div class="price-old">
-                    <span class="currency">₽</span>120
-                  </div>
-                  <div class="price-current">
-                    <span class="currency">₽</span>95
-                  </div>
-                </div>
+
                 <div class="star-holder">
                   <div class="star" data-score="2"></div>
                 </div>
@@ -482,6 +456,15 @@
                 <h3><a href="/en/single-product">Woman highheel shoe</a></h3>
                 <div class="excerpt">
                   Looking lorem round, to ascertain that they...
+                </div>
+                <div class="price-plain">
+                  <div class="price-current">
+                    <span class="currency">$</span>95
+                  </div>
+
+                  <div class="price-old">
+                    <span class="currency">$</span>120
+                  </div>
                 </div>
                 <div class="merged-buttons">
                   <button class="btn-add-to-cart le-btn btn-iconic">
@@ -501,14 +484,7 @@
                     src="../vendor/images/products/products-modelist-1/product03.png"
                   />
                 </div>
-                <div class="price">
-                  <div class="price-old">
-                    <span class="currency">₽</span>450
-                  </div>
-                  <div class="price-current">
-                    <span class="currency">₽</span>245
-                  </div>
-                </div>
+
                 <div class="star-holder">
                   <div class="star" data-score="4"></div>
                 </div>
@@ -518,6 +494,15 @@
                 <h3><a href="/en/single-product">Woman highheel shoe</a></h3>
                 <div class="excerpt">
                   Looking lorem round, to ascertain that they...
+                </div>
+                <div class="price-plain">
+                  <div class="price-current">
+                    <span class="currency">$</span>245
+                  </div>
+
+                  <div class="price-old">
+                    <span class="currency">$</span>450
+                  </div>
                 </div>
                 <div class="merged-buttons">
                   <button class="btn-add-to-cart le-btn btn-iconic">
@@ -537,11 +522,7 @@
                     src="../vendor/images/products/products-modelist-1/product02.png"
                   />
                 </div>
-                <div class="price">
-                  <div class="price-current">
-                    <span class="currency">₽</span>245
-                  </div>
-                </div>
+
                 <div class="star-holder">
                   <div class="star" data-score="4"></div>
                 </div>
@@ -551,6 +532,11 @@
                 <h3><a href="/en/single-product">Man sport Hiking shoe</a></h3>
                 <div class="excerpt">
                   Looking lorem round, to ascertain that they...
+                </div>
+                <div class="price-plain">
+                  <div class="price-current">
+                    <span class="currency">$</span>245
+                  </div>
                 </div>
                 <div class="merged-buttons">
                   <button class="btn-add-to-cart le-btn btn-iconic">
@@ -570,11 +556,7 @@
                     src="../vendor/images/products/products-modelist-1/product04.png"
                   />
                 </div>
-                <div class="price">
-                  <div class="price-current">
-                    <span class="currency">₽</span>95
-                  </div>
-                </div>
+
                 <div class="star-holder">
                   <div class="star" data-score="2"></div>
                 </div>
@@ -586,6 +568,11 @@
                 </h3>
                 <div class="excerpt">
                   Looking lorem round, to ascertain that they...
+                </div>
+                <div class="price-plain">
+                  <div class="price-current">
+                    <span class="currency">$</span>95
+                  </div>
                 </div>
                 <div class="merged-buttons">
                   <button class="btn-add-to-cart le-btn btn-iconic">
@@ -605,11 +592,7 @@
                     src="../vendor/images/products/products-modelist-1/product01.png"
                   />
                 </div>
-                <div class="price">
-                  <div class="price-current">
-                    <span class="currency">₽</span>145
-                  </div>
-                </div>
+
                 <div class="star-holder">
                   <div class="star" data-score="3"></div>
                 </div>
@@ -621,6 +604,11 @@
                 </h3>
                 <div class="excerpt">
                   Looking lorem round, to ascertain that they...
+                </div>
+                <div class="price-plain">
+                  <div class="price-current">
+                    <span class="currency">$</span>145
+                  </div>
                 </div>
                 <div class="merged-buttons">
                   <button class="btn-add-to-cart le-btn btn-iconic">
@@ -648,10 +636,11 @@
             </div>
           </div>
           <div class="products-holder simple-grid">
-            <div class="product-wrapper col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="product-wrapper col-xs-12 col-sm-6 col-md-6 col-lg-4">
               <div class="product-item">
                 <div class="head">
                   <div class="le-ribbon blue right"><span>New!</span></div>
+
                   <div class="thumb">
                     <img
                       alt=""
@@ -660,10 +649,11 @@
                   </div>
                   <div class="price">
                     <div class="price-old">
-                      <span class="currency">₽</span>250
+                      <span class="currency">$</span>250
                     </div>
+
                     <div class="price-current">
-                      <span class="currency">₽</span>145
+                      <span class="currency">$</span>145
                     </div>
                   </div>
                   <div class="star-holder">
@@ -693,7 +683,7 @@
                 </div>
               </div>
             </div>
-            <div class="product-wrapper col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="product-wrapper col-xs-12 col-sm-6 col-md-6 col-lg-4">
               <div class="product-item">
                 <div class="head">
                   <div class="thumb">
@@ -704,10 +694,11 @@
                   </div>
                   <div class="price">
                     <div class="price-old">
-                      <span class="currency">₽</span>350
+                      <span class="currency">$</span>350
                     </div>
+
                     <div class="price-current">
-                      <span class="currency">₽</span>245
+                      <span class="currency">$</span>245
                     </div>
                   </div>
                   <div class="star-holder">
@@ -733,10 +724,11 @@
                 </div>
               </div>
             </div>
-            <div class="product-wrapper col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="product-wrapper col-xs-12 col-sm-6 col-md-6 col-lg-4">
               <div class="product-item">
                 <div class="head">
                   <div class="le-badge orange"><span>50% off</span></div>
+
                   <div class="thumb">
                     <img
                       alt=""
@@ -745,10 +737,11 @@
                   </div>
                   <div class="price">
                     <div class="price-old">
-                      <span class="currency">₽</span>450
+                      <span class="currency">$</span>450
                     </div>
+
                     <div class="price-current">
-                      <span class="currency">₽</span>245
+                      <span class="currency">$</span>245
                     </div>
                   </div>
                   <div class="star-holder">
@@ -772,10 +765,11 @@
                 </div>
               </div>
             </div>
-            <div class="product-wrapper col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="product-wrapper col-xs-12 col-sm-6 col-md-6 col-lg-4">
               <div class="product-item">
                 <div class="head">
                   <div class="le-badge green"><span>New</span></div>
+
                   <div class="thumb">
                     <img
                       alt=""
@@ -784,10 +778,11 @@
                   </div>
                   <div class="price">
                     <div class="price-old">
-                      <span class="currency">₽</span>120
+                      <span class="currency">$</span>120
                     </div>
+
                     <div class="price-current">
-                      <span class="currency">₽</span>95
+                      <span class="currency">$</span>95
                     </div>
                   </div>
                   <div class="star-holder">
@@ -813,7 +808,7 @@
                 </div>
               </div>
             </div>
-            <div class="product-wrapper col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="product-wrapper col-xs-12 col-sm-6 col-md-6 col-lg-4">
               <div class="product-item">
                 <div class="head">
                   <div class="thumb">
@@ -824,10 +819,11 @@
                   </div>
                   <div class="price">
                     <div class="price-old">
-                      <span class="currency">₽</span>450
+                      <span class="currency">$</span>450
                     </div>
+
                     <div class="price-current">
-                      <span class="currency">₽</span>245
+                      <span class="currency">$</span>245
                     </div>
                   </div>
                   <div class="star-holder">
@@ -851,7 +847,7 @@
                 </div>
               </div>
             </div>
-            <div class="product-wrapper col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="product-wrapper col-xs-12 col-sm-6 col-md-6 col-lg-4">
               <div class="product-item">
                 <div class="head">
                   <div class="thumb">
@@ -862,7 +858,7 @@
                   </div>
                   <div class="price">
                     <div class="price-current">
-                      <span class="currency">₽</span>245
+                      <span class="currency">$</span>245
                     </div>
                   </div>
                   <div class="star-holder">
@@ -888,7 +884,7 @@
                 </div>
               </div>
             </div>
-            <div class="product-wrapper col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="product-wrapper col-xs-12 col-sm-6 col-md-6 col-lg-4">
               <div class="product-item">
                 <div class="head">
                   <div class="thumb">
@@ -899,7 +895,7 @@
                   </div>
                   <div class="price">
                     <div class="price-current">
-                      <span class="currency">₽</span>95
+                      <span class="currency">$</span>95
                     </div>
                   </div>
                   <div class="star-holder">
@@ -925,7 +921,7 @@
                 </div>
               </div>
             </div>
-            <div class="product-wrapper col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="product-wrapper col-xs-12 col-sm-6 col-md-6 col-lg-4">
               <div class="product-item">
                 <div class="head">
                   <div class="thumb">
@@ -936,7 +932,7 @@
                   </div>
                   <div class="price">
                     <div class="price-current">
-                      <span class="currency">₽</span>145
+                      <span class="currency">$</span>145
                     </div>
                   </div>
                   <div class="star-holder">
