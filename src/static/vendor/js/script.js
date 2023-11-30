@@ -57,12 +57,13 @@
 
     // products carousel
     $('.product-carousel').owlCarousel({
-      pagination: true,
-      items: 4, // 10 items above 1000px browser width
-      itemsDesktop: [1200, 3], // 5 items between 1000px and 901px
-      itemsDesktopSmall: [990, 2], // betweem 900px and 601px
-      itemsTablet: [570, 1], // 2 items between 600 and 0
-
+      pagination: false,
+      // NOTE: See width setting for `product-item` in `src/_includes/catalogue/section-featured-products.njk`
+      // Sizes per widths...
+      items: 3, // Default
+      itemsDesktop: [1200, 2],
+      itemsDesktopSmall: [990, 2],
+      itemsTablet: [800, 1],
       itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
     });
     var owl = $('.product-carousel').data('owlCarousel');

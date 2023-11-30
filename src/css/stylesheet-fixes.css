@@ -1,0 +1,10 @@
+.iconic-nav-bar.no-icon .bar {
+  border-radius: 4px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+.iconic-nav-bar.no-icon .icon-holder {
+  display: none;
+}
+

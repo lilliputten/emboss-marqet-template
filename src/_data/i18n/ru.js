@@ -53,6 +53,7 @@ const ru = {
     myAccount: 'Профиль',
     myWishlist: 'Желания',
     logIn: 'Войти',
+    logOut: 'Выйти',
     homepage: 'Домашняя страница',
     homepages: 'Основные',
     testPage: 'Тестовая страница',
@@ -92,12 +93,12 @@ const ru = {
   },
   sections: {
     bestSellers: 'Хиты <span class="bold">продаж</span>',
-    featuredProducts: 'Рекомендуемые <span class="bold">товары</span>',
+    featuredProducts: '<span class="bold">Рекомендуемые товары</span>',
   },
   products: {
     toCart: 'Купить',
     toCartWide: 'В корзину',
-    wishlist: 'Отложить',
+    wishlist: 'Желания',
     wishlistFull: 'В лист желаний',
     discount50: '50% off', // Any longer text can't be fit in the circle.
     new: 'New',

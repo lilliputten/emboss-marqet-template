@@ -51,6 +51,7 @@ const en = {
     myAccount: 'My account',
     myWishlist: 'My wishlist',
     logIn: 'Log in',
+    logOut: 'Log out',
     homepage: 'Homepage',
     homepages: 'Homepages',
     testPage: 'Test page',
@@ -90,7 +91,7 @@ const en = {
   },
   sections: {
     bestSellers: 'Best <span class="bold">sellers</span>',
-    featuredProducts: 'Featured <span class="bold">products</span>',
+    featuredProducts: '<span class="bold">Featured products</span>',
   },
   products: {
     toCart: 'To cart',
