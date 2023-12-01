@@ -49,7 +49,7 @@
     <link rel="preload" href="../css/page.css" as="style" />
     <link rel="stylesheet" href="../css/page.css" />
 
-    <meta property="og:site_name" content="Название сайта" />
+    <meta property="og:site_name" content="Emboss" />
     <meta property="og:title" content="Продукт" />
     <meta property="og:description" content="Описание сайта" />
     <meta property="og:url" content="/single-product/" />
@@ -122,8 +122,8 @@
           </div>
           <div class="col-xs-12 col-md-4">
             <div class="logo">
-              <a href="/" title="Название сайта">
-                <img src="../images/logo/logo2-75h.png" alt="Название сайта" />
+              <a href="/" title="Emboss">
+                <img src="../images/logo/logo2-75h.png" alt="Emboss" />
               </a>
             </div>
           </div>
@@ -289,10 +289,10 @@
         </div>
       </header>
 
-      <section id="breadcrumb">
+      <section id="breadcrumb" class="no-icon">
         <div class="container">
           <div class="le-breadcrumb inline">
-            <div class="iconic-nav-bar">
+            <div class="iconic-nav-bar no-icon">
               <div class="icon-holder">
                 <i class="fa fa-chain"></i>
                 <span class="triangle"></span>
@@ -310,16 +310,10 @@
               </div>
             </div>
           </div>
-          <div class="le-backlink">
-            <a href="javascript:history.back()">
-              <i class="fa fa-arrow-left"></i>
-              Назад
-            </a>
-          </div>
         </div>
       </section>
 
-      <section id="single-product-wide" class="page-holder full-width">
+      <section id="single-product-wide" class="--page-holder full-width">
         <div class="container">
           <div class="col-xs-12">
             <div id="single-product" class="row">
@@ -564,20 +558,8 @@
                       <span class="currency">₽</span>250
                     </div>
                   </div>
-                  <div class="buttons-holder">
-                    <select
-                      class="variation-btn inline selectpicker capital"
-                      title="Size"
-                      data-width="70px"
-                      data-style="btn-inverse"
-                    >
-                      <option>39</option>
-                      <option>40</option>
-                      <option>41</option>
-                      <option>42</option>
-                      <option>43</option>
-                    </select>
-                    <div class="inline qnt-holder">
+                  <div>
+                    <div class="padded-buttons inline qnt-holder">
                       <div class="le-quantity">
                         <form>
                           <a class="minus" href="#reduce"></a>
@@ -599,6 +581,11 @@
                         В лист желаний
                       </button>
                     </div>
+                    <div class="padded-buttons">
+                      <button class="btn-file-pdf le-btn btn-iconic">
+                        Скачать инструкцию в PDF
+                      </button>
+                    </div>
                   </div>
                   <div class="social-row">
                     <span class="st_facebook_hcount"></span>
@@ -608,101 +595,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- disqus_thread- - >
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'marqet'; // required: replace example with your forum shortname
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      <! - - END disqus_thread-->
-          </div>
-        </div>
-      </section>
-
-      <section id="newsletter" class="section-newsletter">
-        <div class="container">
-          <div class="col-xs-12 col-md-1">
-            <div class="icon-holder big">
-              <i class="fa fa-newspaper-o"></i>
-              <span class="triangle"></span>
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-4">
-            <div class="text">
-              Подпишитесь на нашу рассылку, чтобы получать лучшие предложения и
-              новости.
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-7">
-            <form class="subscribe-form">
-              <input
-                data-placeholder="Введите адрес электронной почты..."
-                class="le-input col-xs-12 col-md-10"
-              />
-              <button type="submit" class="le-btn icon-btn fa fa-send"></button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <section class="banner-slider wow fadeInUp">
-        <div class="container">
-          <a class="btn-next nav-btn circular-icon" href="#"></a>
-          <a class="btn-prev nav-btn circular-icon" href="#"></a>
-
-          <div class="banner-carousel owl-carousel">
-            <div class="item">
-              <div class="caption">
-                <h1>great stuff</h1>
-                <div class="short-tag">
-                  <p>
-                    it was some time before the obtained any answer,<br />
-                    and the reply, when made, was awesome!
-                  </p>
-                </div>
-                <a class="le-btn" href="#">buy now</a>
-              </div>
-              <img src="../vendor/images/banner-slide-01.jpg" alt="" />
-            </div>
-
-            <div class="item">
-              <div class="caption">
-                <h1>great stuff</h1>
-                <div class="short-tag">
-                  <p>
-                    it was some time before the obtained any answer,<br />
-                    and the reply, when made, was awesome!
-                  </p>
-                </div>
-                <a class="le-btn" href="#">buy now</a>
-              </div>
-              <img src="../vendor/images/banner-slide-01.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-copyright">
-        <div class="container">
-          <div class="copyright col-xs-12 col-sm-5">
-            <p>
-              <strong>© Название компании 2023</strong>. All rights reserved.
-            </p>
-          </div>
-          <div class="copyright-links col-xs-12 col-sm-7">
-            <ul class="inline">
-              <li><a href="/privacy-policy">Политика конфиденциальности</a></li>
-              <li><a href="/terms-conditions">Правила и условия</a></li>
-              <li><a href="/site-map">Карта сайта</a></li>
-            </ul>
           </div>
         </div>
       </section>
@@ -719,58 +611,19 @@
                 Информация
               </h2>
               <ul class="footer-links-holder">
-                <li><a href="/our-blog">Наш блог</a></li>
                 <li><a href="/about-our-shop">О нашем магазине</a></li>
-                <li><a href="/secure-shopping">Безопасный шопинг</a></li>
                 <li>
-                  <a href="/privacy-policy">Политика конфиденциальности</a>
+                  <a href="/payment-informations">Информация об оплате</a>
                 </li>
+
                 <li>
                   <a href="/delivery-informations">Информация о доставке</a>
                 </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="footer-column">
-              <h2>
-                <span class="icon-holder">
-                  <i class="fa fa-check"></i>
-                  <span class="triangle"></span>
-                </span>
-                Клиентам
-              </h2>
-              <ul class="footer-links-holder">
                 <li><a href="/contact-us">Связаться с нами</a></li>
-                <li><a href="/site-map">Карта сайта</a></li>
-                <li>
-                  <a href="/top-sales-bestsellers"
-                    >Лучшие продажи и бестселлеры</a
-                  >
-                </li>
-                <li><a href="/gift-vouchers">Подарочные сертификаты</a></li>
-                <li><a href="/best-sellers">Бестселлеры</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="footer-column">
-              <h2>
-                <span class="icon-holder">
-                  <i class="fa fa-user"></i>
-                  <span class="triangle"></span>
-                </span>
-                Профиль
-              </h2>
-              <ul class="footer-links-holder">
-                <li><a href="/user/order-status">Статус заказа</a></li>
-                <li><a href="/user/wishlist">Список желаний</a></li>
-                <li><a href="/user/delivery-address">Адрес доставки</a></li>
-                <li><a href="/user/order-history">История заказов</a></li>
-                <li><a href="/user/newsletter">Новостная рассылка</a></li>
-              </ul>
-            </div>
-          </div>
+
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="footer-column">
               <h2>
@@ -781,11 +634,27 @@
                 Контакты
               </h2>
               <p>
-                <strong>Название сайта</strong><br />
+                <strong>Emboss</strong><br />
                 Адрес компании<br />
                 +7 (800) 333-04-41
               </p>
+              <ul class="social-icons triangled">
+                <li><a href="#" class="fa fa-facebook"></a></li>
+                <li><a href="#" class="fa fa-google-plus"></a></li>
+                <li><a href="#" class="fa fa-rss"></a></li>
+                <li><a href="#" class="fa fa-linkedin"></a></li>
+              </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-copyright">
+        <div class="container">
+          <div class="copyright col-12">
+            <p>
+              <strong>© Emboss 2023</strong>
+            </p>
           </div>
         </div>
       </section>
