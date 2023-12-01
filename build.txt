@@ -3,4 +3,4 @@ Version: 0.0.7
 Branch: dev-231130-issue-13-changes
 Commit: aeae886
 Fixed: 2023.12.01, 19:10 GMT+3
-Built: 2023.12.01, 19:10 GMT+3
+Built: 2023.12.01, 19:33 GMT+3
