@@ -1,8 +1,9 @@
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
-<section id="checkout" class="page-holder">
+<section id="payment-method" class="--page-holder full-width">
   <div class="container no-padding">
-    <div class="col-xs-12 col-md-8">
+
+    <div class="col-xs-12">
       <div class="box">
         <div class="icon-holder small badge-style">
           <i class="fa fa-check-circle-o"></i>
@@ -36,6 +37,7 @@
       </div>
     </div>
 
+    {# Issue #13: Removed payment method info
     <div class="col-xs-12 col-md-4">
       <div class="box sidebar">
         <div class="widget simple-widget">
@@ -50,5 +52,7 @@
         </div>
       </div>
     </div>
+    #}
+
   </div>
 </section>

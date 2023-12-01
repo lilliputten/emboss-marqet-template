@@ -1,7 +1,7 @@
 const site = require('../site.js');
 
-const siteName = 'Название сайта';
-const companyName = 'Название компании';
+const siteName = 'Emboss';
+const companyName = 'Emboss';
 
 /** @type TLngDef */
 const ru = {
@@ -37,6 +37,7 @@ const ru = {
     secureShopping: 'Безопасный шопинг',
     privacyPolicy: 'Политика конфиденциальности',
     deliveryInformations: 'Информация о доставке',
+    paymentInformations: 'Информация об оплате',
     contactUs: 'Связаться с нами',
     siteMap: 'Карта сайта',
     topSalesBestsellers: 'Лучшие продажи и бестселлеры',
@@ -92,12 +93,13 @@ const ru = {
     enterEmail: 'Введите адрес электронной почты...',
   },
   sections: {
-    bestSellers: 'Хиты <span class="bold">продаж</span>',
+    bestSellers: '<span class="bold">Хиты продаж</span>',
     featuredProducts: '<span class="bold">Рекомендуемые товары</span>',
   },
   products: {
     toCart: 'Купить',
     toCartWide: 'В корзину',
+    downloadPdf: 'Скачать инструкцию в PDF',
     wishlist: 'Желания',
     wishlistFull: 'В лист желаний',
     discount50: '50% off', // Any longer text can't be fit in the circle.
@@ -116,18 +118,22 @@ const ru = {
     sale: 'Sale!',
     addToCart: 'Добавить в корзину',
     all: 'Все',
+    inStock: 'В наличии',
     casualPersons: 'Случайные люди',
     categories: 'Категории',
+    find: 'Найти',
     filter: 'Фильтр',
     learnMore: 'Узнать больше',
     priceFilter: 'Цена',
     sizeFilter: 'Размер',
-    sortAZ: 'Сортировка от А до Я',
-    sortByAvailability: 'Сортировать по наличию',
-    sortByPrice: 'Сортировать по цене',
+    sort: 'Сортировать',
+    sortAbc: 'По алфавиту',
+    sortAZ: 'От А до Я',
+    sortByAvailability: 'По наличию',
+    sortByPrice: 'По цене',
     ascending: 'восходящий',
     descending: 'нисходящий',
-    sortZA: 'Сортировка от Я до А',
+    sortZA: 'От Я до А',
   },
   productsSample: {
     shoesAndClothes: 'Обувь и одежда',
@@ -177,6 +183,7 @@ const ru = {
     paymentMethodInfo: 'Выбор метода платежа',
     address: 'Адрес',
     backToCart: 'Вернуться в корзину',
+    backToCatalogue: 'Вернуться в каталог',
     contactInfo: 'Контактная информация',
     selectCountry: 'Выберите страну',
     shippingInfo: 'Информация о доставке',

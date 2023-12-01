@@ -7,7 +7,8 @@ module.exports = /** @type TProduct[] */ ([
     priceOld: 250,
     price: 145,
     stars: 3,
-    name: 'consectetur adipiscing elit - extra_long_text_line_for_testing_purposes_only',
+    name: 'RFSQS-48186 Red Fox Studio 1/48 3D Декаль Приборная Панель Для MiGG-17F (Ammo)',
+    // name: 'consectetur adipiscing elit - extra_long_text_line_for_testing_purposes_only',
     excerpt: 'Looking lorem round, to ascertain that they - extra_long_text_line_for_testing_purposes_only.',
   },
   {
@@ -15,8 +16,8 @@ module.exports = /** @type TProduct[] */ ([
     priceOld: 350,
     price: 245,
     stars: 4,
-    name: 'Man sport Hiking shoe',
-    excerpt: 'Looking lorem round, to ascertain that they...',
+    name: 'Man sport hiking shoe',
+    excerpt: 'GCM101 Ammo Mig 1/48 Окрасочная Маска Для MiGG-17F',
   },
   {
     extra: '<div class="le-badge orange"><span>50% off</span></div>',
@@ -24,7 +25,7 @@ module.exports = /** @type TProduct[] */ ([
     priceOld: 450,
     price: 245,
     stars: 4,
-    name: 'Woman highheel shoe',
+    name: 'Женская обувь на высоком каблуке',
     excerpt: 'Looking lorem round, to ascertain that they...',
   },
   {
@@ -33,7 +34,7 @@ module.exports = /** @type TProduct[] */ ([
     priceOld: 120,
     price: 95,
     stars: 2,
-    name: 'colorful cool runnig shoes',
+    name: 'Красочные крутые кроссовки для бега',
     excerpt: 'Looking lorem round, to ascertain that they...',
   },
   {
@@ -49,7 +50,7 @@ module.exports = /** @type TProduct[] */ ([
     priceOld: 0,
     price: 245,
     stars: 4,
-    name: 'Man sport Hiking shoe',
+    name: 'Man sport hiking shoe',
     excerpt: 'Looking lorem round, to ascertain that they...',
   },
   {

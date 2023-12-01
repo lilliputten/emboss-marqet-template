@@ -1,10 +1,11 @@
-#breadcrumb {
+section#breadcrumb {
   .container {
     display: flex;
     align-items: flex-start;
   }
   .le-breadcrumb {
     flex: 1;
+    /* &.inline .bar */
   }
   .le-backlink {
     margin-top: 8px;
@@ -13,5 +14,19 @@
     border-radius: 4px;
     text-transform: uppercase;
     font-weight: bold;
+  }
+  /* No-icon mode */
+  &.no-icon {
+    margin-top: 30px;
+    .le-backlink {
+      margin-top: 0;
+    }
+  }
+  .iconic-nav-bar.no-icon {
+    .bar {
+      margin-bottom: 10px;
+      padding-left: 10px;
+      left: auto;
+    }
   }
 }

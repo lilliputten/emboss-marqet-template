@@ -1,14 +1,14 @@
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
 <section id="featured-products">
-  <div class="container">
+  <div class="container no-padding">
     <div class="iconic-nav-bar no-icon">
       {# Removed icon: Issue #13
-      #}
       <div class="icon-holder">
         <i class="fa fa-star"></i>
         <span class="triangle"></span>
       </div>
+      #}
       <div class="bar">
         <h2>{{ 'sections.featuredProducts' | i18n | safe }}</h2>
         <div class="nav-buttons">
@@ -30,7 +30,7 @@
             <div class="thumb">
               <img alt="" src="{{ item.image }}" />
             </div>
-            {#
+            {# Issue #13: Removed price as overlay
             <div class="price">
               {% if item.priceOld %}
               <div class="price-old">

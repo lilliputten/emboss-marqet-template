@@ -1,6 +1,6 @@
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
-<section id="single-product-wide" class="page-holder full-width">
+<section id="single-product-wide" class="--page-holder full-width">
   <div class="container">
     <div class="col-xs-12">
 
@@ -11,8 +11,6 @@
 
       {# NOTE: Issue #9: Those extra sections aren't used.
       {% include "catalogue/section-single-product-review-comment.njk" %}
-      #}
-
       <!-- disqus_thread- - >
       <div id="disqus_thread"></div>
       <script type="text/javascript">
@@ -27,6 +25,7 @@
       </script>
       <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
       <! - - END disqus_thread-->
+      #}
 
     </div>
   </div>

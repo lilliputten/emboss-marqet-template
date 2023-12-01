@@ -65,7 +65,7 @@
 }
 .product-item.wide .body .excerpt {
   font-size: 13px;
-  min-height: 63px;
+  /* min-height: 63px; */
   line-height: 18px;
 }
 /* Hover */

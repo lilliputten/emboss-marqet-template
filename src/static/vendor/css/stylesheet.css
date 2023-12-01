@@ -7492,6 +7492,10 @@ header .link-list {
   content: "\f07a";
   font-family: fontawesome;
 }
+.btn-file-pdf:before {
+  content: "\f1c1";
+  font-family: fontawesome;
+}
 .btn-compare:before {
   content: "\f079";
   font-family: fontawesome;
@@ -8338,7 +8342,8 @@ header .link-list {
   margin-bottom: 30px;
 }
 .controller-nav-bar .ctrl-item {
-  margin-right: 10px;
+  margin-right: 2px;
+  margin-bottom: 4px;
 }
 /*single-product*/
 #breadcrumb {
@@ -8512,6 +8517,9 @@ header .link-list {
   vertical-align: middle;
   line-height: 30px;
   margin: 0 0 0 5px;
+}
+#single-product .padded-buttons {
+  margin: 20px 0;
 }
 #single-product .merged-buttons {
   text-align: left;

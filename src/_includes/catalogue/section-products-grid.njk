@@ -1,7 +1,10 @@
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
+{% set productColumns = 'col-xs-12 col-sm-6 col-md-6 col-lg-6' %}
+{% set currency = '₽' if lang === 'ru' else '$' %}
+
 <section id="products-grid-sidebar" class="section-products-grid">
-  <div class="container">
+  <div class="container no-padding">
     <div class="section-products-grid-sidebar col-xs-12 col-md-3">
       <div class="sidebar">
         {# Main products menu #}
@@ -28,7 +31,7 @@
               {{ 'products.price' | i18n }}: ₽100 - ₽700
             </span>
             <span class="filter-button">
-              <a href="#">{{ 'products.filter' | i18n }}</a>
+              <a href="#">{{ 'products.find' | i18n }}</a>
             </span>
           </div>
         </div>
@@ -52,7 +55,7 @@
       </div>
     </div>
     <div class="section-products-grid-content col-xs-12 col-md-9">
-
+      {# Issue #13: Removed banner
       <div class="row">
         <div class="mosaic-holder col-xs-12">
           <div class="mosaic-banner big">
@@ -67,6 +70,7 @@
           </div>
         </div>
       </div>
+      #}
       <div class="controller-nav-bar row">
         {% include "catalogue/section-products-controls.njk" %}
       </div>
@@ -75,398 +79,128 @@
         <div id="grid-view" class="tab-pane active">
           <div  class="products-holder simple-grid">
             <div class="row">
-             <div class="product-wrapper col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                <div class="product-item">
-                  <div class="head">
-                    <div class="thumb">
-                      <img alt="" src="/vendor/images/products/products-modelist-1/product01.png" />
-                    </div>
-                    <div class="price">
-                      <div class="price-old">
-                        <span class="currency">₽</span>250
+
+              {% for item in bestsellerProducts -%}
+
+                <div class="product-wrapper {{ productColumns }}">
+                  <div class="product-item">
+                    <div class="head">
+                      {% if item.extra %}
+                        {{ item.extra | safe }}
+                      {% endif %}
+                      <div class="thumb">
+                        <img alt="" src="{{ item.image }}" />
                       </div>
-                      <div class="price-current">
-                        <span class="currency">₽</span>145
+                      {# Issue #13: Removed price as overlay
+                      <div class="price">
+                        {% if item.priceOld %}
+                        <div class="price-old">
+                          <span class="currency">{{ currency }}</span>{{ item.priceOld }}
+                        </div>
+                        {% endif %}
+                        <div class="price-current">
+                          <span class="currency">{{ currency }}</span>{{ item.price }}
+                        </div>
                       </div>
+                      #}
+                      <div class="star-holder">
+                        <div class="star" data-score="{{ item.stars }}"></div>
+                      </div>
+                      <button class="btn-compare  btn-iconic"></button>
                     </div>
-                    <div class="star-holder">
-                      <div class="star"  data-score="3"></div>
-                    </div>
-                    <button class="btn-compare  btn-iconic"></button>
-                  </div>
-                  <div class="body">
-                    <h3><a href="{{ langRootUrl }}/single-product">RFSQS-48186 Red Fox Studio 1/48 3D декаль приборная панель для MiGG-17F (Ammo)</a></h3>
-                    <div class="excerpt">
-                    </div>
-                    <div class="merged-buttons">
-                      <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCart' | i18n }}</button>
-                      <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
+                    <div class="body">
+                      <h3><a href="{{ langRootUrl }}/single-product">{{ item.name }}</a></h3>
+                      <div class="excerpt">
+                        {{ item.excerpt }}
+                      </div>
+                      <div class="price-plain">
+                        <div class="price-current">
+                          <span class="currency">{{ currency }}</span>{{ item.price }}
+                        </div>
+                        {% if item.priceOld %}
+                        <div class="price-old">
+                          <span class="currency">{{ currency }}</span>{{ item.priceOld }}
+                        </div>
+                        {% endif %}
+                      </div>
+                      <div class="merged-buttons">
+                        <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCartWide' | i18n }}</button>
+                        <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-             <div class="product-wrapper col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                <div class="product-item">
-                  <div class="head">
-                    <div class="thumb">
-                      <img alt="" src="/vendor/images/products/products-modelist-1/product02.png" />
-                    </div>
-                    <div class="price">
-                      <div class="price-old">
-                        <span class="currency">₽</span>350
-                      </div>
-                      <div class="price-current">
-                        <span class="currency">₽</span>245
-                      </div>
-                    </div>
-                    <div class="star-holder">
-                      <div class="star"  data-score="4"></div>
-                    </div>
-                    <button class="btn-compare  btn-iconic"></button>
-                  </div>
-                  <div class="body">
-                    <h3><a href="{{ langRootUrl }}/single-product">GCM101 Ammo Mig 1/48 Окрасочная маска для MiGG-17F</a></h3>
-                    <div class="excerpt">
-                    </div>
-                    <div class="merged-buttons">
-                      <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCart' | i18n }}</button>
-                      <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <div class="product-wrapper col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                <div class="product-item">
-                  <div class="head">
-                    <div class="le-badge orange"><span>{{ 'products.halfPrice' | i18n }}</span></div>
-                    <div class="thumb">
-                      <img alt="" src="/vendor/images/products/products-modelist-1/product03.png" />
-                    </div>
-                    <div class="price">
-                      <div class="price-old">
-                        <span class="currency">₽</span>450
-                      </div>
-                      <div class="price-current">
-                        <span class="currency">₽</span>245
-                      </div>
-                    </div>
-                    <div class="star-holder">
-                      <div class="star"  data-score="4"></div>
-                    </div>
-                    <button class="btn-compare  btn-iconic"></button>
-                  </div>
-                  <div class="body">
-                    <h3><a href="{{ langRootUrl }}/single-product">{{ 'productsSample.womanHighheelShoe' | i18n }}</a></h3>
-                    <div class="excerpt">
-                      Looking lorem round, to ascertain that they...
-                    </div>
-                    <div class="merged-buttons">
-                      <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCart' | i18n }}</button>
-                      <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="product-wrapper col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                <div class="product-item">
-                  <div class="head">
-                    <div class="le-badge green"><span>{{ 'products.new' | i18n }}</span></div>
-                    <div class="thumb">
-                      <img alt="" src="/vendor/images/products/products-modelist-1/product04.png" />
-                    </div>
-                    <div class="price">
-                      <div class="price-old">
-                        <span class="currency">₽</span>120
-                      </div>
-                      <div class="price-current">
-                        <span class="currency">₽</span>95
-                      </div>
-                    </div>
-                    <div class="star-holder">
-                      <div class="star"  data-score="2"></div>
-                    </div>
-                    <button class="btn-compare  btn-iconic"></button>
-                  </div>
-                  <div class="body">
-                    <h3><a href="{{ langRootUrl }}/single-product">{{ 'productsSample.colorfulCoolRunnigShoes' | i18n }}</a></h3>
-                    <div class="excerpt">
-                      Looking lorem round, to ascertain that they...
-                    </div>
-                    <div class="merged-buttons">
-                      <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCart' | i18n }}</button>
-                      <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="product-wrapper col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                <div class="product-item">
-                  <div class="head">
-                    <div class="le-ribbon blue"><span>{{ 'products.new' | i18n }}</span></div>
-                    <div class="thumb">
-                      <img alt="" src="/vendor/images/products/products-modelist-1/product03.png" />
-                    </div>
-                    <div class="price">
-                      <div class="price-old">
-                        <span class="currency">₽</span>450
-                      </div>
-                      <div class="price-current">
-                        <span class="currency">₽</span>245
-                      </div>
-                    </div>
-                    <div class="star-holder">
-                      <div class="star"  data-score="4"></div>
-                    </div>
-                    <button class="btn-compare  btn-iconic"></button>
-                  </div>
-                  <div class="body">
-                    <h3><a href="{{ langRootUrl }}/single-product">{{ 'productsSample.womanHighheelShoe' | i18n }}</a></h3>
-                    <div class="excerpt">
-                      Looking lorem round, to ascertain that they...
-                    </div>
-                    <div class="merged-buttons">
-                      <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCart' | i18n }}</button>
-                      <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-             <div class="product-wrapper col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                <div class="product-item">
-                  <div class="head">
-                    <div class="thumb">
-                      <img alt="" src="/vendor/images/products/products-modelist-1/product02.png" />
-                    </div>
-                    <div class="price">
-                      <div class="price-current">
-                        <span class="currency">₽</span>245
-                      </div>
-                    </div>
-                    <div class="star-holder">
-                      <div class="star"  data-score="4"></div>
-                    </div>
-                    <button class="btn-compare  btn-iconic"></button>
-                  </div>
-                  <div class="body">
-                    <h3><a href="{{ langRootUrl }}/single-product">Man sport Hiking shoe</a></h3>
-                    <div class="excerpt">
-                      Looking lorem round, to ascertain that they...
-                    </div>
-                    <div class="merged-buttons">
-                      <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCart' | i18n }}</button>
-                      <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {% endfor -%}
+
             </div>
           </div>
         </div>
         <div id="list-view" class="tab-pane">
           <div  class="products-holder list-view">
-            <div class="product-item wide">
-              <div class="row">
-                <div class="col-xs-12 col-md-4 no-margin">
-                  <div class="head">
-                    <div class="le-ribbon red left"><span>{{ 'products.sale' | i18n }}</span></div>
-                    <div class="thumb">
-                      <a href="{{ langRootUrl }}/single-product">
-                        <img alt="" src="/vendor/images/products/products-modelist-1/product01.png" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-md-8 no-margin">
-                  <div class="body">
-                    <h3><a href="{{ langRootUrl }}/single-product">RFSQS-48186 Red Fox Studio 1/48 3D декаль приборная панель для MiGG-17F (Ammo)</a></h3>
-                    <div class="price">
-                      <div class="price-old">
-                        <span class="currency">₽</span>250
-                      </div>
-                      <div class="price-current">
-                        <span class="currency">₽</span>145
+
+              {% for item in bestsellerProducts -%}
+
+                <div class="product-item wide">
+                  <div class="row">
+                    <div class="col-xs-12 col-md-4 no-margin">
+                      <div class="head">
+                        {% if item.extra %}
+                          {{ item.extra | safe }}
+                        {% endif %}
+                        <div class="thumb">
+                          <a href="{{ langRootUrl }}/single-product">
+                            <img alt="" src="{{ item.image }}" />
+                          </a>
+                        </div>
                       </div>
                     </div>
-                    <div class="star-holder">
-                      <div class="star"  data-score="3"></div>
-                    </div>
-                    <div class="excerpt">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus mi in auctor pellentesque. Vivamus vel nisi sed mauris placerat ultricies eu vitae est.
-                    </div>
-                    <div class="buttons-holder">
-                      <select class="selectpicker" title="Size"  data-width="70px" data-style="btn-inverse">
-                        <option>39</option>
-                        <option>40</option>
-                        <option>41</option>
-                        <option>42</option>
-                        <option>43</option>
-                      </select>
-                      <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.addToCart' | i18n }}</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="product-item wide">
-              <div class="row">
-                <div class="col-xs-12 col-md-4 no-margin">
-                  <div class="head">
-                    <div class="le-ribbon orange left"><span>{{ 'products.new' | i18n }}</span></div>
-                    <div class="thumb">
-                      <a href="{{ langRootUrl }}/single-product">
-                        <img alt="" src="/vendor/images/products/products-modelist-1/product02.png" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-md-8 no-margin">
-                  <div class="body">
-                    <h3>GCM101 Ammo Mig 1/48 Окрасочная маска для MiGG-17F</h3>
-                    <div class="price">
-                      <div class="price-current">
-                        <span class="currency">₽</span>145
+                    <div class="col-xs-12 col-md-8 no-margin">
+                      <div class="body">
+                        <h3><a href="{{ langRootUrl }}/single-product">{{ item.name }}</a></h3>
+                        {# Issue #13: Removed price as overlay
+                        <div class="price">
+                          <div class="price-old">
+                            <span class="currency">₽</span>250
+                          </div>
+                          <div class="price-current">
+                            <span class="currency">₽</span>145
+                          </div>
+                        </div>
+                        #}
+                        <div class="star-holder">
+                          <div class="star" data-score="{{ item.stars }}"></div>
+                        </div>
+                        <div class="excerpt">
+                          {{ item.excerpt }}
+                        </div>
+                        <div class="price-plain">
+                          <div class="price-current">
+                            <span class="currency">{{ currency }}</span>{{ item.price }}
+                          </div>
+                          {% if item.priceOld %}
+                          <div class="price-old">
+                            <span class="currency">{{ currency }}</span>{{ item.priceOld }}
+                          </div>
+                          {% endif %}
+                        </div>
+                        <div class="buttons-holder">
+                          {# Issue #13 -- Remove sizes
+                          <select class="selectpicker" title="Size"  data-width="70px" data-style="btn-inverse">
+                            <option>39</option>
+                            <option>40</option>
+                            <option>41</option>
+                            <option>42</option>
+                            <option>43</option>
+                          </select>
+                          #}
+                          <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.addToCart' | i18n }}</button>
+                        </div>
                       </div>
                     </div>
-                    <div class="star-holder">
-                      <div class="star"  data-score="3"></div>
-                    </div>
-                    <div class="excerpt">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus mi in auctor pellentesque. Vivamus vel nisi sed mauris placerat ultricies eu vitae est.
-                    </div>
-                    <div class="buttons-holder">
-                      <select class="selectpicker" title="Size"  data-width="70px" data-style="btn-inverse">
-                        <option>39</option>
-                        <option>40</option>
-                        <option>41</option>
-                        <option>42</option>
-                        <option>43</option>
-                      </select>
-                      <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.addToCart' | i18n }}</button>
-                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="product-item wide">
-              <div class="row">
-                <div class="col-xs-12 col-md-4 no-margin">
-                  <div class="head">
-                    <div class="thumb">
-                      <a href="{{ langRootUrl }}/single-product">
-                        <img alt="" src="/vendor/images/products/products-modelist-1/product03.png" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-md-8 no-margin">
-                  <div class="body">
-                    <h3>auctor pellentesque</h3>
-                    <div class="price">
-                      <div class="price-current">
-                        <span class="currency">₽</span>445
-                      </div>
-                    </div>
-                    <div class="star-holder">
-                      <div class="star"  data-score="5"></div>
-                    </div>
-                    <div class="excerpt">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus mi in auctor pellentesque. Vivamus vel nisi sed mauris placerat ultricies eu vitae est.
-                    </div>
-                    <div class="buttons-holder">
-                      <select class="selectpicker" title="Size"  data-width="70px" data-style="btn-inverse">
-                        <option>39</option>
-                        <option>40</option>
-                        <option>41</option>
-                        <option>42</option>
-                        <option>43</option>
-                      </select>
-                      <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.addToCart' | i18n }}</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="product-item wide">
-              <div class="row">
-                <div class="col-xs-12 col-md-4 no-margin">
-                  <div class="head">
-                    <div class="thumb">
-                      <a href="{{ langRootUrl }}/single-product">
-                        <img alt="" src="/vendor/images/products/products-modelist-1/product04.png" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-md-8 no-margin">
-                  <div class="body">
-                    <h3>Lorem ipsum dolor sit amet</h3>
-                    <div class="price">
-                      <div class="price-old">
-                        <span class="currency">₽</span>150
-                      </div>
-                      <div class="price-current">
-                        <span class="currency">₽</span>45
-                      </div>
-                    </div>
-                    <div class="star-holder">
-                      <div class="star"  data-score="2"></div>
-                    </div>
-                    <div class="excerpt">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus mi in auctor pellentesque. Vivamus vel nisi sed mauris placerat ultricies eu vitae est.
-                    </div>
-                    <div class="buttons-holder">
-                      <select class="selectpicker" title="Size"  data-width="70px" data-style="btn-inverse">
-                        <option>39</option>
-                        <option>40</option>
-                        <option>41</option>
-                        <option>42</option>
-                        <option>43</option>
-                      </select>
-                      <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.addToCart' | i18n }}</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="product-item wide">
-              <div class="row">
-                <div class="col-xs-12 col-md-4 no-margin">
-                  <div class="head">
-                    <div class="thumb">
-                      <a href="{{ langRootUrl }}/single-product">
-                        <img alt="" src="/vendor/images/products/products-modelist-1/product01.png" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-md-8 no-margin">
-                  <div class="body">
-                    <h3>Nunc cursus mi in </h3>
-                    <div class="price">
-                      <div class="price-current">
-                        <span class="currency">₽</span>45
-                      </div>
-                    </div>
-                    <div class="star-holder">
-                      <div class="star"  data-score="1"></div>
-                    </div>
-                    <div class="excerpt">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus mi in auctor pellentesque. Vivamus vel nisi sed mauris placerat ultricies eu vitae est.
-                    </div>
-                    <div class="buttons-holder">
-                      <select class="selectpicker" title="Size"  data-width="70px" data-style="btn-inverse">
-                        <option>39</option>
-                        <option>40</option>
-                        <option>41</option>
-                        <option>42</option>
-                        <option>43</option>
-                      </select>
-                      <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.addToCart' | i18n }}</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+              {% endfor -%}
+
           </div>
         </div>
       </div>

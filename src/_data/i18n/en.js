@@ -1,7 +1,7 @@
 const site = require('../site.js');
 
-const siteName = 'Site name';
-const companyName = 'Company name';
+const siteName = 'Emboss';
+const companyName = 'Emboss';
 
 /** @type TLngDef */
 const en = {
@@ -35,6 +35,7 @@ const en = {
     secureShopping: 'Secure shopping',
     privacyPolicy: 'Privacy policy',
     deliveryInformations: 'Delivery informations',
+    paymentInformations: 'Payment informations',
     contactUs: 'Contact us',
     siteMap: 'Site map',
     topSalesBestsellers: 'Top sales & bestsellers',
@@ -90,12 +91,13 @@ const en = {
     enterEmail: 'Enter your email here...',
   },
   sections: {
-    bestSellers: 'Best <span class="bold">sellers</span>',
+    bestSellers: '<span class="bold">Best sellers</span>',
     featuredProducts: '<span class="bold">Featured products</span>',
   },
   products: {
     toCart: 'To cart',
     toCartWide: 'To cart',
+    downloadPdf: 'Download PDF manual',
     wishlist: 'Wishlist',
     wishlistFull: 'Save to wishlist',
     discount50: '50% off',
@@ -114,18 +116,22 @@ const en = {
     sale: 'Sale!',
     addToCart: 'Add to cart',
     all: 'All',
+    inStock: 'In stock',
     casualPersons: 'Casual persons',
     categories: 'Categories',
+    find: 'Find',
     filter: 'Filter',
     learnMore: 'Learn more',
     priceFilter: 'Price filter',
     sizeFilter: 'Size filter',
-    sortAZ: 'Sort A-Z',
-    sortByAvailability: 'Sort by availability',
-    sortByPrice: 'Sort by price',
+    sort: 'Sort',
+    sortAbc: 'ABC',
+    sortAZ: 'A-Z',
+    sortByAvailability: 'By availability',
+    sortByPrice: 'By price',
     ascending: 'ascending',
     descending: 'descending',
-    sortZA: 'Sort Z-A',
+    sortZA: 'Z-A',
   },
   productsSample: {
     shoesAndClothes: 'Shoes and clothes',
@@ -175,6 +181,7 @@ const en = {
     paymentMethodInfo: 'Payment Method Choosing',
     address: 'Address',
     backToCart: 'Back to cart',
+    backToCatalogue: 'Back to catalogue',
     contactInfo: 'Contact info',
     selectCountry: 'Select country',
     shippingInfo: 'Shipping info',
