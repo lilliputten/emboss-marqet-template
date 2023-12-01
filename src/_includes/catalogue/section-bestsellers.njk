@@ -1,20 +1,22 @@
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
+{% set productColumns = 'col-xs-12 col-sm-6 col-md-6 col-lg-4' %}
+{% set currency = '₽' if lang === 'ru' else '$' %}
+
 <section id="bestsellers">
-  <div class="container">
-    <div class="iconic-nav-bar">
+  <div class="container no-padding">
+    <div class="iconic-nav-bar no-icon">
+      {# Removed icon: Issue #13
       <div class="icon-holder">
         <i class="fa fa-dollar"></i>
         <span class="triangle"></span>
       </div>
+      #}
       <div class="bar">
         <h2>{{ 'sections.bestSellers' | i18n | safe }}</h2>
       </div>
     </div>
     <div class="products-holder simple-grid">
-
-      {% set productColumns = 'col-xs-12 col-sm-6 col-md-6 col-lg-4' %}
-      {% set currency = '₽' if lang === 'ru' else '$' %}
 
       {% for item in bestsellerProducts -%}
         <div class="product-wrapper {{ productColumns }}">
@@ -26,6 +28,7 @@
               <div class="thumb">
                 <img alt="" src="{{ item.image }}" />
               </div>
+              {# Issue #13: Removed price as overlay
               <div class="price">
                 {% if item.priceOld %}
                 <div class="price-old">
@@ -36,6 +39,7 @@
                   <span class="currency">{{ currency }}</span>{{ item.price }}
                 </div>
               </div>
+              #}
               <div class="star-holder">
                 <div class="star" data-score="{{ item.stars }}"></div>
               </div>
@@ -45,6 +49,16 @@
               <h3><a href="{{ langRootUrl }}/single-product">{{ item.name }}</a></h3>
               <div class="excerpt">
                 {{ item.excerpt }}
+              </div>
+              <div class="price-plain">
+                <div class="price-current">
+                  <span class="currency">{{ currency }}</span>{{ item.price }}
+                </div>
+                {% if item.priceOld %}
+                <div class="price-old">
+                  <span class="currency">{{ currency }}</span>{{ item.priceOld }}
+                </div>
+                {% endif %}
               </div>
               <div class="merged-buttons">
                 <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCartWide' | i18n }}</button>

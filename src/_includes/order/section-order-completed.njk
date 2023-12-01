@@ -1,8 +1,8 @@
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
-<section id="checkout" class="page-holder">
+<section id="order-completed" class="--page-holder">
   <div class="container no-padding">
-    <div class="col-12">
+    <div class="col-xs-12">
       <div class="box">
         <div class="icon-holder small badge-style">
           <i class="fa fa-check-circle-o"></i>
@@ -14,8 +14,7 @@
         </div>
         <div class="box-holder">
           <div class="merged-buttons">
-            <a href="{{ langRootUrl }}/" class="le-btn small">{{ 'breadcrumbLinks.toHomepage' | i18n }}</a>
-            <a href="{{ langRootUrl }}/shopping-cart" class="le-btn small">{{ 'checkout.backToCart' | i18n }}</a>
+            <a href="{{ langRootUrl }}/products-grid" class="le-btn small">{{ 'checkout.backToCatalogue' | i18n }}</a>
           </div>
         </div>
       </div>

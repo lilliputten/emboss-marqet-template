@@ -1,13 +1,14 @@
 {# Expecting external variable:
-  @param {{ name: string; link?: string; class?: 'active' }[]} breadcrumb
+  @param {{ name: string; link?: string; class?: 'active' }[]} breadcrumb - List of path chunks
+  @param {boolean} [showBacklink]
 #}
 
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
-<section id="breadcrumb">
+<section id="breadcrumb" class="no-icon">
   <div class="container">
     <div class="le-breadcrumb inline">
-      <div class="iconic-nav-bar">
+      <div class="iconic-nav-bar no-icon">
         <div class="icon-holder">
           <i class="fa fa-chain"></i>
           <span class="triangle"></span>
@@ -29,12 +30,14 @@
         </div>
       </div>
     </div>
+    {% if not hideBacklink %}
     <div class="le-backlink">
       <a href="javascript:history.back()">
         <i class="fa fa-arrow-left"></i>
         {{ 'headerLinks.back' | i18n }}
       </a>
     </div>
+    {% endif %}
   </div>
 </section>
 
