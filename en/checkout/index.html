@@ -88,46 +88,14 @@
           </div>
         </div>
         <div class="container header-row">
-          <div class="col-xs-12 col-md-4">
-            <div class="buttons-holder">
-              <!-- Languages selector moved to the right side / div class="btn-group le-dropdown">
-          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            English
-          </a>
-          <ul class="dropdown-menu">
-            
-            
-            
-              
-                <li><a href="/checkout/" rel="alternate" hreflang="ru">Русский</a></li>
-              
-                <li><a href="/en/checkout/" rel="alternate" hreflang="en">English</a></li>
-              
-          </ul>
-        </div-->
-              <div class="btn-group le-dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                  <i class="fa fa-rub"></i> rub
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="#"><i class="fa fa-rub"></i> rub</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-usd"></i> usd</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-4">
+          <div class="logo-cell col-xs-12 col-md-4">
             <div class="logo">
               <a href="/en/" title="Emboss">
-                <img src="../../images/logo/logo2-75h.png" alt="Emboss" />
+                <img src="../../images/logo/logo3-min.svg" alt="Emboss" />
               </a>
             </div>
           </div>
-          <div class="col-xs-12 col-md-4 last-menu">
+          <div class="menu-cell col-xs-12 col-md-8 last-menu">
             <ul class="link-list inline">
               <li>
                 <div class="btn-group le-dropdown">
@@ -145,6 +113,21 @@
                       <a href="/en/checkout/" rel="alternate" hreflang="en"
                         >English</a
                       >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="btn-group le-dropdown">
+                  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                    <i class="fa fa-rub"></i> rub
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#"><i class="fa fa-rub"></i> rub</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-usd"></i> usd</a>
                     </li>
                   </ul>
                 </div>
@@ -211,6 +194,7 @@
                       </div>
                     </a>
                     <ul class="dropdown-menu">
+                      <!-- Cart items -->
                       <li>
                         <div class="basket-item">
                           <div class="row">
@@ -268,6 +252,9 @@
                           <a class="close-btn" href="#"></a>
                         </div>
                       </li>
+                      <!-- Empty cart info -->
+                      <li class="empty">Cart is empty</li>
+                      <!-- Cart actions (for non-empty one) -->
                       <li class="checkout">
                         <div class="merged-buttons">
                           <a href="/en/checkout" class="btn-add-to-cart le-btn"
@@ -340,6 +327,7 @@
                           data-width="100%"
                           data-style="le-btn no-shadow"
                         >
+                          <option value="RUS">Russia</option>
                           <option value="AFG">Afghanistan</option>
                           <option value="ALA">Åland Islands</option>
                           <option value="ALB">Albania</option>
@@ -509,7 +497,6 @@
                           <option value="QAT">Qatar</option>
                           <option value="REU">Réunion</option>
                           <option value="ROU">Romania</option>
-                          <option value="RUS">Russian Federation</option>
                           <option value="RWA">Rwanda</option>
                           <option value="WSM">Samoa</option>
                           <option value="SMR">San Marino</option>
@@ -568,21 +555,21 @@
                     </div>
                     <div class="col-xs-12 col-md-4">
                       <div class="field-group">
-                        <label>Address 1</label>
+                        <label>City</label>
                         <input
                           type="text"
                           class="le-input"
-                          data-placeholder="Address line 1"
+                          data-placeholder="City"
                         />
                       </div>
                     </div>
                     <div class="col-xs-12 col-md-4">
                       <div class="field-group">
-                        <label>Address 2</label>
+                        <label>Address</label>
                         <input
                           type="text"
                           class="le-input"
-                          data-placeholder="Address line 2"
+                          data-placeholder="Address text"
                         />
                       </div>
                     </div>

@@ -88,46 +88,14 @@
           </div>
         </div>
         <div class="container header-row">
-          <div class="col-xs-12 col-md-4">
-            <div class="buttons-holder">
-              <!-- Languages selector moved to the right side / div class="btn-group le-dropdown">
-          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            Русский
-          </a>
-          <ul class="dropdown-menu">
-            
-            
-            
-              
-                <li><a href="/shopping-cart/" rel="alternate" hreflang="ru">Русский</a></li>
-              
-                <li><a href="/en/shopping-cart/" rel="alternate" hreflang="en">English</a></li>
-              
-          </ul>
-        </div-->
-              <div class="btn-group le-dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                  <i class="fa fa-rub"></i> rub
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="#"><i class="fa fa-rub"></i> rub</a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-usd"></i> usd</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-4">
+          <div class="logo-cell col-xs-12 col-md-4">
             <div class="logo">
               <a href="/" title="Emboss">
-                <img src="../images/logo/logo2-75h.png" alt="Emboss" />
+                <img src="../images/logo/logo3-min.svg" alt="Emboss" />
               </a>
             </div>
           </div>
-          <div class="col-xs-12 col-md-4 last-menu">
+          <div class="menu-cell col-xs-12 col-md-8 last-menu">
             <ul class="link-list inline">
               <li>
                 <div class="btn-group le-dropdown">
@@ -149,10 +117,23 @@
                   </ul>
                 </div>
               </li>
+              <li>
+                <div class="btn-group le-dropdown">
+                  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                    <i class="fa fa-rub"></i> rub
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#"><i class="fa fa-rub"></i> rub</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-usd"></i> usd</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
 
-              <li><a href="/user/account">Профиль</a></li>
-              <li><a href="/user/wishlist">Желания</a></li>
-              <li><a href="/user/logout">Выйти</a></li>
+              <li><a href="/user/login">Войти</a></li>
             </ul>
           </div>
         </div>
@@ -210,6 +191,7 @@
                       </div>
                     </a>
                     <ul class="dropdown-menu">
+                      <!-- Cart items -->
                       <li>
                         <div class="basket-item">
                           <div class="row">
@@ -267,6 +249,9 @@
                           <a class="close-btn" href="#"></a>
                         </div>
                       </li>
+                      <!-- Empty cart info -->
+                      <li class="empty">Корзина пуста</li>
+                      <!-- Cart actions (for non-empty one) -->
                       <li class="checkout">
                         <div class="merged-buttons">
                           <a href="/checkout" class="btn-add-to-cart le-btn"
@@ -308,13 +293,6 @@
                 </ul>
               </div>
             </div>
-          </div>
-
-          <div class="le-backlink">
-            <a href="javascript:history.back()">
-              <i class="fa fa-arrow-left"></i>
-              Назад
-            </a>
           </div>
         </div>
       </section>
@@ -464,25 +442,6 @@
                   <a href="/delivery-informations">Информация о доставке</a>
                 </li>
                 <li><a href="/contact-us">Связаться с нами</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="footer-column">
-              <h2>
-                <span class="icon-holder">
-                  <i class="fa fa-user"></i>
-                  <span class="triangle"></span>
-                </span>
-                Профиль
-              </h2>
-              <ul class="footer-links-holder">
-                <li><a href="/user/order-status">Статус заказа</a></li>
-                <li><a href="/user/wishlist">Список желаний</a></li>
-                <li><a href="/user/delivery-address">Адрес доставки</a></li>
-                <li><a href="/user/order-history">История заказов</a></li>
-                <li><a href="/user/newsletter">Новостная рассылка</a></li>
               </ul>
             </div>
           </div>

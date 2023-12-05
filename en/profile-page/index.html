@@ -50,12 +50,12 @@
     <link rel="stylesheet" href="../../css/page.css" />
 
     <meta property="og:site_name" content="Emboss" />
-    <meta property="og:title" content="Choose payment method" />
+    <meta property="og:title" content="Profile" />
     <meta property="og:description" content="Site description" />
-    <meta property="og:url" content="/en/payment-method/" />
+    <meta property="og:url" content="/en/profile-page/" />
     <meta name="twitter:card" content="summary" />
     <meta name="theme-color" content="#ffffff" />
-    <title>Choose payment method</title>
+    <title>Profile</title>
   </head>
   <body
     class="font-sans text-gray-800 bg-gray-100 noscript"
@@ -104,16 +104,13 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li>
-                      <a href="/payment-method/" rel="alternate" hreflang="ru"
+                      <a href="/profile-page/" rel="alternate" hreflang="ru"
                         >Русский</a
                       >
                     </li>
 
                     <li>
-                      <a
-                        href="/en/payment-method/"
-                        rel="alternate"
-                        hreflang="en"
+                      <a href="/en/profile-page/" rel="alternate" hreflang="en"
                         >English</a
                       >
                     </li>
@@ -292,70 +289,35 @@
                   <li>
                     <a href="/en/"> Main page </a>
                   </li>
-                  <li>
-                    <a href="/en/products-grid"> Prefabricated models </a>
-                  </li>
-                  <li class="active">Product</li>
+                  <li class="active">Profile</li>
                 </ul>
               </div>
             </div>
           </div>
-
-          <div class="le-backlink">
-            <a href="javascript:history.back()">
-              <i class="fa fa-arrow-left"></i>
-              Back
-            </a>
-          </div>
         </div>
       </section>
 
-      <section id="payment-method" class="--page-holder full-width">
-        <div class="container no-padding">
-          <div class="col-xs-12">
-            <div class="box">
-              <div class="icon-holder small badge-style">
-                <i class="fa fa-check-circle-o"></i>
-                <span class="triangle"></span>
-              </div>
-              <div class="box-holder">
-                <h2>Choose Payment Method</h2>
-                <div class="table-form">
-                  <div class="row">
-                    <div class="col-xs-12 col-md-4">
-                      <div class="field-group">
-                        <label>Payment Method</label>
-                        <select
-                          class="variation-btn inline selectpicker"
-                          data-width="100%"
-                          data-style="btn-inverse"
-                        >
-                          <option value="robokassa">Robokassa</option>
-                          <option value="bankTransfer">Bank transfer</option>
-                          <option value="yandexCard">Yandex Card</option>
-                          <option value="cashOnDelivery">
-                            Cash on delivery
-                          </option>
-                          <option value="cashPaymentToTheCourier">
-                            Cash payment to the courier
-                          </option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="box-holder">
-                <div class="merged-buttons">
-                  <a href="/en/shopping-cart" class="le-btn small"
-                    >Back to cart</a
-                  >
-                  <a href="/en/order-completed" class="le-btn small"
-                    >Place order</a
-                  >
-                </div>
-              </div>
+      <section id="newsletter" class="section-newsletter">
+        <div class="container">
+          <div class="col-xs-12 col-md-1">
+            <div class="icon-holder big">
+              <i class="fa fa-newspaper-o"></i>
+              <span class="triangle"></span>
             </div>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <div class="text">
+              Sign up for our newsletter to get best offers and news.
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-7">
+            <form class="subscribe-form">
+              <input
+                data-placeholder="Enter your email here..."
+                class="le-input col-xs-12 col-md-10"
+              />
+              <button type="submit" class="le-btn icon-btn fa fa-send"></button>
+            </form>
           </div>
         </div>
       </section>
