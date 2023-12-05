@@ -1,45 +1,50 @@
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
-{# Filter / pagination controls #}
-<div class="col-xs-12 col-sm-9 col-md-9">
-  <nobr>
-    <label class="ctrl-item" for="section-products-controls-sort">{{ 'products.sort' | i18n }}</label>
-    <select class="ctrl-item selectpicker" data-style="btn-inverse">
-      <option>{{ 'products.sortByPrice' | i18n }} 🠗</option>
-      <option>{{ 'products.sortByPrice' | i18n }} 🠕</option>
-      <option>{{ 'products.sortAbc' | i18n }} 🠗</option>
-      <option>{{ 'products.sortAbc' | i18n }} 🠕</option>
-      <option>{{ 'products.sortByAvailability' | i18n }} 🠗</option>
-      <option>{{ 'products.sortByAvailability' | i18n }} 🠕</option>
-    </select>
-  </nobr>
-  <nobr>
-    <label class="ctrl-item" for="section-products-controls-show">{{ 'products.show' | i18n }}</label>
-    <select class="ctrl-item selectpicker" data-style="btn-inverse">
-      <option>{{ 'products.all' | i18n }}</option>
-      <option>{{ 'products.inStock' | i18n }}</option>
-    </select>
-  </nobr>
-  {# Issue #13: Removed pagination
-  <div id="--id-items-amount" class="ctrl-item inline">
-    <select class="selectpicker" data-width="70px" data-style="btn-inverse">
-      <option>10</option>
-      <option>20</option>
-      <option>30</option>
-      <option>40</option>
-      <option>{{ 'products.all' | i18n }}</option>
-    </select>
-    {{ 'products.productsPerPage' | i18n }}
-  </div>
-  #}
-</div>
+<div class="section-products-controls controller-nav-bar row">
 
-{# List mode buttons #}
-<div class="col-xs-12 col-sm-3 col-md-3">
-  <div class="grid-list-buttons">
-    <ul class="list-inline">
-      <li class="active"><a data-toggle="tab" href="#grid-view"><i class="fa fa-th-large"></i> {{ 'products.grid' | i18n }}</a></li>
-      <li><a data-toggle="tab" href="#list-view"><i class="fa fa-th-list"></i> {{ 'products.list' | i18n }}</a></li>
-    </ul>
+  {# Filter / pagination controls #}
+  <div class="col-xs-12 col-sm-9 col-md-9">
+    <nobr>
+      <label class="ctrl-item" for="section-products-controls-sort">{{ 'products.sort' | i18n }}</label>
+      <select class="ctrl-item selectpicker" data-style="btn-inverse">
+        <option>{{ 'products.sortByPrice' | i18n }} 🠗</option>
+        <option>{{ 'products.sortByPrice' | i18n }} 🠕</option>
+        <option>{{ 'products.sortAbc' | i18n }} 🠗</option>
+        <option>{{ 'products.sortAbc' | i18n }} 🠕</option>
+        <option>{{ 'products.sortByAvailability' | i18n }} 🠗</option>
+        <option>{{ 'products.sortByAvailability' | i18n }} 🠕</option>
+      </select>
+    </nobr>
+    <nobr>
+      <label class="ctrl-item" for="section-products-controls-show">{{ 'products.show' | i18n }}</label>
+      <select id="section-products-controls-show" class="ctrl-item selectpicker" data-style="btn-inverse">
+        <option>{{ 'products.all' | i18n }}</option>
+        <option>{{ 'products.inStock' | i18n }}</option>
+      </select>
+    </nobr>
+    {# Issue #13: Removed pagination
+    #}
+    <div id="--id-items-amount" class="ctrl-item inline">
+      <label class="ctrl-item" for="section-products-controls-page-size">{{ 'products.by' | i18n }}</label>
+      <select id="section-products-controls-page-size" class="ctrl-item selectpicker" data-style="btn-inverse">
+        <option>10</option>
+        <option>20</option>
+        <option>30</option>
+        <option>40</option>
+        <option>{{ 'products.all' | i18n }}</option>
+      </select>
+      <label class="ctrl-item" for="section-products-controls-page-size">{{ 'products.productsPerPage' | i18n }}</label>
+    </div>
   </div>
+
+  {# List mode buttons #}
+  <div class="col-xs-12 col-sm-3 col-md-3">
+    <div class="grid-list-buttons">
+      <ul class="list-inline">
+        <li class="active"><a data-toggle="tab" href="#grid-view"><i class="fa fa-th-large"></i> {{ 'products.grid' | i18n }}</a></li>
+        <li><a data-toggle="tab" href="#list-view"><i class="fa fa-th-list"></i> {{ 'products.list' | i18n }}</a></li>
+      </ul>
+    </div>
+  </div>
+
 </div>

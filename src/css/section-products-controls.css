@@ -1,0 +1,6 @@
+.section-products-controls {
+  /* border: 1px solid red; */
+  .bootstrap-select.ctrl-item {
+    width: auto !important;
+  }
+}

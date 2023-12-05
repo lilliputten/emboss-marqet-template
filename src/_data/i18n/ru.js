@@ -87,6 +87,7 @@ const ru = {
     toHomepage: 'На главную страницу',
     homepage: 'Главная',
     rubric: 'Сборные модели',
+    catalogue: 'Каталог',
     product: 'Товар',
   },
   newsletter: {
@@ -109,7 +110,8 @@ const ru = {
     newExclam: 'New!',
     halfPrice: '50%',
     price: 'Цена',
-    productsPerPage: 'Товаров на странице',
+    by: 'по',
+    productsPerPage: 'на странице',
     show: 'Показать',
     collection: 'Коллекция',
     collections: 'Коллекции',
