@@ -1,7 +1,9 @@
-/* eslint-env jquery */
-/* global WOW */
+// @ts-check
 
-(function ($) {
+/* eslint-env jquery */
+/* --global WOW */
+
+(function (/** @type {jQuery} */ $) {
   'use strict';
 
   function onLoad() {
@@ -27,7 +29,7 @@
     // Set loaded flag
     window.hasReady = true;
 
-    new WOW({
+    new window.WOW({
       boxClass: 'wow', // animated element css class (default is wow)
       animateClass: 'animated', // animation css class (default is animated)
       offset: '-200px', // distance to the element when triggering the animation (default is 0)
@@ -35,7 +37,7 @@
       live: true, // act on asynchronously loaded content (default is true)
     });
 
-    new WOW().init(); // NOTE: It's not a mistake: if we use previosly created wow here it causes errors (not all carousels are initialized)
+    new window.WOW().init(); // NOTE: It's not a mistake: if we use previosly created wow here it causes errors (not all carousels are initialized)
 
     if ($('.bg-image[data-bg-image]').length > 0) {
       $('.bg-image[data-bg-image]').each(function () {
@@ -64,7 +66,7 @@
       itemsDesktop: [1200, 2],
       itemsDesktopSmall: [990, 2],
       itemsTablet: [800, 1],
-      itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
+      itemsMobile: undefined, // itemsMobile disabled - inherit from itemsTablet option
     });
     var owl = $('.product-carousel').data('owlCarousel');
 
@@ -153,47 +155,55 @@
         });
     });
     const basketDropdown = $('[data-hover="dropdown"]');
+    // @ts-ignore
     if (basketDropdown && basketDropdown.dropdownHover) {
+      // @ts-ignore
       basketDropdown.dropdownHover();
     } else {
       // DEBUG?
       console.warn('No basket dropdown has initialized!');
     }
     checkBasketDropdown();
+    /** @param {boolean} [remove] */
     function checkBasketDropdown(remove) {
       if (remove) {
         var cn = parseInt($('.basket-item-count').text());
         var nn = cn - 1;
         $('.basket-item-count').text(nn);
       }
-      if ($('.basket .basket-item').length <= 0) {
-        $('.basket .dropdown-menu').prepend("<li class='empty'>Empty</li>");
+      const basketItems = $('.basket .basket-item');
+      const hasItems = !!basketItems.length;
+      if (!hasItems) {
+        var menu = $('.basket .dropdown-menu');
+        // menu.prepend('<li class="empty">Empty</li>');
+        menu.toggleClass('has-items', hasItems);
       }
     }
     // Quantity element
     $('.le-quantity a').click(function (e) {
       e.preventDefault();
-      var currentQty = $(this).parent().parent().find('input').val();
+      var currentQty = parseInt($(this).parent().parent().find('input').val());
 
       if ($(this).hasClass('minus') && currentQty > 0) {
         $(this)
           .parent()
           .parent()
           .find('input')
-          .val(parseInt(currentQty) - 1);
+          .val(currentQty - 1);
       } else {
         if ($(this).hasClass('plus')) {
           $(this)
             .parent()
             .parent()
             .find('input')
-            .val(parseInt(currentQty) + 1);
+            .val(currentQty + 1);
         }
       }
     });
 
     // Rating Star activator
     if ($('.star').length > 0) {
+      // @ts-ignore
       $('.star').raty({
         space: false,
         starOff: '/vendor/images/star-off.png',
@@ -248,12 +258,13 @@
         var tid = $(this).attr('href');
         var targetSlide = $('.single-product-gallery-item' + tid);
 
-        targetSlide = $(targetSlide).parent().index();
+        var targetSlideIdx = $(targetSlide).parent().index();
 
-        gallery.goTo(targetSlide);
+        gallery.goTo(targetSlideIdx);
       });
 
       if ($('.single-product-vertical-gallery').length > 0) {
+        // @ts-ignore
         $('.single-product-vertical-gallery ul').carouFredSel({
           direction: 'up',
           auto: false,
@@ -282,6 +293,7 @@
       // Horizontal Single page gallery
 
       if ($('.single-product-horizontal-gallery').length > 0) {
+        // @ts-ignore
         $('.single-product-horizontal-gallery ul').carouFredSel({
           auto: false,
           circular: true,
@@ -310,6 +322,7 @@
     // Brand Slider activator
 
     if ($('.brands-slider').length > 0) {
+      // @ts-ignore
       $('.brands-slider img').lazyload({
         event: 'loadImagesNow',
         effect: 'fadeIn',
@@ -319,6 +332,7 @@
     // Lightbox activator
 
     if ($('a[data-rel="prettyphoto"]').length > 0) {
+      // @ts-ignore
       $('a[data-rel="prettyphoto"]').prettyPhoto();
     }
 
@@ -329,6 +343,7 @@
         var src = $(this).attr('src');
         $(this).attr('data-original', src);
         if (i + 1 >= allImgs) {
+          // @ts-ignore
           $('img.lazy').lazyload({
             effect: 'fadeIn',
           });
@@ -435,9 +450,11 @@
   });
 
   if ($('a[data-rel="prettyphoto"]').length > 0) {
+    // @ts-ignore
     $('a[data-rel="prettyphoto"]').prettyPhoto();
   }
   if ($('a[data-rel="prettyPhoto"]').length > 0) {
+    // @ts-ignore
     $('a[data-rel="prettyPhoto"]').prettyPhoto();
   }
 
@@ -471,14 +488,17 @@
   // Custom select buttons trigger
   if ($('.selectpicker').length > 0) {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      // @ts-ignore
       $('.selectpicker').selectpicker('mobile');
     } else {
+      // @ts-ignore
       $('.selectpicker').selectpicker();
     }
   }
 
   // Sidebar Price Slider
   if ($('.price-slider').length > 0) {
+    // @ts-ignore
     $('.price-slider').slider({
       min: 100,
       max: 700,

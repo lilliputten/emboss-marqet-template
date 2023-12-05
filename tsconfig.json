@@ -21,7 +21,7 @@
       "/": ["src/*"]
     }
   },
-  "typeRoots": ["src/types/**/*"],
+  "typeRoots": ["src/@types/**/*"],
   "include": ["src/**/*.ts", "src/**/*.js"],
   "exclude": ["node_modules", ".git", ".vscode", "docs", "tests", "bw_matchbox.egg-info", "**/*_"]
 }
