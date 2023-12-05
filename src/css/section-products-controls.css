@@ -1,4 +1,8 @@
 .section-products-controls {
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
   /* border: 1px solid red; */
   .bootstrap-select.ctrl-item {
     width: auto !important;
