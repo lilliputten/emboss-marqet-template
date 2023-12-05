@@ -5,15 +5,13 @@ const companyName = 'Emboss';
 
 /** @type TLngDef */
 const en = {
-  // Test
-  hello: 'Hello!',
   // General
   siteName: siteName, // Example
   site: {
     name: siteName,
     briefName: site.domainName,
     description: 'Site description',
-    author: 'Site author',
+    author: 'Emboss Studio',
     // TODO: Keywords, etc
     meta: 'Meta', // DEBUG:Example of different data formats
     currency: '$',
