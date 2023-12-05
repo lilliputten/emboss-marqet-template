@@ -61,6 +61,7 @@ const en = {
     singleProductSidebar: 'Single product (sidebar)',
     singleProduct: 'Single product',
     cartPage: 'Cart page',
+    emptyCart: 'Cart is empty',
     checkout: 'Checkout',
     payment: 'Payment',
     showCart: 'Show cart',
@@ -93,6 +94,7 @@ const en = {
   sections: {
     bestSellers: '<span class="bold">Best sellers</span>',
     featuredProducts: '<span class="bold">Featured products</span>',
+    newProducts: '<span class="bold">New products</span>',
   },
   products: {
     toCart: 'To cart',

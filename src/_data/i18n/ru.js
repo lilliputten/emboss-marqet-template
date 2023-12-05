@@ -63,6 +63,7 @@ const ru = {
     singleProductSidebar: 'Продукт (боковая панель)',
     singleProduct: 'Продукт',
     cartPage: 'Корзина',
+    emptyCart: 'Корзина пуста',
     checkout: 'Оформить',
     payment: 'Платеж',
     showCart: 'Купить',
@@ -95,6 +96,7 @@ const ru = {
   sections: {
     bestSellers: '<span class="bold">Хиты продаж</span>',
     featuredProducts: '<span class="bold">Рекомендуемые товары</span>',
+    newProducts: '<span class="bold">Новинки</span>',
   },
   products: {
     toCart: 'Купить',
