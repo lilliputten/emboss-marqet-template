@@ -6,6 +6,7 @@ const envDev = process.env.ELEVENTY_DEV;
 const isDev = !!envDev;
 
 module.exports = {
+  isDev,
   showPagesMenu: isDev, // Show pages menu (debug only!)
   baseURL,
   domainName,

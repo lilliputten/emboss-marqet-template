@@ -1,3 +1,5 @@
+// @ts-check
+
 // TODO: Use traspiller, see https://www.raresportan.com/eleventy-part-five/
 
 // See also: `src/static/vendor/js/script.js`

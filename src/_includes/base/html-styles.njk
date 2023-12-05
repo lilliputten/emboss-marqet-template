@@ -1,8 +1,10 @@
-{# Fonts... #}
+{# Fonts: Use only in production to increase page rendering speed #}
+{% if not isDev %}
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="preload" as="style" />
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800" rel="preload" as="style" />
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800" rel="stylesheet" type="text/css" />
+{% endif %}
 
 {# Marqet template styles... #}
 <link rel="stylesheet" href="/vendor/css/prettyPhoto.css">
