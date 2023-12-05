@@ -173,11 +173,12 @@
       }
       const basketItems = $('.basket .basket-item');
       const hasItems = !!basketItems.length;
-      if (!hasItems) {
-        var menu = $('.basket .dropdown-menu');
-        // menu.prepend('<li class="empty">Empty</li>');
-        menu.toggleClass('has-items', hasItems);
-      }
+      var basket = $('.basket');
+      basket.toggleClass('has-items', hasItems);
+      /* // UNUSED: Direct basket options control
+       * var menu = $('.basket .dropdown-menu');
+       * menu.prepend('<li class="empty">Empty</li>');
+       */
     }
     // Quantity element
     $('.le-quantity a').click(function (e) {

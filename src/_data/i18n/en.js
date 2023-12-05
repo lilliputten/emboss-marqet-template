@@ -85,6 +85,7 @@ const en = {
     toHomepage: 'To main page',
     homepage: 'Main page',
     rubric: 'Prefabricated models',
+    catalogue: 'Catalogue',
     product: 'Product',
   },
   newsletter: {
@@ -107,7 +108,8 @@ const en = {
     newExclam: 'New!',
     halfPrice: '50%',
     price: 'Price',
-    productsPerPage: 'Products per page',
+    by: 'by',
+    productsPerPage: 'per page',
     show: 'Show',
     collection: 'Collection',
     collections: 'Collections',

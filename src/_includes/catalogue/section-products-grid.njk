@@ -71,9 +71,7 @@
         </div>
       </div>
       #}
-      <div class="controller-nav-bar row">
-        {% include "catalogue/section-products-controls.njk" %}
-      </div>
+      {% include "catalogue/section-products-controls.njk" %}
       <div class="product-grid tab-content">
         <!--grid view starts here-->
         <div id="grid-view" class="tab-pane active">
@@ -203,6 +201,7 @@
 
           </div>
         </div>
+      {% include "catalogue/section-products-pagination.njk" %}
       </div>
 
     </div>
