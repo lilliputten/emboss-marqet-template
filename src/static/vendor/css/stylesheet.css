@@ -7207,6 +7207,15 @@ header .link-list {
   left: -234px;
   width: 300px;
 }
+.top-nav-holder .basket-holder .basket:not(.has-items) .dropdown-menu .checkout,
+.top-nav-holder .basket-holder .basket.has-items .dropdown-menu .empty {
+  display: none;
+}
+.top-nav-holder .basket-holder .basket .dropdown-menu .empty {
+  text-align: center;
+  display: block;
+  padding: 20px;
+}
 .top-nav-holder .basket-holder .basket .dropdown-menu:before,
 .top-nav-holder .basket-holder .basket .dropdown-menu:after {
   display: none;
