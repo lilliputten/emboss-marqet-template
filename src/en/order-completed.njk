@@ -1,14 +1,15 @@
 ---
-title: Order completed
+title: pages.orderCompleted
 layout: page.njk
 :changed: 2023.12.01, 22:23
 showProfile: true
+hideBacklink: true
 ---
 
 {% set breadcrumb = [
   { link: '/', name: 'breadcrumbLinks.homepage' | i18n },
-  { link: '/products-grid', name: 'breadcrumbLinks.rubric' | i18n },
-  { name: 'breadcrumbLinks.product' | i18n, class: 'active' }
+  { link: '/profile', name: 'pages.profile' | i18n },
+  { name: 'pages.orderCompleted' | i18n, class: 'active' }
 ] %}
 {% include "shared/section-breadcrumb.njk" %}
 

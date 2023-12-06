@@ -20,6 +20,18 @@ const en = {
     name: companyName,
     address: 'Company address',
   },
+  pages: {
+    checkout: 'Checkout',
+    contacts: 'Contacts',
+    orderCompleted: 'Order completed',
+    paymentMethod: 'Payment method',
+    productsGrid: 'Products grid',
+    profile: 'Profile',
+    profileLogIn: 'Log in',
+    profileLogOn: 'Log on',
+    shoppingCart: 'Shopping cart',
+    singleProduct: 'Single product',
+  },
   rubrics: {
     contacts: 'Contacts',
     account: 'Your account',

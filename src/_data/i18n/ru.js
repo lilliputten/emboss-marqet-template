@@ -23,6 +23,18 @@ const ru = {
     name: companyName,
     address: 'Адрес компании',
   },
+  pages: {
+    checkout: 'Оформление заказа',
+    contacts: 'Контакты',
+    orderCompleted: 'Заказ завершён',
+    paymentMethod: 'Выбрать способ оплаты',
+    productsGrid: 'Каталог',
+    profile: 'Профиль',
+    profileLogIn: 'Войти',
+    profileLogOn: 'Регистрация',
+    shoppingCart: 'Корзина',
+    singleProduct: 'Продукт',
+  },
   rubrics: {
     contacts: 'Контакты',
     account: 'Профиль',

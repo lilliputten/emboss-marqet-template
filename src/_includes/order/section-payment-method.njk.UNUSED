@@ -9,7 +9,7 @@
           <i class="fa fa-check-circle-o"></i>
           <span class="triangle"></span>
         </div>
-        <div class="box-holder">
+        <div class="box-holder" id="choosePaymentMethod">
           <h2>{{ 'headerLinks.choosePaymentMethod' | i18n }}</h2>
           <div class="table-form">
             <div class="row">
