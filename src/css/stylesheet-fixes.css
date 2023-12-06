@@ -1,3 +1,9 @@
+/* Select togglers */
+.btn.dropdown-toggle.selectpicker.btn-input {
+  background-color: #dbdbdb;
+  color: #000000;
+}
+
 .iconic-nav-bar.no-icon {
   .bar {
     border-radius: 4px;
@@ -25,3 +31,4 @@ section {
 .full-width {
   width: 100%;
 }
+
