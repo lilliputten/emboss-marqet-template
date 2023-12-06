@@ -23,6 +23,11 @@
 
   --transition-timeout: 250ms;
 }
+/* Select togglers */
+.btn.dropdown-toggle.selectpicker.btn-input {
+  background-color: #dbdbdb;
+  color: #000000;
+}
 .iconic-nav-bar.no-icon .bar {
     border-radius: 4px;
     margin-bottom: 30px;
