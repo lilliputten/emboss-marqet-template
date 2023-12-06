@@ -347,34 +347,40 @@ section {
   width: 100%;
   margin-bottom: 30px;
 }
+/* Set product card layout */
+.products-holder.simple-grid,
+  .products-holder.product-carousel .owl-wrapper {
+    display: flex !important;
+    align-items: stretch;
+  }
+.products-holder.simple-grid .product-wrapper,
+    .products-holder.simple-grid .body,
+    .products-holder.simple-grid .product-item,
+    .products-holder.simple-grid .owl-item,
+    .products-holder.product-carousel .owl-wrapper .product-wrapper,
+    .products-holder.product-carousel .owl-wrapper .body,
+    .products-holder.product-carousel .owl-wrapper .product-item,
+    .products-holder.product-carousel .owl-wrapper .owl-item {
+      display: flex;
+      align-items: stretch;
+      flex-direction: column;
+      align-content: stretch;
+      justify-content: stretch;
+    }
+.products-holder.simple-grid .body,
+    .products-holder.simple-grid .product-item,
+    .products-holder.product-carousel .owl-wrapper .body,
+    .products-holder.product-carousel .owl-wrapper .product-item {
+      flex: 1;
+    }
+.products-holder.simple-grid .body, .products-holder.product-carousel .owl-wrapper .body {
+      justify-content: space-between;
+    }
 .products-holder.simple-grid, .products-holder.simple-grid .row {
       display: flex;
       flex-wrap: wrap;
       align-items: stretch;
     }
-/* NOTE: Make all items in a rows the same size. */
-.products-holder.simple-grid .product-wrapper, .products-holder.simple-grid .row .product-wrapper {
-        flex-grow: 0;
-        flex-shrink: 0;
-        display: flex;
-        align-items: stretch;
-      }
-.products-holder.simple-grid .product-item, .products-holder.simple-grid .row .product-item {
-        display: flex;
-        flex-direction: column;
-      }
-.products-holder.simple-grid .product-item .body, .products-holder.simple-grid .row .product-item .body {
-          flex: 1;
-        }
-@media (max-width: 991px) {
-        .products-holder.list-view .product-item.wide .body,
-        .products-holder.list-view .product-item.wide .head {
-          /* border: 0; */
-        }
-        .products-holder.list-view .product-item.wide .buttons-holder .btn-add-to-cart {
-          /* margin-top: 10px; */
-        }
-      }
 @media (min-width: 992px) {
         .products-holder.list-view .product-item.wide .row, .products-holder.list-view .product-item.wide .row > * {
           display: flex;
