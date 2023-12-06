@@ -7,7 +7,8 @@ module.exports = /** @type TProduct[] */ ([
     priceOld: 250,
     price: 145,
     stars: 3,
-    name: 'consectetur adipiscing elit',
+    // name: 'consectetur adipiscing elit',
+    name: 'Looking lorem round, to ascertain that they - extra_long_text_line_for_testing_purposes_only',
     excerpt: 'Looking lorem round, to ascertain that they...',
   },
   {
