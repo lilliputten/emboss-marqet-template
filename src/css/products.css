@@ -1,36 +1,36 @@
 .products-holder {
+  /* Set product card layout */
+  &.simple-grid,
+  &.product-carousel .owl-wrapper {
+    display: flex !important;
+    align-items: stretch;
+    .product-wrapper,
+    .body,
+    .product-item,
+    .owl-item {
+      display: flex;
+      align-items: stretch;
+      flex-direction: column;
+      align-content: stretch;
+      justify-content: stretch;
+    }
+    .body,
+    .product-item {
+      flex: 1;
+    }
+    .body {
+      justify-content: space-between;
+    }
+  }
   &.simple-grid {
     &, .row {
       display: flex;
       flex-wrap: wrap;
       align-items: stretch;
-      /* NOTE: Make all items in a rows the same size. */
-      .product-wrapper {
-        flex-grow: 0;
-        flex-shrink: 0;
-        display: flex;
-        align-items: stretch;
-      }
-      .product-item {
-        display: flex;
-        flex-direction: column;
-        .body {
-          flex: 1;
-        }
-      }
     }
   }
   &.list-view {
     .product-item.wide {
-      @media (max-width: 991px) {
-        .body,
-        .head {
-          /* border: 0; */
-        }
-        .buttons-holder .btn-add-to-cart {
-          /* margin-top: 10px; */
-        }
-      }
       @media (min-width: 992px) {
         .row, .row > * {
           display: flex;
