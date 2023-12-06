@@ -1,0 +1,19 @@
+---
+title: pages.profileLogIn
+layout: page.njk
+:changed: 2023.12.05, 18:32
+showProfile: true
+hideBacklink: true
+---
+
+{% set breadcrumb = [
+  { link: '/', name: 'breadcrumbLinks.homepage' | i18n },
+  { name: 'pages.profileLogIn' | i18n, class: 'active' }
+] %}
+{% include "shared/section-breadcrumb.njk" %}
+
+{# {% include "order/section-payment-method.njk" %} #}
+
+{% include "section-newsletter.njk" %}
+{# {% include "section-banner-slider.njk" %} #}
+{# {% include "section-brands-slider.njk" %} #}
