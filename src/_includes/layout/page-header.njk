@@ -1,4 +1,5 @@
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+{% set currencyId = 'rub' if lang === 'ru' else 'usd' %}
 
 <header class="page-header">
   <div class="top-bar">
@@ -37,38 +38,6 @@
     </div>
   </div>
   <div class="container header-row">
-    {# // Removed left section (language, currency)
-    <div class="col-xs-12 col-md-4">
-      <div class="buttons-holder">
-        <!-- Languages & currency selector moved to the right side
-        <div class="btn-group le-dropdown">
-          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            {{ langNames[lang] }}
-          </a>
-          <ul class="dropdown-menu">
-            {% set pageUrl = page.url %}
-            {% set purePageUrl = page.url.substring(lang.length + 1) if page.url.startsWith('/' + lang) else page.url %}
-            {% if locales.length %}
-              {% for locale in locales -%}
-                {% set localePrefix = '/' + locale.code if locale.code !== defaultLang else '' %}
-                <li><a href="{{ localePrefix }}{{ purePageUrl }}" rel="alternate" hreflang="{{ locale.code }}">{{ locale.label }}</a></li>
-              {% endfor -%}
-            {% endif %}
-          </ul>
-        </div>
-        <div class="btn-group le-dropdown">
-          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-            <i class="fa fa-rub"></i> rub
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="#"><i class="fa fa-rub"></i> rub</a></li>
-            <li><a href="#"><i class="fa fa-usd"></i> usd</a></li>
-          </ul>
-        </div>
-        -->
-      </div>
-    </div>
-    #}
     <div class="logo-cell col-xs-12 col-md-4">
       <div class="logo">
         <a href="{{ langRootUrl }}/" title="{{ 'site.name' | i18n }}">
@@ -99,7 +68,7 @@
         <li>
           <div class="btn-group le-dropdown">
             <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-              <i class="fa fa-rub"></i> rub
+              <i class="fa fa-{{ currencyId }}"></i> {{ currencyId }}
             </a>
             <ul class="dropdown-menu">
               <li><a href="#"><i class="fa fa-rub"></i> rub</a></li>
