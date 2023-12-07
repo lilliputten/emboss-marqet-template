@@ -29,6 +29,7 @@ const en = {
     profile: 'Profile',
     profileLogIn: 'Log in',
     profileLogOn: 'Log on',
+    profileRestorePassword: 'Restore password',
     shoppingCart: 'Shopping cart',
     singleProduct: 'Single product',
   },
@@ -200,6 +201,7 @@ const en = {
     backToCatalogue: 'Back to catalogue',
     contactInfo: 'Contact info',
     selectCountry: 'Select country',
+    country: 'Country',
     shippingInfo: 'Shipping info',
     shippingType: 'Shipping type',
     deliveryExpress: 'Express',
@@ -215,7 +217,7 @@ const en = {
     addressLine2: 'Address line 2',
     example: 'Example',
     fullName: 'Full name',
-    emailAddress: 'Email address',
+    emailAddress: 'E-mail address',
     phone: 'Phone',
   },
   payment: {
@@ -243,6 +245,21 @@ const en = {
   orderCompleted: {
     title: 'Order completed',
     text: 'Ваш заказ № …. сформирован, информация поступит на вашу электронную почту.',
+  },
+  profile: {
+    email: 'E-mail',
+    forgotPassword: 'Forgot password?',
+    logon: 'Logon',
+    logonText: 'Logon text',
+    logonTitle: 'Logon title',
+    login: 'Login',
+    loginText: 'Login text',
+    loginTitle: 'Login title',
+    password: 'Password',
+    password2: 'Repeat password',
+    rememberMe: 'Remember me',
+    restorePasswordText: 'Restore password for prreviously created account.',
+    restorePassword: 'Restore password',
   },
 };
 

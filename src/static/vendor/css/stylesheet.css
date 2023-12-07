@@ -8527,10 +8527,26 @@ header .link-list {
   line-height: 30px;
   margin: 0 0 0 5px;
 }
-#single-product .padded-buttons {
+.padded-buttons {
   margin: 20px 0;
 }
-#single-product .merged-buttons {
+.padded-horizontal {
+  margin: 0 20px;
+}
+.links-box {
+  display: flex;
+  gap: 20px;
+}
+.links-box[align="center"] {
+  justify-content: center;
+}
+@media (min-width: 480px) {
+  .narrow-form-box {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+}
+.merged-buttons {
   text-align: left;
   margin: 20px 0;
 }
@@ -8699,6 +8715,11 @@ header .link-list {
 .field-group textarea {
   background-color: #dbdbdb;
   color: #000000;
+}
+.checkbox-field label,
+.checkbox-field input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
 }
 .box-holder {
   padding: 10px;

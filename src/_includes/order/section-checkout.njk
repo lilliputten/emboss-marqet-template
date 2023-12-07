@@ -15,7 +15,7 @@
             <h2>{{ 'checkout.shippingInfo' | i18n }}</h2>
               <div class="col-xs-12">
                 <div class="field-group">
-                  <label>{{ 'checkout.selectCountry' | i18n }}</label>
+                  <label>{{ 'checkout.country' | i18n }}</label>
                   {% include "order/section-checkout-countries-" + lang + ".njk" %}
                 </div>
               </div>
@@ -52,13 +52,13 @@
                   <div class="col-xs-12 col-md-6">
                     <div class="field-group">
                       <label>{{ 'checkout.fullName' | i18n }}</label>
-                      <input type="text" class="le-input" data-placeholder="{{ 'checkout.fullName' | i18n }}">
+                      <input type="text" class="le-input" placeholder="{{ 'checkout.example' | i18n }}: {{ 'checkout.fullName' | i18n }}">
                     </div>
                   </div>
                   <div class="col-xs-12 col-md-6">
                     <div class="field-group">
                       <label>{{ 'checkout.emailAddress' | i18n }}</label>
-                      <input type="text" class="le-input" data-placeholder="{{ 'checkout.emailAddress' | i18n }}">
+                      <input type="text" class="le-input" placeholder="{{ 'checkout.example' | i18n }}: {{ 'checkout.emailAddress' | i18n }}">
                     </div>
                   </div>
                 </div>
@@ -71,13 +71,13 @@
                   <div class="col-xs-12 col-md-6">
                     <div class="field-group">
                       <label>{{ 'checkout.city' | i18n }}</label>
-                      <input type="text" class="le-input" data-placeholder="{{ 'checkout.addressCity' | i18n }}">
+                      <input type="text" class="le-input" placeholder="{{ 'checkout.example' | i18n }}: {{ 'checkout.addressCity' | i18n }}">
                     </div>
                   </div>
                   <div class="col-xs-12 col-md-6">
                     <div class="field-group">
                       <label>{{ 'checkout.address' | i18n }}</label>
-                      <input type="text" class="le-input" data-placeholder="{{ 'checkout.addressText' | i18n }}">
+                      <input type="text" class="le-input" placeholder="{{ 'checkout.example' | i18n }}: {{ 'checkout.addressText' | i18n }}">
                     </div>
                   </div>
                 </div>
@@ -90,13 +90,13 @@
                   <div class="col-xs-12 col-md-6">
                     <div class="field-group">
                       <label>{{ 'checkout.telephone' | i18n }}</label>
-                      <input type="text" class="le-input" data-placeholder="{{ 'checkout.example' | i18n }}:  +1 123 456 7890">
+                      <input type="text" class="le-input" placeholder="{{ 'checkout.example' | i18n }}: +1 123 456 7890">
                     </div>
                   </div>
                   <div class="col-xs-12 col-md-6">
                     <div class="field-group">
                       <label>{{ 'checkout.zipCode' | i18n }}</label>
-                      <input type="text" class="le-input" data-placeholder="{{ 'checkout.example' | i18n }}: 33461">
+                      <input type="text" class="le-input" placeholder="{{ 'checkout.example' | i18n }}: 33461">
                     </div>
                   </div>
                 </div>
@@ -110,9 +110,9 @@
         <div class="box-holder" id="actions">
           <div class="table-form">
             <div class="merged-buttons">
-              <a href="{{ langRootUrl }}/shopping-cart" class="le-btn small">{{ 'checkout.backToCart' | i18n }}</a>
-              {# <a href="{{ langRootUrl }}/payment-method" class="le-btn small">{{ 'headerLinks.choosePaymentMethod' | i18n }}</a> #}
-              <a href="{{ langRootUrl }}/order-completed" class="le-btn small">{{ 'payment.placeOrder' | i18n }}</a>
+              <a href="{{ langRootUrl }}/shopping-cart" class="le-btn">{{ 'checkout.backToCart' | i18n }}</a>
+              {# <a href="{{ langRootUrl }}/payment-method" class="le-btn">{{ 'headerLinks.choosePaymentMethod' | i18n }}</a> #}
+              <a href="{{ langRootUrl }}/order-completed" class="le-btn">{{ 'payment.placeOrder' | i18n }}</a>
             </div>
           </div>
         </div>
