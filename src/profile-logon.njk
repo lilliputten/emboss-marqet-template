@@ -1,5 +1,5 @@
 ---
-title: pages.profileLogIn
+title: pages.profileLogOn
 layout: page.njk
 :changed: 2023.12.07, 15:15
 showProfile: true
@@ -8,11 +8,11 @@ hideBacklink: true
 
 {% set breadcrumb = [
   { link: '/', name: 'breadcrumbLinks.homepage' | i18n },
-  { name: 'pages.profileLogIn' | i18n, class: 'active' }
+  { name: 'pages.profileLogOn' | i18n, class: 'active' }
 ] %}
 {% include "shared/section-breadcrumb.njk" %}
 
-{% include "profile/section-login.njk" %}
+{% include "profile/section-logOn.njk" %}
 
 {# {% include "section-newsletter.njk" %} #}
 {# {% include "section-banner-slider.njk" %} #}

@@ -32,6 +32,7 @@ const ru = {
     profile: 'Профиль',
     profileLogIn: 'Войти',
     profileLogOn: 'Регистрация',
+    profileRestorePassword: 'Восстановить пароль',
     shoppingCart: 'Корзина',
     singleProduct: 'Продукт',
   },
@@ -202,6 +203,7 @@ const ru = {
     backToCatalogue: 'Вернуться в каталог',
     contactInfo: 'Контактная информация',
     selectCountry: 'Выберите страну',
+    country: 'Страна',
     shippingInfo: 'Информация о доставке',
     shippingType: 'Тип доставки',
     deliveryExpress: 'Экспресс',
@@ -217,7 +219,7 @@ const ru = {
     addressLine2: 'Адресная строка 2',
     example: 'Пример',
     fullName: 'ФИО',
-    emailAddress: 'Email',
+    emailAddress: 'E-mail',
     phone: 'Телефон',
   },
   payment: {
@@ -245,6 +247,21 @@ const ru = {
   orderCompleted: {
     title: 'Заказ завершён',
     text: 'Ваш заказ № …. сформирован, информация поступит на вашу электронную почту.',
+  },
+  profile: {
+    email: 'E-mail',
+    forgotPassword: 'Забыли пароль?',
+    logon: 'Регистрация',
+    logonText: 'Текст пояснения к странице (если нужен)',
+    logonTitle: 'Регистрация',
+    login: 'Войти',
+    loginText: 'Текст пояснения к странице (если нужен)',
+    loginTitle: 'Войти',
+    password: 'Пароль',
+    password2: 'Проверка пароля',
+    rememberMe: 'Запомнить меня',
+    restorePasswordText: 'Восстановить пароль для ранее созданной учётной записи.',
+    restorePassword: 'Восстановить пароль',
   },
 };
 

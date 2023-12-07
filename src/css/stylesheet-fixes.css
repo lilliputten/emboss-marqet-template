@@ -32,3 +32,26 @@ section {
   width: 100%;
 }
 
+/* Margins */
+.mb-1 {
+  margin-bottom: 10px;
+}
+.mb-2 {
+  margin-bottom: 20px;
+}
+
+/* Profile styles */
+.profile-secondary-links {
+  > * {
+    position: relative;
+    &:not(:last-child):after {
+      position: absolute;
+      display: inline-block;
+      right: -10px;
+      content: "|";
+      color: #ccc;
+      margin: 0 5px;
+      /* opacity: 0.5; */
+    }
+  }
+}
