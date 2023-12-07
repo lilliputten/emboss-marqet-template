@@ -20,6 +20,15 @@
     }
     .body {
       justify-content: space-between;
+      $padding: 5px;
+      .excerpt {
+        flex: 1;
+        margin-bottom: $padding;
+      }
+      .merged-buttons {
+        margin-top: $padding;
+        margin-bottom: 0;
+      }
     }
   }
   &.simple-grid {
