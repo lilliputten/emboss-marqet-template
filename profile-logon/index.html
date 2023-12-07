@@ -1,0 +1,786 @@
+<!doctype html>
+
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Описание сайта" />
+    <meta name="author" content="Emboss Studio" />
+    <meta name="robots" content="index,follow" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="preload"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800"
+      rel="preload"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link rel="stylesheet" href="../vendor/css/prettyPhoto.css" />
+    <link rel="stylesheet" href="../vendor/css/animate.css" />
+    <link rel="stylesheet" href="../vendor/css/owl.carousel.css" />
+    <link rel="stylesheet" href="../vendor/css/owl.theme.css" />
+    <link rel="stylesheet" href="../vendor/css/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../vendor/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../vendor/css/yamm.css" />
+    <link
+      rel="stylesheet"
+      href="../vendor/css/font-awesome/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="../vendor/css/stylesheet.css" />
+
+    <link rel="preload" href="../css/page.css" as="style" />
+    <link rel="stylesheet" href="../css/page.css" />
+
+    <meta property="og:site_name" content="Emboss" />
+    <meta property="og:title" content="pages.profileLogOn" />
+    <meta property="og:description" content="Описание сайта" />
+    <meta property="og:url" content="/profile-logon/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Регистрация</title>
+  </head>
+  <body
+    class="font-sans text-gray-800 bg-gray-100 noscript"
+    bgcolor="#fff"
+    onLoad="onLoad()"
+  >
+    <div id="preloader">
+      <div id="status">&nbsp;</div>
+      <noscript>JavaScript is off. Please enable to view full site.</noscript>
+    </div>
+
+    <div class="wrapper">
+      <header class="page-header">
+        <div class="top-bar">
+          <div class="container">
+            <div class="col-xs-12 col-sm-6">
+              <ul class="info-inline">
+                <li>
+                  <a href="tel:+7 (800) 333-04-41"
+                    ><i class="fa fa-phone"></i> +7 (800) 333-04-41</a
+                  >
+                </li>
+                <li>
+                  <a href="mailto:info@emboss.studio"
+                    ><i class="fa fa-envelope"></i> info@emboss.studio</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container header-row">
+          <div class="logo-cell col-xs-12 col-md-4">
+            <div class="logo">
+              <a href="/" title="Emboss">
+                <img src="../images/logo/logo3-min.svg" alt="Emboss" />
+              </a>
+            </div>
+          </div>
+          <div class="menu-cell col-xs-12 col-md-8 last-menu">
+            <ul class="link-list inline">
+              <li>
+                <div class="btn-group le-dropdown">
+                  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                    Русский
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="/profile-logon/" rel="alternate" hreflang="ru"
+                        >Русский</a
+                      >
+                    </li>
+
+                    <li>
+                      <a href="/en/profile-logon/" rel="alternate" hreflang="en"
+                        >English</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="btn-group le-dropdown">
+                  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                    <i class="fa fa-rub"></i> rub
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#"><i class="fa fa-rub"></i> rub</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-usd"></i> usd</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li><a href="/user/account">Профиль</a></li>
+              <li><a href="/user/wishlist">Желания</a></li>
+              <li><a href="/user/logout">Выйти</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="container">
+          <div class="top-nav-holder">
+            <div class="row">
+              <div class="col-xs-12 col-md-6 col-lg-8 nav-menu top-menu-holder">
+                <div class="home-icon-button">
+                  <a href="/" title="Домашняя страница"
+                    ><i class="fa fa-home" alt="Домашняя страница"></i
+                  ></a>
+                </div>
+                <nav class="hidden-xs visible-sm visible-lg visible-md">
+                  <ul class="nav">
+                    <li><a href="/products-grid">Каталог</a></li>
+                    <li><a href="/delivery">Доставка и оплата</a></li>
+                    <li><a href="/wholesalers">Оптовикам</a></li>
+                    <li><a href="/contacts">Контакты</a></li>
+                  </ul>
+                </nav>
+                <select
+                  class="mobile-dropdown selectpicker top-drop-menu nav hidden-md hidden-sm visible-xs hidden-lg"
+                  data-style="btn"
+                >
+                  <option value="/" selected="selected">
+                    Домашняя страница
+                  </option>
+                  <option value="/products-grid">Каталог</option>
+                  <option value="/delivery">Доставка и оплата</option>
+                  <option value="/wholesalers">Оптовикам</option>
+                  <option value="/contacts">Контакты</option>
+                </select>
+              </div>
+              <div class="col-xs-12 col-md-5 col-lg-3 no-margin search-holder">
+                <div class="searchbox">
+                  <a href="" class="fa fa-search search-button"></a>
+                  <div class="field">
+                    <form>
+                      <input type="text" data-placeholder="Введите текст..." />
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-1 col-lg-1 basket-holder">
+                <div class="basket">
+                  <div class="dropdown">
+                    <a class="dropdown-toggle" data-hover="dropdown" href="#">
+                      <div class="basket-icon">
+                        <img
+                          class="svg"
+                          alt="basket"
+                          src="../vendor/images/basket.svg"
+                        />
+                        <span class="item-count"> 3 </span>
+                      </div>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <!-- Cart items -->
+                      <li>
+                        <div class="basket-item">
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-2 col-md-4">
+                              <div class="thumb">
+                                <img
+                                  alt=""
+                                  src="../vendor/images/products/products-on-white/product01.png"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-10 col-md-8">
+                              <div class="title">Man shoe</div>
+                              <div class="price">₽170.00</div>
+                            </div>
+                          </div>
+                          <a class="close-btn" href="#"></a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="basket-item">
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-2 col-md-4">
+                              <div class="thumb">
+                                <img
+                                  alt=""
+                                  src="../vendor/images/products/products-on-white/product02.png"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-10 col-md-8">
+                              <div class="title">Woman Shoe</div>
+                              <div class="price">₽120.00</div>
+                            </div>
+                          </div>
+                          <a class="close-btn" href="#"></a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="basket-item">
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-2 col-md-4">
+                              <div class="thumb">
+                                <img
+                                  alt=""
+                                  src="../vendor/images/products/products-on-white/product03.png"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-10 col-md-8">
+                              <div class="title">Indirimli Shoe</div>
+                              <div class="price">₽99.99</div>
+                            </div>
+                          </div>
+                          <a class="close-btn" href="#"></a>
+                        </div>
+                      </li>
+                      <!-- Empty cart info -->
+                      <li class="empty">Корзина пуста</li>
+                      <!-- Cart actions (for non-empty one) -->
+                      <li class="checkout">
+                        <div class="merged-buttons">
+                          <a href="/checkout" class="btn-add-to-cart le-btn"
+                            >Оформить</a
+                          >
+                          <a
+                            href="/shopping-cart"
+                            class="btn-add-to-wishlist le-btn"
+                            >Купить</a
+                          >
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section id="breadcrumb" class="no-icon">
+        <div class="container">
+          <div class="le-breadcrumb inline">
+            <div class="iconic-nav-bar no-icon">
+              <div class="icon-holder">
+                <i class="fa fa-chain"></i>
+                <span class="triangle"></span>
+              </div>
+              <div class="bar">
+                <ul>
+                  <li>
+                    <a href="/"> Главная </a>
+                  </li>
+                  <li class="active">Регистрация</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-logon">
+        <div class="container no-padding">
+          <div class="col-xs-12">
+            <div class="box">
+              <div class="icon-holder small badge-style">
+                <i class="fa fa-check-circle-o"></i>
+                <span class="triangle"></span>
+              </div>
+              <div class="box-holder" align="center">
+                <h2>Регистрация</h2>
+                <p class="mb-2">Текст пояснения к странице (если нужен)</p>
+
+                <form class="narrow-form-box">
+                  <div class="field-group">
+                    <label>ФИО</label>
+                    <input
+                      type="text"
+                      class="le-input"
+                      placeholder="Пример: ФИО"
+                    />
+                  </div>
+                  <div class="field-group" id="logonPasswordField">
+                    <label for="logonPassword">Пароль</label>
+                    <input
+                      id="logonPassword"
+                      type="password"
+                      class="le-input"
+                      placeholder="Пароль"
+                    />
+                  </div>
+                  <div class="field-group" id="loginPassword2Field">
+                    <label for="loginPassword2">Проверка пароля</label>
+                    <input
+                      id="loginPassword2"
+                      type="password"
+                      class="le-input"
+                      placeholder="Проверка пароля"
+                    />
+                  </div>
+
+                  <h2>Контактная информация</h2>
+
+                  <div class="field-group">
+                    <label>Телефон</label>
+                    <input
+                      type="text"
+                      class="le-input"
+                      placeholder="Пример: +1 123 456 7890"
+                    />
+                  </div>
+                  <div class="field-group" id="logonEmailField">
+                    <label for="logonEmail">E-mail</label>
+                    <input
+                      id="logonEmail"
+                      type="text"
+                      class="le-input"
+                      placeholder="Пример: E-mail"
+                    />
+                  </div>
+                  <div class="field-group">
+                    <label>Страна</label>
+                    <select
+                      class="variation-btn inline selectpicker"
+                      data-width="100%"
+                      data-style="btn-input"
+                    >
+                      <option value="RUS">Россия</option>
+                      <option value="AFG">Афганистан</option>
+                      <option value="ALA">Аландские острова</option>
+                      <option value="ALB">Албания</option>
+                      <option value="DZA">Алжир</option>
+                      <option value="ASM">Американское Самоа</option>
+                      <option value="AND">Андорра</option>
+                      <option value="AGO">Ангола</option>
+                      <option value="AIA">Ангилья</option>
+                      <option value="ATA">Антарктида</option>
+                      <option value="ATG">Антигуа и Барбуда</option>
+                      <option value="ARG">Аргентина</option>
+                      <option value="ARM">Армения</option>
+                      <option value="ABW">Аруба</option>
+                      <option value="AUS">Австралия</option>
+                      <option value="AUT">Австрия</option>
+                      <option value="AZE">Азербайджан</option>
+                      <option value="BHS">Багамские острова</option>
+                      <option value="BHR">Бахрейн</option>
+                      <option value="BGD">Бангладеш</option>
+                      <option value="BRB">Барбадос</option>
+                      <option value="BLR">Беларусь</option>
+                      <option value="BEL">Бельгия</option>
+                      <option value="BLZ">Белиз</option>
+                      <option value="BEN">Бенин</option>
+                      <option value="BMU">Бермудские острова</option>
+                      <option value="BTN">Бутан</option>
+                      <option value="BOL">Боливия</option>
+                      <option value="BES">Бонайре</option>
+                      <option value="BWA">Ботсвана</option>
+                      <option value="BVT">Остров Буве</option>
+                      <option value="BRA">Бразилия</option>
+                      <option value="BRN">Бруней-Даруссалам</option>
+                      <option value="BGR">Болгария</option>
+                      <option value="BFA">Буркина-Фасо</option>
+                      <option value="BDI">Бурунди</option>
+                      <option value="KHM">Камбоджа</option>
+                      <option value="CMR">Камерун</option>
+                      <option value="CAN">Канада</option>
+                      <option value="CPV">Кабо-Верде</option>
+                      <option value="CYM">Каймановы острова</option>
+                      <option value="TCD">Чад</option>
+                      <option value="CHL">Чили</option>
+                      <option value="CHN">Китай</option>
+                      <option value="CXR">Остров Рождества</option>
+                      <option value="COL">Колумбия</option>
+                      <option value="COM">Коморские острова</option>
+                      <option value="COG">Конго</option>
+                      <option value="COK">Острова Кука</option>
+                      <option value="CRI">Коста-Рика</option>
+                      <option value="CIV">Кот-д'Ивуар</option>
+                      <option value="HRV">Хорватия</option>
+                      <option value="CUB">Куба</option>
+                      <option value="CUW">Кюрасао</option>
+                      <option value="CYP">Кипр</option>
+                      <option value="CZE">Чешская Республика</option>
+                      <option value="DNK">Дания</option>
+                      <option value="DJI">Джибути</option>
+                      <option value="DMA">Доминика</option>
+                      <option value="DOM">Доминиканская Республика</option>
+                      <option value="ECU">Эквадор</option>
+                      <option value="EGY">Египет</option>
+                      <option value="SLV">Сальвадор</option>
+                      <option value="GNQ">Экваториальная Гвинея</option>
+                      <option value="ERI">Эритрея</option>
+                      <option value="EST">Эстония</option>
+                      <option value="ETH">Эфиопия</option>
+                      <option value="FRO">Фарерские острова</option>
+                      <option value="FJI">Фиджи</option>
+                      <option value="FIN">Финляндия</option>
+                      <option value="FRA">Франция</option>
+                      <option value="GUF">Французская Гвиана</option>
+                      <option value="PYF">Французская Полинезия</option>
+                      <option value="GAB">Габон</option>
+                      <option value="GMB">Гамбия</option>
+                      <option value="GEO">Грузия</option>
+                      <option value="DEU">Германия</option>
+                      <option value="GHA">Гана</option>
+                      <option value="GIB">Гибралтар</option>
+                      <option value="GRC">Греция</option>
+                      <option value="GRL">Гренландия</option>
+                      <option value="GRD">Гренада</option>
+                      <option value="GLP">Гваделупа</option>
+                      <option value="GUM">Гуам</option>
+                      <option value="GTM">Гватемала</option>
+                      <option value="GGY">Гернси</option>
+                      <option value="GIN">Гвинея</option>
+                      <option value="GNB">Гвинея-Бисау</option>
+                      <option value="GUY">Гайана</option>
+                      <option value="HTI">Гаити</option>
+                      <option value="HND">Гондурас</option>
+                      <option value="HKG">Гонконг</option>
+                      <option value="HUN">Венгрия</option>
+                      <option value="ISL">Исландия</option>
+                      <option value="IND">Индия</option>
+                      <option value="IDN">Индонезия</option>
+                      <option value="IRN">Иран</option>
+                      <option value="IRQ">Ирак</option>
+                      <option value="IRL">Ирландия</option>
+                      <option value="IMN">Остров Мэн</option>
+                      <option value="ISR">Израиль</option>
+                      <option value="ITA">Италия</option>
+                      <option value="JAM">Ямайка</option>
+                      <option value="JPN">Япония</option>
+                      <option value="JEY">Джерси</option>
+                      <option value="JOR">Иордания</option>
+                      <option value="KAZ">Казахстан</option>
+                      <option value="KEN">Кения</option>
+                      <option value="KIR">Кирибати</option>
+                      <option value="KOR">Корея, Республика</option>
+                      <option value="KWT">Кувейт</option>
+                      <option value="KGZ">Кыргызстан</option>
+                      <option value="LVA">Латвия</option>
+                      <option value="LBN">Ливан</option>
+                      <option value="LSO">Лесото</option>
+                      <option value="LBR">Либерия</option>
+                      <option value="LBY">Ливия</option>
+                      <option value="LIE">Лихтенштейн</option>
+                      <option value="LTU">Литва</option>
+                      <option value="LUX">Люксембург</option>
+                      <option value="MAC">Макао</option>
+                      <option value="MKD">Македония</option>
+                      <option value="MDG">Мадагаскар</option>
+                      <option value="MWI">Малави</option>
+                      <option value="MYS">Малайзия</option>
+                      <option value="MDV">Мальдивы</option>
+                      <option value="MLI">Мали</option>
+                      <option value="MLT">Мальта</option>
+                      <option value="MHL">Маршалловы острова</option>
+                      <option value="MTQ">Мартиника</option>
+                      <option value="MRT">Мавритания</option>
+                      <option value="MUS">Маврикий</option>
+                      <option value="MYT">Майотта</option>
+                      <option value="MEX">Мексика</option>
+                      <option value="FSM">Микронезия</option>
+                      <option value="MDA">Молдова</option>
+                      <option value="MCO">Монако</option>
+                      <option value="MNG">Монголия</option>
+                      <option value="MNE">Черногория</option>
+                      <option value="MSR">Монтсеррат</option>
+                      <option value="MAR">Марокко</option>
+                      <option value="MOZ">Мозамбик</option>
+                      <option value="MMR">Мьянма</option>
+                      <option value="NAM">Намибия</option>
+                      <option value="NRU">Науру</option>
+                      <option value="NPL">Непал</option>
+                      <option value="NLD">Нидерланды</option>
+                      <option value="NCL">Новая Каледония</option>
+                      <option value="NZL">Новая Зеландия</option>
+                      <option value="NIC">Никарагуа</option>
+                      <option value="NER">Нигер</option>
+                      <option value="NGA">Нигерия</option>
+                      <option value="NIU">Ниуэ</option>
+                      <option value="NFK">Остров Норфолк</option>
+                      <option value="NOR">Норвегия</option>
+                      <option value="OMN">Оман</option>
+                      <option value="PAK">Пакистан</option>
+                      <option value="PLW">Палау</option>
+                      <option value="PAN">Панама</option>
+                      <option value="PNG">Папуа - Новая Гвинея</option>
+                      <option value="PRY">Парагвай</option>
+                      <option value="PER">Перу</option>
+                      <option value="PHL">Филиппины</option>
+                      <option value="PCN">Питкэрн</option>
+                      <option value="POL">Польша</option>
+                      <option value="PRT">Португалия</option>
+                      <option value="PRI">Пуэрто-Рико</option>
+                      <option value="QAT">Катар</option>
+                      <option value="REU">Реюньон</option>
+                      <option value="ROU">Румыния</option>
+                      <option value="RWA">Руанда</option>
+                      <option value="WSM">Самоа</option>
+                      <option value="SMR">Сан-Марино</option>
+                      <option value="STP">Сан-Томе и Принсипи</option>
+                      <option value="SAU">Саудовская Аравия</option>
+                      <option value="SEN">Сенегал</option>
+                      <option value="SRB">Сербия</option>
+                      <option value="SYC">Сейшельские острова</option>
+                      <option value="SLE">Сьерра-Леоне</option>
+                      <option value="SGP">Сингапур</option>
+                      <option value="SVK">Словакия</option>
+                      <option value="SVN">Словения</option>
+                      <option value="SLB">Соломоновы острова</option>
+                      <option value="SOM">Сомали</option>
+                      <option value="ZAF">Южная Африка</option>
+                      <option value="SSD">Южный Судан</option>
+                      <option value="ESP">Испания</option>
+                      <option value="LKA">Шри-Ланка</option>
+                      <option value="SDN">Судан</option>
+                      <option value="SUR">Суринам</option>
+                      <option value="SJM">Шпицберген и Ян-Майен</option>
+                      <option value="SWZ">Свазиленд</option>
+                      <option value="SWE">Швеция</option>
+                      <option value="CHE">Швейцария</option>
+                      <option value="SYR">Сирийская Арабская Республика</option>
+                      <option value="TWN">Тайвань</option>
+                      <option value="TJK">Таджикистан</option>
+                      <option value="TZA">Танзания</option>
+                      <option value="THA">Таиланд</option>
+                      <option value="TLS">Тимор-Лешти</option>
+                      <option value="TGO">Того</option>
+                      <option value="TKL">Токелау</option>
+                      <option value="TON">Тонга</option>
+                      <option value="TUN">Тунис</option>
+                      <option value="TUR">Турция</option>
+                      <option value="TKM">Туркменистан</option>
+                      <option value="TUV">Тувалу</option>
+                      <option value="UGA">Уганда</option>
+                      <option value="UKR">Украина</option>
+                      <option value="ARE">Объединенные Арабские Эмираты</option>
+                      <option value="GBR">Объединенное Королевство</option>
+                      <option value="USA">Соединенные Штаты</option>
+                      <option value="URY">Уругвай</option>
+                      <option value="UZB">Узбекистан</option>
+                      <option value="VUT">Вануату</option>
+                      <option value="VNM">Вьетнам</option>
+                      <option value="VGB">
+                        Виргинские острова, Великобритания
+                      </option>
+                      <option value="VIR">Виргинские острова, США.</option>
+                      <option value="WLF">Уоллис и Футуна</option>
+                      <option value="ESH">Западная Сахара</option>
+                      <option value="YEM">Йемен</option>
+                      <option value="ZMB">Замбия</option>
+                      <option value="ZWE">Зимбабве</option>
+                    </select>
+                  </div>
+                  <div class="field-group">
+                    <label>Город</label>
+                    <input
+                      type="text"
+                      class="le-input"
+                      placeholder="Пример: Город"
+                    />
+                  </div>
+                  <div class="field-group">
+                    <label>Адрес</label>
+                    <input
+                      type="text"
+                      class="le-input"
+                      placeholder="Пример: Текст адреса"
+                    />
+                  </div>
+                  <div class="field-group">
+                    <label>Почтовый индекс</label>
+                    <input
+                      type="text"
+                      class="le-input"
+                      placeholder="Пример: 33461"
+                    />
+                  </div>
+
+                  <!--
+            <div class="field-group" id="rememberMeCheckbox">
+              <span class="checkbox-field">
+                <input type="checkbox" id="check" /> <label for="check">Запомнить меня</label>
+              </span>
+            </div>
+            -->
+
+                  <!-- Action buttons -->
+                  <div class="field-group" align="center">
+                    <button type="submit" class="le-btn">
+                      <i class="fa fa-check"></i> Регистрация
+                    </button>
+                  </div>
+                  <div
+                    class="field-group profile-secondary-links"
+                    align="center"
+                  >
+                    <a href="/profile-login" class="btn">Войти</a>
+                    <a href="/profile-restore-password" class="btn"
+                      >Забыли пароль?</a
+                    >
+                  </div>
+                </form>
+              </div>
+              <div class="box-holder"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-footer">
+        <div class="container">
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="footer-column">
+              <h2>
+                <span class="icon-holder">
+                  <i class="fa fa-info"></i>
+                  <span class="triangle"></span>
+                </span>
+                Информация
+              </h2>
+              <ul class="footer-links-holder">
+                <li><a href="/about-our-shop">О нашем магазине</a></li>
+                <li>
+                  <a href="/payment-informations">Информация об оплате</a>
+                </li>
+
+                <li>
+                  <a href="/delivery-informations">Информация о доставке</a>
+                </li>
+                <li><a href="/contact-us">Связаться с нами</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="footer-column">
+              <h2>
+                <span class="icon-holder">
+                  <i class="fa fa-user"></i>
+                  <span class="triangle"></span>
+                </span>
+                Профиль
+              </h2>
+              <ul class="footer-links-holder">
+                <li><a href="/user/order-status">Статус заказа</a></li>
+                <li><a href="/user/wishlist">Список желаний</a></li>
+                <li><a href="/user/delivery-address">Адрес доставки</a></li>
+                <li><a href="/user/order-history">История заказов</a></li>
+                <li><a href="/user/newsletter">Новостная рассылка</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="footer-column">
+              <h2>
+                <span class="icon-holder">
+                  <i class="fa fa-phone"></i>
+                  <span class="triangle"></span>
+                </span>
+                Контакты
+              </h2>
+              <p>
+                <strong>Emboss</strong><br />
+                Адрес компании<br />
+                +7 (800) 333-04-41
+              </p>
+              <ul class="social-icons triangled">
+                <li><a href="#" class="fa fa-facebook"></a></li>
+                <li><a href="#" class="fa fa-google-plus"></a></li>
+                <li><a href="#" class="fa fa-rss"></a></li>
+                <li><a href="#" class="fa fa-linkedin"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-copyright">
+        <div class="container">
+          <div class="copyright col-12">
+            <p>
+              <strong>© Emboss 2023</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <a class="goto-top" href="#gotop"></a>
+
+    <script
+      type="text/javascript"
+      src="../vendor/js/jquery-1.11.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../vendor/js/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../vendor/css/bootstrap/js/bootstrap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../vendor/js/twitter-bootstrap-hover-dropdown.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../vendor/js/css_browser_selector.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../vendor/js/jquery.easing-1.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../vendor/js/jquery.prettyPhoto.js"
+    ></script>
+    <script type="text/javascript" src="../vendor/js/jquery.validate.js"></script>
+    <script
+      type="text/javascript"
+      src="../vendor/js/jquery.isotope.min.js"
+    ></script>
+    <script type="text/javascript" src="../vendor/js/wow.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../vendor/js/owl.carousel.min.js"
+    ></script>
+    <script type="text/javascript" src="../vendor/js/jquery.raty.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../vendor/js/bootstrap-slider.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../vendor/js/jquery.lazyload.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../vendor/js/bootstrap-select.min.js"
+    ></script>
+
+    <script type="text/javascript" src="../vendor/js/script.js"></script>
+
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

@@ -50,12 +50,12 @@
     <link rel="stylesheet" href="../css/page.css" />
 
     <meta property="og:site_name" content="Emboss" />
-    <meta property="og:title" content="pages.orderCompleted" />
+    <meta property="og:title" content="pages.profileRestorePassword" />
     <meta property="og:description" content="Описание сайта" />
-    <meta property="og:url" content="/order-completed/" />
+    <meta property="og:url" content="/profile-restore-password/" />
     <meta name="twitter:card" content="summary" />
     <meta name="theme-color" content="#ffffff" />
-    <title>Заказ завершён</title>
+    <title>Восстановить пароль</title>
   </head>
   <body
     class="font-sans text-gray-800 bg-gray-100 noscript"
@@ -104,14 +104,17 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li>
-                      <a href="/order-completed/" rel="alternate" hreflang="ru"
+                      <a
+                        href="/profile-restore-password/"
+                        rel="alternate"
+                        hreflang="ru"
                         >Русский</a
                       >
                     </li>
 
                     <li>
                       <a
-                        href="/en/order-completed/"
+                        href="/en/profile-restore-password/"
                         rel="alternate"
                         hreflang="en"
                         >English</a
@@ -291,10 +294,7 @@
                   <li>
                     <a href="/"> Главная </a>
                   </li>
-                  <li>
-                    <a href="/profile"> Профиль </a>
-                  </li>
-                  <li class="active">Заказ завершён</li>
+                  <li class="active">Восстановить пароль</li>
                 </ul>
               </div>
             </div>
@@ -302,7 +302,7 @@
         </div>
       </section>
 
-      <section id="order-completed" class="--page-holder">
+      <section id="section-restore-password">
         <div class="container no-padding">
           <div class="col-xs-12">
             <div class="box">
@@ -311,15 +311,38 @@
                 <span class="triangle"></span>
               </div>
               <div class="box-holder" align="center">
-                <h2>Заказ завершён</h2>
-                <p>
-                  Ваш заказ № …. сформирован, информация поступит на вашу
-                  электронную почту.
+                <h2>Восстановить пароль</h2>
+                <p class="mb-2">
+                  Восстановить пароль для ранее созданной учётной записи.
                 </p>
+
+                <form class="narrow-form-box">
+                  <div class="field-group" id="loginEmailField">
+                    <label for="loginEmail">E-mail</label>
+                    <input
+                      id="loginEmail"
+                      type="text"
+                      class="le-input"
+                      placeholder="E-mail"
+                    />
+                  </div>
+
+                  <!-- Action buttons -->
+                  <div class="field-group" align="center">
+                    <button type="submit" class="le-btn">
+                      <i class="fa fa-check"></i> Восстановить пароль
+                    </button>
+                  </div>
+                  <div
+                    class="field-group profile-secondary-links"
+                    align="center"
+                  >
+                    <a href="/profile-login" class="btn">Войти</a>
+                    <a href="/profile-logon" class="btn">Регистрация</a>
+                  </div>
+                </form>
               </div>
-              <div class="box-holder">
-                <a href="/products-grid" class="le-btn">Вернуться в каталог</a>
-              </div>
+              <div class="box-holder"></div>
             </div>
           </div>
         </div>
