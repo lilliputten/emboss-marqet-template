@@ -64,6 +64,7 @@ const en = {
     myAccount: 'My account',
     myWishlist: 'My wishlist',
     logIn: 'Log in',
+    logOn: 'Log on',
     logOut: 'Log out',
     homepage: 'Homepage',
     homepages: 'Homepages',

@@ -66,6 +66,7 @@ const ru = {
     myAccount: 'Профиль',
     myWishlist: 'Желания',
     logIn: 'Войти',
+    logOn: 'Регистрация',
     logOut: 'Выйти',
     homepage: 'Домашняя страница',
     homepages: 'Основные',
