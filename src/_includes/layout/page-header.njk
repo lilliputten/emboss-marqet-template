@@ -252,8 +252,13 @@
                 </li>
                 <!-- Cart actions (for non-empty one) -->
                 <li class="checkout">
+                  {# Issue #13: Only one button
                   <div class="merged-buttons">
                     <a href="{{ langRootUrl }}/checkout" class="btn-add-to-cart le-btn">{{ 'headerLinks.checkout' | i18n }}</a>
+                    <a href="{{ langRootUrl }}/shopping-cart" class="btn-add-to-wishlist le-btn">{{ 'headerLinks.showCart' | i18n }}</a>
+                  </div>
+                  #}
+                  <div align="center">
                     <a href="{{ langRootUrl }}/shopping-cart" class="btn-add-to-wishlist le-btn">{{ 'headerLinks.showCart' | i18n }}</a>
                   </div>
                 </li>
