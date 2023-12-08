@@ -165,6 +165,7 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+  appearance: button;
   -webkit-appearance: button;
   cursor: pointer;
 }
@@ -190,6 +191,7 @@ input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 input[type="search"] {
+  appearance: textfield;
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
@@ -197,6 +199,7 @@ input[type="search"] {
 }
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
+  appearance: none;
   -webkit-appearance: none;
 }
 fieldset {
@@ -2437,6 +2440,7 @@ textarea.form-control {
   height: auto;
 }
 input[type="search"] {
+  appearance: none;
   -webkit-appearance: none;
 }
 input[type="date"],
@@ -5450,6 +5454,7 @@ button.close {
   cursor: pointer;
   background: transparent;
   border: 0;
+  appearance: none;
   -webkit-appearance: none;
 }
 .modal-open {
@@ -6881,6 +6886,8 @@ section {
 }
 .info-inline li {
   display: inline-block;
+}
+.info-inline li:not(:last-child) {
   margin-right: 20px;
 }
 .info-inline li i {
@@ -7011,9 +7018,6 @@ header .link-list {
 .megamenu .dropdown-menu .yamm-content ul .panel-body,
 .megamenu .dropdown-menu .yamm-content ul .modal-footer {
   min-height: 28px;
-}
-.megamenu .dropdown-menu li a {
-  /*      padding: 0;*/
 }
 .megamenu .open .dropdown-toggle:before {
   position: absolute;
@@ -7154,13 +7158,6 @@ header .link-list {
 .top-nav-holder .basket-holder {
   padding-left: 0;
   position: relative;
-}
-.top-nav-holder .basket-holder:hover {
-  /*        svg{
-                path{
-                  fill:@white!important;
-                }
-              }*/
 }
 .top-nav-holder .basket-holder:hover .basket {
   background-color: #f8f8f8;
@@ -7416,7 +7413,7 @@ header .link-list {
   border-radius: 0 4px 4px 0;
 }
 .nav-buttons {
-  display: inline-block;
+  /* display: inline-block; */
   float: right;
   margin-top: -3px;
 }
@@ -7493,10 +7490,10 @@ header .link-list {
   display: inline-block;
   padding: 3px 5px;
 }
-.star-holder .star {
+/* .star-holder .star {
   width: 100%!important;
   min-width: 100px;
-}
+} */
 .btn-add-to-cart:before {
   content: "\f07a";
   font-family: fontawesome;
@@ -7505,10 +7502,10 @@ header .link-list {
   content: "\f1c1";
   font-family: fontawesome;
 }
-.btn-compare:before {
+/* .btn-compare:before {
   content: "\f079";
   font-family: fontawesome;
-}
+} */
 .btn-add-to-wishlist:before {
   content: "\f08a";
   font-family: fontawesome;
@@ -8045,8 +8042,8 @@ header .link-list {
 .section-footer .footer-column .footer-links-holder li {
   line-height: 30px;
   font-size: 13px;
-  /* text-transform: capitalize; */
 }
+/* Removed footer list arrows
 .section-footer .footer-column .footer-links-holder li:before {
   font-family: fontawesome;
   content: "\f054";
@@ -8057,6 +8054,7 @@ header .link-list {
   margin: 0 5px 0 0;
   vertical-align: middle;
 }
+*/
 .section-footer .footer-column p {
   font-size: 13px;
   line-height: 23px;
@@ -8318,7 +8316,6 @@ header .link-list {
 }
 .grid-list-buttons {
   padding: 7px;
-  display: inline-block;
   float: right;
 }
 .grid-list-buttons ul li {
@@ -8493,15 +8490,15 @@ header .link-list {
 #single-product .body-holder {
   padding: 0 0 0 30px;
 }
-#single-product .body-holder .star-holder {
+/* #single-product .body-holder .star-holder {
   text-align: right;
-}
+} */
 #single-product .body-holder h3 {
   margin: 10px 0;
   font-size: 22px;
 }
 #single-product .body-holder .desc {
-  color: #abb0ac;
+  /* color: #abb0ac; */
   line-height: 30px;
   font-size: 13px;
 }
@@ -8545,9 +8542,15 @@ header .link-list {
     margin: 0 auto;
     max-width: 400px;
   }
+  .medium-form-box {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+}
+#single-product .merged-buttons {
+  text-align: left;
 }
 .merged-buttons {
-  text-align: left;
   margin: 20px 0;
 }
 #single-product .buttons-holder {
@@ -8688,7 +8691,7 @@ header .link-list {
 .table-form .merged-buttons {
   text-align: right;
 }
-.field-group {
+.field-group:not(:last-child) {
   margin: 0 0 20px 0;
 }
 .field-group label {
@@ -9060,12 +9063,9 @@ select.top-drop-menu {
   .section-products-grid .mosaic-holder {
     display: none;
   }
-  .product-item.wide .star-holder {
+  /* .product-item.wide .star-holder {
     top: -38px !important;
-  }
-  .product-item.wide .buttons-holder .btn-add-to-cart {
-    /* margin-top: 10px; */
-  }
+  } */
   .controller-nav-bar {
     text-align: center;
   }
