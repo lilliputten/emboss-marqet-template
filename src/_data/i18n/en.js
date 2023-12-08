@@ -217,6 +217,7 @@ const en = {
     addressLine1: 'Address line 1',
     addressLine2: 'Address line 2',
     example: 'Example',
+    login: 'Full name',
     fullName: 'Full name',
     emailAddress: 'E-mail address',
     phone: 'Phone',
@@ -248,9 +249,11 @@ const en = {
     text: 'Ваш заказ № …. сформирован, информация поступит на вашу электронную почту.',
   },
   profile: {
+    loginName: 'Login name',
     email: 'E-mail',
     forgotPassword: 'Forgot password?',
     logon: 'Logon',
+    profileText: 'Logon text',
     logonText: 'Logon text',
     logonTitle: 'Logon title',
     login: 'Login',
@@ -259,8 +262,9 @@ const en = {
     password: 'Password',
     password2: 'Repeat password',
     rememberMe: 'Remember me',
-    restorePasswordText: 'Restore password for prreviously created account.',
+    restorePasswordText: 'Restore password for previously created account.',
     restorePassword: 'Restore password',
+    save: 'Save',
   },
 };
 

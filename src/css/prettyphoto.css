@@ -1,0 +1,20 @@
+div.pp_default {
+  /* .pp_content_container { */
+  .pp_details {
+    position: absolute;
+    top: 0;
+    a.pp_close {
+      top: -32px;
+      right: -26px;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .pp_nav {
+    display: none !important;
+  }
+}
+.single-product-gallery .gallery-thumbs {
+  text-align: center;
+}
