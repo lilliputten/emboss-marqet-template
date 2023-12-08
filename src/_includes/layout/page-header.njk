@@ -2,6 +2,7 @@
 {% set currencyId = 'rub' if lang === 'ru' else 'usd' %}
 
 <header class="page-header">
+  {# Issue #13: No top black block at all
   <div class="top-bar">
     <div class="container">
       <div class="col-xs-12 col-sm-6">
@@ -14,7 +15,7 @@
           </li>
         </ul>
       </div>
-      {# NOTE: No social icons
+      <!-- NOTE: No social icons
       <div class="col-xs-12 col-sm-6">
         <ul class="social-icons small">
           <li>
@@ -34,9 +35,10 @@
           </li>
         </ul>
       </div>
-      #}
+      -->
     </div>
   </div>
+  #}
   <div class="container header-row">
     <div class="logo-cell col-xs-12 col-md-4">
       <div class="logo">
@@ -46,6 +48,14 @@
       </div>
     </div>
     <div class="menu-cell col-xs-12 col-md-8 last-menu">
+      <ul class="info-inline on-white link-list_ inline">
+        <li>
+          <a href="tel:{{ site.phone }}"><i class="fa fa-phone"></i> {{ site.phone }}</a>
+        </li>
+        <li>
+          <a href="mailto:{{ site.email }}"><i class="fa fa-envelope"></i> {{ site.email }}</a>
+        </li>
+      </ul>
       <ul class="link-list inline">
         {# Language selector #}
         <li>

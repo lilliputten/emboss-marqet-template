@@ -4,19 +4,27 @@
   <div class="container no-padding">
     <div class="col-xs-12">
       <div class="box">
+        {# Issue #13: Removed section icons
         <div class="icon-holder small badge-style">
           <i class="fa fa-check-circle-o"></i>
           <span class="triangle"></span>
         </div>
+        #}
         <div class="box-holder" align="center">
           <h2>{{ 'pages.profileLogIn' | i18n }}</h2>
           <p class="mb-2">{{ 'profile.loginText' | i18n }}</p>
 
           <form class="narrow-form-box">
             <div class="field-group" id="loginEmailField">
+              <label for="loginEmail">{{ 'profile.loginName' | i18n }}</label>
+              <input id="loginEmail" type="text" class="le-input" placeholder="{{ 'profile.loginName' | i18n }}" />
+            </div>
+            {#
+            <div class="field-group" id="loginEmailField">
               <label for="loginEmail">{{ 'profile.email' | i18n }}</label>
               <input id="loginEmail" type="text" class="le-input" placeholder="{{ 'profile.email' | i18n }}" />
             </div>
+            #}
             <div class="field-group" id="loginPasswordField">
               <label for="loginPassword">{{ 'profile.password' | i18n }}</label>
               <input id="loginPassword" type="password" class="le-input" placeholder="{{ 'profile.password' | i18n }}" />
@@ -38,9 +46,6 @@
           </form>
 
         </div>
-        <div class="box-holder">
-        </div>
-
       </div>
     </div>
   </div>

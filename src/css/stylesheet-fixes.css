@@ -33,6 +33,12 @@ section {
 }
 
 /* Margins */
+.mt-1 {
+  margin-top: 10px;
+}
+.mt-2 {
+  margin-top: 20px;
+}
 .mb-1 {
   margin-bottom: 10px;
 }
