@@ -58,12 +58,14 @@
       flex-direction: column;
     }
   }
+  /* Issue #13: Top home icon isn't used
   .top-menu-holder {
     .mobile-dropdown,
     nav {
       margin-left: 36px;
     }
   }
+  */
   .home-icon-button {
     position: absolute;
     left: 20px;

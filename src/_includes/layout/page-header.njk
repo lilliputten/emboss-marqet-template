@@ -48,135 +48,22 @@
       </div>
     </div>
     <div class="menu-cell col-xs-12 col-md-8 last-menu">
-      <ul class="info-inline on-white link-list_ inline">
-        <li>
-          <a href="tel:{{ site.phone }}"><i class="fa fa-phone"></i> {{ site.phone }}</a>
-        </li>
-        <li>
-          <a href="mailto:{{ site.email }}"><i class="fa fa-envelope"></i> {{ site.email }}</a>
-        </li>
-      </ul>
-      <ul class="link-list inline">
-        {# Language selector #}
-        <li>
-          <div class="btn-group le-dropdown">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-              {{ langNames[lang] }}
-            </a>
-            <ul class="dropdown-menu">
-              {% set pageUrl = page.url %}
-              {% set purePageUrl = page.url.substring(lang.length + 1) if page.url.startsWith('/' + lang) else page.url %}
-              {% if locales.length %}
-                {% for locale in locales -%}
-                  {% set localePrefix = '/' + locale.code if locale.code !== defaultLang else '' %}
-                  <li><a href="{{ localePrefix }}{{ purePageUrl }}" rel="alternate" hreflang="{{ locale.code }}">{{ locale.label }}</a></li>
-                {% endfor -%}
-              {% endif %}
-            </ul>
-          </div>
-        </li>
-        <li>
-          <div class="btn-group le-dropdown">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-              <i class="fa fa-{{ currencyId }}"></i> {{ currencyId }}
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="#"><i class="fa fa-rub"></i> rub</a></li>
-              <li><a href="#"><i class="fa fa-usd"></i> usd</a></li>
-            </ul>
-          </div>
-        </li>
-        {% if showProfile %}
-        <li><a href="{{ langRootUrl }}/user/account">{{ 'headerLinks.myAccount' | i18n }}</a></li>
-        <li><a href="{{ langRootUrl }}/user/wishlist">{{ 'headerLinks.myWishlist' | i18n }}</a></li>
-        <li><a href="{{ langRootUrl }}/user/logout">{{ 'headerLinks.logOut' | i18n }}</a></li>
-        {% else %}
-        <li><a href="{{ langRootUrl }}/user/login">{{ 'headerLinks.logIn' | i18n }}</a></li>
-        {% endif %}
-      </ul>
+      <!-- Site top contacts menu -->
+      {% include 'layout/page-top-contacts-menu.njk' %}
+      <!-- Site top right menu -->
+      {% include 'layout/page-top-right-menu.njk' %}
     </div>
   </div>
   <div class="container">
     <div class="top-nav-holder">
       <div class="row">
         <div class="col-xs-12 col-md-6 col-lg-8 nav-menu top-menu-holder">
-        <div class="home-icon-button"><a href="/" title="{{ 'headerLinks.homepage' | i18n }}"><i class="fa fa-home" alt="{{ 'headerLinks.homepage' | i18n }}"></i></a></div>
+          {# Issue #13: Home button isn't used
+          <div class="home-icon-button"><a href="/" title="{{ 'headerLinks.homepage' | i18n }}"><i class="fa fa-home" alt="{{ 'headerLinks.homepage' | i18n }}"></i></a></div>
+          #}
           <nav class="hidden-xs visible-sm visible-lg visible-md">
-            {# Site main menu... #}
-            <ul class="nav">
-
-              <li><a href="{{ langRootUrl }}/products-grid">{{ 'headerLinks.catalog' | i18n }}</a></li>
-              <li><a href="{{ langRootUrl }}/delivery">{{ 'headerLinks.delivery' | i18n }}</a></li>
-              <li><a href="{{ langRootUrl }}/wholesalers">{{ 'headerLinks.wholesalers' | i18n }}</a></li>
-              <li><a href="{{ langRootUrl }}/contacts">{{ 'headerLinks.contacts' | i18n }}</a></li>
-
-              {% if site.showPagesMenu %}
-              <li class="yamm megamenu le-dropdown">
-                <ul class="nav">
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      {{ 'headerLinks.pages' | i18n }}
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <div class="yamm-content">
-                          <div class="row">
-                            <div class="col-xs-12 col-md-3">
-                              <h2 class="iconic-head">
-                                <span class="icon-holder">
-                                  <i class="fa fa-home"></i>
-                                  <span class="triangle"></span>
-                                </span>
-                                {{ 'headerLinks.homepages' | i18n }}</h2>
-                              <ul>
-                                <li>
-                                  <a href="{{ langRootUrl }}/">{{ 'headerLinks.homepage' | i18n }}</a>
-                                </li>
-                                <li>
-                                  <a href="{{ langRootUrl }}/test">{{ 'headerLinks.testPage' | i18n }}</a>
-                                </li>
-                              </ul>
-                              <h2 class="iconic-head">
-                                <span class="icon-holder">
-                                  <i class="fa fa-files-o"></i>
-                                  <span class="triangle"></span>
-                                </span>
-                                {{ 'headerLinks.products' | i18n }}</h2>
-                              <ul>
-                                <li>
-                                  <a href="{{ langRootUrl }}/products-grid">{{ 'pages.productsGrid' | i18n }}</a>
-                                </li>
-                                <li>
-                                  <a href="{{ langRootUrl }}/single-product">{{ 'pages.singleProduct' | i18n }}</a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="col-xs-12 col-md-3">
-                              {% include "layout/page-header-pages-dropdown.njk" %}
-                            </div>
-                            <div class="col-xs-12 col-md-6">
-                              <div class="mosaic-holder">
-                                <div class="mosaic-banner big">
-                                  <img alt="" src="/vendor/images/mosaic/real/mosaic06.jpg" />
-                                  <div class="caption">
-                                    <h1>
-                                      <span class="light">special</span><br>
-                                      off
-                                    </h1>
-                                    <a class="le-btn big" href="#">{{ 'headerLinks.learnMore' | i18n }}</a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              {% endif %}
-            </ul>
+            <!-- Site main menu... -->
+            {% include 'layout/page-main-menu.njk' %}
           </nav>
           {% include "layout/page-header-mobile-dropdown.njk" %}
         </div>
@@ -208,54 +95,7 @@
               </a>
               <ul class="dropdown-menu">
                 <!-- Cart items -->
-                <li>
-                  <div class="basket-item">
-                    <div class="row">
-                      <div class="col-xs-12 col-sm-2 col-md-4">
-                        <div class="thumb">
-                          <img alt="" src="/vendor/images/products/products-on-white/product01.png" />
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-sm-10 col-md-8">
-                        <div class="title">Man shoe</div>
-                        <div class="price">{{ 'site.currency' | i18n }}170.00</div>
-                      </div>
-                    </div>
-                    <a class="close-btn" href="#"></a>
-                  </div>
-                </li>
-                <li>
-                  <div class="basket-item">
-                    <div class="row">
-                      <div class="col-xs-12 col-sm-2 col-md-4">
-                        <div class="thumb">
-                          <img alt="" src="/vendor/images/products/products-on-white/product02.png" />
-                        </div>
-                      </div>
-                       <div class="col-xs-12 col-sm-10 col-md-8">
-                        <div class="title">Woman Shoe</div>
-                        <div class="price">{{ 'site.currency' | i18n }}120.00</div>
-                      </div>
-                    </div>
-                    <a class="close-btn" href="#"></a>
-                  </div>
-                </li>
-                <li>
-                  <div class="basket-item">
-                    <div class="row">
-                     <div class="col-xs-12 col-sm-2 col-md-4">
-                        <div class="thumb">
-                          <img alt="" src="/vendor/images/products/products-on-white/product03.png" />
-                        </div>
-                      </div>
-                     <div class="col-xs-12 col-sm-10 col-md-8">
-                        <div class="title">Indirimli Shoe</div>
-                        <div class="price">{{ 'site.currency' | i18n }}99.99</div>
-                      </div>
-                    </div>
-                    <a class="close-btn" href="#"></a>
-                  </div>
-                </li>
+                {% include 'layout/page-cart-items.njk' %}
                 <!-- Empty cart info -->
                 <li class="empty">
                   {{ 'headerLinks.emptyCart' | i18n }}
@@ -272,6 +112,7 @@
                     <a href="{{ langRootUrl }}/shopping-cart" class="btn-add-to-wishlist le-btn">{{ 'headerLinks.showCart' | i18n }}</a>
                   </div>
                 </li>
+                <!-- Cart end -->
               </ul>
             </div>
           </div>

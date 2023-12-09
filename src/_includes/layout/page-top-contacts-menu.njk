@@ -1,0 +1,10 @@
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+
+<ul class="info-inline on-white link-list_ inline">
+  <li>
+    <a href="tel:{{ site.phone }}"><i class="fa fa-phone"></i> {{ site.phone }}</a>
+  </li>
+  <li>
+    <a href="mailto:{{ site.email }}"><i class="fa fa-envelope"></i> {{ site.email }}</a>
+  </li>
+</ul>

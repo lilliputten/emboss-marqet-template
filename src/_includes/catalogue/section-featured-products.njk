@@ -1,5 +1,9 @@
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
+{% set currency = '₽' if lang === 'ru' else '$' %}
+{# NOTE: To place currency sign after the price or before? #}
+{% set currencyAfter = lang === 'ru' %}
+
 <section id="featured-products">
   <div class="container no-padding">
     <div class="iconic-nav-bar no-icon">
@@ -19,8 +23,6 @@
     </div>
     <div class="products-holder product-carousel owl-carousel">
 
-      {% set currency = '₽' if lang === 'ru' else '$' %}
-
       {% for item in featuredProducts -%}
         <div class="product-item">
           <div class="head">
@@ -34,11 +36,11 @@
             <div class="price">
               {% if item.priceOld %}
               <div class="price-old">
-                <span class="currency">{{ currency }}</span>{{ item.priceOld }}
+                {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.priceOld }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
               </div>
               {% endif %}
               <div class="price-current">
-                <span class="currency">{{ currency }}</span>{{ item.price }}
+                {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
               </div>
             </div>
             #}
@@ -58,11 +60,11 @@
             </div>
             <div class="price-plain">
               <div class="price-current">
-                <span class="currency">{{ currency }}</span>{{ item.price }}
+                {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
               </div>
               {% if item.priceOld %}
               <div class="price-old">
-                <span class="currency">{{ currency }}</span>{{ item.priceOld }}
+                {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.priceOld }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
               </div>
               {% endif %}
             </div>
@@ -73,7 +75,6 @@
           </div>
         </div>
       {% endfor -%}
-
 
     </div>
   </div>
