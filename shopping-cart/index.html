@@ -62,11 +62,6 @@
     bgcolor="#fff"
     onLoad="onLoad()"
   >
-    <div id="preloader">
-      <div id="status">&nbsp;</div>
-      <noscript>JavaScript is off. Please enable to view full site.</noscript>
-    </div>
-
     <div class="wrapper">
       <header class="page-header">
         <div class="container header-row">
@@ -78,6 +73,8 @@
             </div>
           </div>
           <div class="menu-cell col-xs-12 col-md-8 last-menu">
+            <!-- Site top contacts menu -->
+
             <ul class="info-inline on-white link-list_ inline">
               <li>
                 <a href="tel:+7 (800) 333-04-41"
@@ -90,10 +87,13 @@
                 >
               </li>
             </ul>
+
+            <!-- Site top right menu -->
+
             <ul class="link-list inline">
               <li>
                 <div class="btn-group le-dropdown">
-                  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                  <a class="dropdown-toggle" href="#" data-hover="dropdown">
                     Русский
                   </a>
                   <ul class="dropdown-menu">
@@ -113,7 +113,7 @@
               </li>
               <li>
                 <div class="btn-group le-dropdown">
-                  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                  <a class="dropdown-toggle" href="#" data-hover="dropdown">
                     <i class="fa fa-rub"></i> rub
                   </a>
                   <ul class="dropdown-menu">
@@ -135,14 +135,11 @@
           <div class="top-nav-holder">
             <div class="row">
               <div class="col-xs-12 col-md-6 col-lg-8 nav-menu top-menu-holder">
-                <div class="home-icon-button">
-                  <a href="/" title="Домашняя страница"
-                    ><i class="fa fa-home" alt="Домашняя страница"></i
-                  ></a>
-                </div>
                 <nav class="hidden-xs visible-sm visible-lg visible-md">
+                  <!-- Site main menu... -->
+
                   <ul class="nav">
-                    <li><a href="/products-grid">Каталог</a></li>
+                    <li><a class="active" href="/products-grid">Каталог</a></li>
                     <li><a href="/delivery">Доставка и оплата</a></li>
                     <li><a href="/wholesalers">Оптовикам</a></li>
                     <li><a href="/contacts">Контакты</a></li>
@@ -186,6 +183,7 @@
                     </a>
                     <ul class="dropdown-menu">
                       <!-- Cart items -->
+
                       <li>
                         <div class="basket-item">
                           <div class="row">
@@ -243,6 +241,7 @@
                           <a class="close-btn" href="#"></a>
                         </div>
                       </li>
+
                       <!-- Empty cart info -->
                       <li class="empty">Корзина пуста</li>
                       <!-- Cart actions (for non-empty one) -->
@@ -255,6 +254,7 @@
                           >
                         </div>
                       </li>
+                      <!-- Cart end -->
                     </ul>
                   </div>
                 </div>
@@ -326,7 +326,9 @@
                           </div>
                         </td>
                         <td>
-                          <div class="price">₽122.00</div>
+                          <div class="price">
+                            122<span class="currency">₽</span>
+                          </div>
                         </td>
                         <td>
                           <div class="le-quantity">
@@ -343,7 +345,9 @@
                           </div>
                         </td>
                         <td>
-                          <div class="price">₽122.00</div>
+                          <div class="price">
+                            122<span class="currency">₽</span>
+                          </div>
                         </td>
                         <td>
                           <div class="delete">
@@ -368,7 +372,9 @@
                           </div>
                         </td>
                         <td>
-                          <div class="price">₽112.00</div>
+                          <div class="price">
+                            112<span class="currency">₽</span>
+                          </div>
                         </td>
                         <td>
                           <div class="le-quantity">
@@ -385,7 +391,9 @@
                           </div>
                         </td>
                         <td>
-                          <div class="price">₽224.00</div>
+                          <div class="price">
+                            224<span class="currency">₽</span>
+                          </div>
                         </td>
                         <td>
                           <div class="delete">

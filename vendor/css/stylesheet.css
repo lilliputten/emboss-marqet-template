@@ -7224,7 +7224,7 @@ header .link-list {
 }
 .top-nav-holder .basket-holder .basket .basket-icon {
   margin: 0 10px;
-  margin-top: 6px;
+  top: 8px;
   vertical-align: bottom;
   position: relative;
   display: inline-block;
