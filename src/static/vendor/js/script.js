@@ -7,11 +7,11 @@
   'use strict';
 
   function onLoad() {
-    // console.log('[script:onLoad]');
-    $('#status').fadeOut(); // will first fade out the loading animation
-    $('#preloader').delay(1000).fadeOut('slow'); // will fade out the white DIV that covers the website.
-    // $('body').delay(1000).css({'overflow-x': 'hidden'}).css({'overflow-y': 'auto'});
-    // checkContactForm();
+    /* // Issue #13: Preloader is unused.
+     * $('#status').fadeOut(); // will first fade out the loading animation
+     * $('#preloader').delay(1000).fadeOut('slow'); // will fade out the white DIV that covers the website.
+     */
+    // checkContactForm(); // Unused
   }
 
   $(window).bind('load', onLoad);

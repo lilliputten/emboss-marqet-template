@@ -1,5 +1,10 @@
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
+{% set productColumns = 'col-xs-12 col-sm-6 col-md-6 col-lg-4' %}
+{% set currency = '₽' if lang === 'ru' else '$' %}
+{# NOTE: To place currency sign after the price or before? #}
+{% set currencyAfter = lang === 'ru' %}
+
 <section id="cart" class="--page-holder">
   <div class="container">
 
@@ -45,7 +50,7 @@
                   </td>
                   <td>
                     <div class="price">
-                      ₽122.00
+                      {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}122{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
                     </div>
                   </td>
                   <td>
@@ -59,7 +64,7 @@
                   </td>
                   <td>
                     <div class="price">
-                      ₽122.00
+                      {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}122{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
                     </div>
                   </td>
                   <td>
@@ -88,7 +93,7 @@
                   </td>
                   <td>
                     <div class="price">
-                      ₽112.00
+                      {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}112{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
                     </div>
                   </td>
                   <td>
@@ -102,7 +107,7 @@
                   </td>
                   <td>
                     <div class="price">
-                      ₽224.00
+                      {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}224{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
                     </div>
                   </td>
                   <td>

@@ -1,3 +1,13 @@
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+
+{% set productColumns = 'col-xs-12 col-sm-6 col-md-6 col-lg-4' %}
+{% set currency = '₽' if lang === 'ru' else '$' %}
+{# NOTE: To place currency sign after the price or before? #}
+{% set currencyAfter = lang === 'ru' %}
+
+{% set price = 145 %}
+{% set priceOld = 250 %}
+
 <div class="no-margin col-xs-12 col-sm-7 body-holder">
   <div class="body">
     {# Issue #13: Removed ratings
@@ -19,10 +29,10 @@
     </div>
     <div class="price">
       <div class="price-current">
-        <span class="currency">₽</span>145
+        {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
       </div>
       <div class="price-old">
-        <span class="currency">₽</span>250
+        {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ priceOld }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
       </div>
     </div>
     <div>
