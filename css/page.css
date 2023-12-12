@@ -176,8 +176,25 @@ section {
   padding: 0 15px;
   display: inline-block;
 }
+.product-item .body .price-and-buttons {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5px;
+  }
+.wide.product-item .body .price-and-buttons {
+      justify-content: center;
+      gap: 15px;
+    }
+.product-item .body .price-and-buttons .price-plain {
+      margin: 0;
+    }
 .product-item .merged-buttons {
-    /* text-align: left; */
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
   }
 @media (max-width: 767.9px) {
   .products-holder.product-carousel .owl-wrapper .owl-item {
@@ -433,10 +450,6 @@ section {
         flex: 1;
         margin-bottom: 5px;
       }
-.products-holder.simple-grid .body .merged-buttons, .products-holder.product-carousel .owl-wrapper .body .merged-buttons {
-        margin-top: 5px;
-        margin-bottom: 0;
-      }
 .products-holder.simple-grid, .products-holder.simple-grid .row {
       display: flex;
       flex-wrap: wrap;
@@ -456,7 +469,17 @@ section {
         }
         .products-holder.list-view .product-item.wide .body {
           border-left: 0;
+          display: flex;
+          align-items: stretch;
+          flex-direction: column;
+          align-content: stretch;
+          /* justify-content: stretch; */
+          justify-content: space-between;
         }
+          .products-holder.list-view .product-item.wide .body .excerpt {
+            flex: 1;
+            margin-bottom: 5px;
+          }
       }
 .section-products-grid .grid-list-buttons {
     white-space: nowrap;
@@ -465,6 +488,10 @@ section {
   border: 1px solid #d6d6d8;
   background-color: #eee;
 }
+.product-item .merged-buttons {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 .product-item div.body {
     padding: 15px;
   }
@@ -496,7 +523,7 @@ section {
   } */
 .product-item.wide .body h3 {
         /** Add space for stars */
-        padding-right: 110px;
+        /* padding-right: 110px; */
       }
 #single-product .owl-carousel .owl-wrapper {
       display: flex !important;
