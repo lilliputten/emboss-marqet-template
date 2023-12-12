@@ -1,0 +1,14 @@
+--- jquery.prettyPhoto.js.orig	2023-12-09 00:15:26.762363400 +0700
++++ jquery.prettyPhoto.patched.js	2023-12-09 00:17:11.996436500 +0700
+@@ -644,9 +644,9 @@
+ 			$pp_title.remove();
+ 
+ 			// Get the container size, to resize the holder to the right dimensions
+-			pp_contentHeight = height + detailsHeight;
++			pp_contentHeight = height /* + detailsHeight */;
+ 			pp_contentWidth = width;
+-			pp_containerHeight = pp_contentHeight + titleHeight + $pp_pic_holder.find('.pp_top').height() + $pp_pic_holder.find('.pp_bottom').height();
++			pp_containerHeight = pp_contentHeight + /* titleHeight + */ $pp_pic_holder.find('.pp_top').height() + $pp_pic_holder.find('.pp_bottom').height();
+ 			pp_containerWidth = width;
+ 		}
+ 
