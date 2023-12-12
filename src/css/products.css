@@ -25,10 +25,6 @@
         flex: 1;
         margin-bottom: $padding;
       }
-      .merged-buttons {
-        margin-top: $padding;
-        margin-bottom: 0;
-      }
     }
   }
   &.simple-grid {
@@ -54,6 +50,17 @@
         }
         .body {
           border-left: 0;
+          display: flex;
+          align-items: stretch;
+          flex-direction: column;
+          align-content: stretch;
+          /* justify-content: stretch; */
+          justify-content: space-between;
+          $padding: 5px;
+          .excerpt {
+            flex: 1;
+            margin-bottom: $padding;
+          }
         }
       }
     }

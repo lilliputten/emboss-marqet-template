@@ -1,4 +1,8 @@
 .product-item {
+  .merged-buttons {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   div.body {
     padding: 15px;
     .excerpt,
@@ -33,7 +37,7 @@
     .body {
       h3 {
         /** Add space for stars */
-        padding-right: 110px;
+        /* padding-right: 110px; */
       }
     }
   }
