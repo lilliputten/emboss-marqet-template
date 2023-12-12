@@ -1,6 +1,12 @@
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 {% set currencyId = 'rub' if lang === 'ru' else 'usd' %}
 
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+
+{% set currency = '₽' if lang === 'ru' else '$' %}
+{# NOTE: To place currency sign after the price or before? #}
+{% set currencyAfter = lang === 'ru' %}
+
 <li>
   <div class="basket-item">
     <div class="row">
@@ -11,7 +17,10 @@
       </div>
       <div class="col-xs-12 col-sm-10 col-md-8">
         <div class="title">Man shoe</div>
-        <div class="price">{{ 'site.currency' | i18n }}170.00</div>
+        <div class="price">
+          {% set price = 170 %}
+          {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+        </div>
       </div>
     </div>
     <a class="close-btn" href="#"></a>
@@ -27,7 +36,10 @@
       </div>
        <div class="col-xs-12 col-sm-10 col-md-8">
         <div class="title">Woman Shoe</div>
-        <div class="price">{{ 'site.currency' | i18n }}120.00</div>
+        <div class="price">
+          {% set price = 120 %}
+          {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+        </div>
       </div>
     </div>
     <a class="close-btn" href="#"></a>
@@ -43,7 +55,10 @@
       </div>
      <div class="col-xs-12 col-sm-10 col-md-8">
         <div class="title">Indirimli Shoe</div>
-        <div class="price">{{ 'site.currency' | i18n }}99.99</div>
+        <div class="price">
+          {% set price = 99 %}
+          {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+        </div>
       </div>
     </div>
     <a class="close-btn" href="#"></a>
