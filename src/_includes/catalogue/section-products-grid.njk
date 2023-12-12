@@ -12,72 +12,15 @@
       <div class="sidebar">
         {# Main products menu #}
         <div class="accordion-widget category-accordions widget">
-          {# Issue #13: Removed section icons
-          <div class="icon-holder small">
-            <i class="fa fa-chain"></i>
-            <span class="triangle"></span>
-          </div>
-          #}
           <h2>{{ 'products.categories' | i18n }}</h2>
           <div class="accordion">
             {# Main products menu content #}
             {% include "catalogue/section-products-menu-content.njk" %}
           </div>
         </div>
-        {# Issue #13: Removed as unused
-        <div class="price-filter widget">
-          <div class="icon-holder small">
-            <i class="fa fa-dollar"></i>
-            <span class="triangle"></span>
-          </div>
-          <h2>{{ 'products.priceFilter' | i18n }}</h2>
-          <div class="price-range-holder clearfix">
-            <input type="text" class="price-slider" value="">
-            <span class="min-max">
-              {{ 'products.price' | i18n }}: ₽100 - ₽700
-            </span>
-            <span class="filter-button">
-              <a href="#">{{ 'products.find' | i18n }}</a>
-            </span>
-          </div>
-        </div>
-        #}
-        {# NOTE: Issue #9: Sizes is unused
-        <div class="size-filter widget">
-          <div class="icon-holder small">
-            <i class="fa fa-cube"></i>
-            <span class="triangle"></span>
-          </div>
-          <h2>{{ 'products.sizeFilter' | i18n }}</h2>
-          <ul>
-            <li><a href="#">xs <span>(2)</span></a></li>
-            <li><a href="#">s <span>(1)</span></a></li>
-            <li><a href="#">m <span>(2)</span></a></li>
-            <li><a href="#">l <span>(4)</span></a></li>
-            <li><a href="#">xl <span>(3)</span></a></li>
-            <li><a href="#">xxl <span>(1)</span></a></li>
-          </ul>
-        </div>
-        #}
       </div>
     </div>
     <div class="section-products-grid-content col-xs-12 col-md-9">
-      {# Issue #13: Removed banner
-      <div class="row">
-        <div class="mosaic-holder col-xs-12">
-          <div class="mosaic-banner big">
-            <img alt="" src="/vendor/images/tabbed-banner-02.jpg" />
-            <div class="caption">
-              <h1 >
-                <span class="light">{{ 'productsSample.sexyHighHeels' | i18n }}</span><br>
-                {{ 'products.collection' | i18n }}
-              </h1>
-              <a class="le-btn medium" href="#">{{ 'products.learnMore' | i18n }}</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      #}
       {% include "catalogue/section-products-controls.njk" %}
       <div class="product-grid tab-content">
         <!--grid view starts here-->
@@ -96,45 +39,27 @@
                       <div class="thumb">
                         <a href="{{ langRootUrl }}/single-product"><img alt="" src="{{ item.image }}" /></a>
                       </div>
-                      {# Issue #13: Removed price as overlay
-                      <div class="price">
-                        {% if item.priceOld %}
-                        <div class="price-old">
-                          {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.priceOld }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
-                        </div>
-                        {% endif %}
-                        <div class="price-current">
-                          {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
-                        </div>
-                      </div>
-                      #}
-                      {# Issue #13: Removed ratings
-                      <div class="star-holder">
-                        <div class="star" data-score="{{ item.stars }}"></div>
-                      </div>
-                      #}
-                      {# Issue #13: Removed compare buttons
-                      <button class="btn-compare  btn-iconic"></button>
-                      #}
                     </div>
                     <div class="body">
                       <h3><a href="{{ langRootUrl }}/single-product">{{ item.name }}</a></h3>
                       <div class="excerpt">
                         {{ item.excerpt }}
                       </div>
-                      <div class="price-plain">
-                        <div class="price-current">
-                          {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+                      <div class="price-and-buttons">
+                        <div class="price-plain">
+                          <div class="price-current">
+                            {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+                          </div>
+                          {% if item.priceOld %}
+                          <div class="price-old">
+                            {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.priceOld }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+                          </div>
+                          {% endif %}
                         </div>
-                        {% if item.priceOld %}
-                        <div class="price-old">
-                          {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.priceOld }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+                        <div class="merged-buttons">
+                          <button class="btn-add-to-cart_ le-btn btn-iconic_">{{ 'products.toCartWide' | i18n }}</button>
+                          <button class="btn-add-to-wishlist le-btn btn-iconic">{#{ 'products.wishlist' | i18n }#}</button>
                         </div>
-                        {% endif %}
-                      </div>
-                      <div class="merged-buttons">
-                        <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCartWide' | i18n }}</button>
-                        <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlist' | i18n }}</button>
                       </div>
                     </div>
                   </div>
@@ -166,24 +91,26 @@
                     <div class="col-xs-12 col-md-8 no-margin">
                       <div class="body">
                         <h3><a href="{{ langRootUrl }}/single-product">{{ item.name }}</a></h3>
-                        {# Issue #13: Removed price as overlay
-                        <div class="price">
-                          <div class="price-old">
-                            <span class="currency">₽</span>250
-                          </div>
-                          <div class="price-current">
-                            <span class="currency">₽</span>145
-                          </div>
-                        </div>
-                        #}
-                        {# Issue #13: Removed ratings
-                        <div class="star-holder">
-                          <div class="star" data-score="{{ item.stars }}"></div>
-                        </div>
-                        #}
                         <div class="excerpt">
                           {{ item.excerpt }}
                         </div>
+                        <div class="price-and-buttons">
+                          <div class="price-plain">
+                            <div class="price-current">
+                              {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+                            </div>
+                            {% if item.priceOld %}
+                            <div class="price-old">
+                              {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.priceOld }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+                            </div>
+                            {% endif %}
+                          </div>
+                          <div class="merged-buttons">
+                            <button class="btn-add-to-cart_ le-btn btn-iconic_">{{ 'products.toCartWide' | i18n }}</button>
+                            <button class="btn-add-to-wishlist le-btn btn-iconic">{#{ 'products.wishlist' | i18n }#}</button>
+                          </div>
+                        </div>
+                        {#
                         <div class="price-plain">
                           <div class="price-current">
                             {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
@@ -195,17 +122,9 @@
                           {% endif %}
                         </div>
                         <div class="buttons-holder">
-                          {# Issue #13 -- Remove sizes
-                          <select class="selectpicker" title="Size"  data-width="70px" data-style="btn-inverse">
-                            <option>39</option>
-                            <option>40</option>
-                            <option>41</option>
-                            <option>42</option>
-                            <option>43</option>
-                          </select>
-                          #}
                           <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.addToCart' | i18n }}</button>
                         </div>
+                        #}
                       </div>
                     </div>
                   </div>

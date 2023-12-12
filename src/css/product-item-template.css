@@ -3,8 +3,25 @@
   /* width: 285px; */
   padding: 0 15px;
   display: inline-block;
+  .body .price-and-buttons {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5px;
+    .wide& {
+      justify-content: center;
+      gap: 15px;
+    }
+    .price-plain {
+      margin: 0;
+    }
+  }
   .merged-buttons {
-    /* text-align: left; */
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
   }
 }
 

@@ -7482,8 +7482,10 @@ header .link-list {
   height: 18px;
   line-height: 18px;
   font-family: fontawesome;
-  margin-right: 5px;
   vertical-align: bottom;
+}
+.btn-iconic:not(:empty):before {
+  margin-right: 5px;
 }
 /*ribbon*/
 .le-ribbon {
