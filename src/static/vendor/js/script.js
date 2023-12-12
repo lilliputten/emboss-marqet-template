@@ -61,11 +61,24 @@
     $('.product-carousel').owlCarousel({
       pagination: false,
       // NOTE: See width setting for `product-item` in `src/_includes/catalogue/section-featured-products.njk`
-      // Sizes per widths...
-      items: 3, // Default
-      itemsDesktop: [1200, 2],
-      itemsDesktopSmall: [990, 2],
-      itemsTablet: [800, 1],
+      // Sizes per widths
+      items: 4,
+      itemsDesktop: [1200, 3],
+      itemsDesktopSmall: [992, 2],
+      itemsTablet: [768, 1],
+      // itemsTablet: [480, 1],
+      /* // Sizes per widths (original)...
+       * items: 4, // 10 items above 1000px browser width
+       * itemsDesktop: [1200, 3],
+       * itemsDesktopSmall: [990, 2],
+       * itemsTablet: [570, 1],
+       */
+      /* // Sizes per widths (wide)...
+       * items: 3, // Default
+       * itemsDesktop: [1200, 2],
+       * itemsDesktopSmall: [990, 2],
+       * itemsTablet: [800, 1],
+       */
       itemsMobile: undefined, // itemsMobile disabled - inherit from itemsTablet option
     });
     var owl = $('.product-carousel').data('owlCarousel');
@@ -202,18 +215,19 @@
       }
     });
 
-    // Rating Star activator
-    if ($('.star').length > 0) {
-      // @ts-ignore
-      $('.star').raty({
-        space: false,
-        starOff: '/vendor/images/star-off.png',
-        starOn: '/vendor/images/star-on.png',
-        score: function () {
-          return $(this).attr('data-score');
-        },
-      });
-    }
+    /* // UNUSED: Rating Star activator
+     * if ($('.star').length > 0) {
+     *   // @ts-ignore
+     *   $('.star').raty({
+     *     space: false,
+     *     starOff: '/vendor/images/star-off.png',
+     *     starOn: '/vendor/images/star-on.png',
+     *     score: function () {
+     *       return $(this).attr('data-score');
+     *     },
+     *   });
+     * }
+     */
 
     /* // UNUSED?
      * function getImgSize(el, imgSrc) {
