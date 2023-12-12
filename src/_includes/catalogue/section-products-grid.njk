@@ -93,7 +93,7 @@
                         {{ item.extra | safe }}
                       {% endif %}
                       <div class="thumb">
-                        <img alt="" src="{{ item.image }}" />
+                        <a href="{{ langRootUrl }}/single-product"><img alt="" src="{{ item.image }}" /></a>
                       </div>
                       {# Issue #13: Removed price as overlay
                       <div class="price">
@@ -157,7 +157,7 @@
                         {% endif %}
                         <div class="thumb">
                           <a href="{{ langRootUrl }}/single-product">
-                            <img alt="" src="{{ item.image }}" />
+                            <a href="{{ langRootUrl }}/single-product"><img alt="" src="{{ item.image }}" /></a>
                           </a>
                         </div>
                       </div>

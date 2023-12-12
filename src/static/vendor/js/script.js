@@ -440,21 +440,21 @@
       );
     });
 
-    if ($('.search-button').length > 0) {
-      $('.search-button').click(function (e) {
-        e.preventDefault();
-        var fld = $(this).find('+ .field');
-        fld.addClass('open');
-      });
-
-      $('html').click(function () {
-        $('.search-holder .field').removeClass('open');
-      });
-
-      $('.search-holder').click(function (event) {
-        event.stopPropagation();
-      });
-    }
+    /* // Issue #13: Searchbar is always open
+     * if ($('.search-button').length > 0) {
+     *   $('.search-button').click(function (e) {
+     *     e.preventDefault();
+     *     var fld = $(this).find('+ .field');
+     *     fld.addClass('open');
+     *   });
+     *   $('html').click(function () {
+     *     $('.search-holder .field').removeClass('open');
+     *   });
+     *   $('.search-holder').click(function (event) {
+     *     event.stopPropagation();
+     *   });
+     * }
+     */
 
     $('[data-placeholder]')
       .focus(function () {
