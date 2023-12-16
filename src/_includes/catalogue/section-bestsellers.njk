@@ -32,27 +32,35 @@
               <div class="thumb">
                 <a href="{{ langRootUrl }}/single-product"><img alt="" src="{{ item.image }}" /></a>
               </div>
+              <div class="floated-actions">
+                <button class="btn icon-btn" title="{ 'products.wishlist' | i18n }"><i class="fa fa-solid fa-heart"></i></button>
+              </div>
             </div>
             <div class="body">
               <h3><a href="{{ langRootUrl }}/single-product">{{ item.name }}</a></h3>
+              <!--
               <div class="excerpt">
                 {{ item.excerpt }}
               </div>
+              -->
               <div class="price-and-buttons">
                 <div class="price-plain">
                   <div class="price-current">
                     {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
                   </div>
-                  {% if item.priceOld %}
+                  {% if false and item.priceOld %}
                   <div class="price-old">
                     {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.priceOld }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
                   </div>
                   {% endif %}
                 </div>
+                <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCartWide' | i18n }}</button>
+                <!--
                 <div class="merged-buttons">
                   <button class="btn-add-to-cart_ le-btn btn-iconic_">{{ 'products.toCartWide' | i18n }}</button>
-                  <button class="btn-add-to-wishlist le-btn btn-iconic">{#{ 'products.wishlist' | i18n }#}</button>
+                  <button class="btn-add-to-wishlist le-btn btn-iconic" title="{ 'products.wishlist' | i18n }"></button>
                 </div>
+                -->
               </div>
             </div>
           </div>

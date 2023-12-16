@@ -1,4 +1,28 @@
 .product-item {
+  position: relative;
+  .floated-actions {
+    position: absolute;
+    $padding: 8px;
+    left: $padding;
+    top: $padding;
+    button {
+      border: none;
+      background: transparent;
+      &.icon-btn {
+        padding: 5px 8px;
+      }
+      .fa {
+        color: var(--primary-color);
+        font-size: 125%;
+        /* font-size: 18px; [> From btn-iconic <] */
+      }
+      opacity: .7;
+      transition: all var(--transition-timeout);
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
   .merged-buttons {
     margin-top: 0;
     margin-bottom: 0;

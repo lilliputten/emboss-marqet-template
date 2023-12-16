@@ -56,9 +56,6 @@
   display: block;
   text-align: center;
 }
-.product-item.wide .head .thumb img {
-  /* right: 0; */
-}
 .product-item.wide .body {
   padding: 17px;
   border: 5px solid rgba(0, 0, 0, 0.07);
