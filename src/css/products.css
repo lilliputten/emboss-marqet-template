@@ -21,6 +21,7 @@
     .body {
       justify-content: space-between;
       $padding: 5px;
+      h3,
       .excerpt {
         flex: 1;
         margin-bottom: $padding;
