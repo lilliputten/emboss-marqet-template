@@ -226,9 +226,6 @@ section {
   display: block;
   text-align: center;
 }
-.product-item.wide .head .thumb img {
-  /* right: 0; */
-}
 .product-item.wide .body {
   padding: 17px;
   border: 5px solid rgba(0, 0, 0, 0.07);
@@ -446,7 +443,10 @@ section {
 .products-holder.simple-grid .body, .products-holder.product-carousel .owl-wrapper .body {
       justify-content: space-between;
     }
-.products-holder.simple-grid .body .excerpt, .products-holder.product-carousel .owl-wrapper .body .excerpt {
+.products-holder.simple-grid .body h3,
+      .products-holder.simple-grid .body .excerpt,
+      .products-holder.product-carousel .owl-wrapper .body h3,
+      .products-holder.product-carousel .owl-wrapper .body .excerpt {
         flex: 1;
         margin-bottom: 5px;
       }
@@ -488,6 +488,33 @@ section {
   border: 1px solid #d6d6d8;
   background-color: #eee;
 }
+.product-item {
+  position: relative;
+}
+.product-item .floated-actions {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+  }
+.product-item .floated-actions button {
+      border: none;
+      background: transparent;
+    }
+.product-item .floated-actions button.icon-btn {
+        padding: 5px 8px;
+      }
+.product-item .floated-actions button .fa {
+        color: var(--primary-color);
+        font-size: 125%;
+        /* font-size: 18px; [> From btn-iconic <] */
+      }
+.product-item .floated-actions button {
+      opacity: .7;
+      transition: all var(--transition-timeout);
+}
+.product-item .floated-actions button:hover {
+        opacity: 1;
+      }
 .product-item .merged-buttons {
     margin-top: 0;
     margin-bottom: 0;
