@@ -1,6 +1,7 @@
 // @ts-check
-// prettier-ignore
-module.exports = /** @type TProduct[] */ ([
+
+/** @type TProduct[] */
+const bestsellerProducts = [
   {
     extra: '<div class="le-ribbon blue right"><span>New!</span></div>',
     image: '/vendor/images/products/products-real/real-x300.png',
@@ -9,7 +10,8 @@ module.exports = /** @type TProduct[] */ ([
     stars: 3,
     name: 'RFSQS-48186 Red Fox Studio 1/48 3D Декаль Приборная Панель Для MiGG-17F (Ammo)',
     // name: 'consectetur adipiscing elit - extra_long_text_line_for_testing_purposes_only',
-    excerpt: 'Looking lorem round, to ascertain that they - extra_long_text_line_for_testing_purposes_only.',
+    excerpt:
+      'Looking lorem round, to ascertain that they - extra_long_text_line_for_testing_purposes_only.',
   },
   {
     image: '/vendor/images/products/products-modelist-1/product02.png',
@@ -18,6 +20,7 @@ module.exports = /** @type TProduct[] */ ([
     stars: 4,
     name: 'Man sport hiking shoe',
     excerpt: 'GCM101 Ammo Mig 1/48 Окрасочная Маска Для MiGG-17F',
+    favorite: true,
   },
   {
     extra: '<div class="le-badge orange"><span>50% off</span></div>',
@@ -60,6 +63,7 @@ module.exports = /** @type TProduct[] */ ([
     stars: 2,
     name: 'colorful cool runnig shoes',
     excerpt: 'Looking lorem round, to ascertain that they...',
+    favorite: true,
   },
   {
     image: '/vendor/images/products/products-modelist-1/product01.png',
@@ -69,4 +73,6 @@ module.exports = /** @type TProduct[] */ ([
     name: 'consectetur adipiscing elit',
     excerpt: 'Looking lorem round, to ascertain that they...',
   },
-]);
+];
+
+module.exports = bestsellerProducts;

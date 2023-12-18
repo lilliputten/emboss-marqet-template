@@ -6,4 +6,5 @@ interface TProduct {
   name: string;
   excerpt: string;
   extra?: string;
+  favorite?: boolean;
 }

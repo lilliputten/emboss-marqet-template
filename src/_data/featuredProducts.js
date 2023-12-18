@@ -1,8 +1,7 @@
 // @ts-check
 
-// prettier-ignore
 /** @type TProduct[] */
-const featuredProducts = ([
+const featuredProducts = [
   {
     extra: '<div class="le-ribbon green right"><span>50%</span></div>',
     image: '/vendor/images/products/products-modelist-1/product01.png',
@@ -12,6 +11,7 @@ const featuredProducts = ([
     // name: 'consectetur adipiscing elit',
     name: 'Looking lorem round, to ascertain that they - extra_long_text_line_for_testing_purposes_only',
     excerpt: 'Looking lorem round, to ascertain that they...',
+    favorite: true,
   },
   {
     image: '/vendor/images/products/products-modelist-1/product02.png',
@@ -29,6 +29,7 @@ const featuredProducts = ([
     stars: 4,
     name: 'Woman highheel shoe',
     excerpt: 'Looking lorem round, to ascertain that they...',
+    favorite: true,
   },
   {
     extra: '<div class="le-badge green"><span>New</span></div>',
@@ -67,7 +68,8 @@ const featuredProducts = ([
     stars: 3,
     name: 'consectetur adipiscing elit',
     excerpt: 'Looking lorem round, to ascertain that they...',
+    favorite: true,
   },
-]);
+];
 
 module.exports = featuredProducts;
