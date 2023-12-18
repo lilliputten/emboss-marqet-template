@@ -218,7 +218,7 @@
   font-size: 18px;
   line-height: 26px;
   min-height: 44px;
-  text-transform: capitalize;
+  text-transform: none;
   text-align: center;
 }
 .product-item .body h3,

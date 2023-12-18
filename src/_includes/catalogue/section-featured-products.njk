@@ -33,7 +33,7 @@
               <a href="{{ langRootUrl }}/single-product"><img alt="" src="{{ item.image }}" /></a>
             </div>
             <div class="floated-actions">
-              <button class="btn icon-btn" title="{ 'products.wishlist' | i18n }"><i class="fa fa-solid fa-heart"></i></button>
+              <button class="btn icon-btn" title="{ 'products.wishlist' | i18n }"><i class="fa fa-{% if item.favorite %}heart{% else %}heart-o{% endif %}"></i></button>
             </div>
           </div>
           <div class="body">
