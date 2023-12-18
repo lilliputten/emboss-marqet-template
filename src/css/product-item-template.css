@@ -6,16 +6,13 @@
   .body .price-and-buttons {
     margin-top: 10px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     flex-wrap: nowrap;
     justify-content: space-around;
     gap: 5px;
     .wide& {
       justify-content: center;
       gap: 15px;
-    }
-    .price-plain {
-      /* margin: 0; */
     }
     button {
       white-space: nowrap;
@@ -186,13 +183,10 @@
 }
 
 .product-item .body .price-plain {
-  margin: 10px 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
-  margin-bottom: 26px; /* Simulate alignment with buttons */
-  /* flex-flow: row wrap-reverse; */
+  align-items: flex-end;
 }
 .product-item .body .price-current {
   font-size: 23px;

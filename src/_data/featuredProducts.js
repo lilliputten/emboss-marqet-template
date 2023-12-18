@@ -15,7 +15,7 @@ const featuredProducts = [
   },
   {
     image: '/vendor/images/products/products-modelist-1/product02.png',
-    priceOld: 350,
+    // priceOld: 350,
     price: 245,
     stars: 4,
     name: 'Man sport Hiking shoe',
