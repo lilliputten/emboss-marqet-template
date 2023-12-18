@@ -17,6 +17,9 @@
     .price-plain {
       margin: 0;
     }
+    button {
+      white-space: nowrap;
+    }
   }
   .merged-buttons {
     display: flex;
