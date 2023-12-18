@@ -57,8 +57,9 @@
       });
     }
 
-    // products carousel
-    $('.product-carousel').owlCarousel({
+    var productCarousels = $('.product-carousel');
+
+    productCarousels.owlCarousel({
       pagination: false,
       // NOTE: See width setting for `product-item` in `src/_includes/catalogue/section-featured-products.njk`
       // Sizes per widths
@@ -81,8 +82,27 @@
        */
       itemsMobile: undefined, // itemsMobile disabled - inherit from itemsTablet option
     });
-    var owl = $('.product-carousel').data('owlCarousel');
 
+    // Find and init product carousels...
+    productCarousels.each(function initCarouselNode(_idx, node) {
+      var jqNode = $(node);
+      var owl = jqNode.data('owlCarousel');
+      var parent = jqNode.parent();
+      var btnPrev = parent.find('.nav-buttons .btn-prev');
+      var btnNext = parent.find('.nav-buttons .btn-next');
+      btnPrev.click(function (e) {
+        e.preventDefault();
+        owl.prev();
+      });
+      btnNext.click(function (e) {
+        e.preventDefault();
+        owl.next();
+      });
+
+    });
+
+    /* // Old code for product-carousel...
+    var owl = $('.product-carousel').data('owlCarousel');
     $('.product-carousel')
       .parent()
       .find('.nav-buttons .btn-prev')
@@ -90,7 +110,6 @@
         e.preventDefault();
         owl.prev();
       });
-
     $('.product-carousel')
       .parent()
       .find('.nav-buttons .btn-next')
@@ -98,6 +117,7 @@
         e.preventDefault();
         owl.next();
       });
+    */
 
     // Banner slider carousel
     $('.banner-carousel').owlCarousel({
@@ -167,7 +187,7 @@
           checkBasketDropdown(true);
         });
     });
-    const basketDropdown = $('[data-hover="dropdown"]');
+    var basketDropdown = $('[data-hover="dropdown"]');
     // @ts-ignore
     if (basketDropdown && basketDropdown.dropdownHover) {
       // @ts-ignore
@@ -184,8 +204,8 @@
         var nn = cn - 1;
         $('.basket-item-count').text(nn);
       }
-      const basketItems = $('.basket .basket-item');
-      const hasItems = !!basketItems.length;
+      var basketItems = $('.basket .basket-item');
+      var hasItems = !!basketItems.length;
       var basket = $('.basket');
       basket.toggleClass('has-items', hasItems);
       /* // UNUSED: Direct basket options control
