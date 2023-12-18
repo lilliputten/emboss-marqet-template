@@ -180,7 +180,7 @@ section {
     margin-top: 10px;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
     gap: 5px;
   }
@@ -190,6 +190,9 @@ section {
     }
 .product-item .body .price-and-buttons .price-plain {
       margin: 0;
+    }
+.product-item .body .price-and-buttons button {
+      white-space: nowrap;
     }
 .product-item .merged-buttons {
     display: flex;
@@ -355,6 +358,8 @@ section {
   margin: 10px 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-flow: row wrap-reverse;
 }
 .product-item .body .price-current {
   font-size: 23px;
@@ -370,7 +375,7 @@ section {
   text-decoration: line-through;
   display: inline-block;
   vertical-align: middle;
-  line-height: 30px;
+  line-height: 1.2;
   margin: 0 0 0 5px;
 }
 .product-item .body {
@@ -384,7 +389,7 @@ section {
   font-size: 18px;
   line-height: 26px;
   min-height: 44px;
-  text-transform: capitalize;
+  text-transform: none;
   text-align: center;
 }
 .product-item .body h3,
