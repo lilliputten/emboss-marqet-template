@@ -1,11 +1,13 @@
 // @ts-check
+
 // prettier-ignore
-module.exports = /** @type TProduct[] */ ([
+/** @type TProduct[] */
+const featuredProducts = ([
   {
     extra: '<div class="le-ribbon green right"><span>50%</span></div>',
     image: '/vendor/images/products/products-modelist-1/product01.png',
-    priceOld: 250,
-    price: 145,
+    priceOld: 2500,
+    price: 1450,
     stars: 3,
     // name: 'consectetur adipiscing elit',
     name: 'Looking lorem round, to ascertain that they - extra_long_text_line_for_testing_purposes_only',
@@ -67,3 +69,5 @@ module.exports = /** @type TProduct[] */ ([
     excerpt: 'Looking lorem round, to ascertain that they...',
   },
 ]);
+
+module.exports = featuredProducts;

@@ -48,7 +48,7 @@
                   <div class="price-current">
                     {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
                   </div>
-                  {% if false and item.priceOld %}
+                  {% if item.priceOld %}
                   <div class="price-old">
                     {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.priceOld }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
                   </div>

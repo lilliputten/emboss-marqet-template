@@ -7,7 +7,7 @@
     margin-top: 10px;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
     gap: 5px;
     .wide& {
@@ -186,6 +186,8 @@
   margin: 10px 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-flow: row wrap-reverse;
 }
 .product-item .body .price-current {
   font-size: 23px;
@@ -201,7 +203,7 @@
   text-decoration: line-through;
   display: inline-block;
   vertical-align: middle;
-  line-height: 30px;
+  line-height: 1.2;
   margin: 0 0 0 5px;
 }
 
