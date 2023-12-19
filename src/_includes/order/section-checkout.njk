@@ -1,29 +1,41 @@
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
+<script><!--
+  var lang = '{{ lang }}';
+  var formId = '#section-checkout-form';
+  window.addEventListener('load', function onLoad() {
+    if (lang === 'ru') {
+      $('#telephone').mask('+7 (999) 999-9999');
+    }
+    var jqForm = $(formId);
+    if (jqForm.length) {
+      jqForm.validate();
+      $('#formSubmit').click(function validateForm() {
+        var result = jqForm.valid();
+        return result;
+      });
+    }
+  });
+//--></script>
+
 <section id="checkout" class="--page-holder full-width">
   <div class="container no-padding">
 
     <div class="col-xs-12">
-      <div class="box">
-        {# Issue #13: Removed section icons
-        <div class="icon-holder small badge-style">
-          <i class="fa fa-check-circle-o"></i>
-          <span class="triangle"></span>
-        </div>
-        #}
+      <form id="section-checkout-form" class="box validate-form needs-validation" novalidate>
 
         <div class="box-holder row" id="main-wrapper">
           <div class="col-xs-12 col-md-4" id="left-column">
-            <h2>{{ 'checkout.shippingInfo' | i18n }}</h2>
+            <h2 class="first">{{ 'checkout.shippingInfo' | i18n }}</h2>
               <div class="col-xs-12">
                 <div class="field-group">
-                  <label>{{ 'checkout.country' | i18n }}</label>
+                  <label for="country">{{ 'checkout.country' | i18n }}</label>
                   {% include "order/section-checkout-countries-" + lang + ".njk" %}
                 </div>
               </div>
               <div class="col-xs-12">
                 <div class="field-group">
-                  <label>{{ 'checkout.shippingType' | i18n }}</label>
+                  <label for="shippingType">{{ 'checkout.shippingType' | i18n }}</label>
                   <select class="variation-btn inline selectpicker" data-width="100%" data-style="btn-input">
                     <option value="russianPost">{{ 'checkout.deliveryRussianPost' | i18n }}</option>
                     <option value="sdek">{{ 'checkout.deliverySdek' | i18n }}</option>
@@ -33,7 +45,7 @@
               </div>
               <div class="col-xs-12">
                 <div class="field-group">
-                  <label>{{ 'checkout.paymentMethod' | i18n }}</label>
+                  <label for="paymentMethod">{{ 'checkout.paymentMethod' | i18n }}</label>
                   <select class="variation-btn inline selectpicker" data-width="100%" data-style="btn-input">
                     <option value="robokassa">{{ 'paymentMethods.robokassa' | i18n }}</option>
                     <option value="bankTransfer">{{ 'paymentMethods.bankTransfer' | i18n }}</option>
@@ -47,20 +59,21 @@
 
           <div class="col-xs-12 col-md-8" id="right-column">
 
+            <h2>{{ 'checkout.contactInfo' | i18n }}</h2>
+
             <div class="col-xs-12" id="contacts1">
-              <h2>{{ 'checkout.contactInfo' | i18n }}</h2>
               <div class="table-form">
                 <div class="row">
                   <div class="col-xs-12 col-md-6">
                     <div class="field-group">
-                      <label>{{ 'checkout.fullName' | i18n }}</label>
-                      <input type="text" class="le-input" placeholder="{{ 'checkout.fullName' | i18n }}">
+                      <label for="fullName">{{ 'checkout.fullName' | i18n }}</label>
+                      <input id="fullName" name="fullName" type="text" class="le-input" placeholder="{{ 'checkout.fullName' | i18n }}" required />
                     </div>
                   </div>
                   <div class="col-xs-12 col-md-6">
                     <div class="field-group">
-                      <label>{{ 'checkout.emailAddress' | i18n }}</label>
-                      <input type="text" class="le-input" placeholder="{{ 'checkout.emailAddress' | i18n }}">
+                      <label for="emailAddress">{{ 'checkout.emailAddress' | i18n }}</label>
+                      <input id="emailAddress" name="emailAddress" type="text" class="le-input" placeholder="{{ 'checkout.emailAddress' | i18n }}" required />
                     </div>
                   </div>
                 </div>
@@ -72,14 +85,14 @@
                 <div class="row">
                   <div class="col-xs-12 col-md-6">
                     <div class="field-group">
-                      <label>{{ 'checkout.city' | i18n }}</label>
-                      <input type="text" class="le-input" placeholder="{{ 'checkout.addressCity' | i18n }}">
+                      <label for="city">{{ 'checkout.city' | i18n }}</label>
+                      <input id="city" name="city" type="text" class="le-input" placeholder="{{ 'checkout.addressCity' | i18n }}" />
                     </div>
                   </div>
                   <div class="col-xs-12 col-md-6">
                     <div class="field-group">
-                      <label>{{ 'checkout.address' | i18n }}</label>
-                      <input type="text" class="le-input" placeholder="{{ 'checkout.addressText' | i18n }}">
+                      <label for="address">{{ 'checkout.address' | i18n }}</label>
+                      <input id="address" name="address" type="text" class="le-input" placeholder="{{ 'checkout.addressText' | i18n }}" />
                     </div>
                   </div>
                 </div>
@@ -91,14 +104,14 @@
                 <div class="row">
                   <div class="col-xs-12 col-md-6">
                     <div class="field-group">
-                      <label>{{ 'checkout.telephone' | i18n }}</label>
-                      <input type="text" class="le-input" placeholder="{{ 'checkout.telephone' | i18n }}">
+                      <label for="telephone">{{ 'checkout.telephone' | i18n }}</label>
+                      <input id="telephone" name="telephone" type="tel" class="le-input" placeholder="{{ 'checkout.telephone' | i18n }}" required />
                     </div>
                   </div>
                   <div class="col-xs-12 col-md-6">
                     <div class="field-group">
-                      <label>{{ 'checkout.zipCode' | i18n }}</label>
-                      <input type="text" class="le-input" placeholder="{{ 'checkout.zipCode' | i18n }}">
+                      <label for="zipCode">{{ 'checkout.zipCode' | i18n }}</label>
+                      <input id="zipCode" name="zipCode" type="text" class="le-input" placeholder="{{ 'checkout.zipCode' | i18n }}" />
                     </div>
                   </div>
                 </div>
@@ -114,11 +127,11 @@
             <div class="merged-buttons">
               <a href="{{ langRootUrl }}/shopping-cart" class="le-btn">{{ 'checkout.backToCart' | i18n }}</a>
               {# <a href="{{ langRootUrl }}/payment-method" class="le-btn">{{ 'headerLinks.choosePaymentMethod' | i18n }}</a> #}
-              <a href="{{ langRootUrl }}/order-completed" class="le-btn">{{ 'payment.placeOrder' | i18n }}</a>
+              <a id="formSubmit" href="{{ langRootUrl }}/order-completed" class="le-btn">{{ 'payment.placeOrder' | i18n }}</a>
             </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
 
     {# Issue #13: Removed return info

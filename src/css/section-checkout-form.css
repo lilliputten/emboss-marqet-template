@@ -1,0 +1,13 @@
+#section-checkout-form {
+  @media (max-width: 992px) {
+    .box-holder h2:not(.first) {
+      /* margin-top: 25px; */
+    }
+  }
+  .box-holder#main-wrapper > * {
+    margin: 15px 0;
+  }
+  .box-holder#actions .merged-buttons {
+    margin: 0;
+  }
+}

@@ -11,7 +11,6 @@
      * $('#status').fadeOut(); // will first fade out the loading animation
      * $('#preloader').delay(1000).fadeOut('slow'); // will fade out the white DIV that covers the website.
      */
-    // checkContactForm(); // Unused
   }
 
   $(window).bind('load', onLoad);
@@ -545,32 +544,11 @@
    * }
    */
 
-  /* // UNUSED?
-   * // Contact form setup
-   * function checkContactForm() {
-   *   if ($('.contact-form').length > 0) {
-   *     var formStatus = $('.contact-form').validate();
-   *     // =====================================================
-   *     // sending contact form
-   *     $('.contact-form').submit(function (e) {
-   *       e.preventDefault();
-   *       // triggers contact form validation
-   *       if (formStatus.errorList.length === 0) {
-   *         $('.contact-form .submit').fadeOut(function () {
-   *           $('#loading').css('visibility', 'visible');
-   *           $.post('submit.php', $('.contact-form').serialize(), function (data) {
-   *             $('.contact-form input,.contact-form textarea').not('.submit').val('');
-   *             $('.message-box').html(data);
-   *             $('#loading').css('visibility', 'hidden');
-   *             $('.contact-form').css('display', 'none');
-   *             // $(".contact-form .submit").removeClass('disabled').css('display', 'block');
-   *           });
-   *         });
-   *       }
-   *     });
-   *   }
-   * }
-   */
+  // @ts-ignore
+  $.validator.setDefaults({
+    debug: true,
+    success: 'valid',
+  });
 
   // Custom select buttons trigger
   if ($('.selectpicker').length > 0) {
