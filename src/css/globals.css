@@ -23,4 +23,9 @@
   --product-item-height: 220px;
 
   --transition-timeout: 250ms;
+
+  /* Main colors */
+  --common-error-color: #b00; /* 187 0 0 */
+  --common-warn-color: #960;
+  --common-success-color: #181;
 }

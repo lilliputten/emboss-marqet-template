@@ -31,10 +31,10 @@
     </div>
   </li>
   {% if showProfile %}
-  <li><a href="{{ langRootUrl }}/user/account">{{ 'headerLinks.myAccount' | i18n }}</a></li>
-  <li><a href="{{ langRootUrl }}/user/wishlist">{{ 'headerLinks.myWishlist' | i18n }}</a></li>
-  <li><a href="{{ langRootUrl }}/user/logout">{{ 'headerLinks.logOut' | i18n }}</a></li>
+  <li><a href="{{ langRootUrl }}/profile-page">{{ 'headerLinks.myAccount' | i18n }}</a></li>
+  <li><a href="{{ langRootUrl }}/profile-wishlist">{{ 'headerLinks.myWishlist' | i18n }}</a></li>
+  <li><a href="{{ langRootUrl }}/profile-logout">{{ 'headerLinks.logOut' | i18n }}</a></li>
   {% else %}
-  <li><a href="{{ langRootUrl }}/user/login">{{ 'headerLinks.logIn' | i18n }}</a></li>
+  <li><a href="{{ langRootUrl }}/profile-login">{{ 'headerLinks.logIn' | i18n }}</a></li>
   {% endif %}
 </ul>

@@ -4,89 +4,14 @@
   <div class="container no-padding">
     <div class="col-xs-12">
       <div class="box">
-        {# Issue #13: Removed section icons
-        <div class="icon-holder small badge-style">
-          <i class="fa fa-check-circle-o"></i>
-          <span class="triangle"></span>
-        </div>
-        #}
-        <div class="box-holder" align="center">
-          <h2>{{ 'pages.profileLogOn' | i18n }}</h2>
-          <p class="mb-2">{{ 'profile.logonText' | i18n }}</p>
+        <div class="box-holder mt-2">
+          <h2 align="center">{{ 'pages.profileLogOn' | i18n }}</h2>
+          <!--
+          <p class="mb-2" align="center">{{ 'profile.logonText' | i18n }}</p>
+          -->
 
-          <form class="medium-form-box">
-            <div class="box-holder row" id="main-wrapper">
-              <div class="col-xs-12 col-md-6" id="left-column">
-
-                <div class="field-group">
-                  <label>{{ 'profile.loginName' | i18n }}</label>
-                  <input type="text" class="le-input" placeholder="{{ 'profile.loginName' | i18n }}">
-                </div>
-                <div class="field-group" id="logonPasswordField">
-                  <label for="logonPassword">{{ 'profile.password' | i18n }}</label>
-                  <input id="logonPassword" type="password" class="le-input" placeholder="{{ 'profile.password' | i18n }}" />
-                </div>
-                <div class="field-group" id="loginPassword2Field">
-                  <label for="loginPassword2">{{ 'profile.password2' | i18n }}</label>
-                  <input id="loginPassword2" type="password" class="le-input" placeholder="{{ 'profile.password2' | i18n }}" />
-                </div>
-              </div>
-              <div class="col-xs-12 col-md-6" id="right-column">
-
-                {# <h2>{{ 'checkout.contactInfo' | i18n }}</h2> #}
-
-                <div class="field-group">
-                  <label>{{ 'checkout.fullName' | i18n }}</label>
-                  <input type="text" class="le-input" placeholder="{{ 'checkout.fullName' | i18n }}">
-                </div>
-                <div class="field-group">
-                  <label>{{ 'checkout.telephone' | i18n }}</label>
-                  <input type="text" class="le-input" placeholder="{{ 'checkout.telephone' | i18n }}">
-                </div>
-                <div class="field-group" id="logonEmailField">
-                  <label for="logonEmail">{{ 'profile.email' | i18n }}</label>
-                  <input id="logonEmail" type="text" class="le-input" placeholder="{{ 'profile.email' | i18n }}" />
-                </div>
-                <div class="field-group">
-                  <label>{{ 'checkout.country' | i18n }}</label>
-                  {% include "order/section-checkout-countries-" + lang + ".njk" %}
-                </div>
-                <div class="field-group">
-                  <label>{{ 'checkout.city' | i18n }}</label>
-                  <input type="text" class="le-input" placeholder="{{ 'checkout.addressCity' | i18n }}">
-                </div>
-                <div class="field-group">
-                  <label>{{ 'checkout.address' | i18n }}</label>
-                  <input type="text" class="le-input" placeholder="{{ 'checkout.addressText' | i18n }}">
-                </div>
-                <div class="field-group">
-                  <label>{{ 'checkout.zipCode' | i18n }}</label>
-                  <input type="text" class="le-input" placeholder="33461">
-                </div>
-
-              </div>
-              <div class="col-xs-12 mt-2" id="actions-block">
-
-                <!--
-                <div class="field-group" id="rememberMeCheckbox">
-                  <span class="checkbox-field">
-                    <input type="checkbox" id="check" /> <label for="check">{{ 'profile.rememberMe' | i18n }}</label>
-                  </span>
-                </div>
-                -->
-
-                <!-- Action buttons -->
-                <div class="field-group" align="center">
-                  <button type="submit" class="le-btn"><i class="fa fa-check"></i> {{ 'profile.logon' | i18n }}</button>
-                </div>
-                <div class="field-group profile-secondary-links" align="center">
-                  <a href="{{ langRootUrl }}/profile-login" class="btn">{{ 'profile.login' | i18n }}</a>
-                  <a href="{{ langRootUrl }}/profile-restore-password" class="btn">{{ 'profile.forgotPassword' | i18n }}</a>
-                </div>
-
-              </div>
-            </div>
-          </form>
+          {% set profileFormMode = 'logon' %}
+          {% include "profile/profile-form.njk" %}
 
         </div>
       </div>

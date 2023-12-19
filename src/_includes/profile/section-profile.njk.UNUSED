@@ -1,0 +1,73 @@
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+
+<section id="section-logon">
+  <div class="container no-padding">
+    <div class="col-xs-12">
+      <div class="box">
+        {# Issue #13: Removed section icons
+        <div class="icon-holder small badge-style">
+          <i class="fa fa-check-circle-o"></i>
+          <span class="triangle"></span>
+        </div>
+        #}
+        <div class="box-holder" align="center">
+          <h2>{{ 'pages.profile' | i18n }}</h2>
+          <p class="mb-2">{{ 'profile.profileText' | i18n }}</p>
+
+          <form class="narrow-form-box">
+            <div class="box-holder row" id="main-wrapper">
+              <div class="col-xs-12" id="main-block">
+
+                <h2>{{ 'checkout.contactInfo' | i18n }}</h2>
+
+                <div class="field-group">
+                  <label>{{ 'checkout.fullName' | i18n }}</label>
+                  <input type="text" class="le-input" placeholder="{{ 'checkout.fullName' | i18n }}">
+                </div>
+                <div class="field-group">
+                  <label>{{ 'checkout.telephone' | i18n }}</label>
+                  <input type="text" class="le-input" placeholder="{{ 'checkout.telephone' | i18n }}">
+                </div>
+                <div class="field-group" id="logonEmailField">
+                  <label for="logonEmail">{{ 'profile.email' | i18n }}</label>
+                  <input id="logonEmail" type="text" class="le-input" placeholder="{{ 'profile.email' | i18n }}" />
+                </div>
+                <div class="field-group">
+                  <label>{{ 'checkout.country' | i18n }}</label>
+                  {% include "order/section-checkout-countries-" + lang + ".njk" %}
+                </div>
+                <div class="field-group">
+                  <label>{{ 'checkout.city' | i18n }}</label>
+                  <input type="text" class="le-input" placeholder="{{ 'checkout.addressCity' | i18n }}">
+                </div>
+                <div class="field-group">
+                  <label>{{ 'checkout.address' | i18n }}</label>
+                  <input type="text" class="le-input" placeholder="{{ 'checkout.addressText' | i18n }}">
+                </div>
+                <div class="field-group">
+                  <label>{{ 'checkout.zipCode' | i18n }}</label>
+                  <input type="text" class="le-input" placeholder="33461">
+                </div>
+
+              </div>
+              <div class="col-xs-12 mt-2" id="actions-block">
+
+                <!-- Action buttons -->
+                <div class="field-group" align="center">
+                  <button type="submit" class="le-btn"><i class="fa fa-check"></i> {{ 'profile.save' | i18n }}</button>
+                </div>
+                <div class="field-group profile-secondary-links" align="center">
+                  <a href="{{ langRootUrl }}/profile-login" class="btn">{{ 'profile.login' | i18n }}</a>
+                  <a href="{{ langRootUrl }}/profile-restore-password" class="btn">{{ 'profile.forgotPassword' | i18n }}</a>
+                </div>
+
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

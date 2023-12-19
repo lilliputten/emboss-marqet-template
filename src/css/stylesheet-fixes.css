@@ -39,11 +39,23 @@ section {
 .mt-2 {
   margin-top: 20px;
 }
+.mt-3 {
+  margin-top: 30px;
+}
+.mt-4 {
+  margin-top: 40px;
+}
 .mb-1 {
   margin-bottom: 10px;
 }
 .mb-2 {
   margin-bottom: 20px;
+}
+.mb-3 {
+  margin-bottom: 30px;
+}
+.mb-4 {
+  margin-bottom: 40px;
 }
 
 /* Profile styles */
@@ -71,4 +83,9 @@ section {
       background-color: var(--primary-color-dark);
     }
   }
+}
+
+/* Form */
+.field-group label {
+  /* text-align: left; */
 }
