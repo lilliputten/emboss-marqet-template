@@ -133,7 +133,7 @@
                 </div>
               </li>
 
-              <li><a href="/user/login">Войти</a></li>
+              <li><a href="/profile-login">Войти</a></li>
             </ul>
           </div>
         </div>
@@ -297,6 +297,30 @@
         </div>
       </section>
 
+      <script>
+        <!--
+        var lang = "ru";
+        var formId = "#section-restore-password-form";
+        window.addEventListener("load", function onLoad() {
+          var jqForm = $(formId);
+          if (jqForm.length) {
+            jqForm.validate({
+              rules: {
+                email: {
+                  required: true,
+                  email: true,
+                },
+              },
+            });
+            $("#formSubmit").click(function validateForm() {
+              var result = jqForm.valid();
+              return result;
+            });
+          }
+        });
+        //-->
+      </script>
+
       <section id="section-restore-password">
         <div class="container no-padding">
           <div class="col-xs-12">
@@ -307,11 +331,15 @@
                   Восстановить пароль для ранее созданной учётной записи.
                 </p>
 
-                <form class="narrow-form-box">
-                  <div class="field-group" id="loginEmailField">
-                    <label for="loginEmail">E-mail</label>
+                <form
+                  id="section-restore-password-form"
+                  class="narrow-form-box"
+                >
+                  <div class="field-group" id="emailField">
+                    <label for="email">E-mail</label>
                     <input
-                      id="loginEmail"
+                      id="email"
+                      name="email"
                       type="text"
                       class="le-input"
                       placeholder="E-mail"
@@ -320,7 +348,7 @@
 
                   <!-- Action buttons -->
                   <div class="field-group" align="center">
-                    <button type="submit" class="le-btn">
+                    <button id="formSubmit" type="submit" class="le-btn">
                       <i class="fa fa-check"></i> Восстановить пароль
                     </button>
                   </div>
@@ -399,7 +427,6 @@
       type="text/javascript"
       src="../vendor/js/jquery.prettyPhoto.patched.js"
     ></script>
-    <script type="text/javascript" src="../vendor/js/jquery.validate.js"></script>
     <script
       type="text/javascript"
       src="../vendor/js/jquery.isotope.min.js"
@@ -422,6 +449,25 @@
       type="text/javascript"
       src="../vendor/js/bootstrap-select.min.js"
     ></script>
+
+    <script
+      type="text/javascript"
+      src="../vendor/js/jquery-validation-1.19.5/jquery.validate.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="../vendor/js/jquery-validation-1.19.5/localization/messages_ru.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="../vendor/js/jquery.maskedinput@1.4.1/jquery.maskedinput.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="../vendor/js/jquery.maskedinput@1.4.1/jasmine-be-calm.css"
+    />
 
     <script type="text/javascript" src="../vendor/js/script.js"></script>
 

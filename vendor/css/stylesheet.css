@@ -6448,7 +6448,7 @@ h4 {
 .error {
   font-size: 13px;
   line-height: 18px;
-  color: #8bb040;
+  color: var(--common-error-color);
 }
 .absolute {
   position: absolute;

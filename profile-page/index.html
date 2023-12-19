@@ -127,9 +127,9 @@
                 </div>
               </li>
 
-              <li><a href="/user/account">Профиль</a></li>
-              <li><a href="/user/wishlist">Желания</a></li>
-              <li><a href="/user/logout">Выйти</a></li>
+              <li><a href="/profile-page">Профиль</a></li>
+              <li><a href="/profile-wishlist">Желания</a></li>
+              <li><a href="/profile-logout">Выйти</a></li>
             </ul>
           </div>
         </div>
@@ -297,38 +297,120 @@
         <div class="container no-padding">
           <div class="col-xs-12">
             <div class="box">
-              <div class="box-holder" align="center">
-                <h2>Профиль</h2>
-                <p class="mb-2">Текст пояснения к странице (если нужен)</p>
+              <div class="box-holder mt-2">
+                <h2 align="center">Профиль</h2>
+                <!--
+          <p class="mb-2" align="center">Текст пояснения к странице (если нужен)</p>
+          -->
 
-                <form class="narrow-form-box">
+                <script>
+                  <!--
+                  var lang = "ru";
+                  var formId = "#profile-form";
+                  window.addEventListener("load", function onLoad() {
+                    if (lang === "ru") {
+                      $("#telephone").mask("+7 (999) 999-9999");
+                    }
+                    var jqForm = $(formId);
+                    if (jqForm.length) {
+                      jqForm.validate({
+                        rules: {
+                          password: {
+                            required: true,
+                            minlength: 5,
+                          },
+                          password2: {
+                            required: true,
+                            minlength: 5,
+                            equalTo: "#password",
+                          },
+                          email: {
+                            required: true,
+                            email: true,
+                          },
+                        },
+                      });
+                      $("#formSubmit").click(function validateForm() {
+                        var result = jqForm.valid();
+                        return result;
+                      });
+                    }
+                  });
+                  //-->
+                </script>
+
+                <form
+                  id="profile-form"
+                  class="medium-form-box validate-form needs-validation"
+                  novalidate
+                >
                   <div class="box-holder row" id="main-wrapper">
-                    <div class="col-xs-12" id="main-block">
-                      <h2>Контактная информация</h2>
-
+                    <div class="col-xs-12 col-md-6" id="left-column">
                       <div class="field-group">
-                        <label>ФИО</label>
-                        <input type="text" class="le-input" placeholder="ФИО" />
-                      </div>
-                      <div class="field-group">
-                        <label>Телефон</label>
+                        <label for="loginName">Логин</label>
                         <input
+                          id="loginName"
+                          name="loginName"
                           type="text"
                           class="le-input"
-                          placeholder="Телефон"
+                          placeholder="Логин"
                         />
                       </div>
-                      <div class="field-group" id="logonEmailField">
-                        <label for="logonEmail">E-mail</label>
+                      <div class="field-group" id="passwordField">
+                        <label for="password">Пароль</label>
                         <input
-                          id="logonEmail"
+                          id="password"
+                          name="password"
+                          type="password"
+                          class="le-input"
+                          placeholder="Пароль"
+                        />
+                      </div>
+                      <div class="field-group" id="password2Field">
+                        <label for="password2">Проверка пароля</label>
+                        <input
+                          id="password2"
+                          name="password2"
+                          type="password"
+                          class="le-input"
+                          placeholder="Проверка пароля"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6" id="right-column">
+                      <div class="field-group">
+                        <label for="fullName">ФИО</label>
+                        <input
+                          id="fullName"
+                          name="fullName"
+                          type="text"
+                          class="le-input"
+                          placeholder="ФИО"
+                          required
+                        />
+                      </div>
+                      <div class="field-group">
+                        <label for="telephone">Телефон</label>
+                        <input
+                          id="telephone"
+                          name="telephone"
+                          type="tel"
+                          class="le-input"
+                          placeholder="Телефон"
+                          required
+                        />
+                      </div>
+                      <div class="field-group" id="emailField">
+                        <label for="email">E-mail</label>
+                        <input
+                          id="email"
                           type="text"
                           class="le-input"
                           placeholder="E-mail"
                         />
                       </div>
                       <div class="field-group">
-                        <label>Страна</label>
+                        <label for="country">Страна</label>
                         <select
                           class="variation-btn inline selectpicker"
                           data-width="100%"
@@ -566,45 +648,55 @@
                         </select>
                       </div>
                       <div class="field-group">
-                        <label>Город</label>
+                        <label for="city">Город</label>
                         <input
+                          id="city"
+                          name="city"
                           type="text"
                           class="le-input"
                           placeholder="Город"
                         />
                       </div>
                       <div class="field-group">
-                        <label>Адрес</label>
+                        <label for="address">Адрес</label>
                         <input
+                          id="address"
+                          name="address"
                           type="text"
                           class="le-input"
                           placeholder="Текст адреса"
                         />
                       </div>
                       <div class="field-group">
-                        <label>Почтовый индекс</label>
+                        <label for="zipCode">Почтовый индекс</label>
                         <input
+                          id="zipCode"
+                          name="zipCode"
                           type="text"
                           class="le-input"
-                          placeholder="33461"
+                          placeholder="Почтовый индекс"
                         />
                       </div>
                     </div>
-                    <div class="col-xs-12 mt-2" id="actions-block">
+                    <div
+                      class="col-xs-12 mt-4"
+                      id="actions-block"
+                      align="center"
+                    >
+                      <!--
+      <div class="field-group" id="rememberMeCheckbox">
+        <span class="checkbox-field">
+          <input type="checkbox" id="check" /> <label for="check">Запомнить меня</label>
+        </span>
+      </div>
+      -->
+
                       <!-- Action buttons -->
-                      <div class="field-group" align="center">
-                        <button type="submit" class="le-btn">
+
+                      <div class="field-group">
+                        <button id="formSubmit" type="submit" class="le-btn">
                           <i class="fa fa-check"></i> Сохранить
                         </button>
-                      </div>
-                      <div
-                        class="field-group profile-secondary-links"
-                        align="center"
-                      >
-                        <a href="/profile-login" class="btn">Войти</a>
-                        <a href="/profile-restore-password" class="btn"
-                          >Забыли пароль?</a
-                        >
                       </div>
                     </div>
                   </div>
@@ -715,7 +807,6 @@
       type="text/javascript"
       src="../vendor/js/jquery.prettyPhoto.patched.js"
     ></script>
-    <script type="text/javascript" src="../vendor/js/jquery.validate.js"></script>
     <script
       type="text/javascript"
       src="../vendor/js/jquery.isotope.min.js"
@@ -738,6 +829,25 @@
       type="text/javascript"
       src="../vendor/js/bootstrap-select.min.js"
     ></script>
+
+    <script
+      type="text/javascript"
+      src="../vendor/js/jquery-validation-1.19.5/jquery.validate.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="../vendor/js/jquery-validation-1.19.5/localization/messages_ru.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="../vendor/js/jquery.maskedinput@1.4.1/jquery.maskedinput.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="../vendor/js/jquery.maskedinput@1.4.1/jasmine-be-calm.css"
+    />
 
     <script type="text/javascript" src="../vendor/js/script.js"></script>
 

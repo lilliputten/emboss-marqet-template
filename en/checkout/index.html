@@ -127,9 +127,9 @@
                 </div>
               </li>
 
-              <li><a href="/en/user/account">My account</a></li>
-              <li><a href="/en/user/wishlist">My wishlist</a></li>
-              <li><a href="/en/user/logout">Log out</a></li>
+              <li><a href="/en/profile-page">My account</a></li>
+              <li><a href="/en/profile-wishlist">My wishlist</a></li>
+              <li><a href="/en/profile-logout">Log out</a></li>
             </ul>
           </div>
         </div>
@@ -306,16 +306,40 @@
         </div>
       </section>
 
+      <script>
+        <!--
+        var lang = "en";
+        var formId = "#section-checkout-form";
+        window.addEventListener("load", function onLoad() {
+          if (lang === "ru") {
+            $("#telephone").mask("+7 (999) 999-9999");
+          }
+          var jqForm = $(formId);
+          if (jqForm.length) {
+            jqForm.validate();
+            $("#formSubmit").click(function validateForm() {
+              var result = jqForm.valid();
+              return result;
+            });
+          }
+        });
+        //-->
+      </script>
+
       <section id="checkout" class="--page-holder full-width">
         <div class="container no-padding">
           <div class="col-xs-12">
-            <div class="box">
+            <form
+              id="section-checkout-form"
+              class="box validate-form needs-validation"
+              novalidate
+            >
               <div class="box-holder row" id="main-wrapper">
                 <div class="col-xs-12 col-md-4" id="left-column">
-                  <h2>Shipping info</h2>
+                  <h2 class="first">Shipping info</h2>
                   <div class="col-xs-12">
                     <div class="field-group">
-                      <label>Country</label>
+                      <label for="country">Country</label>
                       <select
                         class="variation-btn inline selectpicker"
                         data-width="100%"
@@ -549,7 +573,7 @@
                   </div>
                   <div class="col-xs-12">
                     <div class="field-group">
-                      <label>Shipping type</label>
+                      <label for="shippingType">Shipping type</label>
                       <select
                         class="variation-btn inline selectpicker"
                         data-width="100%"
@@ -563,7 +587,7 @@
                   </div>
                   <div class="col-xs-12">
                     <div class="field-group">
-                      <label>Payment Method</label>
+                      <label for="paymentMethod">Payment Method</label>
                       <select
                         class="variation-btn inline selectpicker"
                         data-width="100%"
@@ -582,27 +606,34 @@
                 </div>
 
                 <div class="col-xs-12 col-md-8" id="right-column">
+                  <h2>Contact info</h2>
+
                   <div class="col-xs-12" id="contacts1">
-                    <h2>Contact info</h2>
                     <div class="table-form">
                       <div class="row">
                         <div class="col-xs-12 col-md-6">
                           <div class="field-group">
-                            <label>Full name</label>
+                            <label for="fullName">Full name</label>
                             <input
+                              id="fullName"
+                              name="fullName"
                               type="text"
                               class="le-input"
                               placeholder="Full name"
+                              required
                             />
                           </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
                           <div class="field-group">
-                            <label>E-mail address</label>
+                            <label for="emailAddress">E-mail address</label>
                             <input
+                              id="emailAddress"
+                              name="emailAddress"
                               type="text"
                               class="le-input"
                               placeholder="E-mail address"
+                              required
                             />
                           </div>
                         </div>
@@ -615,8 +646,10 @@
                       <div class="row">
                         <div class="col-xs-12 col-md-6">
                           <div class="field-group">
-                            <label>City</label>
+                            <label for="city">City</label>
                             <input
+                              id="city"
+                              name="city"
                               type="text"
                               class="le-input"
                               placeholder="City"
@@ -625,8 +658,10 @@
                         </div>
                         <div class="col-xs-12 col-md-6">
                           <div class="field-group">
-                            <label>Address</label>
+                            <label for="address">Address</label>
                             <input
+                              id="address"
+                              name="address"
                               type="text"
                               class="le-input"
                               placeholder="Address text"
@@ -642,18 +677,23 @@
                       <div class="row">
                         <div class="col-xs-12 col-md-6">
                           <div class="field-group">
-                            <label>Telephone</label>
+                            <label for="telephone">Telephone</label>
                             <input
-                              type="text"
+                              id="telephone"
+                              name="telephone"
+                              type="tel"
                               class="le-input"
                               placeholder="Telephone"
+                              required
                             />
                           </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
                           <div class="field-group">
-                            <label>Zip code</label>
+                            <label for="zipCode">Zip code</label>
                             <input
+                              id="zipCode"
+                              name="zipCode"
                               type="text"
                               class="le-input"
                               placeholder="Zip code"
@@ -671,11 +711,13 @@
                   <div class="merged-buttons">
                     <a href="/en/shopping-cart" class="le-btn">Back to cart</a>
 
-                    <a href="/en/order-completed" class="le-btn">Place order</a>
+                    <a id="formSubmit" href="/en/order-completed" class="le-btn"
+                      >Place order</a
+                    >
                   </div>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
@@ -756,7 +798,6 @@
       type="text/javascript"
       src="../../vendor/js/jquery.prettyPhoto.patched.js"
     ></script>
-    <script type="text/javascript" src="../../vendor/js/jquery.validate.js"></script>
     <script
       type="text/javascript"
       src="../../vendor/js/jquery.isotope.min.js"
@@ -779,6 +820,20 @@
       type="text/javascript"
       src="../../vendor/js/bootstrap-select.min.js"
     ></script>
+
+    <script
+      type="text/javascript"
+      src="../../vendor/js/jquery-validation-1.19.5/jquery.validate.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="../../vendor/js/jquery.maskedinput@1.4.1/jquery.maskedinput.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="../../vendor/js/jquery.maskedinput@1.4.1/jasmine-be-calm.css"
+    />
 
     <script type="text/javascript" src="../../vendor/js/script.js"></script>
 

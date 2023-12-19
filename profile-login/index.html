@@ -127,7 +127,7 @@
                 </div>
               </li>
 
-              <li><a href="/user/login">Войти</a></li>
+              <li><a href="/profile-login">Войти</a></li>
             </ul>
           </div>
         </div>
@@ -291,6 +291,30 @@
         </div>
       </section>
 
+      <script>
+        <!--
+        var lang = "ru";
+        var formId = "#section-login-form";
+        window.addEventListener("load", function onLoad() {
+          var jqForm = $(formId);
+          if (jqForm.length) {
+            jqForm.validate({
+              rules: {
+                loginPassword: {
+                  required: true,
+                  minlength: 5,
+                },
+              },
+            });
+            $("#formSubmit").click(function validateForm() {
+              var result = jqForm.valid();
+              return result;
+            });
+          }
+        });
+        //-->
+      </script>
+
       <section id="section-login">
         <div class="container no-padding">
           <div class="col-xs-12">
@@ -299,36 +323,39 @@
                 <h2>Войти</h2>
                 <p class="mb-2">Текст пояснения к странице (если нужен)</p>
 
-                <form class="narrow-form-box">
-                  <div class="field-group" id="loginEmailField">
-                    <label for="loginEmail">Логин</label>
+                <form id="section-login-form" class="narrow-form-box">
+                  <div class="field-group" id="loginNameField">
+                    <label for="loginName">Логин</label>
                     <input
-                      id="loginEmail"
+                      id="loginName"
+                      name="loginName"
                       type="text"
                       class="le-input"
                       placeholder="Логин"
+                      required
                     />
                   </div>
-
                   <div class="field-group" id="loginPasswordField">
                     <label for="loginPassword">Пароль</label>
                     <input
                       id="loginPassword"
+                      name="loginPassword"
                       type="password"
                       class="le-input"
                       placeholder="Пароль"
+                      required
                     />
                   </div>
                   <div class="field-group" id="rememberMeCheckbox">
                     <span class="checkbox-field">
-                      <input type="checkbox" id="check" />
+                      <input type="checkbox" id="check" name="check" />
                       <label for="check">Запомнить меня</label>
                     </span>
                   </div>
 
                   <!-- Action buttons -->
                   <div class="field-group" align="center">
-                    <button type="submit" class="le-btn">
+                    <button id="formSubmit" type="submit" class="le-btn">
                       <i class="fa fa-check"></i> Войти
                     </button>
                   </div>
@@ -409,7 +436,6 @@
       type="text/javascript"
       src="../vendor/js/jquery.prettyPhoto.patched.js"
     ></script>
-    <script type="text/javascript" src="../vendor/js/jquery.validate.js"></script>
     <script
       type="text/javascript"
       src="../vendor/js/jquery.isotope.min.js"
@@ -432,6 +458,25 @@
       type="text/javascript"
       src="../vendor/js/bootstrap-select.min.js"
     ></script>
+
+    <script
+      type="text/javascript"
+      src="../vendor/js/jquery-validation-1.19.5/jquery.validate.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="../vendor/js/jquery-validation-1.19.5/localization/messages_ru.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="../vendor/js/jquery.maskedinput@1.4.1/jquery.maskedinput.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="../vendor/js/jquery.maskedinput@1.4.1/jasmine-be-calm.css"
+    />
 
     <script type="text/javascript" src="../vendor/js/script.js"></script>
 
