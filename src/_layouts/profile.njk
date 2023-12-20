@@ -1,0 +1,30 @@
+---
+layout: page.njk
+---
+
+{% include "shared/section-breadcrumb.njk" %}
+
+<section id="section-profile-layout">
+  <div class="container no-padding">
+    <div class="section-profile-sidebar col-xs-12 col-md-3" id="side-column">
+      <div class="sidebar">
+        {# Main profile menu #}
+        <div class="accordion-widget category-accordions widget">
+          <h2>{{ 'profile.menu' | i18n }}</h2>
+          <ul class="profile-links-holder">
+            <li><a href="{{ langRootUrl }}/profile-page">{{ 'profile.editProfile' | i18n }}</a></li>
+            <li><a href="{{ langRootUrl }}/profile-orders">{{ 'profile.myOrders' | i18n }}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section-profile-content col-xs-12 col-md-9" id="main-column">
+
+      {{ content | safe }}
+
+    </div>
+  </div>
+</section>
+
+{% include "section-newsletter.njk" %}
+

@@ -249,7 +249,7 @@ const en = {
     text: 'Ваш заказ № …. сформирован, информация поступит на вашу электронную почту.',
   },
   profile: {
-    editProfile: 'Edit profile',
+    editProfile: 'Profile',
     email: 'E-mail',
     forgotPassword: 'Forgot password?',
     login: 'Login',
@@ -268,6 +268,16 @@ const en = {
     restorePassword: 'Restore password',
     restorePasswordText: 'Restore password for previously created account.',
     save: 'Save',
+  },
+  ordersTable: {
+    orderNo: 'Order No',
+    orderDate: 'Order Date',
+    orderPrice: 'Order Price',
+    tracking: 'Tracking',
+    orderStatus: 'Order Status',
+    paymentMethod: 'Payment Method',
+    paymentState: 'Payment State',
+    delivery: 'Delivery',
   },
 };
 
