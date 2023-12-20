@@ -1,20 +1,14 @@
 ---
 title: pages.profile
-layout: page.njk
-:changed: 2023.12.19, 23:42
+layout: profile.njk
+:changed: 2023.12.20, 17:15
 showProfile: true
 hideBacklink: true
+breadcrumb:
+  - link: /
+    name: breadcrumbLinks.homepage
+  - name: pages.profile
+    class: active
 ---
 
-{% set breadcrumb = [
-  { link: '/', name: 'breadcrumbLinks.homepage' },
-  { name: 'pages.profile', class: 'active' }
-] %}
-{% include "shared/section-breadcrumb.njk" %}
-
-{% include "profile/section-profile.njk" %}
-
-{% include "section-newsletter.njk" %}
-
-{# {% include "section-banner-slider.njk" %} #}
-{# {% include "section-brands-slider.njk" %} #}
+{% include "profile/section-profile-edit.njk" %}

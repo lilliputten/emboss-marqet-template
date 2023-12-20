@@ -250,7 +250,7 @@ const ru = {
     text: 'Ваш заказ № …. сформирован, информация поступит на вашу электронную почту.',
   },
   profile: {
-    editProfile: 'Редактировать профиль',
+    editProfile: 'Профиль',
     email: 'E-mail',
     forgotPassword: 'Забыли пароль?',
     login: 'Войти',
@@ -269,6 +269,16 @@ const ru = {
     restorePassword: 'Восстановить пароль',
     restorePasswordText: 'Восстановить пароль для ранее созданной учётной записи.',
     save: 'Сохранить',
+  },
+  ordersTable: {
+    orderNo: 'Номер заказа',
+    orderDate: 'Дата заказа',
+    orderPrice: 'Цена заказа',
+    tracking: 'Отслеживание',
+    orderStatus: 'Статус заказа',
+    paymentMethod: 'Способ оплаты',
+    paymentState: 'Состояние платежа',
+    delivery: 'Доставка',
   },
 };
 
