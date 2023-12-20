@@ -20,7 +20,7 @@
                 {% if item.link %}
                   <a href="{{ langRootUrl }}{{ item.link }}">
                 {% endif %}
-                {{ item.name }}
+                {{ item.name | i18n }}
                 {% if item.link %}
                   </a>
                 {% endif %}

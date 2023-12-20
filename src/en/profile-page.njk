@@ -7,8 +7,8 @@ hideBacklink: true
 ---
 
 {% set breadcrumb = [
-  { link: '/', name: 'breadcrumbLinks.homepage' | i18n },
-  { name: 'pages.profile' | i18n, class: 'active' }
+  { link: '/', name: 'breadcrumbLinks.homepage' },
+  { name: 'pages.profile', class: 'active' }
 ] %}
 {% include "shared/section-breadcrumb.njk" %}
 

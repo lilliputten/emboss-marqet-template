@@ -89,3 +89,10 @@ section {
 .field-group label {
   /* text-align: left; */
 }
+
+/* Profile */
+.profile-links-holder {
+  li {
+    margin: 10px 0;
+  }
+}
