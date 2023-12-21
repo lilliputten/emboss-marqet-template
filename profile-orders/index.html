@@ -1,13 +1,13 @@
 <!doctype html>
 
-<html lang="en" dir="ltr">
+<html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Site description" />
+    <meta name="description" content="Описание сайта" />
     <meta name="author" content="Emboss Studio" />
     <meta name="robots" content="index,follow" />
 
@@ -32,30 +32,30 @@
       type="text/css"
     />
 
-    <link rel="stylesheet" href="../../vendor/css/prettyPhoto.css" />
-    <link rel="stylesheet" href="../../vendor/css/animate.css" />
-    <link rel="stylesheet" href="../../vendor/css/owl.carousel.css" />
-    <link rel="stylesheet" href="../../vendor/css/owl.theme.css" />
-    <link rel="stylesheet" href="../../vendor/css/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../../vendor/css/bootstrap-select.min.css" />
-    <link rel="stylesheet" href="../../vendor/css/yamm.css" />
+    <link rel="stylesheet" href="../vendor/css/prettyPhoto.css" />
+    <link rel="stylesheet" href="../vendor/css/animate.css" />
+    <link rel="stylesheet" href="../vendor/css/owl.carousel.css" />
+    <link rel="stylesheet" href="../vendor/css/owl.theme.css" />
+    <link rel="stylesheet" href="../vendor/css/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../vendor/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../vendor/css/yamm.css" />
     <link
       rel="stylesheet"
-      href="../../vendor/css/font-awesome/css/font-awesome.min.css"
+      href="../vendor/css/font-awesome/css/font-awesome.min.css"
     />
 
-    <link rel="stylesheet" href="../../vendor/css/stylesheet.css" />
+    <link rel="stylesheet" href="../vendor/css/stylesheet.css" />
 
-    <link rel="preload" href="../../css/page.css" as="style" />
-    <link rel="stylesheet" href="../../css/page.css" />
+    <link rel="preload" href="../css/page.css" as="style" />
+    <link rel="stylesheet" href="../css/page.css" />
 
     <meta property="og:site_name" content="Emboss" />
-    <meta property="og:title" content="pages.shoppingCart" />
-    <meta property="og:description" content="Site description" />
-    <meta property="og:url" content="/en/shopping-cart/" />
+    <meta property="og:title" content="profile.myOrders" />
+    <meta property="og:description" content="Описание сайта" />
+    <meta property="og:url" content="/profile-orders/" />
     <meta name="twitter:card" content="summary" />
     <meta name="theme-color" content="#ffffff" />
-    <title>Shopping cart</title>
+    <title>Мои заказы</title>
   </head>
   <body
     class="font-sans text-gray-800 bg-gray-100 noscript"
@@ -67,8 +67,8 @@
         <div class="container header-row">
           <div class="logo-cell col-xs-12 col-md-4">
             <div class="logo">
-              <a href="/en/" title="Emboss">
-                <img src="../../images/logo/logo3-min.svg" alt="Emboss" />
+              <a href="/" title="Emboss">
+                <img src="../images/logo/logo3-min.svg" alt="Emboss" />
               </a>
             </div>
           </div>
@@ -94,17 +94,20 @@
               <li>
                 <div class="btn-group le-dropdown">
                   <a class="dropdown-toggle" href="#" data-hover="dropdown">
-                    English
+                    Русский
                   </a>
                   <ul class="dropdown-menu">
                     <li>
-                      <a href="/shopping-cart/" rel="alternate" hreflang="ru"
+                      <a href="/profile-orders/" rel="alternate" hreflang="ru"
                         >Русский</a
                       >
                     </li>
 
                     <li>
-                      <a href="/en/shopping-cart/" rel="alternate" hreflang="en"
+                      <a
+                        href="/en/profile-orders/"
+                        rel="alternate"
+                        hreflang="en"
                         >English</a
                       >
                     </li>
@@ -114,7 +117,7 @@
               <li>
                 <div class="btn-group le-dropdown">
                   <a class="dropdown-toggle" href="#" data-hover="dropdown">
-                    <i class="fa fa-usd"></i> usd
+                    <i class="fa fa-rub"></i> rub
                   </a>
                   <ul class="dropdown-menu">
                     <li>
@@ -127,7 +130,9 @@
                 </div>
               </li>
 
-              <li><a href="/en/profile-login">Log in</a></li>
+              <li><a href="/profile-page">Профиль</a></li>
+              <li><a href="/profile-wishlist">Желания</a></li>
+              <li><a href="/profile-logout">Выйти</a></li>
             </ul>
           </div>
         </div>
@@ -139,33 +144,30 @@
                   <!-- Site main menu... -->
 
                   <ul class="nav">
-                    <li>
-                      <a class="active" href="/en/products-grid">Catalog</a>
-                    </li>
-                    <li><a href="/en/delivery">Delivery and payment</a></li>
-                    <li><a href="/en/wholesalers">Wholesalers</a></li>
-                    <li><a href="/en/contacts">Contacts</a></li>
+                    <li><a class="active" href="/products-grid">Каталог</a></li>
+                    <li><a href="/delivery">Доставка и оплата</a></li>
+                    <li><a href="/wholesalers">Оптовикам</a></li>
+                    <li><a href="/contacts">Контакты</a></li>
                   </ul>
                 </nav>
                 <select
                   class="mobile-dropdown selectpicker top-drop-menu nav hidden-md hidden-sm visible-xs hidden-lg"
                   data-style="btn"
                 >
-                  <option value="/en/" selected="selected">Homepage</option>
-                  <option value="/en/products-grid">Catalog</option>
-                  <option value="/en/delivery">Delivery and payment</option>
-                  <option value="/en/wholesalers">Wholesalers</option>
-                  <option value="/en/contacts">Contacts</option>
+                  <option value="/" selected="selected">
+                    Домашняя страница
+                  </option>
+                  <option value="/products-grid">Каталог</option>
+                  <option value="/delivery">Доставка и оплата</option>
+                  <option value="/wholesalers">Оптовикам</option>
+                  <option value="/contacts">Контакты</option>
                 </select>
               </div>
               <div class="col-xs-12 col-md-5 col-lg-4 no-margin search-holder">
                 <div class="searchbox">
                   <div class="field">
                     <form>
-                      <input
-                        type="text"
-                        data-placeholder="Enter keyword here..."
-                      />
+                      <input type="text" data-placeholder="Введите текст..." />
                     </form>
                   </div>
                   <a href="" class="fa fa-search search-button"></a>
@@ -179,7 +181,7 @@
                         <img
                           class="svg"
                           alt="basket"
-                          src="../../vendor/images/basket.svg"
+                          src="../vendor/images/basket.svg"
                         />
                         <span class="item-count"> 3 </span>
                       </div>
@@ -194,14 +196,14 @@
                               <div class="thumb">
                                 <img
                                   alt=""
-                                  src="../../vendor/images/products/products-on-white/product01.png"
+                                  src="../vendor/images/products/products-on-white/product01.png"
                                 />
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-10 col-md-8">
                               <div class="title">Man shoe</div>
                               <div class="price">
-                                <span class="currency">$</span>170
+                                170<span class="currency">₽</span>
                               </div>
                             </div>
                           </div>
@@ -215,14 +217,14 @@
                               <div class="thumb">
                                 <img
                                   alt=""
-                                  src="../../vendor/images/products/products-on-white/product02.png"
+                                  src="../vendor/images/products/products-on-white/product02.png"
                                 />
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-10 col-md-8">
                               <div class="title">Woman Shoe</div>
                               <div class="price">
-                                <span class="currency">$</span>120
+                                120<span class="currency">₽</span>
                               </div>
                             </div>
                           </div>
@@ -236,14 +238,14 @@
                               <div class="thumb">
                                 <img
                                   alt=""
-                                  src="../../vendor/images/products/products-on-white/product03.png"
+                                  src="../vendor/images/products/products-on-white/product03.png"
                                 />
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-10 col-md-8">
                               <div class="title">Indirimli Shoe</div>
                               <div class="price">
-                                <span class="currency">$</span>99
+                                99<span class="currency">₽</span>
                               </div>
                             </div>
                           </div>
@@ -252,14 +254,14 @@
                       </li>
 
                       <!-- Empty cart info -->
-                      <li class="empty">Cart is empty</li>
+                      <li class="empty">Корзина пуста</li>
                       <!-- Cart actions (for non-empty one) -->
                       <li class="checkout">
                         <div align="center">
                           <a
-                            href="/en/shopping-cart"
+                            href="/shopping-cart"
                             class="btn-add-to-wishlist le-btn"
-                            >Show cart</a
+                            >Купить</a
                           >
                         </div>
                       </li>
@@ -284,12 +286,12 @@
               <div class="bar">
                 <ul>
                   <li>
-                    <a href="/en/"> Main page </a>
+                    <a href="/"> Главная </a>
                   </li>
                   <li>
-                    <a href="/en/profile"> Main page </a>
+                    <a href="/profile-page"> Профиль </a>
                   </li>
-                  <li class="active">Shopping cart</li>
+                  <li class="active">Мои заказы</li>
                 </ul>
               </div>
             </div>
@@ -297,127 +299,104 @@
         </div>
       </section>
 
-      <section id="cart" class="--page-holder">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="shopping-cart-page box">
-                <div class="table-responsive">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th class="col-xs-12 col-md-2">Preview</th>
-                        <th class="col-xs-12 col-md-5">Product</th>
-                        <th class="col-xs-12 col-md-2 price-column">Price</th>
-                        <th class="col-xs-12 col-md-2">Quantity</th>
-                        <th class="col-xs-12 col-md-1 price-column">Total</th>
-                        <th class="col-xs-12 col-md-2">&nbsp;</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <div class="thumb">
-                            <img
-                              alt=""
-                              src="../../images/i-modelist-samples/uaz/medium/02.jpg"
-                            />
-                          </div>
-                        </td>
-                        <td>
-                          <div class="desc">
-                            <h3>
-                              3629 Звезда 1/35 ПРЕДЗАКАЗ Советский военный
-                              внедорожник УАЗ-469
-                            </h3>
+      <section id="section-profile-layout">
+        <div class="container no-padding">
+          <div
+            class="section-profile-sidebar col-xs-12 col-md-3"
+            id="side-column"
+          >
+            <div class="sidebar">
+              <div class="accordion-widget category-accordions widget">
+                <h2>Меню</h2>
+                <ul class="profile-links-holder">
+                  <li><a href="/profile-page">Профиль</a></li>
+                  <li><a href="/profile-orders">Мои заказы</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="section-profile-content col-xs-12 col-md-9"
+            id="main-column"
+          >
+            <div class="box pb-0" id="section-profile-orders-list">
+              <div class="box-holder mt-1 pb-0">
+                <h2 align="center">Мои заказы</h2>
+                <!--
+    <p class="mb-2" align="center">Текст пояснения к странице (если нужен)</p>
+    -->
 
-                            <div class="pid">Product code: 4564789</div>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="price">
-                            <span class="currency">$</span>122
-                          </div>
-                        </td>
-                        <td>
-                          <div class="le-quantity">
-                            <form>
-                              <a class="minus" href="#reduce"></a>
-                              <input
-                                name="quantity"
-                                readonly="readonly"
-                                type="text"
-                                value="1"
-                              />
-                              <a class="plus" href="#add"></a>
-                            </form>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="price">
-                            <span class="currency">$</span>122
-                          </div>
-                        </td>
-                        <td>
-                          <div class="delete">
-                            <a class="close-btn" href="#"></a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="thumb">
-                            <img
-                              alt=""
-                              src="../../images/i-modelist-samples/uaz/medium/03.jpg"
-                            />
-                          </div>
-                        </td>
-                        <td>
-                          <div class="desc">
-                            <h3>4645 Tiger Models 1/35 Российский ЗРПК 9к6</h3>
+                <table
+                  class="fixed-table orders-table"
+                  id="profile-orders-list-table"
+                  width="100%"
+                >
+                  <thead>
+                    <th id="cell-order"><div>Заказ</div></th>
 
-                            <div class="pid">Product code: 56879456</div>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="price">
-                            <span class="currency">$</span>112
-                          </div>
-                        </td>
-                        <td>
-                          <div class="le-quantity">
-                            <form>
-                              <a class="minus" href="#reduce"></a>
-                              <input
-                                name="quantity"
-                                readonly="readonly"
-                                type="text"
-                                value="2"
-                              />
-                              <a class="plus" href="#add"></a>
-                            </form>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="price">
-                            <span class="currency">$</span>224
-                          </div>
-                        </td>
-                        <td>
-                          <div class="delete">
-                            <a class="close-btn" href="#"></a>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="merged-buttons">
-                  <a href="/en/products-grid" class="le-btn"
-                    >Continue shopping</a
-                  >
-                  <a href="/en/checkout" class="le-btn">Checkout</a>
+                    <th id="cell-orderPrice"><div>Цена заказа</div></th>
+                    <th id="cell-tracking"><div>Отслеживание</div></th>
+                    <th id="cell-orderStatus"><div>Статус заказа</div></th>
+                    <th id="cell-paymentMethod"><div>Способ оплаты</div></th>
+                    <th id="cell-paymentState"><div>Состояние платежа</div></th>
+                    <th id="cell-delivery"><div>Доставка</div></th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td id="cell-order">
+                        <div>
+                          <span class="orderNo"
+                            ><span class="number">№</span> 78392140</span
+                          >
+                          <span class="orderDate">20 дек. 2023</span>
+                        </div>
+                      </td>
+
+                      <td id="cell-orderPrice">
+                        <div>155<span class="currency">₽</span></div>
+                      </td>
+                      <td id="cell-tracking"><div>—</div></td>
+                      <td id="cell-orderStatus" class="confirmed">
+                        <div>Подтверждён</div>
+                      </td>
+                      <td id="cell-paymentMethod"><div>—</div></td>
+                      <td id="cell-paymentState" class="paid">
+                        <div>Оплачен</div>
+                      </td>
+                      <td id="cell-delivery"><div>—</div></td>
+                    </tr>
+
+                    <tr>
+                      <td id="cell-order">
+                        <div>
+                          <span class="orderNo"
+                            ><span class="number">№</span> 91035021</span
+                          >
+                          <span class="orderDate">15 мая 2022</span>
+                        </div>
+                      </td>
+
+                      <td id="cell-orderPrice">
+                        <div>740<span class="currency">₽</span></div>
+                      </td>
+                      <td id="cell-tracking"><div></div></td>
+                      <td id="cell-orderStatus" class="cancelled">
+                        <div>Отменён</div>
+                      </td>
+                      <td id="cell-paymentMethod"><div>—</div></td>
+                      <td id="cell-paymentState" class="unpaid">
+                        <div>Не оплачен</div>
+                      </td>
+                      <td id="cell-delivery"><div>—</div></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="totalSum">
+                  <span class="totalLabel">Общая сумма по всем заказам:</span>
+                  <span class="price">
+                    895<span class="currency">₽</span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -429,16 +408,29 @@
         <div class="container">
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="footer-column">
-              <h2>Informations</h2>
+              <h2>Информация</h2>
               <ul class="footer-links-holder">
-                <li><a href="/en/about-our-shop">About our shop</a></li>
+                <li><a href="/about-our-shop">О нашем магазине</a></li>
                 <li>
-                  <a href="/en/payment-informations">Payment informations</a>
+                  <a href="/payment-informations">Информация об оплате</a>
                 </li>
 
                 <li>
-                  <a href="/en/delivery-informations">Delivery informations</a>
+                  <a href="/delivery-informations">Информация о доставке</a>
                 </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="footer-column">
+              <h2>Профиль</h2>
+              <ul class="footer-links-holder">
+                <li><a href="/user/order-status">Статус заказа</a></li>
+                <li><a href="/user/wishlist">Список желаний</a></li>
+                <li><a href="/user/delivery-address">Адрес доставки</a></li>
+                <li><a href="/user/order-history">История заказов</a></li>
+                <li><a href="/user/newsletter">Новостная рассылка</a></li>
               </ul>
             </div>
           </div>
@@ -460,71 +452,76 @@
 
     <script
       type="text/javascript"
-      src="../../vendor/js/jquery-1.11.1.min.js"
+      src="../vendor/js/jquery-1.11.1.min.js"
     ></script>
     <script
       type="text/javascript"
-      src="../../vendor/js/jquery-migrate-1.2.1.min.js"
+      src="../vendor/js/jquery-migrate-1.2.1.min.js"
     ></script>
     <script
       type="text/javascript"
-      src="../../vendor/css/bootstrap/js/bootstrap.min.js"
+      src="../vendor/css/bootstrap/js/bootstrap.min.js"
     ></script>
     <script
       type="text/javascript"
-      src="../../vendor/js/twitter-bootstrap-hover-dropdown.min.js"
+      src="../vendor/js/twitter-bootstrap-hover-dropdown.min.js"
     ></script>
     <script
       type="text/javascript"
-      src="../../vendor/js/css_browser_selector.js"
+      src="../vendor/js/css_browser_selector.js"
     ></script>
     <script
       type="text/javascript"
-      src="../../vendor/js/jquery.easing-1.3.js"
+      src="../vendor/js/jquery.easing-1.3.js"
     ></script>
     <script
       type="text/javascript"
-      src="../../vendor/js/jquery.prettyPhoto.patched.js"
+      src="../vendor/js/jquery.prettyPhoto.patched.js"
     ></script>
     <script
       type="text/javascript"
-      src="../../vendor/js/jquery.isotope.min.js"
+      src="../vendor/js/jquery.isotope.min.js"
     ></script>
-    <script type="text/javascript" src="../../vendor/js/wow.min.js"></script>
+    <script type="text/javascript" src="../vendor/js/wow.min.js"></script>
     <script
       type="text/javascript"
-      src="../../vendor/js/owl.carousel.min.js"
+      src="../vendor/js/owl.carousel.min.js"
     ></script>
-    <script type="text/javascript" src="../../vendor/js/jquery.raty.min.js"></script>
+    <script type="text/javascript" src="../vendor/js/jquery.raty.min.js"></script>
     <script
       type="text/javascript"
-      src="../../vendor/js/bootstrap-slider.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="../../vendor/js/jquery.lazyload.min.js"
+      src="../vendor/js/bootstrap-slider.js"
     ></script>
     <script
       type="text/javascript"
-      src="../../vendor/js/bootstrap-select.min.js"
+      src="../vendor/js/jquery.lazyload.min.js"
     ></script>
-
     <script
       type="text/javascript"
-      src="../../vendor/js/jquery-validation-1.19.5/jquery.validate.min.js"
+      src="../vendor/js/bootstrap-select.min.js"
     ></script>
 
     <script
       type="text/javascript"
-      src="../../vendor/js/jquery.maskedinput@1.4.1/jquery.maskedinput.js"
+      src="../vendor/js/jquery-validation-1.19.5/jquery.validate.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="../vendor/js/jquery-validation-1.19.5/localization/messages_ru.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="../vendor/js/jquery.maskedinput@1.4.1/jquery.maskedinput.js"
     ></script>
     <link
       rel="stylesheet"
-      href="../../vendor/js/jquery.maskedinput@1.4.1/jasmine-be-calm.css"
+      href="../vendor/js/jquery.maskedinput@1.4.1/jasmine-be-calm.css"
     />
 
-    <script type="text/javascript" src="../../vendor/js/script.js"></script>
+    <script type="text/javascript" src="../vendor/js/script.js"></script>
 
-    <script src="../../js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
   </body>
 </html>

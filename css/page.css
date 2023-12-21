@@ -57,6 +57,9 @@ section {
   width: 100%;
 }
 /* Margins */
+.mt-0 {
+  margin-top: 0;
+}
 .mt-1 {
   margin-top: 10px;
 }
@@ -69,6 +72,9 @@ section {
 .mt-4 {
   margin-top: 40px;
 }
+.mb-0 {
+  margin-bottom: 0;
+}
 .mb-1 {
   margin-bottom: 10px;
 }
@@ -80,6 +86,37 @@ section {
 }
 .mb-4 {
   margin-bottom: 40px;
+}
+/* Paddings */
+.pt-0 {
+  padding-top: 0;
+}
+.pt-1 {
+  padding-top: 10px;
+}
+.pt-2 {
+  padding-top: 20px;
+}
+.pt-3 {
+  padding-top: 30px;
+}
+.pt-4 {
+  padding-top: 40px;
+}
+.pb-0 {
+  padding-bottom: 0;
+}
+.pb-1 {
+  padding-bottom: 10px;
+}
+.pb-2 {
+  padding-bottom: 20px;
+}
+.pb-3 {
+  padding-bottom: 30px;
+}
+.pb-4 {
+  padding-bottom: 40px;
 }
 /* Profile styles */
 .profile-secondary-links > * {
@@ -106,6 +143,13 @@ section {
 .field-group label {
   /* text-align: left; */
 }
+/* Profile */
+.profile-links-holder li {
+    margin: 15px 0;
+    /* font-size: 110%; */
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 .page-header {
   border: 0;
   padding-bottom: 0;
@@ -1019,3 +1063,125 @@ div.pp_default .pp_nav {
 #section-checkout-form .box-holder#actions .merged-buttons {
     margin: 0;
   }
+.fixed-table {
+  --fixed-table-bg-color1: rgb(30 174 219 / 10%);
+  --fixed-table-td-padding-h-at-edges: 8px;
+  --fixed-table-td-padding-h: 4px;
+  --fixed-table-td-padding-v: 8px;
+
+  width: 100%;
+  border: 0;
+  table-layout: fixed;
+  border-style: solid;
+}
+.fixed-table tbody tr {
+  transition: all var(--common-animation-time) ease;
+}
+.fixed-table-active tbody tr {
+  cursor: pointer; /* All rows are always interactive. */
+}
+.fixed-table-draggable-rows tbody tr {
+  cursor: grab; /* All rows are always interactive. */
+}
+.fixed-table.fixed-table-active tbody tr:hover {
+  background-color: var(--fixed-table-bg-color1);
+}
+.fixed-table th {
+}
+.fixed-table th,
+.fixed-table td {
+  padding: 0 var(--fixed-table-td-padding-h);
+  /* padding: var(--fixed-table-td-padding-v) var(--fixed-table-td-padding-h); */
+  line-height: 1.3;
+  overflow: hidden;
+  border-bottom: 1px solid rgb(0 0 0 / 10%);
+}
+/* First and last columns fixups... */
+.fixed-table th:first-child,
+.fixed-table td:first-child {
+  padding-left: var(--fixed-table-td-padding-h-at-edges);
+}
+.fixed-table th > div,
+.fixed-table td > div {
+  padding: var(--fixed-table-td-padding-v) 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  position: relative;
+}
+/* Fix skeleton styles for inner elements: bottom margins under last elements */
+.fixed-table td div textarea:last-child {
+  margin-bottom: 0;
+}
+/* TODO: Use `block` display type for single inner element? */
+.fixed-table tbody td a {
+  text-decoration: none;
+}
+.fixed-table tbody td a:hover {
+  text-decoration: underline;
+}
+.orders-table td#cell-order .orderNo,
+    .orders-table td#cell-order .orderDate {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+.orders-table td#cell-order .orderNo {
+      font-weight: bold;
+    }
+.orders-table td#cell-order .orderNo > .number {
+        opacity: .5;
+        font-weight: normal;
+      }
+.orders-table td#cell-order .orderDate {
+      opacity: .5;
+      margin-top: 6px;
+    }
+.orders-table td#cell-orderPrice {
+    font-size: 20px;
+    font-weight: 600 !important;
+  }
+.orders-table {
+    }
+.orders-table {
+    }
+.orders-table {
+    }
+.orders-table td#cell-paymentState.paid,
+    .orders-table td#cell-paymentState.unpaid,
+    .orders-table td#cell-paymentState.cancelled,
+    .orders-table td#cell-paymentState.confirmed,
+    .orders-table td#cell-orderStatus.paid,
+    .orders-table td#cell-orderStatus.unpaid,
+    .orders-table td#cell-orderStatus.cancelled,
+    .orders-table td#cell-orderStatus.confirmed {
+      white-space: nowrap;
+    }
+.orders-table td#cell-paymentState.paid > div:before, .orders-table td#cell-paymentState.unpaid > div:before, .orders-table td#cell-paymentState.cancelled > div:before, .orders-table td#cell-paymentState.confirmed > div:before, .orders-table td#cell-orderStatus.paid > div:before, .orders-table td#cell-orderStatus.unpaid > div:before, .orders-table td#cell-orderStatus.cancelled > div:before, .orders-table td#cell-orderStatus.confirmed > div:before {
+      content: ' ';
+      display: inline-block;
+      border-radius: 50%;
+      height: 8px;
+      width: 8px;
+      margin-right: 4px;
+      /* background-color: #999; */
+      /* vertical-align: middle; */
+    }
+.orders-table td#cell-paymentState.unpaid > div:before, .orders-table td#cell-paymentState.cancelled > div:before, .orders-table td#cell-orderStatus.unpaid > div:before, .orders-table td#cell-orderStatus.cancelled > div:before {
+      background-color: var(--common-error-color);
+    }
+.orders-table td#cell-paymentState.paid > div:before, .orders-table td#cell-paymentState.confirmed > div:before, .orders-table td#cell-orderStatus.paid > div:before, .orders-table td#cell-orderStatus.confirmed > div:before {
+      background-color: var(--common-success-color);
+    }
+#section-profile-orders-list .totalSum {
+    padding: 20px 8px;
+  }
+/* var(--fixed-table-td-padding-h-at-edges); */
+#section-profile-orders-list .totalSum .totalLabel {
+      font-size: 16px;
+      /* opacity: .5; */
+    }
+#section-profile-orders-list .totalSum .price {
+      font-size: 20px;
+      font-weight: 600 !important;
+    }
