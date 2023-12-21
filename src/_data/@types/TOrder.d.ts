@@ -1,5 +1,13 @@
 type TOrderStatus = 'cancelled' | 'confirmed';
 type TOrderPaymentState = 'paid' | 'unpaid';
+type TOrderPaymentMethod =
+  | 'robokassa'
+  | 'bankTransfer'
+  | 'yandexCard'
+  | 'cashOnDelivery'
+  | 'cashPaymentToTheCourier';
+type TOrderDelivery = 'express' | 'standard' | 'russianPost' | 'sdek' | 'lPost';
+
 interface TOrder {
   orderNo: number;
   orderDate: number | string; // Date
@@ -7,7 +15,7 @@ interface TOrder {
   orderPrice: number;
   tracking?: unknown;
   orderStatus: TOrderStatus;
-  paymentMethod: string;
+  paymentMethod: TOrderPaymentMethod;
   paymentState: TOrderPaymentState;
-  delivery: string;
+  delivery: TOrderDelivery;
 }
