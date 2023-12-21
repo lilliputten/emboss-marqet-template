@@ -1,4 +1,7 @@
 .orders-table {
+  a {
+    color: var(--primary-color);
+  }
   td#cell-order {
     .orderNo,
     .orderDate {

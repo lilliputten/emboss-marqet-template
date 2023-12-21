@@ -13,7 +13,7 @@ interface TOrder {
   orderDate: number | string; // Date
   // orderDate: Date; // Date
   orderPrice: number;
-  tracking?: unknown;
+  tracking?: number;
   orderStatus: TOrderStatus;
   paymentMethod: TOrderPaymentMethod;
   paymentState: TOrderPaymentState;
