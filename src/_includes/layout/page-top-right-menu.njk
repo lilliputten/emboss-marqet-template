@@ -33,7 +33,8 @@
   {% if showProfile %}
   <li><a href="{{ langRootUrl }}/profile-page">{{ 'headerLinks.myAccount' | i18n }}</a></li>
   <li><a href="{{ langRootUrl }}/profile-wishlist">{{ 'headerLinks.myWishlist' | i18n }}</a></li>
-  <li><a href="{{ langRootUrl }}/profile-logout">{{ 'headerLinks.logOut' | i18n }}</a></li>
+  <li><a href="{{ langRootUrl }}/profile-page"><i class="fa fa-user"></i> {{ 'headerLinks.sampleUserName' | i18n }}</a></li>
+  <li><a href="{{ langRootUrl }}/profile-logout"><i class="fa fa-sign-out"></i>{#  {{ 'headerLinks.logOut' | i18n }} #}</a></li>
   {% else %}
   <li><a href="{{ langRootUrl }}/profile-login">{{ 'headerLinks.logIn' | i18n }}</a></li>
   {% endif %}

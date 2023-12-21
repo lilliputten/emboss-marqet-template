@@ -62,6 +62,7 @@ const en = {
     termsConditions: 'Terms & conditions',
   },
   headerLinks: {
+    sampleUserName: 'Peter Johnson',
     profile: 'Profile',
     myAccount: 'My account',
     myWishlist: 'My wishlist',
