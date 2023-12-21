@@ -64,6 +64,7 @@ const ru = {
     termsConditions: 'Правила и условия',
   },
   headerLinks: {
+    sampleUserName: 'Пётр Иванов',
     profile: 'Профиль',
     myAccount: 'Профиль',
     myWishlist: 'Желания',

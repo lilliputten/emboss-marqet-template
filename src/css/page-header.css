@@ -52,7 +52,10 @@
       align-items: center;
     }
     .last-menu {
-      text-align: right;
+      text-align: center;
+      @media (min-width: 768px) {
+        text-align: right;
+      }
       white-space: nowrap;
       display: flex;
       flex-direction: column;
