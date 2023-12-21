@@ -28,14 +28,17 @@
           {% set totalSum = totalSum + item.orderPrice %}
           <tr>
             <td id="cell-order"><div>
-              <span class="orderNo"><span class="number">№</span> {{ item.orderNo }}</span>
+              <span class="orderNo">
+                {# <span class="number">№</span> #}
+                <a href="{{ langRootUrl }}/single-product/{{ item.orderNo }}">{{ item.orderNo }}</a>
+              </span>
               <span class="orderDate">{{ item.orderDate | dateFormat }}</span>
             </div></td>
             {# <td id="cell-orderDate"><div>{{ item.orderDate | dateFormat }}</div></td> #}
             <td id="cell-orderPrice"><div>
               {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.orderPrice }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
             </div></td>
-            <td id="cell-tracking"><div>{{ item.tracking }}</div></td>
+            <td id="cell-tracking"><div>{{ item.tracking if item.tracking else '—' }}</div></td>
             <td id="cell-orderStatus" class="{{ item.orderStatus }}"><div>{{ ('ordersTable.' + item.orderStatus) | i18n }}</div></td>
             <td id="cell-paymentMethod"><div>{{ ('paymentMethods.' + item.paymentMethod) | i18n }}</div></td>
             <td id="cell-paymentState" class="{{ item.paymentState }}"><div>{{ ('ordersTable.' + item.paymentState) | i18n }}</div></td>
