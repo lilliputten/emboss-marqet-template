@@ -18,6 +18,11 @@
       margin-top: 6px;
     }
   }
+  th {
+    > div {
+      white-space: nowrap;
+    }
+  }
   td#cell-orderPrice {
     font-size: 20px;
     font-weight: 600 !important;

@@ -37,9 +37,9 @@
             </div></td>
             <td id="cell-tracking"><div>{{ item.tracking }}</div></td>
             <td id="cell-orderStatus" class="{{ item.orderStatus }}"><div>{{ ('ordersTable.' + item.orderStatus) | i18n }}</div></td>
-            <td id="cell-paymentMethod"><div>{{ item.paymentMethod }}</div></td>
+            <td id="cell-paymentMethod"><div>{{ ('paymentMethods.' + item.paymentMethod) | i18n }}</div></td>
             <td id="cell-paymentState" class="{{ item.paymentState }}"><div>{{ ('ordersTable.' + item.paymentState) | i18n }}</div></td>
-            <td id="cell-delivery"><div>{{ item.delivery }}</div></td>
+            <td id="cell-delivery"><div>{{ ('deliveryMethods.' + item.delivery) | i18n }}</div></td>
           </tr>
         {% endfor %}
       </tbody>

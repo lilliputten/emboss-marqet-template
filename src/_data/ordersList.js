@@ -10,18 +10,18 @@ const ordersList = [
     orderPrice: 155,
     tracking: unknown,
     orderStatus: 'confirmed',
-    paymentMethod: unknown,
+    paymentMethod: 'robokassa',
     paymentState: 'paid',
-    delivery: unknown,
+    delivery: 'express',
   },
   {
-    orderNo: 91035021,
+    orderNo: 913021,
     orderDate: '2022-05-14T22:11:31.374Z',
     orderPrice: 740,
     orderStatus: 'cancelled',
-    paymentMethod: unknown,
+    paymentMethod: 'yandexCard',
     paymentState: 'unpaid',
-    delivery: unknown,
+    delivery: 'russianPost',
   },
 ];
 
