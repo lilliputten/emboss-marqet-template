@@ -200,11 +200,18 @@ section {
   }
     }
 .page-header .header-row .last-menu {
-      text-align: right;
+      text-align: center;
+    }
+@media (min-width: 768px) {
+.page-header .header-row .last-menu {
+        text-align: right;
+    }
+      }
+.page-header .header-row .last-menu {
       white-space: nowrap;
       display: flex;
       flex-direction: column;
-    }
+}
 /* Issue #13: Top home icon isn't used
   .top-menu-holder {
     .mobile-dropdown,
@@ -1120,6 +1127,9 @@ div.pp_default .pp_nav {
 .fixed-table tbody td a:hover {
   text-decoration: underline;
 }
+.orders-table a {
+    color: var(--primary-color);
+  }
 .orders-table td#cell-order .orderNo,
     .orders-table td#cell-order .orderDate {
       display: block;
@@ -1136,6 +1146,9 @@ div.pp_default .pp_nav {
 .orders-table td#cell-order .orderDate {
       opacity: .5;
       margin-top: 6px;
+    }
+.orders-table th > div {
+      white-space: nowrap;
     }
 .orders-table td#cell-orderPrice {
     font-size: 20px;

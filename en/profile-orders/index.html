@@ -132,7 +132,14 @@
 
               <li><a href="/en/profile-page">My account</a></li>
               <li><a href="/en/profile-wishlist">My wishlist</a></li>
-              <li><a href="/en/profile-logout">Log out</a></li>
+              <li>
+                <a href="/en/profile-page"
+                  ><i class="fa fa-user"></i> Peter Johnson</a
+                >
+              </li>
+              <li>
+                <a href="/en/profile-logout"><i class="fa fa-sign-out"></i></a>
+              </li>
             </ul>
           </div>
         </div>
@@ -337,9 +344,9 @@
                   <thead>
                     <th id="cell-order"><div>Order</div></th>
 
-                    <th id="cell-orderPrice"><div>Order Price</div></th>
+                    <th id="cell-orderPrice"><div>Price</div></th>
                     <th id="cell-tracking"><div>Tracking</div></th>
-                    <th id="cell-orderStatus"><div>Order Status</div></th>
+                    <th id="cell-orderStatus"><div>Status</div></th>
                     <th id="cell-paymentMethod"><div>Payment Method</div></th>
                     <th id="cell-paymentState"><div>Payment State</div></th>
                     <th id="cell-delivery"><div>Delivery</div></th>
@@ -348,9 +355,9 @@
                     <tr>
                       <td id="cell-order">
                         <div>
-                          <span class="orderNo"
-                            ><span class="number">№</span> 78392140</span
-                          >
+                          <span class="orderNo">
+                            <a href="/en/single-product/78392140">78392140</a>
+                          </span>
                           <span class="orderDate">20 дек. 2023</span>
                         </div>
                       </td>
@@ -358,23 +365,23 @@
                       <td id="cell-orderPrice">
                         <div><span class="currency">$</span>155</div>
                       </td>
-                      <td id="cell-tracking"><div>—</div></td>
+                      <td id="cell-tracking"><div>12345612789</div></td>
                       <td id="cell-orderStatus" class="confirmed">
                         <div>Confirmed</div>
                       </td>
-                      <td id="cell-paymentMethod"><div>—</div></td>
+                      <td id="cell-paymentMethod"><div>Robokassa</div></td>
                       <td id="cell-paymentState" class="paid">
                         <div>Paid</div>
                       </td>
-                      <td id="cell-delivery"><div>—</div></td>
+                      <td id="cell-delivery"><div>Express</div></td>
                     </tr>
 
                     <tr>
                       <td id="cell-order">
                         <div>
-                          <span class="orderNo"
-                            ><span class="number">№</span> 91035021</span
-                          >
+                          <span class="orderNo">
+                            <a href="/en/single-product/913021">913021</a>
+                          </span>
                           <span class="orderDate">15 мая 2022</span>
                         </div>
                       </td>
@@ -382,15 +389,15 @@
                       <td id="cell-orderPrice">
                         <div><span class="currency">$</span>740</div>
                       </td>
-                      <td id="cell-tracking"><div></div></td>
+                      <td id="cell-tracking"><div>—</div></td>
                       <td id="cell-orderStatus" class="cancelled">
                         <div>Cancelled</div>
                       </td>
-                      <td id="cell-paymentMethod"><div>—</div></td>
+                      <td id="cell-paymentMethod"><div>Yandex Card</div></td>
                       <td id="cell-paymentState" class="unpaid">
                         <div>Unpaid</div>
                       </td>
-                      <td id="cell-delivery"><div>—</div></td>
+                      <td id="cell-delivery"><div>Russian Post</div></td>
                     </tr>
                   </tbody>
                 </table>
