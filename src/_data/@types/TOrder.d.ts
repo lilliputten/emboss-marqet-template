@@ -1,11 +1,13 @@
 type TOrderStatus = 'cancelled' | 'confirmed';
+type TOrderPaymentState = 'paid' | 'unpaid';
 interface TOrder {
   orderNo: number;
-  orderDate: number; // Date
+  orderDate: number | string; // Date
+  // orderDate: Date; // Date
   orderPrice: number;
   tracking?: unknown;
   orderStatus: TOrderStatus;
   paymentMethod: string;
-  paymentState: string;
+  paymentState: TOrderPaymentState;
   delivery: string;
 }

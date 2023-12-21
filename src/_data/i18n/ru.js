@@ -26,7 +26,9 @@ const ru = {
   pages: {
     checkout: 'Оформление заказа',
     contacts: 'Контакты',
+    myOrders: 'Мои заказы',
     orderCompleted: 'Заказ завершён',
+    ordersList: 'Список заказов',
     paymentMethod: 'Выбрать способ оплаты',
     productsGrid: 'Каталог',
     profile: 'Профиль',
@@ -271,6 +273,7 @@ const ru = {
     save: 'Сохранить',
   },
   ordersTable: {
+    order: 'Заказ',
     orderNo: 'Номер заказа',
     orderDate: 'Дата заказа',
     orderPrice: 'Цена заказа',
@@ -279,6 +282,11 @@ const ru = {
     paymentMethod: 'Способ оплаты',
     paymentState: 'Состояние платежа',
     delivery: 'Доставка',
+    paid: 'Оплачен',
+    unpaid: 'Не оплачен',
+    cancelled: 'Отменён',
+    confirmed: 'Подтверждён',
+    totalSumForOrders: 'Общая сумма по всем заказам',
   },
 };
 

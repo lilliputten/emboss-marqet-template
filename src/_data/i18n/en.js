@@ -23,7 +23,9 @@ const en = {
   pages: {
     checkout: 'Checkout',
     contacts: 'Contacts',
+    myOrders: 'My orders',
     orderCompleted: 'Order completed',
+    ordersList: 'Orders list',
     paymentMethod: 'Payment method',
     productsGrid: 'Products grid',
     profile: 'Profile',
@@ -270,6 +272,7 @@ const en = {
     save: 'Save',
   },
   ordersTable: {
+    order: 'Order',
     orderNo: 'Order No',
     orderDate: 'Order Date',
     orderPrice: 'Order Price',
@@ -278,6 +281,11 @@ const en = {
     paymentMethod: 'Payment Method',
     paymentState: 'Payment State',
     delivery: 'Delivery',
+    paid: 'Paid',
+    unpaid: 'Unpaid',
+    cancelled: 'Cancelled',
+    confirmed: 'Confirmed',
+    totalSumForOrders: 'Total amount for all orders',
   },
 };
 

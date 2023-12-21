@@ -33,6 +33,9 @@ section {
 }
 
 /* Margins */
+.mt-0 {
+  margin-top: 0;
+}
 .mt-1 {
   margin-top: 10px;
 }
@@ -45,6 +48,9 @@ section {
 .mt-4 {
   margin-top: 40px;
 }
+.mb-0 {
+  margin-bottom: 0;
+}
 .mb-1 {
   margin-bottom: 10px;
 }
@@ -56,6 +62,38 @@ section {
 }
 .mb-4 {
   margin-bottom: 40px;
+}
+
+/* Paddings */
+.pt-0 {
+  padding-top: 0;
+}
+.pt-1 {
+  padding-top: 10px;
+}
+.pt-2 {
+  padding-top: 20px;
+}
+.pt-3 {
+  padding-top: 30px;
+}
+.pt-4 {
+  padding-top: 40px;
+}
+.pb-0 {
+  padding-bottom: 0;
+}
+.pb-1 {
+  padding-bottom: 10px;
+}
+.pb-2 {
+  padding-bottom: 20px;
+}
+.pb-3 {
+  padding-bottom: 30px;
+}
+.pb-4 {
+  padding-bottom: 40px;
 }
 
 /* Profile styles */
@@ -93,6 +131,9 @@ section {
 /* Profile */
 .profile-links-holder {
   li {
-    margin: 10px 0;
+    margin: 15px 0;
+    /* font-size: 110%; */
+    text-transform: uppercase;
+    font-weight: bold;
   }
 }

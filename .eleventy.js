@@ -3,6 +3,12 @@
 const eleventy = require('@11ty/eleventy');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 
+const {
+  format,
+  // formatInTimeZone,
+} = require('date-fns-tz');
+const ru = require('date-fns/locale/ru');
+
 const defaultLang = require('./src/_data/defaultLang.js');
 const langCodes = require('./src/_data/langCodes.js');
 
@@ -18,6 +24,10 @@ const envDev = process.env.ELEVENTY_DEV;
 const isDev = !!envDev;
 
 const translations = require('./src/_data/i18n');
+
+// const dateFormat = 'yyyy.MM.dd';
+const dateFormat = 'd MMM yyyy';
+const timeFormat = dateFormat + ', HH:mm';
 
 module.exports = function (eleventyConfig) {
   // Enable subfolders for includes...
@@ -52,6 +62,12 @@ module.exports = function (eleventyConfig) {
     });
     return markdown.render(value);
   });
+
+  eleventyConfig.addFilter('toISOString', (dateString) => new Date(dateString).toISOString());
+  eleventyConfig.addFilter('dateFormat', (dateString) =>
+    format(new Date(dateString), dateFormat, { locale: ru }),
+  );
+  eleventyConfig.addFilter('timeFormat', (dateString) => format(new Date(dateString), timeFormat));
 
   // rebuild on CSS changes
   eleventyConfig.addWatchTarget('./src/_includes/css/');
