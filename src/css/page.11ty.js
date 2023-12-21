@@ -18,13 +18,13 @@ module.exports = class {
     return await postcss([
       // https://www.npmjs.com/package/postcss-strip-inline-comments -- ???
       require('postcss-strip-inline-comments'),
+      require('postcss-mixins'),
       require('postcss-simple-vars'),
       require('postcss-import'),
       // require('tailwindcss/nesting'),
       // @see https://tailwindcss.com/docs/using-with-preprocessors
       require('postcss-nested'),
       // require('postcss-nesting'),
-      // postcss-nested-ancestors
       require('autoprefixer'),
       require('tailwindcss'),
       // require('cssnano'),

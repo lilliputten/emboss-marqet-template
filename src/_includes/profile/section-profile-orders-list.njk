@@ -1,16 +1,21 @@
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
-<div class="box">
-  <div class="box-holder mt-2">
-    <h2 align="center">{{ 'pages.profile' | i18n }}</h2>
+{% set currency = '₽' if lang === 'ru' else '$' %}
+{# NOTE: To place currency sign after the price or before? #}
+{% set currencyAfter = lang === 'ru' %}
+
+<div class="box pb-0" id="section-profile-orders-list">
+  <div class="box-holder mt-1 pb-0">
+    <h2 align="center">{{ 'pages.myOrders' | i18n }}</h2>
     <!--
     <p class="mb-2" align="center">{{ 'profile.profileText' | i18n }}</p>
     -->
 
-    <table class="fixed-table" width="100%">
+    {% set totalSum = 0 %}
+    <table class="fixed-table orders-table" id="profile-orders-list-table" width="100%">
       <thead>
-        <th id="cell-orderNo"><div>{{ 'ordersTable.orderNo' | i18n }}</div></th>
-        <th id="cell-orderDate"><div>{{ 'ordersTable.orderDate' | i18n }}</div></th>
+        <th id="cell-order"><div>{{ 'ordersTable.order' | i18n }}</div></th>
+        {# <th id="cell-orderDate"><div>{{ 'ordersTable.orderDate' | i18n }}</div></th> #}
         <th id="cell-orderPrice"><div>{{ 'ordersTable.orderPrice' | i18n }}</div></th>
         <th id="cell-tracking"><div>{{ 'ordersTable.tracking' | i18n }}</div></th>
         <th id="cell-orderStatus"><div>{{ 'ordersTable.orderStatus' | i18n }}</div></th>
@@ -20,19 +25,33 @@
       </thead>
       <tbody>
         {% for item in ordersList -%}
+          {% set totalSum = totalSum + item.orderPrice %}
           <tr>
-            <td id="cell-orderNo"><div>{{ item.orderNo }}</div></td>
-            <td id="cell-orderDate"><div>{{ item.orderDate }}</div></td>
-            <td id="cell-orderPrice"><div>{{ item.orderPrice }}</div></td>
+            <td id="cell-order"><div>
+              <span class="orderNo"><span class="number">№</span> {{ item.orderNo }}</span>
+              <span class="orderDate">{{ item.orderDate | dateFormat }}</span>
+            </div></td>
+            {# <td id="cell-orderDate"><div>{{ item.orderDate | dateFormat }}</div></td> #}
+            <td id="cell-orderPrice"><div>
+              {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.orderPrice }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+            </div></td>
             <td id="cell-tracking"><div>{{ item.tracking }}</div></td>
-            <td id="cell-orderStatus"><div>{{ item.orderStatus }}</div></td>
+            <td id="cell-orderStatus" class="{{ item.orderStatus }}"><div>{{ ('ordersTable.' + item.orderStatus) | i18n }}</div></td>
             <td id="cell-paymentMethod"><div>{{ item.paymentMethod }}</div></td>
-            <td id="cell-paymentState"><div>{{ item.paymentState }}</div></td>
+            <td id="cell-paymentState" class="{{ item.paymentState }}"><div>{{ ('ordersTable.' + item.paymentState) | i18n }}</div></td>
             <td id="cell-delivery"><div>{{ item.delivery }}</div></td>
           </tr>
         {% endfor %}
       </tbody>
     </table>
+
+    <div class="totalSum">
+      <span class="totalLabel">{{ 'ordersTable.totalSumForOrders' | i18n }}:</span>
+      <span class="price">
+        {# {% set totalSum = 1025 %} #}
+        {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ totalSum }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+      </span>
+    </div>
 
   </div>
 </div>

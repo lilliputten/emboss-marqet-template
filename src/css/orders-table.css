@@ -1,0 +1,61 @@
+.orders-table {
+  td#cell-order {
+    .orderNo,
+    .orderDate {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .orderNo {
+      font-weight: bold;
+      > .number {
+        opacity: .5;
+        font-weight: normal;
+      }
+    }
+    .orderDate {
+      opacity: .5;
+      margin-top: 6px;
+    }
+  }
+  td#cell-orderPrice {
+    font-size: 20px;
+    font-weight: 600 !important;
+  }
+  $cellStatusSize: 8px;
+  @define-mixin cellWithStatusColor {
+    white-space: nowrap;
+    & > div:before {
+      content: ' ';
+      display: inline-block;
+      border-radius: 50%;
+      height: $cellStatusSize;
+      width: $cellStatusSize;
+      margin-right: 4px;
+      /* background-color: #999; */
+      /* vertical-align: middle; */
+    }
+  }
+  @define-mixin cellStatusColor $color {
+    & > div:before {
+      background-color: $color;
+    }
+  }
+  td#cell-paymentState,
+  td#cell-orderStatus {
+    &.paid,
+    &.unpaid,
+    &.cancelled,
+    &.confirmed {
+      @mixin cellWithStatusColor;
+    }
+    &.unpaid,
+    &.cancelled {
+      @mixin cellStatusColor var(--common-error-color);
+    }
+    &.paid,
+    &.confirmed {
+      @mixin cellStatusColor var(--common-success-color);
+    }
+  }
+}
