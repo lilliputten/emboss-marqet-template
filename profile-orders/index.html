@@ -201,20 +201,27 @@
                           <div class="row">
                             <div class="col-xs-12 col-sm-2 col-md-4">
                               <div class="thumb">
-                                <img
-                                  alt=""
-                                  src="../vendor/images/products/products-on-white/product01.png"
-                                />
+                                <a href="/single-product"
+                                  ><img
+                                    alt=""
+                                    src="../vendor/images/products/products-modelist-1/product02.png"
+                                /></a>
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-10 col-md-8">
-                              <div class="title">Man shoe</div>
-                              <div class="price">
-                                170<span class="currency">₽</span>
+                              <div class="title">Man sport Hiking shoe</div>
+                              <div class="priceBlock">
+                                <span class="text-label">Цена:</span>
+                                <span class="price"
+                                  >245<span class="currency">₽</span></span
+                                >
+                              </div>
+                              <div class="countBlock">
+                                <span class="text-label">Кол-во:</span> 2
                               </div>
                             </div>
                           </div>
-                          <a class="close-btn" href="#"></a>
+                          <a class="close-btn" href="#" title="Удалить"></a>
                         </div>
                       </li>
                       <li>
@@ -222,20 +229,27 @@
                           <div class="row">
                             <div class="col-xs-12 col-sm-2 col-md-4">
                               <div class="thumb">
-                                <img
-                                  alt=""
-                                  src="../vendor/images/products/products-on-white/product02.png"
-                                />
+                                <a href="/single-product"
+                                  ><img
+                                    alt=""
+                                    src="../vendor/images/products/products-modelist-1/product03.png"
+                                /></a>
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-10 col-md-8">
-                              <div class="title">Woman Shoe</div>
-                              <div class="price">
-                                120<span class="currency">₽</span>
+                              <div class="title">Woman highheel shoe</div>
+                              <div class="priceBlock">
+                                <span class="text-label">Цена:</span>
+                                <span class="price"
+                                  >245<span class="currency">₽</span></span
+                                >
+                              </div>
+                              <div class="countBlock">
+                                <span class="text-label">Кол-во:</span> 1
                               </div>
                             </div>
                           </div>
-                          <a class="close-btn" href="#"></a>
+                          <a class="close-btn" href="#" title="Удалить"></a>
                         </div>
                       </li>
                       <li>
@@ -243,20 +257,27 @@
                           <div class="row">
                             <div class="col-xs-12 col-sm-2 col-md-4">
                               <div class="thumb">
-                                <img
-                                  alt=""
-                                  src="../vendor/images/products/products-on-white/product03.png"
-                                />
+                                <a href="/single-product"
+                                  ><img
+                                    alt=""
+                                    src="../vendor/images/products/products-modelist-1/product04.png"
+                                /></a>
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-10 col-md-8">
-                              <div class="title">Indirimli Shoe</div>
-                              <div class="price">
-                                99<span class="currency">₽</span>
+                              <div class="title">Woman highheel shoe</div>
+                              <div class="priceBlock">
+                                <span class="text-label">Цена:</span>
+                                <span class="price"
+                                  >95<span class="currency">₽</span></span
+                                >
+                              </div>
+                              <div class="countBlock">
+                                <span class="text-label">Кол-во:</span> 1
                               </div>
                             </div>
                           </div>
-                          <a class="close-btn" href="#"></a>
+                          <a class="close-btn" href="#" title="Удалить"></a>
                         </div>
                       </li>
 
@@ -314,10 +335,11 @@
           >
             <div class="sidebar">
               <div class="accordion-widget category-accordions widget">
-                <h2>Меню</h2>
+                <h2 class="mt-2">Меню</h2>
                 <ul class="profile-links-holder">
                   <li><a href="/profile-page">Профиль</a></li>
                   <li><a href="/profile-orders">Мои заказы</a></li>
+                  <li><a href="/profile-wishlist">Список желаний</a></li>
                 </ul>
               </div>
             </div>
@@ -339,26 +361,36 @@
                   width="100%"
                 >
                   <thead>
-                    <th id="cell-order"><div>Заказ</div></th>
+                    <th id="cell-order" title="Заказ"><div>Заказ</div></th>
 
-                    <th id="cell-orderPrice"><div>Цена</div></th>
-                    <th id="cell-tracking"><div>Трекинг</div></th>
-                    <th id="cell-orderStatus"><div>Статус</div></th>
-                    <th id="cell-paymentMethod"><div>Способ оплаты</div></th>
-                    <th id="cell-paymentState"><div>Состояние платежа</div></th>
-                    <th id="cell-delivery"><div>Доставка</div></th>
+                    <th id="cell-orderPrice" title="Цена"><div>Цена</div></th>
+                    <th id="cell-tracking" title="Трекинг">
+                      <div>Трекинг</div>
+                    </th>
+                    <th id="cell-orderStatus" title="Статус">
+                      <div>Статус</div>
+                    </th>
+                    <th id="cell-paymentMethod" title="Способ оплаты">
+                      <div>Способ оплаты</div>
+                    </th>
+                    <th id="cell-paymentState" title="Состояние платежа">
+                      <div>Состояние платежа</div>
+                    </th>
+                    <th id="cell-delivery" title="Доставка">
+                      <div>Доставка</div>
+                    </th>
+                    <th id="cell-pay" title="Оплатить"><div>Оплатить</div></th>
                   </thead>
                   <tbody>
                     <tr>
                       <td id="cell-order">
                         <div>
                           <span class="orderNo">
-                            <a href="/single-product/78392140">78392140</a>
+                            <a href="/profile-order/?78392140">78392140</a>
                           </span>
                           <span class="orderDate">20 дек. 2023</span>
                         </div>
                       </td>
-
                       <td id="cell-orderPrice">
                         <div>155<span class="currency">₽</span></div>
                       </td>
@@ -371,18 +403,22 @@
                         <div>Оплачен</div>
                       </td>
                       <td id="cell-delivery"><div>Экспресс</div></td>
+                      <td id="cell-pay">
+                        <button class="le-btn small" title="Оплатить">
+                          Оплатить
+                        </button>
+                      </td>
                     </tr>
 
                     <tr>
                       <td id="cell-order">
                         <div>
                           <span class="orderNo">
-                            <a href="/single-product/913021">913021</a>
+                            <a href="/profile-order/?913021">913021</a>
                           </span>
                           <span class="orderDate">15 мая 2022</span>
                         </div>
                       </td>
-
                       <td id="cell-orderPrice">
                         <div>740<span class="currency">₽</span></div>
                       </td>
@@ -395,15 +431,27 @@
                         <div>Не оплачен</div>
                       </td>
                       <td id="cell-delivery"><div>Почта России</div></td>
+                      <td id="cell-pay">
+                        <button class="le-btn small" title="Оплатить">
+                          Оплатить
+                        </button>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
 
-                <div class="totalSum">
-                  <span class="totalLabel">Общая сумма по всем заказам:</span>
-                  <span class="price">
-                    895<span class="currency">₽</span>
-                  </span>
+                <div class="orderSummaryBlock">
+                  <div class="totalSum">
+                    <span class="totalLabel">Общая сумма по всем заказам:</span>
+                    <span class="price">
+                      895<span class="currency">₽</span>
+                    </span>
+                  </div>
+                  <div class="actions">
+                    <button class="le-btn small">
+                      <i class="fa fa-credit-card"></i> Оплатить
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

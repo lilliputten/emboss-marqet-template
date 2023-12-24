@@ -212,25 +212,42 @@
        * menu.prepend('<li class="empty">Empty</li>');
        */
     }
-    // Quantity element
+    // Quantity element in shopping cart list (TODO: Update for new dynamically added items?)
     $('.le-quantity a').click(function (e) {
+      var thisNode = $(this);
+      var rowNode = thisNode.closest('tr');
+      var tableNode = thisNode.closest('table');
+      var inputNode = rowNode.find('input#quantity');
+      var priceNode = rowNode.find('.shopping-cart-price');
+      var totalNode = rowNode.find('.shopping-cart-total');
       e.preventDefault();
-      var currentQty = parseInt($(this).parent().parent().find('input').val());
+      var currentQty = parseInt(String(inputNode.val()));
+      var price = parseInt(priceNode.text());
+      var isMinus = thisNode.hasClass('minus') && currentQty > 0;
+      var isPlus = thisNode.hasClass('plus');
+      var nextQty = currentQty;
 
-      if ($(this).hasClass('minus') && currentQty > 0) {
-        $(this)
-          .parent()
-          .parent()
-          .find('input')
-          .val(currentQty - 1);
-      } else {
-        if ($(this).hasClass('plus')) {
-          $(this)
-            .parent()
-            .parent()
-            .find('input')
-            .val(currentQty + 1);
-        }
+      if (isMinus) {
+        nextQty = currentQty - 1;
+      } else if (isPlus) {
+        nextQty = currentQty + 1;
+      }
+
+      var total = nextQty * price;
+
+      inputNode.val(nextQty);
+      totalNode.text(String(total));
+
+      // Update total sum value (NOTE: Assuming only one total sum node on the page)
+      var totalSumNode = document.getElementById('totalSum');
+      if (totalSumNode) {
+        var totalNodes = tableNode.find('.shopping-cart-total');
+        var summ = 0;
+        totalNodes.each(function () {
+          var node = $(this);
+          summ += parseInt(String(node.text()));
+        });
+        totalSumNode.innerHTML = String(summ);
       }
     });
 

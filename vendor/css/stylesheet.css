@@ -8597,6 +8597,7 @@ header .link-list {
 .italic {
   font-style: italic;
 }
+
 /*shopping-cart-page*/
 .shopping-cart-page {
   padding: 20px;
@@ -8649,6 +8650,7 @@ header .link-list {
 .shopping-cart-page table {
   margin: 0;
 }
+
 /*Checkout page*/
 .table-form .merged-buttons {
   text-align: right;

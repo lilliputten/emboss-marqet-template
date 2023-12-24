@@ -50,12 +50,12 @@
     <link rel="stylesheet" href="../../css/page.css" />
 
     <meta property="og:site_name" content="Emboss" />
-    <meta property="og:title" content="pages.profileRestorePassword" />
+    <meta property="og:title" content="profile.myWishlist" />
     <meta property="og:description" content="Site description" />
-    <meta property="og:url" content="/en/profile-restore-password/" />
+    <meta property="og:url" content="/en/profile-wishlist/" />
     <meta name="twitter:card" content="summary" />
     <meta name="theme-color" content="#ffffff" />
-    <title>Restore password</title>
+    <title>My wishlist</title>
   </head>
   <body
     class="font-sans text-gray-800 bg-gray-100 noscript"
@@ -98,17 +98,14 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li>
-                      <a
-                        href="/profile-restore-password/"
-                        rel="alternate"
-                        hreflang="ru"
+                      <a href="/profile-wishlist/" rel="alternate" hreflang="ru"
                         >Русский</a
                       >
                     </li>
 
                     <li>
                       <a
-                        href="/en/profile-restore-password/"
+                        href="/en/profile-wishlist/"
                         rel="alternate"
                         hreflang="en"
                         >English</a
@@ -133,7 +130,16 @@
                 </div>
               </li>
 
-              <li><a href="/en/profile-login">Log in</a></li>
+              <li><a href="/en/profile-page">My account</a></li>
+              <li><a href="/en/profile-wishlist">My wishlist</a></li>
+              <li>
+                <a href="/en/profile-page"
+                  ><i class="fa fa-user"></i> Peter Johnson</a
+                >
+              </li>
+              <li>
+                <a href="/en/profile-logout"><i class="fa fa-sign-out"></i></a>
+              </li>
             </ul>
           </div>
         </div>
@@ -313,7 +319,10 @@
                   <li>
                     <a href="/en/"> Main page </a>
                   </li>
-                  <li class="active">Restore password</li>
+                  <li>
+                    <a href="/en/profile-page"> Profile </a>
+                  </li>
+                  <li class="active">My wishlist</li>
                 </ul>
               </div>
             </div>
@@ -321,69 +330,177 @@
         </div>
       </section>
 
-      <script>
-        <!--
-        var lang = "en";
-        var formId = "#section-restore-password-form";
-        window.addEventListener("load", function onLoad() {
-          var jqForm = $(formId);
-          if (jqForm.length) {
-            jqForm.validate({
-              rules: {
-                email: {
-                  required: true,
-                  email: true,
-                },
-              },
-            });
-            $("#formSubmit").click(function validateForm() {
-              var result = jqForm.valid();
-              return result;
-            });
-          }
-        });
-        //-->
-      </script>
-
-      <section id="section-restore-password">
+      <section id="section-profile-layout">
         <div class="container no-padding">
-          <div class="col-xs-12">
-            <div class="box">
-              <div class="box-holder" align="center">
-                <h2>Restore password</h2>
-                <p class="mb-2">
-                  Restore password for previously created account.
-                </p>
+          <div
+            class="section-profile-sidebar col-xs-12 col-md-3"
+            id="side-column"
+          >
+            <div class="sidebar">
+              <div class="accordion-widget category-accordions widget">
+                <h2 class="mt-2">Menu</h2>
+                <ul class="profile-links-holder">
+                  <li><a href="/profile-page">Profile</a></li>
+                  <li><a href="/profile-orders">My orders</a></li>
+                  <li><a href="/profile-wishlist">My wishlist</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="section-profile-content col-xs-12 col-md-9"
+            id="main-column"
+          >
+            <div class="box pb-0" id="section-profile-orders-list">
+              <div class="box-holder mt-1 pb-0">
+                <h2 align="center">My wishlist</h2>
 
-                <form
-                  id="section-restore-password-form"
-                  class="narrow-form-box"
-                >
-                  <div class="field-group" id="emailField">
-                    <label for="email">E-mail</label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="text"
-                      class="le-input"
-                      placeholder="E-mail"
-                    />
-                  </div>
-
-                  <!-- Action buttons -->
-                  <div class="field-group" align="center">
-                    <button id="formSubmit" type="submit" class="le-btn">
-                      <i class="fa fa-check"></i> Restore password
-                    </button>
-                  </div>
+                <div class="shopping-cart-page">
                   <div
-                    class="field-group profile-secondary-links"
-                    align="center"
+                    class="shopping-cart-shopping-cart-list"
+                    id="shopping-cart-list"
+                    class="table-responsive"
                   >
-                    <a href="/en/profile-login" class="btn">Login</a>
-                    <a href="/en/profile-logon" class="btn">Logon</a>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th class="col-xs-12 col-md-2">Preview</th>
+                          <th class="col-xs-12 col-md-5">Product</th>
+                          <th class="col-xs-12 col-md-2 price-column">Price</th>
+
+                          <th class="col-xs-12 col-md-2">&nbsp;</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="thumb">
+                              <a href="/en/single-product"
+                                ><img
+                                  alt=""
+                                  src="../../vendor/images/products/products-modelist-1/product02.png"
+                              /></a>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="desc">
+                              <h3>
+                                <a href="/en/single-product"
+                                  >Man sport Hiking shoe</a
+                                >
+                              </h3>
+                              <div class="pid">Product code: 389645</div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="price">
+                              <span class="currency">$</span
+                              ><span class="shopping-cart-price" id="price"
+                                >245</span
+                              >
+                            </div>
+                          </td>
+
+                          <td>
+                            <div class="actions">
+                              <button
+                                class="btn-add-to-cart le-btn small btn-iconic"
+                              >
+                                Add to cart
+                              </button>
+
+                              <a class="close-btn" href="#" title="Remove"></a>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="thumb">
+                              <a href="/en/single-product"
+                                ><img
+                                  alt=""
+                                  src="../../vendor/images/products/products-modelist-1/product03.png"
+                              /></a>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="desc">
+                              <h3>
+                                <a href="/en/single-product"
+                                  >Woman highheel shoe</a
+                                >
+                              </h3>
+                              <div class="pid">Product code: 8464759</div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="price">
+                              <span class="currency">$</span
+                              ><span class="shopping-cart-price" id="price"
+                                >245</span
+                              >
+                            </div>
+                          </td>
+
+                          <td>
+                            <div class="actions">
+                              <button
+                                class="btn-add-to-cart le-btn small btn-iconic"
+                              >
+                                Add to cart
+                              </button>
+
+                              <a class="close-btn" href="#" title="Remove"></a>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="thumb">
+                              <a href="/en/single-product"
+                                ><img
+                                  alt=""
+                                  src="../../vendor/images/products/products-modelist-1/product04.png"
+                              /></a>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="desc">
+                              <h3>
+                                <a href="/en/single-product"
+                                  >Woman highheel shoe</a
+                                >
+                              </h3>
+                              <div class="pid">Product code: 83925602</div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="price">
+                              <span class="currency">$</span
+                              ><span class="shopping-cart-price" id="price"
+                                >95</span
+                              >
+                            </div>
+                          </td>
+
+                          <td>
+                            <div class="actions">
+                              <button
+                                class="btn-add-to-cart le-btn small btn-iconic"
+                              >
+                                Add to cart
+                              </button>
+
+                              <a class="close-btn" href="#" title="Remove"></a>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
           </div>
@@ -404,6 +521,21 @@
                 <li>
                   <a href="/en/delivery-informations">Delivery informations</a>
                 </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="footer-column">
+              <h2>Your account</h2>
+              <ul class="footer-links-holder">
+                <li><a href="/en/user/order-status">Order status</a></li>
+                <li><a href="/en/user/wishlist">My wishlist</a></li>
+                <li>
+                  <a href="/en/user/delivery-address">Delivery address</a>
+                </li>
+                <li><a href="/en/user/order-history">Order history</a></li>
+                <li><a href="/en/user/newsletter">Newsletter</a></li>
               </ul>
             </div>
           </div>
