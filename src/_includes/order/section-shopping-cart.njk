@@ -5,124 +5,17 @@
 {# NOTE: To place currency sign after the price or before? #}
 {% set currencyAfter = lang === 'ru' %}
 
-<section id="cart" class="--page-holder">
+<section id="cart">
   <div class="container">
 
     <div class="row">
       <div class="col-xs-12">
         <div class="shopping-cart-page box">
-          {# Issue #13: Removed section icons
-          <div class="icon-holder small badge-style">
-            <i class="fa fa-shopping-cart"></i>
-            <span class="triangle"></span>
-          </div>
-          #}
-          <div class="table-responsive">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th class="col-xs-12 col-md-2">{{ 'shoppingCart.preview' | i18n }}</th>
-                  <th class="col-xs-12 col-md-5">{{ 'shoppingCart.product' | i18n }}</th>
-                  <th class="col-xs-12 col-md-2 price-column">{{ 'shoppingCart.price' | i18n }}</th>
-                  <th class="col-xs-12 col-md-2">{{ 'shoppingCart.quantity' | i18n }}</th>
-                  <th class="col-xs-12 col-md-1 price-column">{{ 'shoppingCart.total' | i18n }}</th>
-                  <th class="col-xs-12 col-md-2">&nbsp;</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <div class="thumb">
-                      <img alt="" src="/images/i-modelist-samples/uaz/medium/02.jpg" />
-                    </div>
-                  </td>
-                  <td>
-                    <div class="desc">
-                      <h3>3629 Звезда 1/35 ПРЕДЗАКАЗ Советский военный внедорожник УАЗ-469</h3>
-                      {#
-                      <div class="tag-line">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed
-                        elementum nisl.
-                      </div>
-                      #}
-                      <div class="pid">{{ 'shoppingCart.productCode' | i18n }}: 4564789</div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="price">
-                      {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}122{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
-                    </div>
-                  </td>
-                  <td>
-                    <div class="le-quantity">
-                      <form>
-                        <a class="minus" href="#reduce"></a>
-                        <input name="quantity" readonly="readonly" type="text" value="1" />
-                        <a class="plus" href="#add"></a>
-                      </form>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="price">
-                      {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}122{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
-                    </div>
-                  </td>
-                  <td>
-                    <div class="delete">
-                      <a class="close-btn" href="#"></a>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="thumb">
-                      <img alt="" src="/images/i-modelist-samples/uaz/medium/03.jpg" />
-                    </div>
-                  </td>
-                  <td>
-                    <div class="desc">
-                      <h3>4645 Tiger Models 1/35 Российский ЗРПК 9к6</h3>
-                      {#
-                      <div class="tag-line">
-                        In hac habitasse platea dictumst. Donec aliquet dolor in libero euismod,
-                        ac dapibus turpis euismod.
-                      </div>
-                      #}
-                      <div class="pid">{{ 'shoppingCart.productCode' | i18n }}: 56879456</div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="price">
-                      {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}112{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
-                    </div>
-                  </td>
-                  <td>
-                    <div class="le-quantity">
-                      <form>
-                        <a class="minus" href="#reduce"></a>
-                        <input name="quantity" readonly="readonly" type="text" value="2" />
-                        <a class="plus" href="#add"></a>
-                      </form>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="price">
-                      {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}224{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
-                    </div>
-                  </td>
-                  <td>
-                    <div class="delete">
-                      <a class="close-btn" href="#"></a>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="merged-buttons">
-            <a href="{{ langRootUrl }}/products-grid" class="le-btn">{{ 'shoppingCart.continueShopping' | i18n }}</a>
-            <a href="{{ langRootUrl }}/checkout" class="le-btn">{{ 'shoppingCart.checkout' | i18n }}</a>
-          </div>
+
+          {% set showCartButtons = true %}
+          {% set showTotalSum = true %}
+
+          {% include "order/shopping-cart-list.njk" %}
 
         </div>
       </div>

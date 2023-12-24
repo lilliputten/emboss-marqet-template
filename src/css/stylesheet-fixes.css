@@ -112,6 +112,21 @@ section {
   }
 }
 
+/* Profile */
+.profile-links-holder {
+  li {
+    margin: 15px 0;
+    /* font-size: 110%; */
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+.section-profile-sidebar {
+  h2 {
+    margin-top: 18px;
+  }
+}
+
 /* Nav menu active item */
 .top-nav-holder .nav-menu ul {
   > li a.active {
@@ -128,12 +143,12 @@ section {
   /* text-align: left; */
 }
 
-/* Profile */
-.profile-links-holder {
-  li {
-    margin: 15px 0;
-    /* font-size: 110%; */
-    text-transform: uppercase;
-    font-weight: bold;
-  }
+/* Misc */
+.text-label {
+  font-weight: bold;
+  opacity: .5;
 }
+.table-responsive {
+  overflow: auto;
+}
+

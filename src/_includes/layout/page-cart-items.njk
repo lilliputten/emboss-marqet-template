@@ -7,61 +7,25 @@
 {# NOTE: To place currency sign after the price or before? #}
 {% set currencyAfter = lang === 'ru' %}
 
-<li>
-  <div class="basket-item">
-    <div class="row">
-      <div class="col-xs-12 col-sm-2 col-md-4">
-        <div class="thumb">
-          <img alt="" src="/vendor/images/products/products-on-white/product01.png" />
+{% for item in basketItems -%}
+  <li>
+    <div class="basket-item">
+      <div class="row">
+        <div class="col-xs-12 col-sm-2 col-md-4">
+          <div class="thumb">
+            <a href="{{ langRootUrl }}/single-product"><img alt="" src="{{ item.image }}" /></a>
+            {# <img alt="" src="/vendor/images/products/products-on-white/product01.png" /> #}
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-10 col-md-8">
+          <div class="title">{{ item.name }}</div>
+          <div class="priceBlock">
+            <span class="text-label">{{ 'products.price' | i18n }}:</span> <span class="price">{% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}</span>
+          </div>
+          <div class="countBlock"><span class="text-label">{{ 'products.count' | i18n }}:</span> {{ item.count }}</div>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-10 col-md-8">
-        <div class="title">Man shoe</div>
-        <div class="price">
-          {% set price = 170 %}
-          {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
-        </div>
-      </div>
+      <a class="close-btn" href="#" title="{{ 'products.remove' | i18n }}"></a>
     </div>
-    <a class="close-btn" href="#"></a>
-  </div>
-</li>
-<li>
-  <div class="basket-item">
-    <div class="row">
-      <div class="col-xs-12 col-sm-2 col-md-4">
-        <div class="thumb">
-          <img alt="" src="/vendor/images/products/products-on-white/product02.png" />
-        </div>
-      </div>
-       <div class="col-xs-12 col-sm-10 col-md-8">
-        <div class="title">Woman Shoe</div>
-        <div class="price">
-          {% set price = 120 %}
-          {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
-        </div>
-      </div>
-    </div>
-    <a class="close-btn" href="#"></a>
-  </div>
-</li>
-<li>
-  <div class="basket-item">
-    <div class="row">
-     <div class="col-xs-12 col-sm-2 col-md-4">
-        <div class="thumb">
-          <img alt="" src="/vendor/images/products/products-on-white/product03.png" />
-        </div>
-      </div>
-     <div class="col-xs-12 col-sm-10 col-md-8">
-        <div class="title">Indirimli Shoe</div>
-        <div class="price">
-          {% set price = 99 %}
-          {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
-        </div>
-      </div>
-    </div>
-    <a class="close-btn" href="#"></a>
-  </div>
-</li>
-
+  </li>
+{% endfor %}

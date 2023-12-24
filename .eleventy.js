@@ -64,9 +64,14 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter('toISOString', (dateString) => new Date(dateString).toISOString());
-  eleventyConfig.addFilter('dateFormat', (dateString) =>
-    format(new Date(dateString), dateFormat, { locale: ru }),
-  );
+  eleventyConfig.addFilter('dateFormat', (dateString, localeId) => {
+    const opts = {};
+    if (localeId && localeId === 'ru') {
+      opts.locale = ru;
+    }
+    // TODO: Access current `lang` value?
+    return format(new Date(dateString), dateFormat, opts);
+  });
   eleventyConfig.addFilter('timeFormat', (dateString) => format(new Date(dateString), timeFormat));
 
   // rebuild on CSS changes

@@ -124,6 +124,7 @@ const en = {
     newExclam: 'New!',
     halfPrice: '50%',
     price: 'Price',
+    count: 'Count',
     by: 'by',
     productsPerPage: 'per page',
     show: 'Show',
@@ -152,6 +153,7 @@ const en = {
     ascending: 'ascending',
     descending: 'descending',
     sortZA: 'Z-A',
+    remove: 'Remove',
   },
   productsSample: {
     shoesAndClothes: 'Shoes and clothes',
@@ -271,6 +273,8 @@ const en = {
     logonTitle: 'Logon title',
     menu: 'Menu',
     myOrders: 'My orders',
+    myWishlist: 'My wishlist',
+    order: 'Order',
     password2: 'Repeat password',
     password: 'Password',
     profileText: 'Logon text',
@@ -293,7 +297,9 @@ const en = {
     unpaid: 'Unpaid',
     cancelled: 'Cancelled',
     confirmed: 'Confirmed',
+    totalSum: 'Total amount',
     totalSumForOrders: 'Total amount for all orders',
+    pay: 'Pay',
   },
 };
 

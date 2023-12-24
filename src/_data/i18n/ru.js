@@ -126,6 +126,7 @@ const ru = {
     newExclam: 'New!',
     halfPrice: '50%',
     price: 'Цена',
+    count: 'Кол-во',
     by: 'по',
     productsPerPage: 'на странице',
     show: 'Показать',
@@ -154,6 +155,7 @@ const ru = {
     ascending: 'восходящий',
     descending: 'нисходящий',
     sortZA: 'От Я до А',
+    remove: 'Удалить',
   },
   productsSample: {
     shoesAndClothes: 'Обувь и одежда',
@@ -272,6 +274,8 @@ const ru = {
     logonTitle: 'Регистрация',
     menu: 'Меню',
     myOrders: 'Мои заказы',
+    myWishlist: 'Список желаний',
+    order: 'Заказ',
     password2: 'Проверка пароля',
     password: 'Пароль',
     profileText: 'Текст пояснения к странице (если нужен)',
@@ -294,7 +298,9 @@ const ru = {
     unpaid: 'Не оплачен',
     cancelled: 'Отменён',
     confirmed: 'Подтверждён',
+    totalSum: 'Общая сумма',
     totalSumForOrders: 'Общая сумма по всем заказам',
+    pay: 'Оплатить',
   },
 };
 
