@@ -1,13 +1,24 @@
 #section-profile-orders-list {
-  .totalSum {
-    padding: 20px 8px; /* var(--fixed-table-td-padding-h-at-edges); */
-    .totalLabel {
-      font-size: 16px;
-      /* opacity: .5; */
-    }
-    .price {
-      font-size: 20px;
-      font-weight: 600 !important;
-    }
+  button {
+    white-space: nowrap;
+    $padding: 6px;
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+}
+.orderSummaryBlock {
+  display: flex;
+  align-items: center;
+  padding: 20px 8px;
+}
+.totalSum {
+  flex: 1;
+  .totalLabel {
+    font-size: 16px;
+    /* opacity: .5; */
+  }
+  .price {
+    font-size: 20px;
+    font-weight: 600 !important;
   }
 }

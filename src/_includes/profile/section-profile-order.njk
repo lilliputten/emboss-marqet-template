@@ -1,0 +1,21 @@
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+
+{% set currency = '₽' if lang === 'ru' else '$' %}
+{# NOTE: To place currency sign after the price or before? #}
+{% set currencyAfter = lang === 'ru' %}
+
+<div class="box pb-0" id="section-profile-orders-list">
+  <div class="box-holder mt-1 pb-0">
+    <h2 align="center">{{ 'profile.order' | i18n }}</h2>
+
+    <div class="shopping-cart-page">
+
+      {% set showCheckoutButton = true %}
+      {% set showTotalSum = true %}
+
+      {% include "order/shopping-cart-list.njk" %}
+
+    </div>
+
+  </div>
+</div>

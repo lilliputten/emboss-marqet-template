@@ -1,9 +1,25 @@
 .shopping-cart-page {
   &.box {
-    background-color: var(--product-item-background);
+    /* background-color: var(--product-item-background); */
   }
-  tbody .delete .close-btn {
-    top: -8px;
-    right: auto;
+}
+#shopping-cart-list {
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .close-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* top: -8px; */
+      /* right: auto; */
+      position: relative;
+      top: auto;
+      right: auto;
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+    }
   }
 }

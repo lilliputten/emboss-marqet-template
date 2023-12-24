@@ -66,4 +66,7 @@
       @mixin cellStatusColor var(--common-success-color);
     }
   }
+  td#cell-pay {
+    /* min-width: 110px; */
+  }
 }

@@ -1,0 +1,102 @@
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+
+{% set productColumns = 'col-xs-12 col-sm-6 col-md-6 col-lg-4' %}
+{% set currency = '₽' if lang === 'ru' else '$' %}
+{# NOTE: To place currency sign after the price or before? #}
+{% set currencyAfter = lang === 'ru' %}
+
+<div class="shopping-cart-shopping-cart-list" id="shopping-cart-list" class="table-responsive">
+
+  {% set totalSum = 0 %}
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="col-xs-12 col-md-2">{{ 'shoppingCart.preview' | i18n }}</th>
+        <th class="col-xs-12 col-md-5">{{ 'shoppingCart.product' | i18n }}</th>
+        <th class="col-xs-12 col-md-2 price-column">{{ 'shoppingCart.price' | i18n }}</th>
+        {% if not hideQuantityColumn %}
+        <th class="col-xs-12 col-md-2">{{ 'shoppingCart.quantity' | i18n }}</th>
+        <th class="col-xs-12 col-md-1 price-column">{{ 'shoppingCart.total' | i18n }}</th>
+        {% endif %}
+        <th class="col-xs-12 col-md-2">&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for item in basketItems -%}
+
+      {% set total = item.count * item.price %}
+      {% set totalSum = totalSum + total %}
+
+      <tr>
+        <td>
+          <div class="thumb">
+            {# <img alt="" src="/images/i-modelist-samples/uaz/medium/02.jpg" /> #}
+            <a href="{{ langRootUrl }}/single-product"><img alt="" src="{{ item.image }}" /></a>
+          </div>
+        </td>
+        <td>
+          <div class="desc">
+            <h3><a href="{{ langRootUrl }}/single-product">{{ item.name }}</a></h3>
+            <div class="pid">{{ 'shoppingCart.productCode' | i18n }}: {{ item.id }}</div>
+          </div>
+        </td>
+        <td>
+          <div class="price">
+            {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}<span class="shopping-cart-price" id="price">{{ item.price }}</span>{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+          </div>
+        </td>
+        {% if not hideQuantityColumn %}
+        <td>
+          <div class="le-quantity">
+            <form>
+              <a class="minus" href="#reduce"></a>
+              <input class="shopping-cart-quantity" id="quantity" name="quantity" readonly="readonly" type="text" value="{{ item.count }}" />
+              <a class="plus" href="#add"></a>
+            </form>
+          </div>
+        </td>
+        <td>
+          <div class="price">
+            {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}<span class="shopping-cart-total" id="total">{{ item.count * item.price }}</span>{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+          </div>
+        </td>
+        {% endif %}
+        <td>
+          <div class="actions">
+            {% if showAddTpoCartButton %}
+            <button class="btn-add-to-cart le-btn small btn-iconic">{{ 'products.addToCart' | i18n }}</button>
+            {% endif %}
+            <a class="close-btn" href="#" title="{{ 'products.remove' | i18n }}"></a>
+          </div>
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+  {% if showSummaryBlock or showCheckoutButton or showCartButtons %}
+  <div class="orderSummaryBlock">
+    {% if showTotalSum %}
+    <div class="totalSum">
+      <span class="totalLabel">{{ 'ordersTable.totalSum' | i18n }}:</span>
+      <span class="price">
+        {# {% set totalSum = 1025 %} #}
+        {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}<span class="shopping-cart-totalSum" id="totalSum">{{ totalSum }}</span>{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+      </span>
+    </div>
+    {% endif %}
+    {% if showCheckoutButton %}
+      <div class="actions">
+        <a class="le-btn" href="{{ langRootUrl }}/checkout"><i class="fa fa-credit-card"></i> {{ 'ordersTable.pay' | i18n }}</a>
+      </div>
+    {% elif showCartButtons %}
+      <div class="merged-buttons">
+        <a href="{{ langRootUrl }}/products-grid" class="le-btn">{{ 'shoppingCart.continueShopping' | i18n }}</a>
+        <a href="{{ langRootUrl }}/checkout" class="le-btn">{{ 'shoppingCart.checkout' | i18n }}</a>
+      </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+</div>

@@ -40,8 +40,8 @@
   padding-left: var(--fixed-table-td-padding-h-at-edges);
 }
 
-.fixed-table th > div,
-.fixed-table td > div {
+.fixed-table th > *,
+.fixed-table td > * {
   padding: var(--fixed-table-td-padding-v) 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -49,8 +49,8 @@
   position: relative;
 }
 
-/* Fix skeleton styles for inner elements: bottom margins under last elements */
-.fixed-table td div textarea:last-child {
+/* Fix styles for inner elements: bottom margins under last elements */
+.fixed-table td > * textarea:last-child {
   margin-bottom: 0;
 }
 /* TODO: Use `block` display type for single inner element? */
