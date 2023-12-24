@@ -1,0 +1,18 @@
+---
+title: pages.productsSearch
+layout: page.njk
+:changed: 2023.12.25, 01:38
+hideBacklink: true
+---
+
+{% set breadcrumb = [
+  { link: '/', name: 'breadcrumbLinks.homepage' },
+  { name: 'breadcrumbLinks.search', class: 'active' }
+] %}
+{% include "shared/section-breadcrumb.njk" %}
+
+{% include "catalogue/section-products-search.njk" %}
+
+{# {% include "section-newsletter.njk" %} #}
+{# {% include "section-banner-slider.njk" %} #}
+{# section-brands-slider #}
