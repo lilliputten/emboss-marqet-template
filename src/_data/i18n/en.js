@@ -28,6 +28,7 @@ const en = {
     ordersList: 'Orders list',
     paymentMethod: 'Payment method',
     productsGrid: 'Products grid',
+    productsSearch: 'Search',
     profile: 'Profile',
     profileLogIn: 'Log in',
     profileLogOn: 'Log on',
@@ -98,11 +99,12 @@ const en = {
     back: 'Back',
   },
   breadcrumbLinks: {
-    toHomepage: 'To main page',
-    homepage: 'Main page',
-    rubric: 'Prefabricated models',
     catalogue: 'Catalogue',
+    homepage: 'Main page',
     product: 'Product',
+    rubric: 'Prefabricated models',
+    search: 'Search',
+    toHomepage: 'To main page',
   },
   newsletter: {
     signUp: 'Sign up for our newsletter to get best offers and news.',
@@ -154,6 +156,7 @@ const en = {
     descending: 'descending',
     sortZA: 'Z-A',
     remove: 'Remove',
+    foundByRequest: 'Found by request',
   },
   productsSample: {
     shoesAndClothes: 'Shoes and clothes',
