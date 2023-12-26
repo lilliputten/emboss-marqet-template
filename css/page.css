@@ -1161,7 +1161,7 @@ div.pp_default .pp_nav {
     white-space: nowrap;
   }
 .orders-table td > .le-btn[disabled] {
-      opacity: .5;
+      opacity: .3;
       pointer-events: none;
       cursor: default;
     }
