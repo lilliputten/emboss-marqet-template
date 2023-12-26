@@ -127,15 +127,22 @@
                 </div>
               </li>
 
-              <li><a href="/profile-page">Профиль</a></li>
-              <li><a href="/profile-wishlist">Желания</a></li>
               <li>
-                <a href="/profile-page"
-                  ><i class="fa fa-user"></i> Пётр Иванов</a
-                >
-              </li>
-              <li>
-                <a href="/profile-logout"><i class="fa fa-sign-out"></i></a>
+                <div class="btn-group le-dropdown">
+                  <a class="dropdown-toggle" href="#" data-hover="dropdown">
+                    <i class="fa fa-user"></i> Пётр Иванов
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/profile-page">Профиль</a></li>
+                    <li><a href="/profile-orders">Мои заказы</a></li>
+                    <li><a href="/profile-wishlist">Список желаний</a></li>
+                    <li>
+                      <a href="/profile-logout"
+                        ><i class="fa fa-sign-out"></i> Выйти</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </div>
@@ -771,19 +778,6 @@
                 <li>
                   <a href="/delivery-informations">Информация о доставке</a>
                 </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="footer-column">
-              <h2>Профиль</h2>
-              <ul class="footer-links-holder">
-                <li><a href="/user/order-status">Статус заказа</a></li>
-                <li><a href="/user/wishlist">Список желаний</a></li>
-                <li><a href="/user/delivery-address">Адрес доставки</a></li>
-                <li><a href="/user/order-history">История заказов</a></li>
-                <li><a href="/user/newsletter">Новостная рассылка</a></li>
               </ul>
             </div>
           </div>

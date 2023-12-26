@@ -1146,15 +1146,25 @@ div.pp_default .pp_nav {
   margin-bottom: 0;
 }
 /* TODO: Use `block` display type for single inner element? */
-.fixed-table tbody td a {
+.fixed-table tbody td a:not(.le-btn) {
   text-decoration: none;
 }
-.fixed-table tbody td a:hover {
-  text-decoration: underline;
-}
-.orders-table a {
+.fixed-table tbody td a:not(.le-btn):hover {
+    text-decoration: underline;
+  }
+.orders-table a:not(.le-btn) {
     color: var(--primary-color);
   }
+.orders-table td > .le-btn {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+  }
+.orders-table td > .le-btn[disabled] {
+      opacity: .5;
+      pointer-events: none;
+      cursor: default;
+    }
 .orders-table td#cell-order .orderNo,
     .orders-table td#cell-order .orderDate {
       display: block;
@@ -1214,7 +1224,7 @@ div.pp_default .pp_nav {
 .orders-table td#cell-pay {
     /* min-width: 110px; */
   }
-#section-profile-orders-list button {
+#profile-orders-list-table button {
     white-space: nowrap;
     padding-left: 6px;
     padding-right: 6px;
