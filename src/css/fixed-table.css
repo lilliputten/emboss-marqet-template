@@ -55,10 +55,10 @@
 }
 /* TODO: Use `block` display type for single inner element? */
 
-.fixed-table tbody td a {
+.fixed-table tbody td a:not(.le-btn) {
   text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-.fixed-table tbody td a:hover {
-  text-decoration: underline;
-}

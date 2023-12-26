@@ -22,7 +22,7 @@
         <th id="cell-paymentMethod" title="{{ 'ordersTable.paymentMethod' | i18n }}"><div>{{ 'ordersTable.paymentMethod' | i18n }}</div></th>
         <th id="cell-paymentState" title="{{ 'ordersTable.paymentState' | i18n }}"><div>{{ 'ordersTable.paymentState' | i18n }}</div></th>
         <th id="cell-delivery" title="{{ 'ordersTable.delivery' | i18n }}"><div>{{ 'ordersTable.delivery' | i18n }}</div></th>
-        <th id="cell-pay" title="{{ 'ordersTable.pay' | i18n }}"><div>{{ 'ordersTable.pay' | i18n }}</div></th>
+        <th id="cell-pay" title="{{ 'ordersTable.pay' | i18n }}"><!--div>{{ 'ordersTable.pay' | i18n }}</div--></th>
       </thead>
       <tbody>
         {% for item in ordersList -%}
@@ -44,7 +44,14 @@
             <td id="cell-paymentState" class="{{ item.paymentState }}"><div>{{ ('ordersTable.' + item.paymentState) | i18n }}</div></td>
             <td id="cell-delivery"><div>{{ ('deliveryMethods.' + item.delivery) | i18n }}</div></td>
             <td id="cell-pay">
-              <button class="le-btn small" title="{{ 'ordersTable.pay' | i18n }}">{# <i class="fa fa-credit-card"></i> #}{{ 'ordersTable.pay' | i18n }}</button>
+              <a
+                class="le-btn small"
+                {% if item.paymentState === 'paid' %}disabled{% endif %}
+                title="{{ 'ordersTable.pay' | i18n }}"
+                href="{{ langRootUrl }}/checkout?{{ item.orderNo }}"
+              >
+                <i class="fa fa-credit-card"></i> {{ 'ordersTable.pay' | i18n }}
+              </a>
             </td>
           </tr>
         {% endfor %}
@@ -60,7 +67,7 @@
         </span>
       </div>
       <div class="actions">
-        <button class="le-btn small"><i class="fa fa-credit-card"></i> {{ 'ordersTable.pay' | i18n }}</button>
+        <a class="le-btn" href="{{ langRootUrl }}/checkout"><i class="fa fa-credit-card"></i> {{ 'ordersTable.pay' | i18n }}</a>
       </div>
     </div>
 
