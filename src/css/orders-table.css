@@ -1,6 +1,16 @@
 .orders-table {
-  a {
+  a:not(.le-btn) {
     color: var(--primary-color);
+  }
+  td > .le-btn {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    &[disabled] {
+      opacity: .5;
+      pointer-events: none;
+      cursor: default;
+    }
   }
   td#cell-order {
     .orderNo,
