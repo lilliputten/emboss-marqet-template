@@ -9,17 +9,20 @@
 
   {% set totalSum = 0 %}
 
-  <table class="table">
+  <table class="table fixed-table">
     <thead>
       <tr>
-        <th class="col-xs-12 col-md-2">{{ 'shoppingCart.preview' | i18n }}</th>
-        <th class="col-xs-12 col-md-5">{{ 'shoppingCart.product' | i18n }}</th>
-        <th class="col-xs-12 col-md-2 price-column">{{ 'shoppingCart.price' | i18n }}</th>
-        {% if not hideQuantityColumn %}
-        <th class="col-xs-12 col-md-2">{{ 'shoppingCart.quantity' | i18n }}</th>
-        <th class="col-xs-12 col-md-1 price-column">{{ 'shoppingCart.total' | i18n }}</th>
+        <th class="_col-xs-12 _col-md-2 col-preview" title="{{ 'shoppingCart.preview' | i18n }}"><div>{{ 'shoppingCart.preview' | i18n }}</div></th>
+        <th class="_col-xs-12 _col-md-5 col-product" title="{{ 'shoppingCart.product' | i18n }}"><div>{{ 'shoppingCart.product' | i18n }}</div></th>
+        <th class="_col-xs-12 _col-md-2 _price-column col-price" title="{{ 'shoppingCart.price' | i18n }}"><div>{{ 'shoppingCart.price' | i18n }}</div></th>
+        {% if showInStockColumn %}
+        <th class="_col-xs-12 _col-md-2 col-inStock" title="{{ 'products.inStock' | i18n }}"><div>{{ 'products.inStock' | i18n }}</div></th>
         {% endif %}
-        <th class="col-xs-12 col-md-2">&nbsp;</th>
+        {% if not hideQuantityColumn %}
+        <th class="_col-xs-12 _col-md-2 col-quantity" title="{{ 'shoppingCart.quantity' | i18n }}"><div>{{ 'shoppingCart.quantity' | i18n }}</div></th>
+        <th class="_col-xs-12 _col-md-1 _price-column col-total" title="{{ 'shoppingCart.total' | i18n }}"><div>{{ 'shoppingCart.total' | i18n }}</div></th>
+        {% endif %}
+        <th class="_col-xs-12 _col-md-2 col-actions">&nbsp;</th>
       </tr>
     </thead>
     <tbody>
@@ -29,25 +32,28 @@
       {% set totalSum = totalSum + total %}
 
       <tr>
-        <td>
+        <td class="col-preview">
           <div class="thumb">
             {# <img alt="" src="/images/i-modelist-samples/uaz/medium/02.jpg" /> #}
             <a href="{{ langRootUrl }}/single-product"><img alt="" src="{{ item.image }}" /></a>
           </div>
         </td>
-        <td>
+        <td class="col-product">
           <div class="desc">
             <h3><a href="{{ langRootUrl }}/single-product">{{ item.name }}</a></h3>
             <div class="pid">{{ 'shoppingCart.productCode' | i18n }}: {{ item.id }}</div>
           </div>
         </td>
-        <td>
+        <td class="col-price">
           <div class="price">
             {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}<span class="shopping-cart-price" id="price">{{ item.price }}</span>{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
           </div>
         </td>
+        {% if showInStockColumn %}
+          <td class="col-inStock"><div>{% if item.inStock %}{{ 'products.inStock' | i18n }}{% endif %}</div></td>
+        {% endif %}
         {% if not hideQuantityColumn %}
-        <td>
+        <td class="col-quantity">
           <div class="le-quantity">
             <form>
               <a class="minus" href="#reduce"></a>
@@ -56,16 +62,16 @@
             </form>
           </div>
         </td>
-        <td>
+        <td class="col-total">
           <div class="price">
             {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}<span class="shopping-cart-total" id="total">{{ item.count * item.price }}</span>{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
           </div>
         </td>
         {% endif %}
-        <td>
+        <td class="col-actions">
           <div class="actions">
-            {% if showAddTpoCartButton %}
-            <button class="btn-add-to-cart le-btn small btn-iconic">{{ 'products.addToCart' | i18n }}</button>
+            {% if showAddTpoCartButton and (not showInStockColumn or item.inStock) %}
+            <button class="btn-add-to-cart le-btn small btn-iconic" title="{{ 'products.addToCart' | i18n }}">{{ 'products.toCartWide' | i18n }}</button>
             {% endif %}
             <a class="close-btn" href="#" title="{{ 'products.remove' | i18n }}"></a>
           </div>

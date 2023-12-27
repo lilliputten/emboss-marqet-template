@@ -20,6 +20,7 @@ const basketItems = [
     name: 'Man sport Hiking shoe',
     id: 389645,
     count: 2,
+    inStock: true,
   },
   {
     image: '/vendor/images/products/products-modelist-1/product03.png',
@@ -36,6 +37,7 @@ const basketItems = [
     name: 'Woman highheel shoe',
     id: 83925602,
     count: 1,
+    inStock: true,
   },
   /*
   {
@@ -71,4 +73,3 @@ const basketItems = [
 ];
 
 module.exports = basketItems;
-

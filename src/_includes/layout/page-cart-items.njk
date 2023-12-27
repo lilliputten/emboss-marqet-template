@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="col-xs-12 col-sm-10 col-md-8">
-          <div class="title">{{ item.name }}</div>
+          <div class="title"><a href="{{ langRootUrl }}/single-product">{{ item.name }}</a></div>
           <div class="priceBlock">
             <span class="text-label">{{ 'products.price' | i18n }}:</span> <span class="price">{% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}</span>
           </div>

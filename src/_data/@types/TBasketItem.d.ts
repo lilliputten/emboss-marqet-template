@@ -5,4 +5,5 @@ interface TBasketItem {
   name: string;
   count: number;
   id: number | string;
+  inStock?: boolean;
 }
