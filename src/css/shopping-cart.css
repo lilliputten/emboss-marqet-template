@@ -19,6 +19,13 @@
       }
     }
   }
+  .le-quantity {
+    padding: 0;
+    width: auto;
+    input {
+      padding: 2px;
+    }
+  }
   .actions {
     display: flex;
     align-items: center;

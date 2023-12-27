@@ -63,9 +63,13 @@
   td#cell-orderStatus {
     &.paid,
     &.unpaid,
+    &.unknown,
     &.cancelled,
     &.confirmed {
       @mixin cellWithStatusColor;
+    }
+    &.unknown {
+      @mixin cellStatusColor #999;
     }
     &.unpaid,
     &.cancelled {

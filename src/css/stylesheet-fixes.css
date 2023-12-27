@@ -64,6 +64,11 @@ section {
   margin-bottom: 40px;
 }
 
+.mh-2 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 /* Paddings */
 .pt-0 {
   padding-top: 0;
@@ -151,4 +156,5 @@ section {
 .table-responsive {
   overflow: auto;
 }
+
 
