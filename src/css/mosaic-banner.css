@@ -131,7 +131,7 @@
 }
 @media all and (max-width: 991px) {
   .mosaic-holder .mosaic-banner {
-    margin: 15px;
+    /* margin: 15px; */
   }
 }
 @media (max-width: 460px) {

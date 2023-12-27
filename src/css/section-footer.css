@@ -1,4 +1,8 @@
 .section-footer {
+  .container {
+    background-color: #f0f0f1;
+      padding: 50px 0;
+  }
   .footer-links-holder {
     li {
       display: flex;
