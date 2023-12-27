@@ -50,7 +50,7 @@
           </div>
         </td>
         {% if showInStockColumn %}
-          <td class="col-inStock"><div>{% if item.inStock %}{{ 'products.inStock' | i18n }}{% endif %}</div></td>
+          <td class="col-inStock"><div>{% if item.inStock %}{{ 'products.inStockYes' | i18n }}{% else %}{{ 'products.inStockNo' | i18n }}{% endif %}</div></td>
         {% endif %}
         {% if not hideQuantityColumn %}
         <td class="col-quantity">

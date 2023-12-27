@@ -1,5 +1,5 @@
 type TOrderStatus = 'cancelled' | 'confirmed';
-type TOrderPaymentState = 'paid' | 'unpaid';
+type TOrderPaymentState = 'paid' | 'unpaid' | 'unknown'; // `unknown` state added only for test for 3rd `checkout` button state
 type TOrderPaymentMethod =
   | 'robokassa'
   | 'bankTransfer'

@@ -2,101 +2,105 @@
 
 <section class="section-footer">
   <div class="container">
-    {# Information section #}
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="footer-column">
-        <h2>
-          {# Issue #13: Removed section icons
-          <span class="icon-holder">
-            <i class="fa fa-info"></i>
-            <span class="triangle"></span>
-          </span>
-          #}
-          {{ 'rubrics.informations' | i18n }}
-        </h2>
-        <ul class="footer-links-holder">
-          {# <li><a href="{{ langRootUrl }}/our-blog">{{ 'servicesMenu.ourBlog' | i18n }}</a></li> #}
-          <li><a href="{{ langRootUrl }}/about-our-shop">{{ 'servicesMenu.aboutOurShop' | i18n }}</a></li>
-          <li><a href="{{ langRootUrl }}/payment-informations">{{ 'servicesMenu.paymentInformations' | i18n }}</a></li>
-          {# <li><a href="{{ langRootUrl }}/privacy-policy">{{ 'servicesMenu.privacyPolicy' | i18n }}</a></li> #}
-          <li><a href="{{ langRootUrl }}/delivery-informations">{{ 'servicesMenu.deliveryInformations' | i18n }}</a></li>
-          {# <li><a href="{{ langRootUrl }}/contact-us">{{ 'servicesMenu.contactUs' | i18n }}</a></li> #}
-        </ul>
+    <div class="footer-background">
+
+      {# Information section #}
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="footer-column">
+          <h2>
+            {# Issue #13: Removed section icons
+            <span class="icon-holder">
+              <i class="fa fa-info"></i>
+              <span class="triangle"></span>
+            </span>
+            #}
+            {{ 'rubrics.informations' | i18n }}
+          </h2>
+          <ul class="footer-links-holder">
+            {# <li><a href="{{ langRootUrl }}/our-blog">{{ 'servicesMenu.ourBlog' | i18n }}</a></li> #}
+            <li><a href="{{ langRootUrl }}/about-our-shop">{{ 'servicesMenu.aboutOurShop' | i18n }}</a></li>
+            <li><a href="{{ langRootUrl }}/payment-informations">{{ 'servicesMenu.paymentInformations' | i18n }}</a></li>
+            {# <li><a href="{{ langRootUrl }}/privacy-policy">{{ 'servicesMenu.privacyPolicy' | i18n }}</a></li> #}
+            <li><a href="{{ langRootUrl }}/delivery-informations">{{ 'servicesMenu.deliveryInformations' | i18n }}</a></li>
+            {# <li><a href="{{ langRootUrl }}/contact-us">{{ 'servicesMenu.contactUs' | i18n }}</a></li> #}
+          </ul>
+        </div>
       </div>
-    </div>
-    {# Clients section #}
-    {% if false %}
-    {# Removed block #}
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="footer-column">
-        <h2>
-          {# Issue #13: Removed section icons
-          <span class="icon-holder">
-            <i class="fa  fa-check"></i>
-            <span class="triangle"></span>
-          </span>
-          #}
-          {{ 'rubrics.forClients' | i18n }}
-        </h2>
-        <ul class="footer-links-holder">
-          <li><a href="{{ langRootUrl }}/contact-us">{{ 'servicesMenu.contactUs' | i18n }}</a></li>
-          {# <li><a href="{{ langRootUrl }}/site-map">{{ 'servicesMenu.siteMap' | i18n }}</a></li> #}
-          {# <li><a href="{{ langRootUrl }}/top-sales-bestsellers">{{ 'servicesMenu.topSalesBestsellers' | i18n }}</a></li> #}
-          {# <li><a href="{{ langRootUrl }}/gift-vouchers">{{ 'servicesMenu.giftVouchers' | i18n }}</a></li> #}
-          {# <li><a href="{{ langRootUrl }}/best-sellers">{{ 'servicesMenu.bestSellers' | i18n }}</a></li> #}
-        </ul>
+      {# Clients section #}
+      {% if false %}
+      {# Removed block #}
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="footer-column">
+          <h2>
+            {# Issue #13: Removed section icons
+            <span class="icon-holder">
+              <i class="fa  fa-check"></i>
+              <span class="triangle"></span>
+            </span>
+            #}
+            {{ 'rubrics.forClients' | i18n }}
+          </h2>
+          <ul class="footer-links-holder">
+            <li><a href="{{ langRootUrl }}/contact-us">{{ 'servicesMenu.contactUs' | i18n }}</a></li>
+            {# <li><a href="{{ langRootUrl }}/site-map">{{ 'servicesMenu.siteMap' | i18n }}</a></li> #}
+            {# <li><a href="{{ langRootUrl }}/top-sales-bestsellers">{{ 'servicesMenu.topSalesBestsellers' | i18n }}</a></li> #}
+            {# <li><a href="{{ langRootUrl }}/gift-vouchers">{{ 'servicesMenu.giftVouchers' | i18n }}</a></li> #}
+            {# <li><a href="{{ langRootUrl }}/best-sellers">{{ 'servicesMenu.bestSellers' | i18n }}</a></li> #}
+          </ul>
+        </div>
       </div>
-    </div>
-    {% endif %}
-    {# Profile section #}
-    {% if false and showProfile %}
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="footer-column">
-        <h2>
-          {# Issue #13: Removed section icons
-          <span class="icon-holder">
-            <i class="fa  fa-user"></i>
-            <span class="triangle"></span>
-          </span>
-          #}
-          {{ 'rubrics.account' | i18n }}
-        </h2>
-        <ul class="footer-links-holder">
-          <li><a href="{{ langRootUrl }}/user/order-status">{{ 'servicesMenu.orderStatus' | i18n }}</a></li>
-          <li><a href="{{ langRootUrl }}/user/wishlist">{{ 'servicesMenu.myWishlist' | i18n }}</a></li>
-          <li><a href="{{ langRootUrl }}/user/delivery-address">{{ 'servicesMenu.deliveryAddress' | i18n }}</a></li>
-          <li><a href="{{ langRootUrl }}/user/order-history">{{ 'servicesMenu.orderHistory' | i18n }}</a></li>
-          <li><a href="{{ langRootUrl }}/user/newsletter">{{ 'servicesMenu.newsletter' | i18n }}</a></li>
-        </ul>
+      {% endif %}
+      {# Profile section #}
+      {% if false and showProfile %}
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="footer-column">
+          <h2>
+            {# Issue #13: Removed section icons
+            <span class="icon-holder">
+              <i class="fa  fa-user"></i>
+              <span class="triangle"></span>
+            </span>
+            #}
+            {{ 'rubrics.account' | i18n }}
+          </h2>
+          <ul class="footer-links-holder">
+            <li><a href="{{ langRootUrl }}/user/order-status">{{ 'servicesMenu.orderStatus' | i18n }}</a></li>
+            <li><a href="{{ langRootUrl }}/user/wishlist">{{ 'servicesMenu.myWishlist' | i18n }}</a></li>
+            <li><a href="{{ langRootUrl }}/user/delivery-address">{{ 'servicesMenu.deliveryAddress' | i18n }}</a></li>
+            <li><a href="{{ langRootUrl }}/user/order-history">{{ 'servicesMenu.orderHistory' | i18n }}</a></li>
+            <li><a href="{{ langRootUrl }}/user/newsletter">{{ 'servicesMenu.newsletter' | i18n }}</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-    {% endif %}
-    {# Contacts section #}
-    {# Issue #13: Removed block
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="footer-column">
-        <h2>
-          { # Issue #13: Removed section icons
-          <span class="icon-holder">
-            <i class="fa  fa-phone"></i>
-            <span class="triangle"></span>
-          </span>
-          # }
-          {{ 'rubrics.contacts' | i18n }}
-        </h2>
-        <p>
-        <strong>{{ 'site.name' | i18n }}</strong><br>
-          {{ 'company.address' | i18n }}<br>
-          {{ site.phone }}
-        </p>
-        <ul class="social-icons triangled">
-          <li><a href="#" class="fa fa-facebook"></a></li>
-          <li><a href="#" class="fa fa-google-plus"></a></li>
-          <li><a href="#" class="fa fa-rss"></a></li>
-          <li><a href="#" class="fa fa-linkedin"></a></li>
-        </ul>
+      {% endif %}
+      {# Contacts section #}
+      {# Issue #13: Removed block
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="footer-column">
+          <h2>
+            { # Issue #13: Removed section icons
+            <span class="icon-holder">
+              <i class="fa  fa-phone"></i>
+              <span class="triangle"></span>
+            </span>
+            # }
+            {{ 'rubrics.contacts' | i18n }}
+          </h2>
+          <p>
+          <strong>{{ 'site.name' | i18n }}</strong><br>
+            {{ 'company.address' | i18n }}<br>
+            {{ site.phone }}
+          </p>
+          <ul class="social-icons triangled">
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-google-plus"></a></li>
+            <li><a href="#" class="fa fa-rss"></a></li>
+            <li><a href="#" class="fa fa-linkedin"></a></li>
+          </ul>
+        </div>
       </div>
+      #}
+
     </div>
-    #}
   </div>
 </section>

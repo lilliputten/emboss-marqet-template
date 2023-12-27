@@ -44,14 +44,16 @@
             <td id="cell-paymentState" class="{{ item.paymentState }}"><div>{{ ('ordersTable.' + item.paymentState) | i18n }}</div></td>
             <td id="cell-delivery"><div>{{ ('deliveryMethods.' + item.delivery) | i18n }}</div></td>
             <td id="cell-pay">
+              {% if item.paymentState !== 'paid' %}
               <a
                 class="le-btn small"
-                {% if item.paymentState === 'paid' %}disabled{% endif %}
+                {% if item.paymentState !== 'unpaid' %}disabled{% endif %}
                 title="{{ 'ordersTable.pay' | i18n }}"
                 href="{{ langRootUrl }}/checkout?{{ item.orderNo }}"
               >
                 <i class="fa fa-credit-card"></i> {{ 'ordersTable.pay' | i18n }}
               </a>
+              {% endif %}
             </td>
           </tr>
         {% endfor %}

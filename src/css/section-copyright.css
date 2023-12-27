@@ -2,8 +2,9 @@
   .container {
     display: flex;
     align-items: center;
-    background-color: #e0e1e0;
-    .copyright-links {
+    .footer-background {
+      background-color: #e0e1e0;
+      padding: 0 20px;
     }
   }
 }
