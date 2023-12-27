@@ -87,6 +87,10 @@ section {
 .mb-4 {
   margin-bottom: 40px;
 }
+.mh-2 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
 /* Paddings */
 .pt-0 {
   padding-top: 0;
@@ -247,12 +251,31 @@ section {
     display: flex;
     align-items: center;
   }
-.section-copyright .container .copyright-links {
+.section-copyright .container .footer-background {
+      background-color: #e0e1e0;
+      padding: 0 20px;
+    }
+.section-footer .container .footer-background {
+      padding-top: 40px;
+      padding-bottom: 30px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
     }
 .section-footer .footer-links-holder li {
       display: flex;
       align-items: center;
     }
+/* Footer styles */
+.footer-background {
+  background-color: #f0f0f1;
+  width: 100%;
+ }
+.footer-background:before,
+  .footer-background:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
 /* Product item */
 .product-item {
   /* width: 285px; */
@@ -652,11 +675,53 @@ section {
 .shopping-cart-page.box {
     /* background-color: var(--product-item-background); */
   }
+#shopping-cart-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+
+}
+#shopping-cart-list table {
+    flex: 1;
+  }
+#shopping-cart-list table .desc {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+#shopping-cart-list table .desc > * {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+#shopping-cart-list .le-quantity {
+    padding: 0;
+    width: auto;
+  }
+#shopping-cart-list .le-quantity input {
+      padding: 2px;
+    }
 #shopping-cart-list .actions {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 10px;
   }
+#shopping-cart-list .actions button {
+      white-space: nowrap;
+    }
+/* overflow: hidden; */
+/* text-overflow: ellipsis; */
+@media (max-width: 768px) {
+#shopping-cart-list .actions button {
+        /* Show only icon */
+        max-width: 36px;
+        color: transparent;
+        padding-left: 9px
+    }
+        #shopping-cart-list .actions button::before {
+          color: white;
+        }
+      }
 #shopping-cart-list .actions .close-btn {
       display: flex;
       align-items: center;
@@ -669,7 +734,53 @@ section {
       font-size: 20px;
       width: 20px;
       height: 20px;
+      color: var(--primary-color);
     }
+#shopping-cart-list .actions .close-btn:hover {
+        text-decoration: none;
+        color: var(--primary-color-dark);
+      }
+/* Adjust table... */
+#shopping-cart-list th > div {
+    white-space: nowrap;
+  }
+#shopping-cart-list .col-preview { width: 10em; }
+/* .col-product { width: 8em; } */
+#shopping-cart-list .col-price { width: 8em; }
+#shopping-cart-list .col-inStock { width: 7em; }
+#shopping-cart-list .col-quantity { width: 8em; }
+#shopping-cart-list .col-total { width: 8em; }
+#shopping-cart-list .col-actions { width: 10em; }
+#shopping-cart-list .col-product h3 {
+    text-transform: none;
+  }
+#shopping-cart-list .col-inStock,
+  #shopping-cart-list .col-price,
+  #shopping-cart-list .col-total {
+    text-align: center;
+  }
+/* Customize columns for mobile devices */
+@media (max-width: 992px) {
+    #shopping-cart-list .col-inStock { width: 6em; }
+    #shopping-cart-list .col-price { width: 6em; }
+    #shopping-cart-list .col-total { width: 6em; }
+  }
+@media (max-width: 768px) {
+#shopping-cart-list {
+    /* .col-preview, */
+
+}
+    #shopping-cart-list .col-inStock {
+      display: none;
+    }
+    #shopping-cart-list .col-preview { width: 6em; }
+    #shopping-cart-list .col-actions { width: 5em; }
+  }
+@media (max-width: 520px) {
+    #shopping-cart-list .col-preview {
+      display: none;
+    }
+  }
 select.mobile-dropdown {
     display: none !important;
   }
@@ -833,7 +944,7 @@ section#breadcrumb .iconic-nav-bar.no-icon .bar {
 }
 @media all and (max-width: 991px) {
   .mosaic-holder .mosaic-banner {
-    margin: 15px;
+    /* margin: 15px; */
   }
 }
 @media (max-width: 460px) {
@@ -1190,22 +1301,24 @@ div.pp_default .pp_nav {
     font-weight: 600 !important;
   }
 .orders-table {
-    }
+}
 .orders-table {
-    }
+}
 .orders-table {
-    }
+}
 .orders-table td#cell-paymentState.paid,
     .orders-table td#cell-paymentState.unpaid,
+    .orders-table td#cell-paymentState.unknown,
     .orders-table td#cell-paymentState.cancelled,
     .orders-table td#cell-paymentState.confirmed,
     .orders-table td#cell-orderStatus.paid,
     .orders-table td#cell-orderStatus.unpaid,
+    .orders-table td#cell-orderStatus.unknown,
     .orders-table td#cell-orderStatus.cancelled,
     .orders-table td#cell-orderStatus.confirmed {
       white-space: nowrap;
     }
-.orders-table td#cell-paymentState.paid > div:before, .orders-table td#cell-paymentState.unpaid > div:before, .orders-table td#cell-paymentState.cancelled > div:before, .orders-table td#cell-paymentState.confirmed > div:before, .orders-table td#cell-orderStatus.paid > div:before, .orders-table td#cell-orderStatus.unpaid > div:before, .orders-table td#cell-orderStatus.cancelled > div:before, .orders-table td#cell-orderStatus.confirmed > div:before {
+.orders-table td#cell-paymentState.paid > div:before, .orders-table td#cell-paymentState.unpaid > div:before, .orders-table td#cell-paymentState.unknown > div:before, .orders-table td#cell-paymentState.cancelled > div:before, .orders-table td#cell-paymentState.confirmed > div:before, .orders-table td#cell-orderStatus.paid > div:before, .orders-table td#cell-orderStatus.unpaid > div:before, .orders-table td#cell-orderStatus.unknown > div:before, .orders-table td#cell-orderStatus.cancelled > div:before, .orders-table td#cell-orderStatus.confirmed > div:before {
       content: ' ';
       display: inline-block;
       border-radius: 50%;
@@ -1214,6 +1327,9 @@ div.pp_default .pp_nav {
       margin-right: 4px;
       /* background-color: #999; */
       /* vertical-align: middle; */
+    }
+.orders-table td#cell-paymentState.unknown > div:before, .orders-table td#cell-orderStatus.unknown > div:before {
+      background-color: #999;
     }
 .orders-table td#cell-paymentState.unpaid > div:before, .orders-table td#cell-paymentState.cancelled > div:before, .orders-table td#cell-orderStatus.unpaid > div:before, .orders-table td#cell-orderStatus.cancelled > div:before {
       background-color: var(--common-error-color);

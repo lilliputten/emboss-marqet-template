@@ -7146,6 +7146,14 @@ header .link-list {
 .top-nav-holder .basket-holder .basket .basket-item .title {
   font-weight: 700!important;
   font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 20px;
+  line-height: 1.2;
+  margin: 3px 0;
+}
+.top-nav-holder .basket-holder .basket .basket-item .title a {
+  padding: 0;
 }
 .top-nav-holder .basket-holder .basket .basket-item .price {
   font-size: 14px;
@@ -7153,6 +7161,10 @@ header .link-list {
 .top-nav-holder .basket-holder .basket .basket-item .close-btn {
   top: 15px;
   right: 10px;
+  color: var(--primary-color);
+}
+.top-nav-holder .basket-holder .basket .basket-item .close-btn:hover {
+  color: var(--primary-color-dark);
 }
 .top-nav-holder .basket-holder .basket .dropdown-menu {
   top: 98%;
@@ -7940,8 +7952,6 @@ header .link-list {
 }
 .section-footer {
   margin: 0;
-  padding: 50px 0;
-  background-color: #f0f0f1;
 }
 .section-footer .footer-column h2 {
   font-size: 15px;
@@ -8027,7 +8037,6 @@ header .link-list {
 /*Copyright*/
 .section-copyright {
   text-align: right;
-  background-color: #e0e1e0;
   margin: 0;
 }
 .copyright {
