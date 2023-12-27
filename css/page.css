@@ -253,7 +253,7 @@ section {
   }
 .section-copyright .container .footer-background {
       background-color: #e0e1e0;
-      padding: 0 20px;
+      /* padding: 0 20px; */
     }
 .section-footer .container .footer-background {
       padding-top: 40px;
