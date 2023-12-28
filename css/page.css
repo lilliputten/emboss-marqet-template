@@ -704,41 +704,21 @@ section {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 5px;
   }
+#shopping-cart-list .actions button .fa {
+        font-size: 14px;
+      }
 #shopping-cart-list .actions button {
       white-space: nowrap;
-    }
-/* overflow: hidden; */
-/* text-overflow: ellipsis; */
+}
 @media (max-width: 768px) {
 #shopping-cart-list .actions button {
         /* Show only icon */
-        max-width: 36px;
-        color: transparent;
-        padding-left: 9px
     }
-        #shopping-cart-list .actions button::before {
-          color: white;
+        #shopping-cart-list .actions button span {
+          display: none;
         }
-      }
-#shopping-cart-list .actions .close-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      /* top: -8px; */
-      /* right: auto; */
-      position: relative;
-      top: auto;
-      right: auto;
-      font-size: 20px;
-      width: 20px;
-      height: 20px;
-      color: var(--primary-color);
-    }
-#shopping-cart-list .actions .close-btn:hover {
-        text-decoration: none;
-        color: var(--primary-color-dark);
       }
 /* Adjust table... */
 #shopping-cart-list th > div {
@@ -747,10 +727,10 @@ section {
 #shopping-cart-list .col-preview { width: 10em; }
 /* .col-product { width: 8em; } */
 #shopping-cart-list .col-price { width: 8em; }
-#shopping-cart-list .col-inStock { width: 7em; }
-#shopping-cart-list .col-quantity { width: 8em; }
+#shopping-cart-list .col-inStock { width: 8em; }
+#shopping-cart-list .col-quantity { width: 8.5em; }
 #shopping-cart-list .col-total { width: 8em; }
-#shopping-cart-list .col-actions { width: 10em; }
+#shopping-cart-list .col-actions { width: 14em; }
 #shopping-cart-list .col-product h3 {
     text-transform: none;
   }
@@ -774,7 +754,7 @@ section {
       display: none;
     }
     #shopping-cart-list .col-preview { width: 6em; }
-    #shopping-cart-list .col-actions { width: 5em; }
+    #shopping-cart-list .col-actions { width: 8em; }
   }
 @media (max-width: 520px) {
     #shopping-cart-list .col-preview {
