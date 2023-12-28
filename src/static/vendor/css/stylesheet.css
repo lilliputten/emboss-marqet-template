@@ -8614,10 +8614,11 @@ header .link-list {
 .shopping-cart-page thead th {
   padding-top: 0!important;
   text-transform: uppercase;
-  font-size: 17px;
+  opacity: .8;
+  /* font-size: 17px; */
 }
 .shopping-cart-page thead th:nth-child(n+3) {
-  text-align: center;
+  /* text-align: center; */
 }
 .shopping-cart-page td {
   vertical-align: middle!important;

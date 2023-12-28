@@ -10,21 +10,23 @@
   {% set totalSum = 0 %}
 
   <table class="table fixed-table">
+    {# Issue #15: No table header
     <thead>
       <tr>
-        <th class="_col-xs-12 _col-md-2 col-preview" title="{{ 'shoppingCart.preview' | i18n }}"><div>{{ 'shoppingCart.preview' | i18n }}</div></th>
-        <th class="_col-xs-12 _col-md-5 col-product" title="{{ 'shoppingCart.product' | i18n }}"><div>{{ 'shoppingCart.product' | i18n }}</div></th>
-        <th class="_col-xs-12 _col-md-2 _price-column col-price" title="{{ 'shoppingCart.price' | i18n }}"><div>{{ 'shoppingCart.price' | i18n }}</div></th>
+        <th class="col-preview" title="{{ 'shoppingCart.preview' | i18n }}"><!--div>{{ 'shoppingCart.preview' | i18n }}</div--></th>
+        <th class="col-product" title="{{ 'shoppingCart.product' | i18n }}"><div>{{ 'shoppingCart.product' | i18n }}</div></th>
+        <th class="col-price" title="{{ 'shoppingCart.price' | i18n }}"><div>{{ 'shoppingCart.price' | i18n }}</div></th>
         {% if showInStockColumn %}
-        <th class="_col-xs-12 _col-md-2 col-inStock" title="{{ 'products.inStock' | i18n }}"><div>{{ 'products.inStock' | i18n }}</div></th>
+        <th class="col-inStock" title="{{ 'products.inStock' | i18n }}"><div>{{ 'products.inStock' | i18n }}</div></th>
         {% endif %}
         {% if not hideQuantityColumn %}
-        <th class="_col-xs-12 _col-md-2 col-quantity" title="{{ 'shoppingCart.quantity' | i18n }}"><div>{{ 'shoppingCart.quantity' | i18n }}</div></th>
-        <th class="_col-xs-12 _col-md-1 _price-column col-total" title="{{ 'shoppingCart.total' | i18n }}"><div>{{ 'shoppingCart.total' | i18n }}</div></th>
+        <th class="col-quantity" title="{{ 'shoppingCart.quantity' | i18n }}"><div>{{ 'shoppingCart.quantity' | i18n }}</div></th>
+        <th class="col-total" title="{{ 'shoppingCart.total' | i18n }}"><div>{{ 'shoppingCart.total' | i18n }}</div></th>
         {% endif %}
-        <th class="_col-xs-12 _col-md-2 col-actions">&nbsp;</th>
+        <th class="col-actions">&nbsp;</th>
       </tr>
     </thead>
+    #}
     <tbody>
     {% for item in basketItems -%}
 
@@ -71,9 +73,12 @@
         <td class="col-actions">
           <div class="actions">
             {% if showAddTpoCartButton and (not showInStockColumn or item.inStock) %}
-            <button class="btn-add-to-cart le-btn small btn-iconic" title="{{ 'products.addToCart' | i18n }}">{{ 'products.toCartWide' | i18n }}</button>
+                                                                                                                                                                                                       <button class="btn-add-to-cart_ le-btn small btn-iconic" title="{{ 'products.addToCart' | i18n }}"><i class="fa fa-shopping-cart"></i> <span>{{ 'products.toCartWide' | i18n }}</span></button>
             {% endif %}
+            <button class="le-btn small btn-iconic" title="{{ 'products.remove' | i18n }}"><i class="fa fa-times"></i></button>
+            <!--
             <a class="close-btn" href="#" title="{{ 'products.remove' | i18n }}"></a>
+            -->
           </div>
         </td>
       </tr>
