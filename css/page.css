@@ -728,13 +728,14 @@ section {
 /* .col-product { width: 8em; } */
 #shopping-cart-list .col-price { width: 8em; }
 #shopping-cart-list .col-inStock { width: 8em; }
-#shopping-cart-list .col-quantity { width: 8.5em; }
+#shopping-cart-list .col-quantity { width: 9em; }
 #shopping-cart-list .col-total { width: 8em; }
 #shopping-cart-list .col-actions { width: 14em; }
 #shopping-cart-list .col-product h3 {
     text-transform: none;
   }
-#shopping-cart-list .col-inStock,
+#shopping-cart-list .col-quantity,
+  #shopping-cart-list .col-inStock,
   #shopping-cart-list .col-price,
   #shopping-cart-list .col-total {
     text-align: center;
