@@ -225,7 +225,7 @@ const en = {
     telephone: 'Telephone',
     zipCode: 'Zip code',
     addressCity: 'City',
-    addressText: 'Address text',
+    addressText: 'Address',
     addressLine1: 'Address line 1',
     addressLine2: 'Address line 2',
     example: 'Example',

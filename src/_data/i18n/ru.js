@@ -227,7 +227,7 @@ const ru = {
     telephone: 'Телефон',
     zipCode: 'Почтовый индекс',
     addressCity: 'Город',
-    addressText: 'Текст адреса',
+    addressText: 'Адрес',
     addressLine1: 'Адресная строка 1',
     addressLine2: 'Адресная строка 2',
     example: 'Пример',
