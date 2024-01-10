@@ -78,6 +78,18 @@
     .basket-holder {
       width: 100%;
     }
+    .basket-holder .basket .dropdown-menu {
+      width: 100%;
+      left: 0%;
+    }
+    /* // Adaptive text sizes aren't used.
+    .top-nav-holder .basket-holder .basket .basket-item .title {
+      font-size: 19px;
+    }
+    .top-nav-holder .basket-holder .basket .basket-item .price {
+      font-size: 15px;
+    }
+    */
   }
   @media all and (min-width: 300px) and (max-width: 991px) {
     /* Remove extra inner paddings... */
