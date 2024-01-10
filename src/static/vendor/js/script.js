@@ -212,6 +212,7 @@
        * menu.prepend('<li class="empty">Empty</li>');
        */
     }
+
     // Quantity element in shopping cart list (TODO: Update for new dynamically added items?)
     $('.le-quantity a').click(function (e) {
       var thisNode = $(this);

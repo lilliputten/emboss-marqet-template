@@ -2,43 +2,6 @@
 {% set currencyId = 'rub' if lang === 'ru' else 'usd' %}
 
 <header class="page-header">
-  {# Issue #13: No top black block at all
-  <div class="top-bar">
-    <div class="container">
-      <div class="col-xs-12 col-sm-6">
-        <ul class="info-inline">
-          <li>
-            <a href="tel:{{ site.phone }}"><i class="fa fa-phone"></i> {{ site.phone }}</a>
-          </li>
-          <li>
-            <a href="mailto:{{ site.email }}"><i class="fa fa-envelope"></i> {{ site.email }}</a>
-          </li>
-        </ul>
-      </div>
-      <!-- NOTE: No social icons
-      <div class="col-xs-12 col-sm-6">
-        <ul class="social-icons small">
-          <li>
-            <a href="#" class="fa fa-facebook-square"></a>
-          </li>
-          <li>
-            <a href="#" class="fa fa-twitter-square"></a>
-          </li>
-          <li>
-            <a href="#" class="fa fa-pinterest-square"></a>
-          </li>
-          <li>
-            <a href="#" class="fa fa-linkedin-square"></a>
-          </li>
-          <li>
-            <a href="#" class="fa fa-google-plus-square"></a>
-          </li>
-        </ul>
-      </div>
-      -->
-    </div>
-  </div>
-  #}
   <div class="container header-row">
     <div class="logo-cell col-xs-12 col-md-4">
       <div class="logo">
@@ -58,9 +21,6 @@
     <div class="top-nav-holder">
       <div class="row">
         <div class="col-xs-12 col-md-6 col-lg-7 nav-menu top-menu-holder">
-          {# Issue #13: Home button isn't used
-          <div class="home-icon-button"><a href="/" title="{{ 'headerLinks.homepage' | i18n }}"><i class="fa fa-home" alt="{{ 'headerLinks.homepage' | i18n }}"></i></a></div>
-          #}
           <nav class="hidden-xs visible-sm visible-lg visible-md">
             <!-- Site main menu... -->
             {% include 'layout/page-main-menu.njk' %}
@@ -87,11 +47,6 @@
                     3
                   </span>
                 </div>
-                {# NOTE: Price removed due to issue #13
-                <span class="total-price">
-                  {{ 'site.currency' | i18n }}389.99
-                </span>
-                #}
               </a>
               <ul class="dropdown-menu">
                 <!-- Cart items -->
@@ -102,12 +57,6 @@
                 </li>
                 <!-- Cart actions (for non-empty one) -->
                 <li class="checkout">
-                  {# Issue #13: Only one button
-                  <div class="merged-buttons">
-                    <a href="{{ langRootUrl }}/checkout" class="btn-add-to-cart le-btn">{{ 'headerLinks.checkout' | i18n }}</a>
-                    <a href="{{ langRootUrl }}/shopping-cart" class="btn-add-to-wishlist le-btn">{{ 'headerLinks.showCart' | i18n }}</a>
-                  </div>
-                  #}
                   <div align="center">
                     <a href="{{ langRootUrl }}/shopping-cart" class="btn-add-to-wishlist le-btn">{{ 'headerLinks.showCart' | i18n }}</a>
                   </div>
