@@ -8988,16 +8988,6 @@ select.top-drop-menu {
     margin-top: 20px;
     margin-bottom: 65px;
   }
-  .top-nav-holder .basket-holder .basket .basket-item .title {
-    font-size: 19px;
-  }
-  .top-nav-holder .basket-holder .basket .basket-item .price {
-    font-size: 15px;
-  }
-  .top-nav-holder .basket-holder .basket .dropdown-menu {
-    width: 100%;
-    left: 0%;
-  }
   .top-nav-holder .basket-holder .basket .megamenu .dropdown-menu {
     width: 720px;
     min-width: 720px;
