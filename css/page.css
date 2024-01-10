@@ -197,12 +197,10 @@ section {
           color: var(--secondary-color);
         }
 .page-header .info-inline a {
-      /* color: #fff; */
       opacity: 1;
     }
 .page-header .info-inline a:hover {
         color: var(--active-color);
-        /* color: var(--secondary-color); */
       }
 .page-header .top-nav-holder .yamm-content ul > li > a {
     display: block;
@@ -227,14 +225,6 @@ section {
       display: flex;
       flex-direction: column;
 }
-/* Issue #13: Top home icon isn't used
-  .top-menu-holder {
-    .mobile-dropdown,
-    nav {
-      margin-left: 36px;
-    }
-  }
-  */
 .page-header .home-icon-button {
     position: absolute;
     left: 20px;
@@ -246,6 +236,31 @@ section {
     width: 30px;
     height: 30px;
     line-height: 30px;
+  }
+/* Basket & search row */
+@media all and (max-width: 299px) {
+    .page-header .search-holder,
+    .page-header .basket-holder {
+      width: 100%;
+    }
+  }
+@media all and (min-width: 300px) and (max-width: 991px) {
+.page-header {
+    /* Remove extra inner paddings... */
+    /* Widths... /*/
+}
+    .page-header .search-holder {
+      padding-right: 0 !important;
+    }
+    .page-header .basket-holder {
+      padding-left: 0 !important;
+    }
+    .page-header .search-holder {
+      width: calc(100% - 80px);
+    }
+    .page-header .basket-holder {
+      width: 80px;
+    }
   }
 .section-copyright .container {
     display: flex;
