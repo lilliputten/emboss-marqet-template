@@ -34,11 +34,9 @@
       }
     }
     a {
-      /* color: #fff; */
       opacity: 1;
       &:hover {
         color: var(--active-color);
-        /* color: var(--secondary-color); */
       }
     }
   }
@@ -61,14 +59,6 @@
       flex-direction: column;
     }
   }
-  /* Issue #13: Top home icon isn't used
-  .top-menu-holder {
-    .mobile-dropdown,
-    nav {
-      margin-left: 36px;
-    }
-  }
-  */
   .home-icon-button {
     position: absolute;
     left: 20px;
@@ -80,5 +70,30 @@
     width: 30px;
     height: 30px;
     line-height: 30px;
+  }
+
+  /* Basket & search row */
+  @media all and (max-width: 299px) {
+    .search-holder,
+    .basket-holder {
+      width: 100%;
+    }
+  }
+  @media all and (min-width: 300px) and (max-width: 991px) {
+    /* Remove extra inner paddings... */
+    .search-holder {
+      padding-right: 0 !important;
+    }
+    .basket-holder {
+      padding-left: 0 !important;
+    }
+    /* Widths... /*/
+    $basketWidth: 80px;
+    .search-holder {
+      width: calc(100% - $basketWidth);
+    }
+    .basket-holder {
+      width: $basketWidth;
+    }
   }
 }
