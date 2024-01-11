@@ -1,5 +1,5 @@
 :root {
-  /* Global variables from `src/static/vendor/css/stylesheet.less` */
+  // Global variables from `src/static/vendor/css/stylesheet.less`
 
   --black: #000000;
   --dark: #323232;
@@ -11,12 +11,12 @@
   --orange: #fa8411;
   --light: #e3e8e4;
 
-  --primary-color: #1da796; /* color1 */
+  --primary-color: #1da796; // color1
   --primary-color-dark: #157c6f;
-  --secondary-color: #8bb040; /* color2 */
+  --secondary-color: #8bb040; // color2
   --active-color: #59b210;
 
-  /* Custom variables... */
+  // Custom variables...
 
   --product-item-background: #fff;
   --product-item-body-background: #f8f8f8;
@@ -24,8 +24,8 @@
 
   --transition-timeout: 250ms;
 
-  /* Main colors */
-  --common-error-color: #b00; /* 187 0 0 */
+  // Main colors
+  --common-error-color: #b00; // 187 0 0
   --common-warn-color: #960;
   --common-success-color: #181;
 }
