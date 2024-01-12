@@ -36,8 +36,8 @@
     <link rel="stylesheet" href="../vendor/css/animate.css" />
     <link rel="stylesheet" href="../vendor/css/owl.carousel.css" />
     <link rel="stylesheet" href="../vendor/css/owl.theme.css" />
-    <link rel="stylesheet" href="../vendor/css/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../vendor/css/bootstrap-select.min.css" />
+
+    <link rel="stylesheet" href="../vendor/css/bootstrap-select.css" />
     <link rel="stylesheet" href="../vendor/css/yamm.css" />
     <link
       rel="stylesheet"
@@ -213,6 +213,39 @@
                                 <a href="/single-product"
                                   ><img
                                     alt=""
+                                    src="../vendor/images/products/products-modelist-1/product01.png"
+                                /></a>
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-8">
+                              <div class="title">
+                                <a href="/single-product"
+                                  >Looking lorem round, to ascertain that they -
+                                  extra_long_text_line_for_testing_purposes_only</a
+                                >
+                              </div>
+                              <div class="priceBlock">
+                                <span class="text-label">Цена:</span>
+                                <span class="price"
+                                  >1450<span class="currency">₽</span></span
+                                >
+                              </div>
+                              <div class="countBlock">
+                                <span class="text-label">Кол-во:</span> 1
+                              </div>
+                            </div>
+                          </div>
+                          <a class="close-btn" href="#" title="Удалить"></a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="basket-item">
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-4">
+                              <div class="thumb">
+                                <a href="/single-product"
+                                  ><img
+                                    alt=""
                                     src="../vendor/images/products/products-modelist-1/product02.png"
                                 /></a>
                               </div>
@@ -350,184 +383,232 @@
 
       <section id="section-profile-layout">
         <div class="container no-padding">
-          <div class="section-profile-sidebar col-xs-12" id="main-content">
-            <div class="box pb-0" id="section-profile-orders-list">
-              <div class="box-holder mt-1 pb-0">
+          <div class="section-profile-content col-xs-12" id="main-content">
+            <div class="box" id="section-profile-wishlist">
+              <div class="box-holder mt-1">
                 <h2 align="center">Список желаний</h2>
 
-                <div class="shopping-cart-page">
+                <div class="section-profile-wishlist-page">
                   <div
-                    class="shopping-cart-shopping-cart-list"
+                    class="shopping-cart-shopping-cart-list wide-action-column"
                     id="shopping-cart-list"
-                    class="table-responsive"
                   >
-                    <table class="table fixed-table">
-                      <thead>
-                        <tr>
-                          <th class="col-preview" title="Предпросмотр">
-                            <!--div>Предпросмотр</div-->
-                          </th>
-                          <th class="col-product" title="Наименование">
-                            <div>Наименование</div>
-                          </th>
-                          <th class="col-price" title="Цена">
-                            <div>Цена</div>
-                          </th>
+                    <div class="fixed-table-scroll-wrapper">
+                      <table class="fixed-table">
+                        <thead>
+                          <tr>
+                            <th class="col-preview" title="Предпросмотр">
+                              <!--div>Предпросмотр</div-->
+                            </th>
+                            <th class="col-product" title="Наименование">
+                              <div>Наименование</div>
+                            </th>
+                            <th class="col-price" title="Цена">
+                              <div>Цена</div>
+                            </th>
 
-                          <th class="col-inStock" title="В наличии">
-                            <div>В наличии</div>
-                          </th>
+                            <th class="col-inStock" title="В наличии">
+                              <div>В наличии</div>
+                            </th>
 
-                          <th class="col-actions">&nbsp;</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td class="col-preview">
-                            <div class="thumb">
-                              <a href="/single-product"
-                                ><img
-                                  alt=""
-                                  src="../vendor/images/products/products-modelist-1/product02.png"
-                              /></a>
-                            </div>
-                          </td>
-                          <td class="col-product">
-                            <div class="desc">
-                              <a href="/single-product">
-                                <h3>Man sport Hiking shoe</h3>
-                                <div class="pid">Артикул: 389645</div>
-                              </a>
-                            </div>
-                          </td>
-                          <td class="col-price">
-                            <div class="price">
-                              <span class="shopping-cart-price" id="price"
-                                >245</span
-                              ><span class="currency">₽</span>
-                            </div>
-                          </td>
+                            <th class="col-actions">&nbsp;</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="col-preview">
+                              <div class="thumb">
+                                <a href="/single-product"
+                                  ><img
+                                    alt=""
+                                    src="../vendor/images/products/products-modelist-1/product01.png"
+                                /></a>
+                              </div>
+                            </td>
+                            <td class="col-product">
+                              <div class="desc">
+                                <a href="/single-product">
+                                  <h3>
+                                    Looking lorem round, to ascertain that they
+                                    -
+                                    extra_long_text_line_for_testing_purposes_only
+                                  </h3>
+                                  <div class="pid">Артикул: 4564789</div>
+                                </a>
+                              </div>
+                            </td>
+                            <td class="col-price">
+                              <div class="price">
+                                <span class="shopping-cart-price" id="price"
+                                  >1450</span
+                                ><span class="currency">₽</span>
+                              </div>
+                            </td>
 
-                          <td class="col-inStock"><div>Есть</div></td>
+                            <td class="col-inStock"><div>Нет</div></td>
 
-                          <td class="col-actions">
-                            <div class="actions">
-                              <button
-                                class="le-btn small btn-iconic"
-                                title="Добавить в корзину"
-                              >
-                                <i class="fa fa-shopping-cart"></i>
-                                <span>В корзину</span>
-                              </button>
+                            <td class="col-actions">
+                              <div class="actions">
+                                <button
+                                  class="le-btn small btn-iconic"
+                                  title="Удалить"
+                                >
+                                  <i class="fa fa-times"></i>
+                                </button>
+                                <!--
+              <a class="close-btn" href="#" title="Удалить"></a>
+              -->
+                              </div>
+                            </td>
+                          </tr>
 
-                              <button
-                                class="le-btn small btn-iconic"
-                                title="Удалить"
-                              >
-                                <i class="fa fa-times"></i>
-                              </button>
-                              <!--
-            <a class="close-btn" href="#" title="Удалить"></a>
-            -->
-                            </div>
-                          </td>
-                        </tr>
+                          <tr>
+                            <td class="col-preview">
+                              <div class="thumb">
+                                <a href="/single-product"
+                                  ><img
+                                    alt=""
+                                    src="../vendor/images/products/products-modelist-1/product02.png"
+                                /></a>
+                              </div>
+                            </td>
+                            <td class="col-product">
+                              <div class="desc">
+                                <a href="/single-product">
+                                  <h3>Man sport Hiking shoe</h3>
+                                  <div class="pid">Артикул: 389645</div>
+                                </a>
+                              </div>
+                            </td>
+                            <td class="col-price">
+                              <div class="price">
+                                <span class="shopping-cart-price" id="price"
+                                  >245</span
+                                ><span class="currency">₽</span>
+                              </div>
+                            </td>
 
-                        <tr>
-                          <td class="col-preview">
-                            <div class="thumb">
-                              <a href="/single-product"
-                                ><img
-                                  alt=""
-                                  src="../vendor/images/products/products-modelist-1/product03.png"
-                              /></a>
-                            </div>
-                          </td>
-                          <td class="col-product">
-                            <div class="desc">
-                              <a href="/single-product">
-                                <h3>Woman highheel shoe</h3>
-                                <div class="pid">Артикул: 8464759</div>
-                              </a>
-                            </div>
-                          </td>
-                          <td class="col-price">
-                            <div class="price">
-                              <span class="shopping-cart-price" id="price"
-                                >245</span
-                              ><span class="currency">₽</span>
-                            </div>
-                          </td>
+                            <td class="col-inStock"><div>Есть</div></td>
 
-                          <td class="col-inStock"><div>Нет</div></td>
+                            <td class="col-actions">
+                              <div class="actions">
+                                <button
+                                  class="le-btn small btn-iconic"
+                                  title="Добавить в корзину"
+                                >
+                                  <i class="fa fa-shopping-cart"></i>
+                                  <span>В корзину</span>
+                                </button>
 
-                          <td class="col-actions">
-                            <div class="actions">
-                              <button
-                                class="le-btn small btn-iconic"
-                                title="Удалить"
-                              >
-                                <i class="fa fa-times"></i>
-                              </button>
-                              <!--
-            <a class="close-btn" href="#" title="Удалить"></a>
-            -->
-                            </div>
-                          </td>
-                        </tr>
+                                <button
+                                  class="le-btn small btn-iconic"
+                                  title="Удалить"
+                                >
+                                  <i class="fa fa-times"></i>
+                                </button>
+                                <!--
+              <a class="close-btn" href="#" title="Удалить"></a>
+              -->
+                              </div>
+                            </td>
+                          </tr>
 
-                        <tr>
-                          <td class="col-preview">
-                            <div class="thumb">
-                              <a href="/single-product"
-                                ><img
-                                  alt=""
-                                  src="../vendor/images/products/products-modelist-1/product04.png"
-                              /></a>
-                            </div>
-                          </td>
-                          <td class="col-product">
-                            <div class="desc">
-                              <a href="/single-product">
-                                <h3>Woman highheel shoe</h3>
-                                <div class="pid">Артикул: 83925602</div>
-                              </a>
-                            </div>
-                          </td>
-                          <td class="col-price">
-                            <div class="price">
-                              <span class="shopping-cart-price" id="price"
-                                >95</span
-                              ><span class="currency">₽</span>
-                            </div>
-                          </td>
+                          <tr>
+                            <td class="col-preview">
+                              <div class="thumb">
+                                <a href="/single-product"
+                                  ><img
+                                    alt=""
+                                    src="../vendor/images/products/products-modelist-1/product03.png"
+                                /></a>
+                              </div>
+                            </td>
+                            <td class="col-product">
+                              <div class="desc">
+                                <a href="/single-product">
+                                  <h3>Woman highheel shoe</h3>
+                                  <div class="pid">Артикул: 8464759</div>
+                                </a>
+                              </div>
+                            </td>
+                            <td class="col-price">
+                              <div class="price">
+                                <span class="shopping-cart-price" id="price"
+                                  >245</span
+                                ><span class="currency">₽</span>
+                              </div>
+                            </td>
 
-                          <td class="col-inStock"><div>Есть</div></td>
+                            <td class="col-inStock"><div>Нет</div></td>
 
-                          <td class="col-actions">
-                            <div class="actions">
-                              <button
-                                class="le-btn small btn-iconic"
-                                title="Добавить в корзину"
-                              >
-                                <i class="fa fa-shopping-cart"></i>
-                                <span>В корзину</span>
-                              </button>
+                            <td class="col-actions">
+                              <div class="actions">
+                                <button
+                                  class="le-btn small btn-iconic"
+                                  title="Удалить"
+                                >
+                                  <i class="fa fa-times"></i>
+                                </button>
+                                <!--
+              <a class="close-btn" href="#" title="Удалить"></a>
+              -->
+                              </div>
+                            </td>
+                          </tr>
 
-                              <button
-                                class="le-btn small btn-iconic"
-                                title="Удалить"
-                              >
-                                <i class="fa fa-times"></i>
-                              </button>
-                              <!--
-            <a class="close-btn" href="#" title="Удалить"></a>
-            -->
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                          <tr>
+                            <td class="col-preview">
+                              <div class="thumb">
+                                <a href="/single-product"
+                                  ><img
+                                    alt=""
+                                    src="../vendor/images/products/products-modelist-1/product04.png"
+                                /></a>
+                              </div>
+                            </td>
+                            <td class="col-product">
+                              <div class="desc">
+                                <a href="/single-product">
+                                  <h3>Woman highheel shoe</h3>
+                                  <div class="pid">Артикул: 83925602</div>
+                                </a>
+                              </div>
+                            </td>
+                            <td class="col-price">
+                              <div class="price">
+                                <span class="shopping-cart-price" id="price"
+                                  >95</span
+                                ><span class="currency">₽</span>
+                              </div>
+                            </td>
+
+                            <td class="col-inStock"><div>Есть</div></td>
+
+                            <td class="col-actions">
+                              <div class="actions">
+                                <button
+                                  class="le-btn small btn-iconic"
+                                  title="Добавить в корзину"
+                                >
+                                  <i class="fa fa-shopping-cart"></i>
+                                  <span>В корзину</span>
+                                </button>
+
+                                <button
+                                  class="le-btn small btn-iconic"
+                                  title="Удалить"
+                                >
+                                  <i class="fa fa-times"></i>
+                                </button>
+                                <!--
+              <a class="close-btn" href="#" title="Удалить"></a>
+              -->
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>

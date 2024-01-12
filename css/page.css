@@ -1,5 +1,5 @@
 :root {
-  /* Global variables from `src/static/vendor/css/stylesheet.less` */
+  /* Global variables from `src/static/vendor/css/stylesheet.less`*/
 
   --black: #000000;
   --dark: #323232;
@@ -11,12 +11,12 @@
   --orange: #fa8411;
   --light: #e3e8e4;
 
-  --primary-color: #1da796; /* color1 */
+  --primary-color: #1da796; /* color1*/
   --primary-color-dark: #157c6f;
-  --secondary-color: #8bb040; /* color2 */
+  --secondary-color: #8bb040; /* color2*/
   --active-color: #59b210;
 
-  /* Custom variables... */
+  /* Custom variables...*/
 
   --product-item-background: #fff;
   --product-item-body-background: #f8f8f8;
@@ -24,8 +24,8 @@
 
   --transition-timeout: 250ms;
 
-  /* Main colors */
-  --common-error-color: #b00; /* 187 0 0 */
+  /* Main colors*/
+  --common-error-color: #b00; /* 187 0 0*/
   --common-warn-color: #960;
   --common-success-color: #181;
 }
@@ -142,9 +142,11 @@ section {
     text-transform: uppercase;
     font-weight: bold;
   }
-.section-profile-sidebar h2 {
+/* .section-profile-sidebar {
+  h2 {
     margin-top: 18px;
   }
+} */
 /* Nav menu active item */
 .top-nav-holder .nav-menu ul > li a.active {
     background-color: var(--primary-color);
@@ -584,7 +586,7 @@ section {
       .products-holder.product-carousel .owl-wrapper .body h3,
       .products-holder.product-carousel .owl-wrapper .body .excerpt {
         flex: 1;
-        margin-bottom: 5px;
+        margin-bottom: 6px;
       }
 .products-holder.simple-grid, .products-holder.simple-grid .row {
       display: flex;
@@ -701,14 +703,24 @@ section {
 #single-product {
     background-color: var(--product-item-background);
   }
+@media (max-width: 768px) {
+    #single-product .padded-buttons,
+    #single-product .merged-buttons {
+      display: flex;
+    }
+      #single-product .padded-buttons > button, #single-product .merged-buttons > button {
+        flex: 1;
+      }
+  }
 .shopping-cart-page.box {
-    /* background-color: var(--product-item-background); */
+    /* background-color: var(--product-item-background);*/
   }
 #shopping-cart-list {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: stretch;
+  /* }*/
 
 }
 #shopping-cart-list table {
@@ -718,7 +730,7 @@ section {
       overflow: hidden;
       text-overflow: ellipsis;
     }
-#shopping-cart-list table .desc > * {
+#shopping-cart-list table .desc * {
         overflow: hidden;
         text-overflow: ellipsis;
       }
@@ -732,7 +744,9 @@ section {
 #shopping-cart-list .actions {
     display: flex;
     align-items: center;
+    /* @media ($fixedTableNonAdaptiveMedia) {*/
     justify-content: flex-end;
+    /* }*/
     gap: 5px;
   }
 #shopping-cart-list .actions button .fa {
@@ -743,23 +757,80 @@ section {
 }
 @media (max-width: 768px) {
 #shopping-cart-list .actions button {
-        /* Show only icon */
+        /* Show only icon in a square button...*/
+        height: 33px;
+        width: 33px;
+        padding: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center
     }
         #shopping-cart-list .actions button span {
           display: none;
         }
       }
-/* Adjust table... */
+/* Adjust table...*/
+#shopping-cart-list table {
+    /* Set minimal width to enable scroll with `fixed-table-scroll-wrapper`*/
+    min-width: 600px;
+  }
 #shopping-cart-list th > div {
     white-space: nowrap;
   }
+#shopping-cart-list td h3 {
+      font-size: 14px;
+    }
+/* Product description*/
+#shopping-cart-list td .desc h3 + div {
+        margin-top: 4px;
+      }
+/* @media ($fixedTableNonAdaptiveMedia) {*/
+#shopping-cart-list .totalSum {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-top: 5px;
+  }
+#shopping-cart-list .totalSum .price,
+  #shopping-cart-list td.col-total,
+  #shopping-cart-list td.col-price {
+    font-size: 20px;
+    font-weight: 600;
+  }
+#shopping-cart-list td.col-preview { padding-right: 10px; }
+/*
+  .col-actions {
+    width: 4em;
+    border: 1px solid green;
+    overflow: visible;
+    white-space: nowrap;
+    // display: flex;
+    & > *,
+    .actions {
+      display: inline-block;
+      overflow: visible;
+      border: 1px solid blue;
+      white-space: nowrap;
+      // display: flex;
+      // gap: 5px;
+    }
+  }
+  */
 #shopping-cart-list .col-preview { width: 10em; }
-/* .col-product { width: 8em; } */
-#shopping-cart-list .col-price { width: 8em; }
+/* .col-product { }*/
+#shopping-cart-list .col-price { width: 9em; }
 #shopping-cart-list .col-inStock { width: 8em; }
 #shopping-cart-list .col-quantity { width: 9em; }
-#shopping-cart-list .col-total { width: 8em; }
-#shopping-cart-list .col-actions { width: 14em; }
+#shopping-cart-list .col-total { width: 9em; }
+#shopping-cart-list .col-actions { width: 4em; }
+/* Narrow actions column*/
+#shopping-cart-list.wide-action-column .col-actions { /* Wide actions column*/
+    width: 14em;
+  }
+@media (max-width: 768px) {
+#shopping-cart-list.wide-action-column .col-actions { /* With compact icons (see rules above)*/
+      width: 8em
+  }
+    }
 #shopping-cart-list .col-product h3 {
     text-transform: none;
   }
@@ -769,7 +840,7 @@ section {
   #shopping-cart-list .col-total {
     text-align: center;
   }
-/* Customize columns for mobile devices */
+/* Customize columns for mobile devices*/
 @media (max-width: 992px) {
     #shopping-cart-list .col-inStock { width: 6em; }
     #shopping-cart-list .col-price { width: 6em; }
@@ -777,18 +848,17 @@ section {
   }
 @media (max-width: 768px) {
 #shopping-cart-list {
-    /* .col-preview, */
+    /* .col-preview { width: 6em; }*/
+    /* .col-actions { width: 8em; }*/
 
 }
     #shopping-cart-list .col-inStock {
-      display: none;
+      /* display: none;*/
     }
-    #shopping-cart-list .col-preview { width: 6em; }
-    #shopping-cart-list .col-actions { width: 8em; }
   }
 @media (max-width: 520px) {
     #shopping-cart-list .col-preview {
-      display: none;
+      /* display: none;*/
     }
   }
 select.mobile-dropdown {
@@ -1226,58 +1296,99 @@ div.pp_default .pp_nav {
   border: 0;
   table-layout: fixed;
   border-style: solid;
+
+  /* Adaptive...*/
+
+  /* UNUSED: fixedTableAdaptiveMedia
+  @media ($fixedTableAdaptiveMedia) {
+    // border: 1px solid blue;
+    &,
+    tbody,
+    tr,
+    th,
+    td {
+      display: block;
+    }
+    th, td {
+      border: none !important;
+      // width: auto !important;
+      // text-align: left !important;
+      &:first-child {
+        // padding-left: 0;
+      }
+      & > * {
+        width: auto !important; // Ovverride specific widths
+        overflow: auto;
+      }
+    }
+    thead {
+      // No table header
+      display: none;
+    }
+    tr + tr {
+      border-top: 1px solid rgb(0 0 0 / 10%);
+      margin-top: 15px;
+      padding-top: 15px;
+    }
+  }
+  */
 }
 .fixed-table tbody tr {
-  transition: all var(--common-animation-time) ease;
-}
-.fixed-table-active tbody tr {
-  cursor: pointer; /* All rows are always interactive. */
-}
-.fixed-table-draggable-rows tbody tr {
-  cursor: grab; /* All rows are always interactive. */
-}
-.fixed-table.fixed-table-active tbody tr:hover {
-  background-color: var(--fixed-table-bg-color1);
-}
-.fixed-table th {
-}
-.fixed-table th,
-.fixed-table td {
-  padding: 0 var(--fixed-table-td-padding-h);
-  /* padding: var(--fixed-table-td-padding-v) var(--fixed-table-td-padding-h); */
-  line-height: 1.3;
-  overflow: hidden;
-  border-bottom: 1px solid rgb(0 0 0 / 10%);
-}
-/* First and last columns fixups... */
-.fixed-table th:first-child,
-.fixed-table td:first-child {
-  padding-left: var(--fixed-table-td-padding-h-at-edges);
-}
-.fixed-table th > *,
-.fixed-table td > * {
-  padding: var(--fixed-table-td-padding-v) 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  position: relative;
-}
-/* Fix styles for inner elements: bottom margins under last elements */
-.fixed-table td > * textarea:last-child {
-  margin-bottom: 0;
-}
-/* TODO: Use `block` display type for single inner element? */
-.fixed-table tbody td a:not(.le-btn) {
-  text-decoration: none;
-}
-.fixed-table tbody td a:not(.le-btn):hover {
-    text-decoration: underline;
+    transition: all var(--common-animation-time) ease;
   }
+.fixed-table-active tbody tr {
+    cursor: pointer; /* All rows are always interactive.*/
+  }
+.fixed-table-draggable-rows tbody tr {
+    cursor: grab; /* All rows are always interactive.*/
+  }
+.fixed-table.fixed-table-active tbody tr:hover {
+    background-color: var(--fixed-table-bg-color1);
+  }
+.fixed-table th,
+  .fixed-table td {
+    padding: 0 var(--fixed-table-td-padding-h);
+    /* padding: var(--fixed-table-td-padding-v) var(--fixed-table-td-padding-h);*/
+    line-height: 1.3;
+    overflow: hidden;
+  }
+.fixed-table tr:not(:last-child) th,
+    .fixed-table tr:not(:last-child) td {
+      border-bottom: 1px solid rgb(0 0 0 / 10%);
+    }
+/* First and last columns fixups...*/
+.fixed-table th:first-child,
+  .fixed-table td:first-child {
+    /* padding-left: var(--fixed-table-td-padding-h-at-edges);*/
+  }
+.fixed-table th > *,
+  .fixed-table td > * {
+    padding: var(--fixed-table-td-padding-v) 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: relative;
+  }
+/* Fix styles for inner elements: bottom margins under last elements*/
+.fixed-table td > * textarea:last-child {
+      margin-bottom: 0;
+    }
+/* TODO: Use `block` display type for single inner element?*/
+.fixed-table tbody td a:not(.le-btn) {
+    text-decoration: none;
+  }
+.fixed-table tbody td a:not(.le-btn):hover {
+      text-decoration: underline;
+    }
+.fixed-table-scroll-wrapper {
+  position: relative;
+  overflow: auto;
+}
 .orders-table a:not(.le-btn) {
     color: var(--primary-color);
   }
 .orders-table td > .le-btn {
-    display: block;
+    /* display: block;*/
     text-align: center;
     white-space: nowrap;
   }
@@ -1310,12 +1421,9 @@ div.pp_default .pp_nav {
     font-size: 20px;
     font-weight: 600 !important;
   }
-.orders-table {
-}
-.orders-table {
-}
-.orders-table {
-}
+.orders-table {}
+.orders-table {}
+.orders-table {}
 .orders-table td#cell-paymentState.paid,
     .orders-table td#cell-paymentState.unpaid,
     .orders-table td#cell-paymentState.unknown,
@@ -1350,24 +1458,56 @@ div.pp_default .pp_nav {
 .orders-table td#cell-pay {
     /* min-width: 110px; */
   }
-#profile-orders-list-table button {
-    white-space: nowrap;
-    padding-left: 6px;
-    padding-right: 6px;
+#section-profile-orders-list #profile-orders-list-table {
+    min-width: 70em;
   }
-.orderSummaryBlock {
-  display: flex;
-  align-items: center;
-  padding: 20px 8px;
-}
-.totalSum {
-  flex: 1;
-}
-.totalSum .totalLabel {
+#section-profile-orders-list #profile-orders-list-table button {
+      white-space: nowrap;
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+#section-profile-orders-list #profile-orders-list-table .orderSummaryBlock {
+      display: flex;
+      align-items: center;
+      padding: 20px 8px;
+    }
+#section-profile-orders-list #profile-orders-list-table .totalSum {
+      flex: 1;
+    }
+#section-profile-orders-list #profile-orders-list-table .totalSum .totalLabel {
+        font-size: 16px;
+        /* opacity: .5; */
+      }
+#section-profile-orders-list #profile-orders-list-table .totalSum .price {
+        font-size: 20px;
+        font-weight: 600 !important;
+      }
+#section-profile-orders-list #profile-orders-list-table #cell-pay {
+      width: 10em;
+    }
+@media (max-width: 768px) {
+      #section-profile-orders-list #profile-orders-list-table #cell-pay {
+        width: 4em;
+      }
+        #section-profile-orders-list #profile-orders-list-table .le-btn span {
+          display: none;
+        }
+        #section-profile-orders-list #profile-orders-list-table .le-btn {
+        height: 33px;
+        width: 33px;
+        padding: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+  }
+    }
+#section-profile-orders-list .totalSum {
     font-size: 16px;
-    /* opacity: .5; */
+    line-height: 1.2;
+    margin-top: 5px;
   }
-.totalSum .price {
+#section-profile-orders-list .totalSum .price {
     font-size: 20px;
-    font-weight: 600 !important;
+    font-weight: 600;
   }

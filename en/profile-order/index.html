@@ -36,8 +36,8 @@
     <link rel="stylesheet" href="../../vendor/css/animate.css" />
     <link rel="stylesheet" href="../../vendor/css/owl.carousel.css" />
     <link rel="stylesheet" href="../../vendor/css/owl.theme.css" />
-    <link rel="stylesheet" href="../../vendor/css/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../../vendor/css/bootstrap-select.min.css" />
+
+    <link rel="stylesheet" href="../../vendor/css/bootstrap-select.css" />
     <link rel="stylesheet" href="../../vendor/css/yamm.css" />
     <link
       rel="stylesheet"
@@ -213,6 +213,39 @@
                                 <a href="/en/single-product"
                                   ><img
                                     alt=""
+                                    src="../../vendor/images/products/products-modelist-1/product01.png"
+                                /></a>
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-8">
+                              <div class="title">
+                                <a href="/en/single-product"
+                                  >Looking lorem round, to ascertain that they -
+                                  extra_long_text_line_for_testing_purposes_only</a
+                                >
+                              </div>
+                              <div class="priceBlock">
+                                <span class="text-label">Price:</span>
+                                <span class="price"
+                                  ><span class="currency">$</span>1450</span
+                                >
+                              </div>
+                              <div class="countBlock">
+                                <span class="text-label">Count:</span> 1
+                              </div>
+                            </div>
+                          </div>
+                          <a class="close-btn" href="#" title="Remove"></a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="basket-item">
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-4">
+                              <div class="thumb">
+                                <a href="/en/single-product"
+                                  ><img
+                                    alt=""
                                     src="../../vendor/images/products/products-modelist-1/product02.png"
                                 /></a>
                               </div>
@@ -350,243 +383,315 @@
 
       <section id="section-profile-layout">
         <div class="container no-padding">
-          <div class="section-profile-sidebar col-xs-12" id="main-content">
-            <div class="box pb-0" id="section-profile-orders-list">
-              <div class="box-holder mt-1 pb-0">
+          <div class="section-profile-content col-xs-12" id="main-content">
+            <div class="box" id="section-profile-order">
+              <div class="box-holder mt-1">
                 <h2 align="center">Order</h2>
 
-                <div class="shopping-cart-page">
+                <div class="section-profile-order-page">
                   <div
                     class="shopping-cart-shopping-cart-list"
                     id="shopping-cart-list"
-                    class="table-responsive"
                   >
-                    <table class="table fixed-table">
-                      <thead>
-                        <tr>
-                          <th class="col-preview" title="Preview">
-                            <!--div>Preview</div-->
-                          </th>
-                          <th class="col-product" title="Name">
-                            <div>Name</div>
-                          </th>
-                          <th class="col-price" title="Price">
-                            <div>Price</div>
-                          </th>
+                    <div class="fixed-table-scroll-wrapper">
+                      <table class="fixed-table">
+                        <thead>
+                          <tr>
+                            <th class="col-preview" title="Preview">
+                              <!--div>Preview</div-->
+                            </th>
+                            <th class="col-product" title="Name">
+                              <div>Name</div>
+                            </th>
+                            <th class="col-price" title="Price">
+                              <div>Price</div>
+                            </th>
 
-                          <th class="col-quantity" title="Quantity">
-                            <div>Quantity</div>
-                          </th>
-                          <th class="col-total" title="Total">
-                            <div>Total</div>
-                          </th>
+                            <th class="col-quantity" title="Quantity">
+                              <div>Quantity</div>
+                            </th>
+                            <th class="col-total" title="Total">
+                              <div>Total</div>
+                            </th>
 
-                          <th class="col-actions">&nbsp;</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td class="col-preview">
-                            <div class="thumb">
-                              <a href="/en/single-product"
-                                ><img
-                                  alt=""
-                                  src="../../vendor/images/products/products-modelist-1/product02.png"
-                              /></a>
-                            </div>
-                          </td>
-                          <td class="col-product">
-                            <div class="desc">
-                              <a href="/en/single-product">
-                                <h3>Man sport Hiking shoe</h3>
-                                <div class="pid">Product code: 389645</div>
-                              </a>
-                            </div>
-                          </td>
-                          <td class="col-price">
-                            <div class="price">
-                              <span class="currency">$</span
-                              ><span class="shopping-cart-price" id="price"
-                                >245</span
-                              >
-                            </div>
-                          </td>
+                            <th class="col-actions">&nbsp;</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="col-preview">
+                              <div class="thumb">
+                                <a href="/en/single-product"
+                                  ><img
+                                    alt=""
+                                    src="../../vendor/images/products/products-modelist-1/product01.png"
+                                /></a>
+                              </div>
+                            </td>
+                            <td class="col-product">
+                              <div class="desc">
+                                <a href="/en/single-product">
+                                  <h3>
+                                    Looking lorem round, to ascertain that they
+                                    -
+                                    extra_long_text_line_for_testing_purposes_only
+                                  </h3>
+                                  <div class="pid">Product code: 4564789</div>
+                                </a>
+                              </div>
+                            </td>
+                            <td class="col-price">
+                              <div class="price">
+                                <span class="currency">$</span
+                                ><span class="shopping-cart-price" id="price"
+                                  >1450</span
+                                >
+                              </div>
+                            </td>
 
-                          <td class="col-quantity">
-                            <div class="le-quantity">
-                              <form>
-                                <a class="minus" href="#reduce"></a>
-                                <input
-                                  class="shopping-cart-quantity"
-                                  id="quantity"
-                                  name="quantity"
-                                  readonly="readonly"
-                                  type="text"
-                                  value="2"
-                                />
-                                <a class="plus" href="#add"></a>
-                              </form>
-                            </div>
-                          </td>
-                          <td class="col-total">
-                            <div class="price">
-                              <span class="currency">$</span
-                              ><span class="shopping-cart-total" id="total"
-                                >490</span
-                              >
-                            </div>
-                          </td>
+                            <td class="col-quantity">
+                              <div class="le-quantity">
+                                <form>
+                                  <a class="minus" href="#reduce"></a>
+                                  <input
+                                    class="shopping-cart-quantity"
+                                    id="quantity"
+                                    name="quantity"
+                                    readonly="readonly"
+                                    type="text"
+                                    value="1"
+                                  />
+                                  <a class="plus" href="#add"></a>
+                                </form>
+                              </div>
+                            </td>
+                            <td class="col-total">
+                              <div class="price">
+                                <span class="currency">$</span
+                                ><span class="shopping-cart-total" id="total"
+                                  >1450</span
+                                >
+                              </div>
+                            </td>
 
-                          <td class="col-actions">
-                            <div class="actions">
-                              <button
-                                class="le-btn small btn-iconic"
-                                title="Remove"
-                              >
-                                <i class="fa fa-times"></i>
-                              </button>
-                              <!--
-            <a class="close-btn" href="#" title="Remove"></a>
-            -->
-                            </div>
-                          </td>
-                        </tr>
+                            <td class="col-actions">
+                              <div class="actions">
+                                <button
+                                  class="le-btn small btn-iconic"
+                                  title="Remove"
+                                >
+                                  <i class="fa fa-times"></i>
+                                </button>
+                                <!--
+              <a class="close-btn" href="#" title="Remove"></a>
+              -->
+                              </div>
+                            </td>
+                          </tr>
 
-                        <tr>
-                          <td class="col-preview">
-                            <div class="thumb">
-                              <a href="/en/single-product"
-                                ><img
-                                  alt=""
-                                  src="../../vendor/images/products/products-modelist-1/product03.png"
-                              /></a>
-                            </div>
-                          </td>
-                          <td class="col-product">
-                            <div class="desc">
-                              <a href="/en/single-product">
-                                <h3>Woman highheel shoe</h3>
-                                <div class="pid">Product code: 8464759</div>
-                              </a>
-                            </div>
-                          </td>
-                          <td class="col-price">
-                            <div class="price">
-                              <span class="currency">$</span
-                              ><span class="shopping-cart-price" id="price"
-                                >245</span
-                              >
-                            </div>
-                          </td>
+                          <tr>
+                            <td class="col-preview">
+                              <div class="thumb">
+                                <a href="/en/single-product"
+                                  ><img
+                                    alt=""
+                                    src="../../vendor/images/products/products-modelist-1/product02.png"
+                                /></a>
+                              </div>
+                            </td>
+                            <td class="col-product">
+                              <div class="desc">
+                                <a href="/en/single-product">
+                                  <h3>Man sport Hiking shoe</h3>
+                                  <div class="pid">Product code: 389645</div>
+                                </a>
+                              </div>
+                            </td>
+                            <td class="col-price">
+                              <div class="price">
+                                <span class="currency">$</span
+                                ><span class="shopping-cart-price" id="price"
+                                  >245</span
+                                >
+                              </div>
+                            </td>
 
-                          <td class="col-quantity">
-                            <div class="le-quantity">
-                              <form>
-                                <a class="minus" href="#reduce"></a>
-                                <input
-                                  class="shopping-cart-quantity"
-                                  id="quantity"
-                                  name="quantity"
-                                  readonly="readonly"
-                                  type="text"
-                                  value="1"
-                                />
-                                <a class="plus" href="#add"></a>
-                              </form>
-                            </div>
-                          </td>
-                          <td class="col-total">
-                            <div class="price">
-                              <span class="currency">$</span
-                              ><span class="shopping-cart-total" id="total"
-                                >245</span
-                              >
-                            </div>
-                          </td>
+                            <td class="col-quantity">
+                              <div class="le-quantity">
+                                <form>
+                                  <a class="minus" href="#reduce"></a>
+                                  <input
+                                    class="shopping-cart-quantity"
+                                    id="quantity"
+                                    name="quantity"
+                                    readonly="readonly"
+                                    type="text"
+                                    value="2"
+                                  />
+                                  <a class="plus" href="#add"></a>
+                                </form>
+                              </div>
+                            </td>
+                            <td class="col-total">
+                              <div class="price">
+                                <span class="currency">$</span
+                                ><span class="shopping-cart-total" id="total"
+                                  >490</span
+                                >
+                              </div>
+                            </td>
 
-                          <td class="col-actions">
-                            <div class="actions">
-                              <button
-                                class="le-btn small btn-iconic"
-                                title="Remove"
-                              >
-                                <i class="fa fa-times"></i>
-                              </button>
-                              <!--
-            <a class="close-btn" href="#" title="Remove"></a>
-            -->
-                            </div>
-                          </td>
-                        </tr>
+                            <td class="col-actions">
+                              <div class="actions">
+                                <button
+                                  class="le-btn small btn-iconic"
+                                  title="Remove"
+                                >
+                                  <i class="fa fa-times"></i>
+                                </button>
+                                <!--
+              <a class="close-btn" href="#" title="Remove"></a>
+              -->
+                              </div>
+                            </td>
+                          </tr>
 
-                        <tr>
-                          <td class="col-preview">
-                            <div class="thumb">
-                              <a href="/en/single-product"
-                                ><img
-                                  alt=""
-                                  src="../../vendor/images/products/products-modelist-1/product04.png"
-                              /></a>
-                            </div>
-                          </td>
-                          <td class="col-product">
-                            <div class="desc">
-                              <a href="/en/single-product">
-                                <h3>Woman highheel shoe</h3>
-                                <div class="pid">Product code: 83925602</div>
-                              </a>
-                            </div>
-                          </td>
-                          <td class="col-price">
-                            <div class="price">
-                              <span class="currency">$</span
-                              ><span class="shopping-cart-price" id="price"
-                                >95</span
-                              >
-                            </div>
-                          </td>
+                          <tr>
+                            <td class="col-preview">
+                              <div class="thumb">
+                                <a href="/en/single-product"
+                                  ><img
+                                    alt=""
+                                    src="../../vendor/images/products/products-modelist-1/product03.png"
+                                /></a>
+                              </div>
+                            </td>
+                            <td class="col-product">
+                              <div class="desc">
+                                <a href="/en/single-product">
+                                  <h3>Woman highheel shoe</h3>
+                                  <div class="pid">Product code: 8464759</div>
+                                </a>
+                              </div>
+                            </td>
+                            <td class="col-price">
+                              <div class="price">
+                                <span class="currency">$</span
+                                ><span class="shopping-cart-price" id="price"
+                                  >245</span
+                                >
+                              </div>
+                            </td>
 
-                          <td class="col-quantity">
-                            <div class="le-quantity">
-                              <form>
-                                <a class="minus" href="#reduce"></a>
-                                <input
-                                  class="shopping-cart-quantity"
-                                  id="quantity"
-                                  name="quantity"
-                                  readonly="readonly"
-                                  type="text"
-                                  value="1"
-                                />
-                                <a class="plus" href="#add"></a>
-                              </form>
-                            </div>
-                          </td>
-                          <td class="col-total">
-                            <div class="price">
-                              <span class="currency">$</span
-                              ><span class="shopping-cart-total" id="total"
-                                >95</span
-                              >
-                            </div>
-                          </td>
+                            <td class="col-quantity">
+                              <div class="le-quantity">
+                                <form>
+                                  <a class="minus" href="#reduce"></a>
+                                  <input
+                                    class="shopping-cart-quantity"
+                                    id="quantity"
+                                    name="quantity"
+                                    readonly="readonly"
+                                    type="text"
+                                    value="1"
+                                  />
+                                  <a class="plus" href="#add"></a>
+                                </form>
+                              </div>
+                            </td>
+                            <td class="col-total">
+                              <div class="price">
+                                <span class="currency">$</span
+                                ><span class="shopping-cart-total" id="total"
+                                  >245</span
+                                >
+                              </div>
+                            </td>
 
-                          <td class="col-actions">
-                            <div class="actions">
-                              <button
-                                class="le-btn small btn-iconic"
-                                title="Remove"
-                              >
-                                <i class="fa fa-times"></i>
-                              </button>
-                              <!--
-            <a class="close-btn" href="#" title="Remove"></a>
-            -->
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                            <td class="col-actions">
+                              <div class="actions">
+                                <button
+                                  class="le-btn small btn-iconic"
+                                  title="Remove"
+                                >
+                                  <i class="fa fa-times"></i>
+                                </button>
+                                <!--
+              <a class="close-btn" href="#" title="Remove"></a>
+              -->
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td class="col-preview">
+                              <div class="thumb">
+                                <a href="/en/single-product"
+                                  ><img
+                                    alt=""
+                                    src="../../vendor/images/products/products-modelist-1/product04.png"
+                                /></a>
+                              </div>
+                            </td>
+                            <td class="col-product">
+                              <div class="desc">
+                                <a href="/en/single-product">
+                                  <h3>Woman highheel shoe</h3>
+                                  <div class="pid">Product code: 83925602</div>
+                                </a>
+                              </div>
+                            </td>
+                            <td class="col-price">
+                              <div class="price">
+                                <span class="currency">$</span
+                                ><span class="shopping-cart-price" id="price"
+                                  >95</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="col-quantity">
+                              <div class="le-quantity">
+                                <form>
+                                  <a class="minus" href="#reduce"></a>
+                                  <input
+                                    class="shopping-cart-quantity"
+                                    id="quantity"
+                                    name="quantity"
+                                    readonly="readonly"
+                                    type="text"
+                                    value="1"
+                                  />
+                                  <a class="plus" href="#add"></a>
+                                </form>
+                              </div>
+                            </td>
+                            <td class="col-total">
+                              <div class="price">
+                                <span class="currency">$</span
+                                ><span class="shopping-cart-total" id="total"
+                                  >95</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="col-actions">
+                              <div class="actions">
+                                <button
+                                  class="le-btn small btn-iconic"
+                                  title="Remove"
+                                >
+                                  <i class="fa fa-times"></i>
+                                </button>
+                                <!--
+              <a class="close-btn" href="#" title="Remove"></a>
+              -->
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
 
                     <div class="orderSummaryBlock">
                       <div class="totalSum">
@@ -594,7 +699,7 @@
                         <span class="price">
                           <span class="currency">$</span
                           ><span class="shopping-cart-totalSum" id="totalSum"
-                            >830</span
+                            >2280</span
                           >
                         </span>
                       </div>

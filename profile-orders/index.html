@@ -36,8 +36,8 @@
     <link rel="stylesheet" href="../vendor/css/animate.css" />
     <link rel="stylesheet" href="../vendor/css/owl.carousel.css" />
     <link rel="stylesheet" href="../vendor/css/owl.theme.css" />
-    <link rel="stylesheet" href="../vendor/css/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../vendor/css/bootstrap-select.min.css" />
+
+    <link rel="stylesheet" href="../vendor/css/bootstrap-select.css" />
     <link rel="stylesheet" href="../vendor/css/yamm.css" />
     <link
       rel="stylesheet"
@@ -213,6 +213,39 @@
                                 <a href="/single-product"
                                   ><img
                                     alt=""
+                                    src="../vendor/images/products/products-modelist-1/product01.png"
+                                /></a>
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-8">
+                              <div class="title">
+                                <a href="/single-product"
+                                  >Looking lorem round, to ascertain that they -
+                                  extra_long_text_line_for_testing_purposes_only</a
+                                >
+                              </div>
+                              <div class="priceBlock">
+                                <span class="text-label">Цена:</span>
+                                <span class="price"
+                                  >1450<span class="currency">₽</span></span
+                                >
+                              </div>
+                              <div class="countBlock">
+                                <span class="text-label">Кол-во:</span> 1
+                              </div>
+                            </div>
+                          </div>
+                          <a class="close-btn" href="#" title="Удалить"></a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="basket-item">
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-4">
+                              <div class="thumb">
+                                <a href="/single-product"
+                                  ><img
+                                    alt=""
                                     src="../vendor/images/products/products-modelist-1/product02.png"
                                 /></a>
                               </div>
@@ -350,135 +383,139 @@
 
       <section id="section-profile-layout">
         <div class="container no-padding">
-          <div class="section-profile-sidebar col-xs-12" id="main-content">
-            <div class="box pb-0" id="section-profile-orders-list">
-              <div class="box-holder mt-1 pb-0">
+          <div class="section-profile-content col-xs-12" id="main-content">
+            <div class="box" id="section-profile-orders-list">
+              <div class="box-holder mt-1">
                 <h2 align="center">Мои заказы</h2>
                 <!--
     <p class="mb-2" align="center">Текст пояснения к странице (если нужен)</p>
     -->
 
-                <table
-                  class="fixed-table orders-table"
-                  id="profile-orders-list-table"
-                  width="100%"
-                >
-                  <thead>
-                    <th id="cell-order" title="Заказ"><div>Заказ</div></th>
+                <div class="fixed-table-scroll-wrapper">
+                  <table
+                    class="fixed-table orders-table"
+                    id="profile-orders-list-table"
+                    width="100%"
+                  >
+                    <thead>
+                      <th id="cell-order" title="Заказ"><div>Заказ</div></th>
 
-                    <th id="cell-orderPrice" title="Цена"><div>Цена</div></th>
-                    <th id="cell-tracking" title="Трекинг">
-                      <div>Трекинг</div>
-                    </th>
-                    <th id="cell-orderStatus" title="Статус">
-                      <div>Статус</div>
-                    </th>
-                    <th id="cell-paymentMethod" title="Способ оплаты">
-                      <div>Способ оплаты</div>
-                    </th>
-                    <th id="cell-paymentState" title="Статус платежа">
-                      <div>Статус платежа</div>
-                    </th>
-                    <th id="cell-delivery" title="Доставка">
-                      <div>Доставка</div>
-                    </th>
-                    <th id="cell-pay" title="Оплатить">
-                      <!--div>Оплатить</div-->
-                    </th>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td id="cell-order">
-                        <div>
-                          <span class="orderNo">
-                            <a href="/profile-order/?739140">739140</a>
-                          </span>
-                          <span class="orderDate">20 дек. 2023</span>
-                        </div>
-                      </td>
-                      <td id="cell-orderPrice">
-                        <div>155<span class="currency">₽</span></div>
-                      </td>
-                      <td id="cell-tracking"><div>12345612789</div></td>
-                      <td id="cell-orderStatus" class="confirmed">
-                        <div>Подтверждён</div>
-                      </td>
-                      <td id="cell-paymentMethod"><div>Робокасса</div></td>
-                      <td id="cell-paymentState" class="paid">
-                        <div>Оплачен</div>
-                      </td>
-                      <td id="cell-delivery"><div>Экспресс</div></td>
-                      <td id="cell-pay"></td>
-                    </tr>
+                      <th id="cell-orderPrice" title="Цена"><div>Цена</div></th>
+                      <th id="cell-tracking" title="Трекинг">
+                        <div>Трекинг</div>
+                      </th>
+                      <th id="cell-orderStatus" title="Статус">
+                        <div>Статус</div>
+                      </th>
+                      <th id="cell-paymentMethod" title="Способ оплаты">
+                        <div>Способ оплаты</div>
+                      </th>
+                      <th id="cell-paymentState" title="Статус платежа">
+                        <div>Статус платежа</div>
+                      </th>
+                      <th id="cell-delivery" title="Доставка">
+                        <div>Доставка</div>
+                      </th>
+                      <th id="cell-pay" title="Оплатить">
+                        <!--div>Оплатить</div-->
+                      </th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td id="cell-order">
+                          <div>
+                            <span class="orderNo">
+                              <a href="/profile-order/?739140">739140</a>
+                            </span>
+                            <span class="orderDate">20 дек. 2023</span>
+                          </div>
+                        </td>
+                        <td id="cell-orderPrice">
+                          <div>155<span class="currency">₽</span></div>
+                        </td>
+                        <td id="cell-tracking"><div>12345612789</div></td>
+                        <td id="cell-orderStatus" class="confirmed">
+                          <div>Подтверждён</div>
+                        </td>
+                        <td id="cell-paymentMethod"><div>Робокасса</div></td>
+                        <td id="cell-paymentState" class="paid">
+                          <div>Оплачен</div>
+                        </td>
+                        <td id="cell-delivery"><div>Экспресс</div></td>
+                        <td id="cell-pay"></td>
+                      </tr>
 
-                    <tr>
-                      <td id="cell-order">
-                        <div>
-                          <span class="orderNo">
-                            <a href="/profile-order/?813021">813021</a>
-                          </span>
-                          <span class="orderDate">15 мая 2022</span>
-                        </div>
-                      </td>
-                      <td id="cell-orderPrice">
-                        <div>740<span class="currency">₽</span></div>
-                      </td>
-                      <td id="cell-tracking"><div>—</div></td>
-                      <td id="cell-orderStatus" class="cancelled">
-                        <div>Отменён</div>
-                      </td>
-                      <td id="cell-paymentMethod"><div>Яндекс карта</div></td>
-                      <td id="cell-paymentState" class="unpaid">
-                        <div>Не оплачен</div>
-                      </td>
-                      <td id="cell-delivery"><div>Почта России</div></td>
-                      <td id="cell-pay">
-                        <a
-                          class="le-btn small"
-                          title="Оплатить"
-                          href="/checkout?813021"
-                        >
-                          <i class="fa fa-credit-card"></i> Оплатить
-                        </a>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td id="cell-order">
+                          <div>
+                            <span class="orderNo">
+                              <a href="/profile-order/?813021">813021</a>
+                            </span>
+                            <span class="orderDate">15 мая 2022</span>
+                          </div>
+                        </td>
+                        <td id="cell-orderPrice">
+                          <div>740<span class="currency">₽</span></div>
+                        </td>
+                        <td id="cell-tracking"><div>—</div></td>
+                        <td id="cell-orderStatus" class="cancelled">
+                          <div>Отменён</div>
+                        </td>
+                        <td id="cell-paymentMethod"><div>Яндекс карта</div></td>
+                        <td id="cell-paymentState" class="unpaid">
+                          <div>Не оплачен</div>
+                        </td>
+                        <td id="cell-delivery"><div>Почта России</div></td>
+                        <td id="cell-pay">
+                          <a
+                            class="le-btn small"
+                            title="Оплатить"
+                            href="/checkout?813021"
+                          >
+                            <i class="fa fa-credit-card"></i>
+                            <span>Оплатить</span>
+                          </a>
+                        </td>
+                      </tr>
 
-                    <tr>
-                      <td id="cell-order">
-                        <div>
-                          <span class="orderNo">
-                            <a href="/profile-order/?902430">902430</a>
-                          </span>
-                          <span class="orderDate">28 дек. 2023</span>
-                        </div>
-                      </td>
-                      <td id="cell-orderPrice">
-                        <div>320<span class="currency">₽</span></div>
-                      </td>
-                      <td id="cell-tracking"><div>—</div></td>
-                      <td id="cell-orderStatus" class="cancelled">
-                        <div>Отменён</div>
-                      </td>
-                      <td id="cell-paymentMethod">
-                        <div>Наложенный платеж</div>
-                      </td>
-                      <td id="cell-paymentState" class="unknown">
-                        <div>Не известно</div>
-                      </td>
-                      <td id="cell-delivery"><div>СДЭК</div></td>
-                      <td id="cell-pay">
-                        <a
-                          class="le-btn small"
-                          disabled
-                          title="Оплатить"
-                          href="/checkout?902430"
-                        >
-                          <i class="fa fa-credit-card"></i> Оплатить
-                        </a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                      <tr>
+                        <td id="cell-order">
+                          <div>
+                            <span class="orderNo">
+                              <a href="/profile-order/?902430">902430</a>
+                            </span>
+                            <span class="orderDate">28 дек. 2023</span>
+                          </div>
+                        </td>
+                        <td id="cell-orderPrice">
+                          <div>320<span class="currency">₽</span></div>
+                        </td>
+                        <td id="cell-tracking"><div>—</div></td>
+                        <td id="cell-orderStatus" class="cancelled">
+                          <div>Отменён</div>
+                        </td>
+                        <td id="cell-paymentMethod">
+                          <div>Наложенный платеж</div>
+                        </td>
+                        <td id="cell-paymentState" class="unknown">
+                          <div>Не известно</div>
+                        </td>
+                        <td id="cell-delivery"><div>СДЭК</div></td>
+                        <td id="cell-pay">
+                          <a
+                            class="le-btn small"
+                            disabled
+                            title="Оплатить"
+                            href="/checkout?902430"
+                          >
+                            <i class="fa fa-credit-card"></i>
+                            <span>Оплатить</span>
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
 
                 <div class="orderSummaryBlock">
                   <div class="totalSum">
