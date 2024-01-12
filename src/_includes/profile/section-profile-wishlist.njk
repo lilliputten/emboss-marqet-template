@@ -4,14 +4,14 @@
 {# NOTE: To place currency sign after the price or before? #}
 {% set currencyAfter = lang === 'ru' %}
 
-<div class="box pb-0" id="section-profile-orders-list">
-  <div class="box-holder mt-1 pb-0">
+<div class="box" id="section-profile-wishlist">
+  <div class="box-holder mt-1">
     <h2 align="center">{{ 'profile.myWishlist' | i18n }}</h2>
 
-    <div class="shopping-cart-page">
+    <div class="section-profile-wishlist-page">
 
       {% set hideQuantityColumn = true %}
-      {% set showAddTpoCartButton = true %}
+      {% set showAddTopCartButton = true %}
       {% set showInStockColumn = true %}
 
       {% include "order/shopping-cart-list.njk" %}

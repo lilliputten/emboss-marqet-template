@@ -4,61 +4,64 @@
 {# NOTE: To place currency sign after the price or before? #}
 {% set currencyAfter = lang === 'ru' %}
 
-<div class="box pb-0" id="section-profile-orders-list">
-  <div class="box-holder mt-1 pb-0">
+<div class="box" id="section-profile-orders-list">
+  <div class="box-holder mt-1">
     <h2 align="center">{{ 'pages.myOrders' | i18n }}</h2>
     <!--
     <p class="mb-2" align="center">{{ 'profile.profileText' | i18n }}</p>
     -->
 
     {% set totalSum = 0 %}
-    <table class="fixed-table orders-table" id="profile-orders-list-table" width="100%">
-      <thead>
-        <th id="cell-order" title="{{ 'ordersTable.order' | i18n }}"><div>{{ 'ordersTable.order' | i18n }}</div></th>
-        {# <th id="cell-orderDate" title="{{ 'ordersTable.orderDate' | i18n }}"><div>{{ 'ordersTable.orderDate' | i18n }}</div></th> #}
-        <th id="cell-orderPrice" title="{{ 'ordersTable.orderPrice' | i18n }}"><div>{{ 'ordersTable.orderPrice' | i18n }}</div></th>
-        <th id="cell-tracking" title="{{ 'ordersTable.tracking' | i18n }}"><div>{{ 'ordersTable.tracking' | i18n }}</div></th>
-        <th id="cell-orderStatus" title="{{ 'ordersTable.orderStatus' | i18n }}"><div>{{ 'ordersTable.orderStatus' | i18n }}</div></th>
-        <th id="cell-paymentMethod" title="{{ 'ordersTable.paymentMethod' | i18n }}"><div>{{ 'ordersTable.paymentMethod' | i18n }}</div></th>
-        <th id="cell-paymentState" title="{{ 'ordersTable.paymentState' | i18n }}"><div>{{ 'ordersTable.paymentState' | i18n }}</div></th>
-        <th id="cell-delivery" title="{{ 'ordersTable.delivery' | i18n }}"><div>{{ 'ordersTable.delivery' | i18n }}</div></th>
-        <th id="cell-pay" title="{{ 'ordersTable.pay' | i18n }}"><!--div>{{ 'ordersTable.pay' | i18n }}</div--></th>
-      </thead>
-      <tbody>
-        {% for item in ordersList -%}
-          {% set totalSum = totalSum + item.orderPrice %}
-          <tr>
-            <td id="cell-order"><div>
-              <span class="orderNo">
-                {# <span class="number">№</span> #}
-                <a href="{{ langRootUrl }}/profile-order/?{{ item.orderNo }}">{{ item.orderNo }}</a>
-              </span>
-              <span class="orderDate">{{ item.orderDate | dateFormat(lang) }}</span>
-            </div></td>
-            <td id="cell-orderPrice"><div>
-              {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.orderPrice }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
-            </div></td>
-            <td id="cell-tracking"><div>{{ item.tracking if item.tracking else '—' }}</div></td>
-            <td id="cell-orderStatus" class="{{ item.orderStatus }}"><div>{{ ('ordersTable.' + item.orderStatus) | i18n }}</div></td>
-            <td id="cell-paymentMethod"><div>{{ ('paymentMethods.' + item.paymentMethod) | i18n }}</div></td>
-            <td id="cell-paymentState" class="{{ item.paymentState }}"><div>{{ ('ordersTable.' + item.paymentState) | i18n }}</div></td>
-            <td id="cell-delivery"><div>{{ ('deliveryMethods.' + item.delivery) | i18n }}</div></td>
-            <td id="cell-pay">
-              {% if item.paymentState !== 'paid' %}
-              <a
-                class="le-btn small"
-                {% if item.paymentState !== 'unpaid' %}disabled{% endif %}
-                title="{{ 'ordersTable.pay' | i18n }}"
-                href="{{ langRootUrl }}/checkout?{{ item.orderNo }}"
-              >
-                <i class="fa fa-credit-card"></i> {{ 'ordersTable.pay' | i18n }}
-              </a>
-              {% endif %}
-            </td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+    <div class="fixed-table-scroll-wrapper">
+      <table class="fixed-table orders-table" id="profile-orders-list-table" width="100%">
+        <thead>
+          <th id="cell-order" title="{{ 'ordersTable.order' | i18n }}"><div>{{ 'ordersTable.order' | i18n }}</div></th>
+          {# <th id="cell-orderDate" title="{{ 'ordersTable.orderDate' | i18n }}"><div>{{ 'ordersTable.orderDate' | i18n }}</div></th> #}
+          <th id="cell-orderPrice" title="{{ 'ordersTable.orderPrice' | i18n }}"><div>{{ 'ordersTable.orderPrice' | i18n }}</div></th>
+          <th id="cell-tracking" title="{{ 'ordersTable.tracking' | i18n }}"><div>{{ 'ordersTable.tracking' | i18n }}</div></th>
+          <th id="cell-orderStatus" title="{{ 'ordersTable.orderStatus' | i18n }}"><div>{{ 'ordersTable.orderStatus' | i18n }}</div></th>
+          <th id="cell-paymentMethod" title="{{ 'ordersTable.paymentMethod' | i18n }}"><div>{{ 'ordersTable.paymentMethod' | i18n }}</div></th>
+          <th id="cell-paymentState" title="{{ 'ordersTable.paymentState' | i18n }}"><div>{{ 'ordersTable.paymentState' | i18n }}</div></th>
+          <th id="cell-delivery" title="{{ 'ordersTable.delivery' | i18n }}"><div>{{ 'ordersTable.delivery' | i18n }}</div></th>
+          <th id="cell-pay" title="{{ 'ordersTable.pay' | i18n }}"><!--div>{{ 'ordersTable.pay' | i18n }}</div--></th>
+        </thead>
+        <tbody>
+          {% for item in ordersList -%}
+            {% set totalSum = totalSum + item.orderPrice %}
+            <tr>
+              <td id="cell-order"><div>
+                <span class="orderNo">
+                  {# <span class="number">№</span> #}
+                  <a href="{{ langRootUrl }}/profile-order/?{{ item.orderNo }}">{{ item.orderNo }}</a>
+                </span>
+                <span class="orderDate">{{ item.orderDate | dateFormat(lang) }}</span>
+              </div></td>
+              <td id="cell-orderPrice"><div>
+                {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.orderPrice }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+              </div></td>
+              <td id="cell-tracking"><div>{{ item.tracking if item.tracking else '—' }}</div></td>
+              <td id="cell-orderStatus" class="{{ item.orderStatus }}"><div>{{ ('ordersTable.' + item.orderStatus) | i18n }}</div></td>
+              <td id="cell-paymentMethod"><div>{{ ('paymentMethods.' + item.paymentMethod) | i18n }}</div></td>
+              <td id="cell-paymentState" class="{{ item.paymentState }}"><div>{{ ('ordersTable.' + item.paymentState) | i18n }}</div></td>
+              <td id="cell-delivery"><div>{{ ('deliveryMethods.' + item.delivery) | i18n }}</div></td>
+              <td id="cell-pay">
+                {% if item.paymentState !== 'paid' %}
+                <a
+                  class="le-btn small"
+                  {% if item.paymentState !== 'unpaid' %}disabled{% endif %}
+                  title="{{ 'ordersTable.pay' | i18n }}"
+                  href="{{ langRootUrl }}/checkout?{{ item.orderNo }}"
+                >
+                  <i class="fa fa-credit-card"></i>
+                  <span>{{ 'ordersTable.pay' | i18n }}</span>
+                </a>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
 
     <div class="orderSummaryBlock">
       <div class="totalSum">

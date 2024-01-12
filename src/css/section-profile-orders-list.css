@@ -1,24 +1,58 @@
-#profile-orders-list-table {
-  button {
-    white-space: nowrap;
-    $padding: 6px;
-    padding-left: $padding;
-    padding-right: $padding;
+#section-profile-orders-list {
+  #profile-orders-list-table {
+    min-width: 70em;
+    button {
+      white-space: nowrap;
+      $padding: 6px;
+      padding-left: $padding;
+      padding-right: $padding;
+    }
+    .orderSummaryBlock {
+      display: flex;
+      align-items: center;
+      padding: 20px 8px;
+    }
+    .totalSum {
+      flex: 1;
+      .totalLabel {
+        font-size: 16px;
+        /* opacity: .5; */
+      }
+      .price {
+        font-size: 20px;
+        font-weight: 600 !important;
+      }
+    }
+    #cell-pay {
+      width: 10em;
+    }
+    @media (max-width: 768px) {
+      #cell-pay {
+        width: 4em;
+      }
+      .le-btn {
+        span {
+          display: none;
+        }
+        height: 33px;
+        width: 33px;
+        padding: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+      }
+    }
   }
-}
-.orderSummaryBlock {
-  display: flex;
-  align-items: center;
-  padding: 20px 8px;
-}
-.totalSum {
-  flex: 1;
-  .totalLabel {
+
+  .totalSum {
     font-size: 16px;
-    /* opacity: .5; */
+    line-height: 1.2;
+    margin-top: 5px;
   }
-  .price {
+  .totalSum .price {
     font-size: 20px;
-    font-weight: 600 !important;
+    font-weight: 600;
   }
+
 }
