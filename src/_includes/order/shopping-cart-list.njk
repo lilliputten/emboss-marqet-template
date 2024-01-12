@@ -5,87 +5,96 @@
 {# NOTE: To place currency sign after the price or before? #}
 {% set currencyAfter = lang === 'ru' %}
 
-<div class="shopping-cart-shopping-cart-list" id="shopping-cart-list" class="table-responsive">
+{% set wideActionsColumn = true if showAddTopCartButton else false %}
+
+<div class="
+    shopping-cart-shopping-cart-list
+    {{ 'wide-action-column' if wideActionsColumn else '' }}
+  "
+  id="shopping-cart-list"
+>
 
   {% set totalSum = 0 %}
 
-  <table class="table_ fixed-table">
-    {# Issue #15: No table header
-    #}
-    <thead>
-      <tr>
-        <th class="col-preview" title="{{ 'shoppingCart.preview' | i18n }}"><!--div>{{ 'shoppingCart.preview' | i18n }}</div--></th>
-        <th class="col-product" title="{{ 'shoppingCart.productName' | i18n }}"><div>{{ 'shoppingCart.productName' | i18n }}</div></th>
-        <th class="col-price" title="{{ 'shoppingCart.price' | i18n }}"><div>{{ 'shoppingCart.price' | i18n }}</div></th>
-        {% if showInStockColumn %}
-        <th class="col-inStock" title="{{ 'products.inStock' | i18n }}"><div>{{ 'products.inStock' | i18n }}</div></th>
-        {% endif %}
-        {% if not hideQuantityColumn %}
-        <th class="col-quantity" title="{{ 'shoppingCart.quantity' | i18n }}"><div>{{ 'shoppingCart.quantity' | i18n }}</div></th>
-        <th class="col-total" title="{{ 'shoppingCart.total' | i18n }}"><div>{{ 'shoppingCart.total' | i18n }}</div></th>
-        {% endif %}
-        <th class="col-actions">&nbsp;</th>
-      </tr>
-    </thead>
-    <tbody>
-    {% for item in basketItems -%}
+  <div class="fixed-table-scroll-wrapper">
+    <table class="fixed-table">
+      {# Issue #15: No table header
+      #}
+      <thead>
+        <tr>
+          <th class="col-preview" title="{{ 'shoppingCart.preview' | i18n }}"><!--div>{{ 'shoppingCart.preview' | i18n }}</div--></th>
+          <th class="col-product" title="{{ 'shoppingCart.productName' | i18n }}"><div>{{ 'shoppingCart.productName' | i18n }}</div></th>
+          <th class="col-price" title="{{ 'shoppingCart.price' | i18n }}"><div>{{ 'shoppingCart.price' | i18n }}</div></th>
+          {% if showInStockColumn %}
+          <th class="col-inStock" title="{{ 'products.inStock' | i18n }}"><div>{{ 'products.inStock' | i18n }}</div></th>
+          {% endif %}
+          {% if not hideQuantityColumn %}
+          <th class="col-quantity" title="{{ 'shoppingCart.quantity' | i18n }}"><div>{{ 'shoppingCart.quantity' | i18n }}</div></th>
+          <th class="col-total" title="{{ 'shoppingCart.total' | i18n }}"><div>{{ 'shoppingCart.total' | i18n }}</div></th>
+          {% endif %}
+          <th class="col-actions">&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for item in basketItems -%}
 
-      {% set total = item.count * item.price %}
-      {% set totalSum = totalSum + total %}
+        {% set total = item.count * item.price %}
+        {% set totalSum = totalSum + total %}
 
-      <tr>
-        <td class="col-preview">
-          <div class="thumb">
-            <a href="{{ langRootUrl }}/single-product"><img alt="" src="{{ item.image }}" /></a>
-          </div>
-        </td>
-        <td class="col-product">
-          <div class="desc">
-            <a href="{{ langRootUrl }}/single-product">
-              <h3>{{ item.name }}</h3>
-              <div class="pid">{{ 'shoppingCart.productCode' | i18n }}: {{ item.id }}</div>
-            </a>
-          </div>
-        </td>
-        <td class="col-price">
-          <div class="price">
-            {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}<span class="shopping-cart-price" id="price">{{ item.price }}</span>{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
-          </div>
-        </td>
-        {% if showInStockColumn %}
-          <td class="col-inStock"><div>{% if item.inStock %}{{ 'products.inStockYes' | i18n }}{% else %}{{ 'products.inStockNo' | i18n }}{% endif %}</div></td>
-        {% endif %}
-        {% if not hideQuantityColumn %}
-        <td class="col-quantity">
-          <div class="le-quantity">
-            <form>
-              <a class="minus" href="#reduce"></a>
-              <input class="shopping-cart-quantity" id="quantity" name="quantity" readonly="readonly" type="text" value="{{ item.count }}" />
-              <a class="plus" href="#add"></a>
-            </form>
-          </div>
-        </td>
-        <td class="col-total">
-          <div class="price">
-            {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}<span class="shopping-cart-total" id="total">{{ item.count * item.price }}</span>{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
-          </div>
-        </td>
-        {% endif %}
-        <td class="col-actions">
-          <div class="actions">
-            {% if showAddTpoCartButton and (not showInStockColumn or item.inStock) %}
-              <button class="le-btn small btn-iconic" title="{{ 'products.addToCart' | i18n }}"><i class="fa fa-shopping-cart"></i> <span>{{ 'products.toCartWide' | i18n }}</span></button>
-            {% endif %}
-            <button class="le-btn small btn-iconic" title="{{ 'products.remove' | i18n }}"><i class="fa fa-times"></i></button>
-            <!--
-            <a class="close-btn" href="#" title="{{ 'products.remove' | i18n }}"></a>
-            -->
-          </div>
-        </td>
-      </tr>
-    {% endfor %}
-    </tbody>
-  </table>
+        <tr>
+          <td class="col-preview">
+            <div class="thumb">
+              <a href="{{ langRootUrl }}/single-product"><img alt="" src="{{ item.image }}" /></a>
+            </div>
+          </td>
+          <td class="col-product">
+            <div class="desc">
+              <a href="{{ langRootUrl }}/single-product">
+                <h3>{{ item.name }}</h3>
+                <div class="pid">{{ 'shoppingCart.productCode' | i18n }}: {{ item.id }}</div>
+              </a>
+            </div>
+          </td>
+          <td class="col-price">
+            <div class="price">
+              {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}<span class="shopping-cart-price" id="price">{{ item.price }}</span>{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+            </div>
+          </td>
+          {% if showInStockColumn %}
+            <td class="col-inStock"><div>{% if item.inStock %}{{ 'products.inStockYes' | i18n }}{% else %}{{ 'products.inStockNo' | i18n }}{% endif %}</div></td>
+          {% endif %}
+          {% if not hideQuantityColumn %}
+          <td class="col-quantity">
+            <div class="le-quantity">
+              <form>
+                <a class="minus" href="#reduce"></a>
+                <input class="shopping-cart-quantity" id="quantity" name="quantity" readonly="readonly" type="text" value="{{ item.count }}" />
+                <a class="plus" href="#add"></a>
+              </form>
+            </div>
+          </td>
+          <td class="col-total">
+            <div class="price">
+              {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}<span class="shopping-cart-total" id="total">{{ item.count * item.price }}</span>{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+            </div>
+          </td>
+          {% endif %}
+          <td class="col-actions">
+            <div class="actions">
+              {% if showAddTopCartButton and (not showInStockColumn or item.inStock) %}
+                <button class="le-btn small btn-iconic" title="{{ 'products.addToCart' | i18n }}"><i class="fa fa-shopping-cart"></i> <span>{{ 'products.toCartWide' | i18n }}</span></button>
+              {% endif %}
+              <button class="le-btn small btn-iconic" title="{{ 'products.remove' | i18n }}"><i class="fa fa-times"></i></button>
+              <!--
+              <a class="close-btn" href="#" title="{{ 'products.remove' | i18n }}"></a>
+              -->
+            </div>
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
 
   {% if showSummaryBlock or showCheckoutButton or showCartButtons %}
   <div class="orderSummaryBlock">

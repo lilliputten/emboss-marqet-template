@@ -52,9 +52,11 @@
     position: relative;
   }
 
-  // Fix styles for inner elements: bottom margins under last elements
-  td > * textarea:last-child {
-    margin-bottom: 0;
+  td {
+    // Fix styles for inner elements: bottom margins under last elements
+    & > * textarea:last-child {
+      margin-bottom: 0;
+    }
   }
   // TODO: Use `block` display type for single inner element?
 
@@ -67,6 +69,7 @@
 
   // Adaptive...
 
+  /* UNUSED: fixedTableAdaptiveMedia
   @media ($fixedTableAdaptiveMedia) {
     // border: 1px solid blue;
     &,
@@ -98,4 +101,10 @@
       padding-top: 15px;
     }
   }
+  */
+}
+
+.fixed-table-scroll-wrapper {
+  position: relative;
+  overflow: auto;
 }

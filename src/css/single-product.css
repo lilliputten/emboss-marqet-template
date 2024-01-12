@@ -14,4 +14,13 @@
   & {
     background-color: var(--product-item-background);
   }
+  @media (max-width: 768px) {
+    .padded-buttons,
+    .merged-buttons {
+      display: flex;
+      > button {
+        flex: 1;
+      }
+    }
+  }
 }

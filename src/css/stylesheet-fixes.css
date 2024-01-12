@@ -126,11 +126,11 @@ section {
     font-weight: bold;
   }
 }
-.section-profile-sidebar {
+/* .section-profile-sidebar {
   h2 {
     margin-top: 18px;
   }
-}
+} */
 
 /* Nav menu active item */
 .top-nav-holder .nav-menu ul {
