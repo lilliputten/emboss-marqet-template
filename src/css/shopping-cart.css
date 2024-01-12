@@ -13,7 +13,7 @@
     .desc {
       overflow: hidden;
       text-overflow: ellipsis;
-      > * {
+      * {
         overflow: hidden;
         text-overflow: ellipsis;
       }
@@ -29,9 +29,9 @@
   .actions {
     display: flex;
     align-items: center;
-    @media ($fixedTableNonAdaptiveMedia) {
-      justify-content: flex-end;
-    }
+    // @media ($fixedTableNonAdaptiveMedia) {
+    justify-content: flex-end;
+    // }
     gap: 5px;
     button {
       .fa {
@@ -39,58 +39,117 @@
       }
       white-space: nowrap;
       @media (max-width: 768px) {
-        // Show only icon
+        // Show only icon in a square button...
         span {
           display: none;
         }
+        height: 33px;
+        width: 33px;
+        padding: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
 
   // Adjust table...
 
+  table {
+    // Set minimal width to enable scroll with `fixed-table-scroll-wrapper`
+    min-width: 600px;
+  }
+
   th > div {
     white-space: nowrap;
   }
-
-  @media ($fixedTableNonAdaptiveMedia) {
-    .col-preview { width: 10em; }
-    // .col-product { width: 8em; }
-    .col-price { width: 8em; }
-    .col-inStock { width: 8em; }
-    .col-quantity { width: 9em; }
-    .col-total { width: 8em; }
-    .col-actions { width: 14em; }
-
-    .col-product h3 {
-      text-transform: none;
+  td {
+    h3 {
+      font-size: 14px;
     }
-
-    .col-quantity,
-    .col-inStock,
-    .col-price,
-    .col-total {
-      text-align: center;
-    }
-
-    // Customize columns for mobile devices
-    @media (max-width: 992px) {
-      .col-inStock { width: 6em; }
-      .col-price { width: 6em; }
-      .col-total { width: 6em; }
-    }
-    @media (max-width: 768px) {
-      .col-inStock {
-        // display: none;
-      }
-      .col-preview { width: 6em; }
-      .col-actions { width: 8em; }
-    }
-    @media (max-width: 520px) {
-      .col-preview {
-        // display: none;
+    // Product description
+    .desc {
+      h3 + div {
+        margin-top: 4px;
       }
     }
   }
+
+  // @media ($fixedTableNonAdaptiveMedia) {
+  .totalSum {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-top: 5px;
+  }
+  .totalSum .price,
+  td.col-total,
+  td.col-price {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  td.col-preview { padding-right: 10px; }
+  /*
+  .col-actions {
+    width: 4em;
+    border: 1px solid green;
+    overflow: visible;
+    white-space: nowrap;
+    // display: flex;
+    & > *,
+    .actions {
+      display: inline-block;
+      overflow: visible;
+      border: 1px solid blue;
+      white-space: nowrap;
+      // display: flex;
+      // gap: 5px;
+    }
+  }
+  */
+
+  .col-preview { width: 10em; }
+  // .col-product { }
+  .col-price { width: 9em; }
+  .col-inStock { width: 8em; }
+  .col-quantity { width: 9em; }
+  .col-total { width: 9em; }
+  .col-actions { width: 4em; } // Narrow actions column
+  &.wide-action-column .col-actions { // Wide actions column
+    width: 14em;
+    @media (max-width: 768px) { // With compact icons (see rules above)
+      width: 8em;
+    }
+  }
+
+  .col-product h3 {
+    text-transform: none;
+  }
+
+  .col-quantity,
+  .col-inStock,
+  .col-price,
+  .col-total {
+    text-align: center;
+  }
+
+  // Customize columns for mobile devices
+  @media (max-width: 992px) {
+    .col-inStock { width: 6em; }
+    .col-price { width: 6em; }
+    .col-total { width: 6em; }
+  }
+  @media (max-width: 768px) {
+    .col-inStock {
+      // display: none;
+    }
+    // .col-preview { width: 6em; }
+    // .col-actions { width: 8em; }
+  }
+  @media (max-width: 520px) {
+    .col-preview {
+      // display: none;
+    }
+  }
+  // }
 
 }
