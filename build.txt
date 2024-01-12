@@ -3,4 +3,4 @@ Version: 0.0.26
 Branch: dev-240110-17-minor-changes
 Commit: 00cd9cb
 Fixed: 2024.01.12, 11:46 GMT+3
-Built: 2024.01.12, 11:46 GMT+3
+Built: 2024.01.12, 17:24 GMT+3
