@@ -65,7 +65,13 @@
       items: 4,
       itemsDesktop: [1200, 3],
       itemsDesktopSmall: [992, 2],
-      itemsTablet: [768, 1],
+      itemsTablet: [580, 1],
+      /* // Sizes per widths (non-optimal: only 1 item on screens narrower than 780)
+       * items: 4,
+       * itemsDesktop: [1200, 3],
+       * itemsDesktopSmall: [992, 2],
+       * itemsTablet: [768, 1],
+       */
       // itemsTablet: [480, 1],
       /* // Sizes per widths (original)...
        * items: 4, // 10 items above 1000px browser width
