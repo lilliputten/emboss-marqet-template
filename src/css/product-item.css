@@ -16,7 +16,7 @@
         font-size: 125%;
         /* font-size: 18px; [> From btn-iconic <] */
       }
-      opacity: .7;
+      opacity: 0.7;
       transition: all var(--transition-timeout);
       &:hover {
         opacity: 1;
@@ -36,7 +36,13 @@
     }
   }
   .head .thumb {
-    height: var(--product-item-height);
+    height: var(--product-item-height); // ???
+    @media (max-width: 767.9px) {
+      height: 150px;
+    }
+    @media (max-width: 400px) {
+      height: 120px;
+    }
     overflow: hidden;
     position: relative;
     display: flex;
@@ -63,6 +69,27 @@
         /** Add space for stars */
         /* padding-right: 110px; */
       }
+    }
+  }
+}
+
+.product-item {
+  width: 100%;
+}
+
+.products-holder { // .product-carousel .owl-wrapper .owl-item {
+  @media (max-width: 767.9px) {
+    align-items: center !important;
+    .product-item {
+      /* width: 305px; */
+      .body h3 {
+        font-size: 14px;
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    .product-item {
+      /* width: 100%; */
     }
   }
 }
