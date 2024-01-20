@@ -7,7 +7,7 @@
     margin-top: 10px;
     display: flex;
     align-items: flex-end;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     gap: 5px;
     .wide& {
@@ -22,15 +22,6 @@
     display: flex;
     align-items: stretch;
     justify-content: center;
-  }
-}
-
-@media (max-width: 767.9px) {
-  .products-holder.product-carousel .owl-wrapper .owl-item {
-    align-items: center !important;
-    .product-item {
-      width: 305px;
-    }
   }
 }
 
@@ -215,7 +206,8 @@
 }
 .product-item .body h3 {
   font-size: 18px;
-  line-height: 26px;
+  /* line-height: 26px; */
+  line-height: 1.3;
   min-height: 44px;
   text-transform: none;
   text-align: center;

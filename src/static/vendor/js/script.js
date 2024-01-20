@@ -63,9 +63,10 @@
       // NOTE: See width setting for `product-item` in `src/_includes/catalogue/section-featured-products.njk`
       // Sizes per widths
       items: 4,
-      itemsDesktop: [1200, 3],
-      itemsDesktopSmall: [992, 2],
-      itemsTablet: [580, 1],
+      itemsDesktop: [992, 3],
+      itemsDesktopSmall: [768, 3],
+      itemsTablet: [600, 2],
+      itemsMobile: [340, 1],
       /* // Sizes per widths (non-optimal: only 1 item on screens narrower than 780)
        * items: 4,
        * itemsDesktop: [1200, 3],
@@ -85,7 +86,7 @@
        * itemsDesktopSmall: [990, 2],
        * itemsTablet: [800, 1],
        */
-      itemsMobile: undefined, // itemsMobile disabled - inherit from itemsTablet option
+      // itemsMobile: undefined, // itemsMobile disabled - inherit from itemsTablet option
     });
 
     // Find and init product carousels...
