@@ -1,7 +1,7 @@
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
 {% set productColumns = 'col-xs-12 col-sm-6 col-md-6 col-lg-6' %}
-{% set productColumns = 'col-xs-12 col-sm-6 col-md-6 col-lg-4' %}
+{% set productColumns = 'col-xs-6 col-sm-6 col-md-6 col-lg-4' %}
 {% set currency = '₽' if lang === 'ru' else '$' %}
 {# NOTE: To place currency sign after the price or before? #}
 {% set currencyAfter = lang === 'ru' %}

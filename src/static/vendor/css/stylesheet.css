@@ -9040,7 +9040,7 @@ select.top-drop-menu {
     display: none;
   }
   .simple-grid .product-item {
-    width: 285px!important;
+    /* width: 285px!important; */
     margin: 0 auto 20px auto;
     display: block;
   }
@@ -9054,7 +9054,7 @@ select.top-drop-menu {
 }
 @media all and (max-width: 342px) {
   .simple-grid .product-item {
-    width: 100%!important;
+    /* width: 100%!important; */
     margin: 0 auto 20px auto;
     display: block;
   }
