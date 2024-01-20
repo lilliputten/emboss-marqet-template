@@ -317,7 +317,7 @@ section {
     margin-top: 10px;
     display: flex;
     align-items: flex-end;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     gap: 5px;
   }
@@ -333,14 +333,6 @@ section {
     align-items: stretch;
     justify-content: center;
   }
-@media (max-width: 767.9px) {
-  .products-holder.product-carousel .owl-wrapper .owl-item {
-    align-items: center !important;
-  }
-    .products-holder.product-carousel .owl-wrapper .owl-item .product-item {
-      width: 305px;
-    }
-}
 .product-item.wide {
   margin-bottom: 30px;
   width: 100%;
@@ -520,7 +512,8 @@ section {
 }
 .product-item .body h3 {
   font-size: 18px;
-  line-height: 26px;
+  /* line-height: 26px; */
+  line-height: 1.3;
   min-height: 44px;
   text-transform: none;
   text-align: center;
@@ -647,7 +640,7 @@ section {
         /* font-size: 18px; [> From btn-iconic <] */
       }
 .product-item .floated-actions button {
-      opacity: .7;
+      opacity: 0.7;
       transition: all var(--transition-timeout);
 }
 .product-item .floated-actions button:hover {
@@ -667,13 +660,26 @@ section {
     }
 .product-item .head .thumb {
     height: var(--product-item-height);
+  }
+/* ???*/
+@media (max-width: 767.9px) {
+.product-item .head .thumb {
+      height: 150px;
+  }
+    }
+@media (max-width: 400px) {
+.product-item .head .thumb {
+      height: 120px;
+  }
+    }
+.product-item .head .thumb {
     overflow: hidden;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
-  }
+}
 .product-item :hover .thumb img {
     transform: scale(1.1);
     opacity: 0.9;
@@ -690,6 +696,24 @@ section {
         /** Add space for stars */
         /* padding-right: 110px; */
       }
+.product-item {
+  width: 100%;
+}
+/* .product-carousel .owl-wrapper .owl-item {*/
+@media (max-width: 767.9px) {
+.products-holder {
+    align-items: center !important
+}
+      /* width: 305px; */
+      .products-holder .product-item .body h3 {
+        font-size: 14px;
+      }
+  }
+@media (max-width: 400px) {
+    .products-holder .product-item {
+      /* width: 100%; */
+    }
+  }
 #single-product .owl-carousel .owl-wrapper {
       display: flex !important;
       align-items: center;

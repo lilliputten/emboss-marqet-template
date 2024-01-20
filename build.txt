@@ -1,6 +1,6 @@
 Project: emboss-studio-site
-Version: 0.0.26
-Branch: dev-240110-17-minor-changes
-Commit: 5751a66
-Fixed: 2024.01.14, 08:47 GMT+3
-Built: 2024.01.18, 08:44 GMT+3
+Version: 0.0.27
+Branch: 18-product-item-columns
+Commit: 0024cd4
+Fixed: 2024.01.20, 17:16 GMT+3
+Built: 2024.01.20, 17:16 GMT+3
