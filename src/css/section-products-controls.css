@@ -1,10 +1,33 @@
 .section-products-controls {
-  @media (min-width: 768px) {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 10px;
+  // margin: 0 10px;
+  .filters-cell {
+    flex: 1;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .grid-list-cell {
+  }
+  @media (min-width: 768px) {
   }
   /* border: 1px solid red; */
   .bootstrap-select.ctrl-item {
     width: auto !important;
+  }
+  @media (max-width: 499.9px) {
+    flex-direction: column;
+    .filters-cell {
+      justify-content: center;
+    }
+  }
+  @media (max-width: 767.9px) {
+    .hide-for-mobiles {
+      display: none;
+    }
   }
 }

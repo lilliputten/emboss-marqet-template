@@ -71,5 +71,7 @@
 .section-products-grid {
   .grid-list-buttons {
     white-space: nowrap;
+    li {
+    }
   }
 }
