@@ -3,7 +3,6 @@
 /** @type TBasketItem[] */
 const basketItems = [
   /*
-  */
   {
     image: '/vendor/images/products/products-modelist-1/product01.png',
     priceOld: 2500,
@@ -13,6 +12,7 @@ const basketItems = [
     id: 4564789,
     count: 1,
   },
+  */
   {
     image: '/vendor/images/products/products-modelist-1/product02.png',
     // priceOld: 350,
