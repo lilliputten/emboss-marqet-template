@@ -1,16 +1,16 @@
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
-<div class="section-products-controls controller-nav-bar row">
+<div class="products-controls-item section-products-controls controller-nav-bar row">
 
   {# Filter / pagination controls #}
   <div class="col-xs-12 col-sm-9 col-md-9">
     <nobr>
       <label class="ctrl-item" for="section-products-controls-sort">{{ 'products.sort' | i18n }}</label>
       <select class="ctrl-item selectpicker" data-style="btn-inverse">
-        <option>{{ 'products.sortByPrice' | i18n }} 🠗</option>
-        <option>{{ 'products.sortByPrice' | i18n }} 🠕</option>
-        <option>{{ 'products.sortAbc' | i18n }} 🠗</option>
-        <option>{{ 'products.sortAbc' | i18n }} 🠕</option>
+        <option>{{ 'products.sortByPrice' | i18n }} &darr;</option>
+        <option>{{ 'products.sortByPrice' | i18n }} &uarr;</option>
+        <option>{{ 'products.sortAbc' | i18n }} &darr;</option>
+        <option>{{ 'products.sortAbc' | i18n }} &uarr;</option>
         {#
         <option>{{ 'products.sortByAvailability' | i18n }} 🠗</option>
         <option>{{ 'products.sortByAvailability' | i18n }} 🠕</option>
