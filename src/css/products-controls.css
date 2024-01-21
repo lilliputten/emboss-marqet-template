@@ -16,6 +16,9 @@
   }
   &.products-controls-show .products-controls-item {
     display: block;
+    &.products-controls-item-flex {
+      display: flex;
+    }
   }
   @media (min-width: 992px) {
     & #products-controls-button {
@@ -23,6 +26,9 @@
     }
     & .products-controls-item {
       display: block;
+      &.products-controls-item-flex {
+        display: flex;
+      }
     }
   }
 }
