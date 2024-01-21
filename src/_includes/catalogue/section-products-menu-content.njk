@@ -1,12 +1,16 @@
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 
+{% set showOpen = false %}
+{% set toggleClass = 'accordion-toggle' if showOpen else 'accordion-toggle collapsed' %}
+{% set bodyClass = 'accordion-body collapse in' if showOpen else 'accordion-body collapse' %}
+
 <div class="accordion-group">
   <div class="accordion-heading">
-    <a class="accordion-toggle" data-toggle="collapse" href="#decals">
+    <a class="{{ toggleClass }}" data-toggle="collapse" href="#decals">
       {{ 'productsMenu.decals' | i18n }}
     </a>
   </div>
-  <div id="decals" class="accordion-body collapse in">
+  <div id="decals" class="{{ bodyClass  }}">
     <div class="accordion-inner">
       <ul>
         <li><a href="{{ langRootUrl }}/products/decals/aircrafts">{{ 'productsMenu.aircrafts' | i18n }}</a></li>
@@ -19,11 +23,11 @@
 
 <div class="accordion-group">
   <div class="accordion-heading">
-    <a class="accordion-toggle" data-toggle="collapse" href="#scale">
+    <a class="{{ toggleClass }}" data-toggle="collapse" href="#scale">
       {{ 'productsMenu.scale' | i18n }}
     </a>
   </div>
-  <div id="scale" class="accordion-body collapse in">
+  <div id="scale" class="{{ bodyClass }}">
     <div class="accordion-inner">
       <ul>
         <li><a href="{{ langRootUrl }}/products/scale/1-32">1/32</a></li>
@@ -39,11 +43,11 @@
 
 <div class="accordion-group">
   <div class="accordion-heading">
-    <a class="accordion-toggle" data-toggle="collapse" href="#discounts">
+    <a class="{{ toggleClass }}" data-toggle="collapse" href="#discounts">
       {{ 'productsMenu.discounts' | i18n }}
     </a>
   </div>
-  <div id="discounts" class="accordion-body collapse in">
+  <div id="discounts" class="{{ bodyClass }}">
     <div class="accordion-inner">
       <ul>
         <li><a href="{{ langRootUrl }}/products/discounts/new">{{ 'productsMenu.new' | i18n }}</a></li>
