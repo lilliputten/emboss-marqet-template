@@ -437,11 +437,14 @@
           </div>
           <div class="section-products-grid-content col-xs-12 col-md-9">
             <div
-              class="products-controls-item section-products-controls controller-nav-bar row"
+              id="section-products-controls"
+              class="products-controls-item products-controls-item-flex section-products-controls _controller-nav-bar _row"
             >
-              <div class="col-xs-12 col-sm-9 col-md-9">
+              <div class="filters-cell _col-xs-12 _col-sm-9 _col-md-9">
                 <nobr>
-                  <label class="ctrl-item" for="section-products-controls-sort"
+                  <label
+                    class="ctrl-item hide-for-mobiles"
+                    for="section-products-controls-sort"
                     >Сортировать</label
                   >
                   <select
@@ -455,7 +458,9 @@
                   </select>
                 </nobr>
                 <nobr>
-                  <label class="ctrl-item" for="section-products-controls-show"
+                  <label
+                    class="ctrl-item hide-for-mobiles"
+                    for="section-products-controls-show"
                     >Показать</label
                   >
                   <select
@@ -485,15 +490,13 @@
                     <option>40</option>
                     <option>Все</option>
                   </select>
-                  <label
-                    class="ctrl-item"
-                    for="section-products-controls-page-size"
-                    >на странице</label
-                  >
+                  <!--
+      <label class="ctrl-item hide-for-mobiles" for="section-products-controls-page-size">на странице</label>
+      -->
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-3 col-md-3">
+              <div class="grid-list-cell _col-xs-12 _col-sm-3 _col-md-3">
                 <div class="grid-list-buttons">
                   <ul class="list-inline">
                     <li class="active">
