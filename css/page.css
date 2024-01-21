@@ -344,7 +344,6 @@ section {
 .product-item.wide .head,
 .product-item.wide .head .thumb {
   max-height: var(--product-item-height);
-  /* height: var(--product-item-height); */
   overflow: hidden;
   position: relative;
 }
@@ -1513,4 +1512,30 @@ div.pp_default .pp_nav {
 #section-profile-orders-list .totalSum .price {
     font-size: 20px;
     font-weight: 600;
+  }
+.products-controls-group #products-controls-button {
+    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.products-controls-group.products-controls-show #products-controls-button > .icon-show,
+  .products-controls-group:not(.products-controls-show) #products-controls-button > .icon-hide {
+    display: none;
+  }
+.products-controls-group .products-controls-item {
+    display: none;
+  }
+.products-controls-group.products-controls-show .products-controls-item {
+    display: block;
+  }
+@media (min-width: 992px) {
+    .products-controls-group #products-controls-button {
+      display: none;
+    }
+    .products-controls-group .products-controls-item {
+      display: block;
+    }
   }

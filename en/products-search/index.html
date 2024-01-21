@@ -369,88 +369,110 @@
         </div>
       </section>
 
-      <section id="products-grid-sidebar" class="section-products-grid">
+      <section
+        id="products-grid-sidebar"
+        class="section-products-grid products-controls-group"
+      >
         <div class="container no-padding">
           <div class="section-products-grid-sidebar col-xs-12 col-md-3">
             <div class="sidebar">
-              <div class="accordion-widget category-accordions widget">
-                <h2>Categories</h2>
-                <div class="accordion">
-                  <div class="accordion-group">
-                    <div class="accordion-heading">
-                      <a
-                        class="accordion-toggle"
-                        data-toggle="collapse"
-                        href="#decals"
-                      >
-                        3D decals
-                      </a>
-                    </div>
-                    <div id="decals" class="accordion-body collapse in">
-                      <div class="accordion-inner">
-                        <ul>
-                          <li>
-                            <a href="/en/products/decals/aircrafts">Aircraft</a>
-                          </li>
-                          <li>
-                            <a href="/en/products/decals/helicopters"
-                              >Helicopters</a
-                            >
-                          </li>
-                          <li><a href="/en/products/decals/cars">Cars</a></li>
-                        </ul>
+              <!-- See parent container `.products-controls-group` -->
+              <button
+                id="products-controls-button"
+                type="button"
+                class="btn le-btn"
+              >
+                <i class="icon-show fa fa-bars" title="Show details"></i>
+                <i class="icon-hide fa fa-times" title="Hide details"></i>
+              </button>
+
+              <div id="main-products-menu" class="main-products-menu">
+                <div
+                  id="main-products-menu-content"
+                  class="products-controls-item accordion-widget category-accordion widget"
+                >
+                  <h2>Categories</h2>
+                  <div class="accordion">
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a
+                          class="accordion-toggle"
+                          data-toggle="collapse"
+                          href="#decals"
+                        >
+                          3D decals
+                        </a>
+                      </div>
+                      <div id="decals" class="accordion-body collapse in">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li>
+                              <a href="/en/products/decals/aircrafts"
+                                >Aircraft</a
+                              >
+                            </li>
+                            <li>
+                              <a href="/en/products/decals/helicopters"
+                                >Helicopters</a
+                              >
+                            </li>
+                            <li><a href="/en/products/decals/cars">Cars</a></li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="accordion-group">
-                    <div class="accordion-heading">
-                      <a
-                        class="accordion-toggle"
-                        data-toggle="collapse"
-                        href="#scale"
-                      >
-                        Scale
-                      </a>
-                    </div>
-                    <div id="scale" class="accordion-body collapse in">
-                      <div class="accordion-inner">
-                        <ul>
-                          <li><a href="/en/products/scale/1-32">1/32</a></li>
-                          <li><a href="/en/products/scale/1-48">1/48</a></li>
-                          <li><a href="/en/products/scale/1-144">1/144</a></li>
-                          <li><a href="/en/products/scale/1-24">1/24</a></li>
-                          <li><a href="/en/products/scale/1-35">1/35</a></li>
-                          <li><a href="/en/products/scale/1-43">1/43</a></li>
-                        </ul>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a
+                          class="accordion-toggle"
+                          data-toggle="collapse"
+                          href="#scale"
+                        >
+                          Scale
+                        </a>
+                      </div>
+                      <div id="scale" class="accordion-body collapse in">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li><a href="/en/products/scale/1-32">1/32</a></li>
+                            <li><a href="/en/products/scale/1-48">1/48</a></li>
+                            <li>
+                              <a href="/en/products/scale/1-144">1/144</a>
+                            </li>
+                            <li><a href="/en/products/scale/1-24">1/24</a></li>
+                            <li><a href="/en/products/scale/1-35">1/35</a></li>
+                            <li><a href="/en/products/scale/1-43">1/43</a></li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="accordion-group">
-                    <div class="accordion-heading">
-                      <a
-                        class="accordion-toggle"
-                        data-toggle="collapse"
-                        href="#discounts"
-                      >
-                        Discounts and promotions
-                      </a>
-                    </div>
-                    <div id="discounts" class="accordion-body collapse in">
-                      <div class="accordion-inner">
-                        <ul>
-                          <li>
-                            <a href="/en/products/discounts/new"
-                              >New products</a
-                            >
-                          </li>
-                          <li>
-                            <a href="/en/products/discounts/hits"
-                              >Hit of sales</a
-                            >
-                          </li>
-                        </ul>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a
+                          class="accordion-toggle"
+                          data-toggle="collapse"
+                          href="#discounts"
+                        >
+                          Discounts and promotions
+                        </a>
+                      </div>
+                      <div id="discounts" class="accordion-body collapse in">
+                        <div class="accordion-inner">
+                          <ul>
+                            <li>
+                              <a href="/en/products/discounts/new"
+                                >New products</a
+                              >
+                            </li>
+                            <li>
+                              <a href="/en/products/discounts/hits"
+                                >Hit of sales</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -459,7 +481,9 @@
             </div>
           </div>
           <div class="section-products-grid-content col-xs-12 col-md-9">
-            <div class="section-products-controls controller-nav-bar row">
+            <div
+              class="products-controls-item section-products-controls controller-nav-bar row"
+            >
               <div class="col-xs-12 col-sm-9 col-md-9">
                 <nobr>
                   <label class="ctrl-item" for="section-products-controls-sort"
