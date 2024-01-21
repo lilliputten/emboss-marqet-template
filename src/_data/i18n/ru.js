@@ -1,3 +1,5 @@
+// vim: ic
+
 const site = require('../site.js');
 
 const siteName = 'Emboss';
@@ -146,6 +148,10 @@ const ru = {
     inStockNo: 'Нет',
     casualPersons: 'Случайные люди',
     categories: 'Категории',
+    showCategories: 'Показать категории',
+    hideCategories: 'Скрыть категории',
+    showDetails: 'Показать детали',
+    hideDetails: 'Скрыть детали',
     find: 'Найти',
     filter: 'Фильтр',
     learnMore: 'Узнать больше',

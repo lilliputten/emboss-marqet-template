@@ -6,18 +6,12 @@
 {# NOTE: To place currency sign after the price or before? #}
 {% set currencyAfter = lang === 'ru' %}
 
-<section id="products-grid-sidebar" class="section-products-grid">
+<section id="products-grid-sidebar" class="section-products-grid products-controls-group">
   <div class="container no-padding">
     <div class="section-products-grid-sidebar col-xs-12 col-md-3">
       <div class="sidebar">
-        {# Main products menu #}
-        <div class="accordion-widget category-accordions widget">
-          <h2>{{ 'products.categories' | i18n }}</h2>
-          <div class="accordion">
-            {# Main products menu content #}
-            {% include "catalogue/section-products-menu-content.njk" %}
-          </div>
-        </div>
+        {% include "catalogue/products-controls-button.njk" %}
+        {% include "catalogue/main-products-menu.njk" %}
       </div>
     </div>
     <div class="section-products-grid-content col-xs-12 col-md-9">

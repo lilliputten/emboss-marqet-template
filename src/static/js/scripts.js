@@ -13,6 +13,7 @@ function onLoad() {
     window.removeEventListener('load', onLoad);
     var body = document.body;
     body.classList.add('loaded');
+    loaded();
   }
 }
 
@@ -31,6 +32,9 @@ function started() {
   var body = document.body;
   body.classList.add('inited');
   body.classList.remove('noscript');
+}
+
+function loaded() {
 }
 
 window.addEventListener('load', onLoad);
