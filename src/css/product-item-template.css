@@ -36,7 +36,6 @@
 .product-item.wide .head,
 .product-item.wide .head .thumb {
   max-height: var(--product-item-height);
-  /* height: var(--product-item-height); */
   overflow: hidden;
   position: relative;
 }

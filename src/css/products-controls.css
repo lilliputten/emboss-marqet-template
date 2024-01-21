@@ -1,0 +1,28 @@
+.products-controls-group {
+  & #products-controls-button {
+    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &.products-controls-show #products-controls-button > .icon-show,
+  &:not(.products-controls-show) #products-controls-button > .icon-hide {
+    display: none;
+  }
+  & .products-controls-item {
+    display: none;
+  }
+  &.products-controls-show .products-controls-item {
+    display: block;
+  }
+  @media (min-width: 992px) {
+    & #products-controls-button {
+      display: none;
+    }
+    & .products-controls-item {
+      display: block;
+    }
+  }
+}

@@ -20,6 +20,13 @@
 
   // onReady method begin
   function onReady() {
+    // products-controls
+    var mainProductsMenuButton = $('#products-controls-button');
+    mainProductsMenuButton.click(function() {
+      var menu = this.closest('.products-controls-group');
+      menu.classList.toggle('products-controls-show');
+    });
+
     // console.log('[script:onReady]', window.hasReady);
     // NOTE: Avoid re-initialization on live-reload (in debug mode)
     if (window.hasReady) {
