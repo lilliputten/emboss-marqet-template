@@ -147,20 +147,35 @@
                     <li><a href="/en/contacts">Contacts</a></li>
                   </ul>
                 </nav>
-                <select
-                  class="mobile-dropdown selectpicker top-drop-menu nav hidden-md hidden-sm visible-xs hidden-lg"
-                  data-style="btn"
-                >
-                  <option value="/en/" selected="selected">Homepage</option>
-                  <option value="/en/products-grid">Catalog</option>
-                  <option value="/en/delivery">Delivery and payment</option>
-                  <option value="/en/wholesalers">Wholesalers</option>
-                  <option value="/en/contacts">Contacts</option>
-                </select>
               </div>
               <div
                 class="col-xs-9 col-sm-11 col-md-5 col-lg-4 no-margin search-holder"
               >
+                <!-- Site menu -->
+                <div class="main-menu-block dropdown">
+                  <button
+                    id="main-menu-button dropdown-toggle"
+                    data-hover="dropdown"
+                    type="button"
+                    class="btn le-btn"
+                  >
+                    <i class="icon-show fa fa-bars" title="Show menu"></i>
+                    <!--
+              <i class="icon-hide fa fa-times" title="Hide menu"></i>
+              -->
+                  </button>
+                  <div class="dropdown-menu">
+                    <ul class="nav">
+                      <li>
+                        <a class="active" href="/en/products-grid">Catalog</a>
+                      </li>
+                      <li><a href="/en/delivery">Delivery and payment</a></li>
+                      <li><a href="/en/wholesalers">Wholesalers</a></li>
+                      <li><a href="/en/contacts">Contacts</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Search -->
                 <div class="searchbox">
                   <div class="field">
                     <form>

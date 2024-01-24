@@ -154,20 +154,35 @@
                     <li><a href="/en/contacts">Contacts</a></li>
                   </ul>
                 </nav>
-                <select
-                  class="mobile-dropdown selectpicker top-drop-menu nav hidden-md hidden-sm visible-xs hidden-lg"
-                  data-style="btn"
-                >
-                  <option value="/en/" selected="selected">Homepage</option>
-                  <option value="/en/products-grid">Catalog</option>
-                  <option value="/en/delivery">Delivery and payment</option>
-                  <option value="/en/wholesalers">Wholesalers</option>
-                  <option value="/en/contacts">Contacts</option>
-                </select>
               </div>
               <div
                 class="col-xs-9 col-sm-11 col-md-5 col-lg-4 no-margin search-holder"
               >
+                <!-- Site menu -->
+                <div class="main-menu-block dropdown">
+                  <button
+                    id="main-menu-button dropdown-toggle"
+                    data-hover="dropdown"
+                    type="button"
+                    class="btn le-btn"
+                  >
+                    <i class="icon-show fa fa-bars" title="Show menu"></i>
+                    <!--
+              <i class="icon-hide fa fa-times" title="Hide menu"></i>
+              -->
+                  </button>
+                  <div class="dropdown-menu">
+                    <ul class="nav">
+                      <li>
+                        <a class="active" href="/en/products-grid">Catalog</a>
+                      </li>
+                      <li><a href="/en/delivery">Delivery and payment</a></li>
+                      <li><a href="/en/wholesalers">Wholesalers</a></li>
+                      <li><a href="/en/contacts">Contacts</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Search -->
                 <div class="searchbox">
                   <div class="field">
                     <form>
@@ -338,21 +353,11 @@
 
       <section
         id="products-grid-sidebar"
-        class="section-products-grid products-controls-group"
+        class="section-products-grid products-controls-group_"
       >
         <div class="container no-padding">
           <div class="section-products-grid-sidebar col-xs-12 col-md-3">
             <div class="sidebar">
-              <!-- See parent container `.products-controls-group` -->
-              <button
-                id="products-controls-button"
-                type="button"
-                class="btn le-btn"
-              >
-                <i class="icon-show fa fa-bars" title="Show details"></i>
-                <i class="icon-hide fa fa-times" title="Hide details"></i>
-              </button>
-
               <div id="main-products-menu" class="main-products-menu">
                 <div
                   id="main-products-menu-content"
@@ -511,14 +516,16 @@
               <div class="grid-list-cell _col-xs-12 _col-sm-3 _col-md-3">
                 <div class="grid-list-buttons">
                   <ul class="list-inline">
-                    <li class="active">
+                    <li class="active" title="Grid">
                       <a data-toggle="tab" href="#grid-view"
-                        ><i class="fa fa-th-large"></i> Grid</a
+                        ><i class="fa fa-th-large"></i>
+                        <span class="hideForMobiles">Grid</span></a
                       >
                     </li>
                     <li>
-                      <a data-toggle="tab" href="#list-view"
-                        ><i class="fa fa-th-list"></i> List</a
+                      <a data-toggle="tab" href="#list-view" title="List"
+                        ><i class="fa fa-th-list"></i>
+                        <span class="hideForMobiles">List</span></a
                       >
                     </li>
                   </ul>

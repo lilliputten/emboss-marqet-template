@@ -239,6 +239,34 @@ section {
     height: 30px;
     line-height: 30px;
   }
+.page-header .search-holder {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+.page-header .search-holder .main-menu-block {
+      margin-left: 10px;
+    }
+/* width: 49px;*/
+@media (min-width: 768px) {
+.page-header .search-holder .main-menu-block {
+        display: none
+    }
+      }
+/* padding: 10px;*/
+.page-header .search-holder .main-menu-block .dropdown-menu .nav li {
+            margin: 5px 0;
+            font-size: 13px;
+            text-transform: uppercase;
+          }
+/* line-height: 29px;*/
+.page-header .search-holder .main-menu-block .dropdown-menu .nav li a {
+              padding-top: 5px;
+              padding-bottom: 5px;
+            }
+.page-header .search-holder .searchbox {
+      flex: 1;
+    }
 /* Basket & search row */
 @media all and (max-width: 299px) {
 .page-header {
@@ -615,7 +643,13 @@ section {
 .section-products-grid .grid-list-buttons {
     white-space: nowrap;
   }
-.section-products-grid .grid-list-buttons li {
+@media (max-width: 650px) {
+      .section-products-grid .grid-list-buttons li {
+        min-width: 30px;
+      }
+      .section-products-grid .grid-list-buttons .hideForMobiles {
+        display: none;
+      }
     }
 .inline.qnt-holder > .le-quantity input {
   border: 1px solid #d6d6d8;
@@ -1240,14 +1274,12 @@ section#breadcrumb .iconic-nav-bar.no-icon .bar {
 .section-products-controls .bootstrap-select.ctrl-item {
     width: auto !important;
   }
-@media (max-width: 499.9px) {
-.section-products-controls {
-    flex-direction: column
-}
-    .section-products-controls .filters-cell {
-      justify-content: center;
-    }
-  }
+/* @media (max-width: 499.9px) {*/
+/*   flex-direction: column;*/
+/*   .filters-cell {*/
+/*     justify-content: center;*/
+/*   }*/
+/* }*/
 @media (max-width: 767.9px) {
     .section-products-controls .hide-for-mobiles {
       display: none;
@@ -1449,11 +1481,11 @@ div.pp_default .pp_nav {
     font-weight: 600 !important;
   }
 .orders-table {
-    }
+  }
 .orders-table {
-    }
+  }
 .orders-table {
-    }
+  }
 .orders-table td#cell-paymentState.paid,
     .orders-table td#cell-paymentState.unpaid,
     .orders-table td#cell-paymentState.unknown,

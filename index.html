@@ -145,22 +145,35 @@
                     <li><a href="/contacts">Контакты</a></li>
                   </ul>
                 </nav>
-                <select
-                  class="mobile-dropdown selectpicker top-drop-menu nav hidden-md hidden-sm visible-xs hidden-lg"
-                  data-style="btn"
-                >
-                  <option value="/" selected="selected">
-                    Домашняя страница
-                  </option>
-                  <option value="/products-grid">Каталог</option>
-                  <option value="/delivery">Доставка и оплата</option>
-                  <option value="/wholesalers">Оптовикам</option>
-                  <option value="/contacts">Контакты</option>
-                </select>
               </div>
               <div
                 class="col-xs-9 col-sm-11 col-md-5 col-lg-4 no-margin search-holder"
               >
+                <!-- Site menu -->
+                <div class="main-menu-block dropdown">
+                  <button
+                    id="main-menu-button dropdown-toggle"
+                    data-hover="dropdown"
+                    type="button"
+                    class="btn le-btn"
+                  >
+                    <i class="icon-show fa fa-bars" title="Показать меню"></i>
+                    <!--
+              <i class="icon-hide fa fa-times" title="Скрыть меню"></i>
+              -->
+                  </button>
+                  <div class="dropdown-menu">
+                    <ul class="nav">
+                      <li>
+                        <a class="active" href="/products-grid">Каталог</a>
+                      </li>
+                      <li><a href="/delivery">Доставка и оплата</a></li>
+                      <li><a href="/wholesalers">Оптовикам</a></li>
+                      <li><a href="/contacts">Контакты</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Search -->
                 <div class="searchbox">
                   <div class="field">
                     <form>
