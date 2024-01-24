@@ -19,12 +19,12 @@
   .bootstrap-select.ctrl-item {
     width: auto !important;
   }
-  @media (max-width: 499.9px) {
-    flex-direction: column;
-    .filters-cell {
-      justify-content: center;
-    }
-  }
+  // @media (max-width: 499.9px) {
+  //   flex-direction: column;
+  //   .filters-cell {
+  //     justify-content: center;
+  //   }
+  // }
   @media (max-width: 767.9px) {
     .hide-for-mobiles {
       display: none;

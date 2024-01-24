@@ -71,7 +71,13 @@
 .section-products-grid {
   .grid-list-buttons {
     white-space: nowrap;
-    li {
+    @media (max-width: 650px) {
+      li {
+        min-width: 30px;
+      }
+      .hideForMobiles {
+        display: none;
+      }
     }
   }
 }
