@@ -45,8 +45,8 @@
   <div class="grid-list-cell _col-xs-12 _col-sm-3 _col-md-3">
     <div class="grid-list-buttons">
       <ul class="list-inline">
-        <li class="active"><a data-toggle="tab" href="#grid-view"><i class="fa fa-th-large"></i> {{ 'products.grid' | i18n }}</a></li>
-        <li><a data-toggle="tab" href="#list-view"><i class="fa fa-th-list"></i> {{ 'products.list' | i18n }}</a></li>
+        <li class="active" title="{{ 'products.grid' | i18n }}"><a data-toggle="tab" href="#grid-view"><i class="fa fa-th-large"></i> <span class="hideForMobiles">{{ 'products.grid' | i18n }}</span></a></li>
+        <li><a data-toggle="tab" href="#list-view" title="{{ 'products.list' | i18n }}"><i class="fa fa-th-list"></i> <span class="hideForMobiles">{{ 'products.list' | i18n }}</span></a></li>
       </ul>
     </div>
   </div>
