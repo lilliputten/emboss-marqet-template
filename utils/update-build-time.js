@@ -44,7 +44,7 @@ const timestampFileName = path.resolve(prjPath, 'build-timestamp.txt');
 const timetagFileName = path.resolve(prjPath, 'build-timetag.txt');
 // const versionFileName = path.resolve(prjPath, 'build-version.txt');
 
-console.log('Updating build tag/time:', buildTag, '/', buildTzTime);
+console.log('Updated build tag/time:', buildTag, '/', buildTzTime);
 
 fs.writeFileSync(timetagFileName, buildTag, 'utf8');
 fs.writeFileSync(timestampFileName, buildTzTime, 'utf8');
