@@ -1,5 +1,14 @@
+<div class="mobile-menu top-drop-menu nav visible-xs hidden-sm hidden-md hidden-lg">
+  <button id="products-controls-button" type="button" class="btn le-btn">
+    <i class="icon-show fa fa-bars" title="{{ 'headerLinks.showMenu' | i18n }}"></i>
+    <!--
+    <i class="icon-hide fa fa-times" title="{{ 'headerLinks.hideMenu' | i18n }}"></i>
+    -->
+  </button>
+</div>
+{#
 <select class="mobile-dropdown selectpicker top-drop-menu nav hidden-md hidden-sm visible-xs hidden-lg" data-style="btn">
-  {# Mobile droipdown menu... #}
+  <!-- Mobile droipdown menu... -->
   <option value="{{ langRootUrl }}/" selected="selected">{{ 'headerLinks.homepage' | i18n }}</option>
   <option value="{{ langRootUrl }}/products-grid">{{ 'headerLinks.catalog' | i18n }}</option>
   <option value="{{ langRootUrl }}/delivery">{{ 'headerLinks.delivery' | i18n }}</option>
@@ -18,7 +27,8 @@
     <option value="{{ langRootUrl }}/profile-logon">{{ 'pages.profileLogOn' | i18n }}</option>
     <option value="{{ langRootUrl }}/shopping-cart">{{ 'pages.shoppingCart' | i18n }}</option>
     <option value="{{ langRootUrl }}/checkout">{{ 'pages.checkout' | i18n }}</option>
-    {# <option value="{{ langRootUrl }}/payment-method">{{ 'pages.paymentMethod' | i18n }}</option> #}
+    <!-- <option value="{{ langRootUrl }}/payment-method">{{ 'pages.paymentMethod' | i18n }}</option> -->
   </optgroup>
   {% endif %}
 </select>
+#}

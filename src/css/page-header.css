@@ -72,6 +72,37 @@
     line-height: 30px;
   }
 
+  .search-holder {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .main-menu-block {
+      margin-left: 10px;
+      // width: 49px;
+      @media (min-width: 768px) {
+        display: none;
+      }
+      .dropdown-menu {
+        .nav {
+          // padding: 10px;
+          li {
+            margin: 5px 0;
+            font-size: 13px;
+            text-transform: uppercase;
+            // line-height: 29px;
+            a {
+              padding-top: 5px;
+              padding-bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+    .searchbox {
+      flex: 1;
+    }
+  }
+
   /* Basket & search row */
   @media all and (max-width: 299px) {
     .search-holder,

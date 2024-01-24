@@ -25,9 +25,26 @@
             <!-- Site main menu... -->
             {% include 'layout/page-main-menu.njk' %}
           </nav>
+        {#
           {% include "layout/page-header-mobile-dropdown.njk" %}
+        #}
         </div>
         <div class="col-xs-9 col-sm-11 col-md-5 col-lg-4 no-margin search-holder">
+          <!-- Site menu -->
+          <div class="main-menu-block dropdown">
+            <button id="main-menu-button dropdown-toggle" data-hover="dropdown" type="button" class="btn le-btn">
+              <i class="icon-show fa fa-bars" title="{{ 'headerLinks.showMenu' | i18n }}"></i>
+              <!--
+              <i class="icon-hide fa fa-times" title="{{ 'headerLinks.hideMenu' | i18n }}"></i>
+              -->
+            </button>
+            <div class="dropdown-menu">
+              <ul class="nav">
+                {% include "layout/main-menu-main-pages.njk" %}
+              </ul>
+            </div>
+          </div>
+          <!-- Search -->
           <div class="searchbox">
             <div class="field">
               <form>
