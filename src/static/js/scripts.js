@@ -13,7 +13,7 @@ function onLoad() {
     window.removeEventListener('load', onLoad);
     var body = document.body;
     body.classList.add('loaded');
-    loaded();
+    onLoaded();
   }
 }
 
@@ -22,10 +22,10 @@ function onDebugCustomReload() {
   onLoad();
 }
 
-function started() {
+function onStarted() {
   // NOTE: Beware of `eleventy.reload` event.
   // See `node_modules/@11ty/eleventy-dev-server/client/reload-client.js`
-  /* console.log('[scripts:started]', {
+  /* console.log('[scripts:onStarted]', {
    *   loaded,
    * });
    */
@@ -34,7 +34,8 @@ function started() {
   body.classList.remove('noscript');
 }
 
-function loaded() {
+function onLoaded() {
+  // TODO
 }
 
 window.addEventListener('load', onLoad);
@@ -42,4 +43,4 @@ window.addEventListener('load', onLoad);
 // DEBUG: 11thy live-reload handler...
 (window.__onDebugReload = window.__onDebugReload || []).push(onDebugCustomReload);
 
-started();
+onStarted();
