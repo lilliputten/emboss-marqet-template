@@ -1,6 +1,6 @@
 Project: emboss-studio-site
 Version: 0.0.29
 Branch: 18-product-item-columns
-Commit: c335c51
-Fixed: 2024.01.24, 16:06 GMT+3
-Built: 2024.01.24, 16:08 GMT+3
+Commit: 91c55b4
+Fixed: 2024.01.29, 15:23 GMT+3
+Built: 2024.01.29, 15:24 GMT+3

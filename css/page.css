@@ -934,9 +934,18 @@ section#breadcrumb .container {
     display: flex;
     align-items: flex-start;
   }
+@media (max-width: 500px) {
+section#breadcrumb .container {
+      flex-direction: column
+  }
+    }
 section#breadcrumb .le-breadcrumb {
     flex: 1;
-    /* &.inline .bar */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    position: relative;
   }
 section#breadcrumb .le-backlink {
     margin-top: 8px;
