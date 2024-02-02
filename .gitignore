@@ -120,6 +120,7 @@ utils/config-local.sh
 ~$*.doc
 *crashed-session*
 *.session
+.gitmodules
 
 # Special exclusions
 !__mocks__

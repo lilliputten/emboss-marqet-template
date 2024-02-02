@@ -203,6 +203,7 @@ const en = {
     productCode: 'Product code',
     checkout: 'Checkout',
     continueShopping: 'Continue shopping',
+    continueShoppingShort: 'Continue',
     preview: 'Preview',
     price: 'Price',
     product: 'Product',

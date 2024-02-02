@@ -205,6 +205,7 @@ const ru = {
     productCode: 'Артикул',
     checkout: 'Оформить',
     continueShopping: 'Продолжить покупки',
+    continueShoppingShort: 'Продолжить',
     preview: 'Предпросмотр',
     price: 'Цена',
     product: 'Продукт',

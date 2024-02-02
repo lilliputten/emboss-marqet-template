@@ -23,4 +23,15 @@
       }
     }
   }
+  .merged-buttons {
+    white-space: nowrap;
+    @media (max-width: 460px) {
+      button.heart {
+        flex: 0;
+        span {
+          display: none;
+        }
+      }
+    }
+  }
 }

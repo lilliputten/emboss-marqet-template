@@ -9,7 +9,6 @@
   align-items: stretch;
   justify-content: stretch;
   table {
-    flex: 1;
     .desc {
       overflow: hidden;
       text-overflow: ellipsis;
@@ -56,6 +55,7 @@
   // Adjust table...
 
   table {
+    flex: 1;
     // Set minimal width to enable scroll with `fixed-table-scroll-wrapper`
     min-width: 600px;
   }
@@ -88,24 +88,6 @@
     font-weight: 600;
   }
   td.col-preview { padding-right: 10px; }
-  /*
-  .col-actions {
-    width: 4em;
-    border: 1px solid green;
-    overflow: visible;
-    white-space: nowrap;
-    // display: flex;
-    & > *,
-    .actions {
-      display: inline-block;
-      overflow: visible;
-      border: 1px solid blue;
-      white-space: nowrap;
-      // display: flex;
-      // gap: 5px;
-    }
-  }
-  */
 
   .col-preview { width: 10em; }
   // .col-product { }
@@ -132,24 +114,94 @@
     text-align: center;
   }
 
+  .orderSummaryBlock {
+    margin-top: 10px;
+  }
+
   // Customize columns for mobile devices
   @media (max-width: 992px) {
     .col-inStock { width: 6em; }
     .col-price { width: 6em; }
     .col-total { width: 6em; }
   }
+  // Display as a non-table on narrow screens
   @media (max-width: 768px) {
-    .col-inStock {
-      // display: none;
+    .fixed-table-scroll-wrapper {
+      overflow: visible;
     }
-    // .col-preview { width: 6em; }
-    // .col-actions { width: 8em; }
-  }
-  @media (max-width: 520px) {
-    .col-preview {
-      // display: none;
+    table {
+      tbody,
+      thead,
+      tr,
+      th,
+      td,
+      & {
+        display: block;
+        min-width: auto;
+      }
+      thead {
+        display: none;
+      }
+      tr {
+        padding-right: 50px;
+        border-bottom: 1px solid rgb(0 0 0 / 10%);
+        position: relative;
+        &:after {
+          clear: both;
+          content: '';
+          display: block;
+        }
+      }
+      td {
+        border: none;
+        width: auto !important;
+        text-align: left !important;
+      }
+      .col-actions {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .col-preview {
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+      // Adaptive sizes for preview image and main content padding...
+      @media (max-width: 255.99px) {
+        .col-preview {
+          display: none;
+        }
+      }
+      @media (min-width: 260px) {
+        $previewWidth: 120px;
+        $previewWidthMd: 90px;
+        $previewWidthSm: 60px;
+        & {
+          tr {
+            padding-left: $previewWidth;
+          }
+          .col-preview {
+            width: $previewWidth !important;
+          }
+        }
+        @media (max-width: 480px) {
+          tr {
+            padding-left: $previewWidthMd;
+          }
+          .col-preview {
+            width: $previewWidthMd !important;
+          }
+        }
+        @media (max-width: 380px) {
+          tr {
+            padding-left: $previewWidthSm;
+          }
+          .col-preview {
+            width: $previewWidthSm !important;
+          }
+        }
+      }
     }
   }
-  // }
-
 }
