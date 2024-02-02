@@ -8655,7 +8655,7 @@ header .link-list {
   font-size: 20px;
 }
 .shopping-cart-page .merged-buttons {
-  text-align: right;
+  /* text-align: right; */
 }
 .shopping-cart-page table {
   margin: 0;
@@ -8663,7 +8663,7 @@ header .link-list {
 
 /*Checkout page*/
 .table-form .merged-buttons {
-  text-align: right;
+  /* text-align: right; */
 }
 .field-group:not(:last-child) {
   margin: 0 0 20px 0;
