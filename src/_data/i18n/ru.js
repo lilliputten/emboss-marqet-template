@@ -108,6 +108,7 @@ const ru = {
     catalogue: 'Каталог',
     homepage: 'Главная',
     product: 'Товар',
+    profile: 'Профиль',
     rubric: 'Сборные модели',
     search: 'Поиск',
     toHomepage: 'На главную страницу',

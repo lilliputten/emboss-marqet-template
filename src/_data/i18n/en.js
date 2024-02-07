@@ -106,6 +106,7 @@ const en = {
     catalogue: 'Catalogue',
     homepage: 'Main page',
     product: 'Product',
+    profile: 'Profile',
     rubric: 'Prefabricated models',
     search: 'Search',
     toHomepage: 'To main page',
