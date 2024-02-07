@@ -124,7 +124,7 @@ const ru = {
   products: {
     toCart: 'Купить',
     toCartWide: 'В корзину',
-    downloadPdf: 'Скачать инструкцию в PDF',
+    downloadPdf: 'Скачать PDF инструкцию',
     wishlist: 'Желания',
     wishlistFull: 'В лист желаний',
     discount50: '50% off', // Any longer text can't be fit in the circle.
