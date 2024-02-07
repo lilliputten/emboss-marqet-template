@@ -124,7 +124,7 @@
     .col-price { width: 6em; }
     .col-total { width: 6em; }
   }
-  // Display as a non-table on narrow screens
+  // Adaptive layout: Display as a non-table on narrow screens
   @media (max-width: 768px) {
     .fixed-table-scroll-wrapper {
       overflow: visible;
@@ -143,11 +143,10 @@
         display: none;
       }
       tr {
-        padding-right: 50px;
+        padding-right: 50px; // Space for buttons
         border-bottom: 1px solid rgb(0 0 0 / 10%);
         position: relative;
         overflow: hidden;
-        // display: flex;
         &:after {
           clear: both;
           content: '';

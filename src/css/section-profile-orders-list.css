@@ -7,23 +7,6 @@
       padding-left: $padding;
       padding-right: $padding;
     }
-    .orderSummaryBlock {
-      display: flex;
-      align-items: center;
-      padding: 20px 8px;
-      margin-top: 20px;
-    }
-    .totalSum {
-      flex: 1;
-      .totalLabel {
-        font-size: 16px;
-        /* opacity: .5; */
-      }
-      .price {
-        font-size: 20px;
-        font-weight: 600 !important;
-      }
-    }
     #cell-pay {
       width: 10em;
     }
@@ -46,14 +29,79 @@
     }
   }
 
+  .orderSummaryBlock {
+    display: flex;
+    align-items: center;
+    // padding: 20px 8px;
+    margin-top: 10px;
+  }
   .totalSum {
+    flex: 1;
+    .totalLabel {
+      font-size: 16px;
+    }
     font-size: 16px;
     line-height: 1.2;
     margin-top: 5px;
-  }
-  .totalSum .price {
-    font-size: 20px;
-    font-weight: 600;
+    .price {
+      font-size: 20px;
+      font-weight: 600 !important;
+    }
   }
 
+  // Adaptive layout: Display as a non-table on narrow screens
+  @media (max-width: 768px) {
+    .fixed-table-scroll-wrapper {
+      overflow: visible;
+    }
+    table {
+      tbody,
+      thead,
+      tr,
+      th,
+      td,
+      & {
+        display: block;
+        min-width: auto !important;
+      }
+      thead {
+        display: none;
+      }
+      tr {
+        padding: 5px 0;
+        padding-right: 50px; // Space for buttons
+        border-bottom: 1px solid rgb(0 0 0 / 10%);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0 10px;
+        min-height: 50px;
+      }
+      td {
+        padding: 5px;
+        border: none;
+        &#cell-order div {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 10px;
+          > span {
+            padding: 0;
+            margin: 0;
+          }
+        }
+        &#cell-pay {
+          position: absolute;
+          top: 5px;
+          right: -7px;
+        }
+        > div {
+          padding: 0;
+        }
+      }
+    }
+    // Adaptive layout: end
+  }
 }
