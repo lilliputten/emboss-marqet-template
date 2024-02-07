@@ -1,3 +1,5 @@
+// @ts-check
+
 /** @module gulp-helpers
  *  @since 2023.04.07, 00:00
  *  @changed 2023.06.19, 20:35
@@ -31,41 +33,49 @@ const timeZone = config.timeZone || '';
 
 const prjConfig = require(path.resolve(prjPath, 'package.json'));
 
+/** @return {string} */
 function getProjectName() {
   return prjConfig.name;
 }
 
+/** @return {string} */
 function getTimestamp() {
   return prjConfig.timestamp;
   // const buf = fs.readFileSync(timestampFileName);
   // return buf.toString().trim();
 }
 
+/** @return {string} */
 function getTimetag() {
   return prjConfig.timetag;
   // const buf = fs.readFileSync(timetagFileName);
   // return buf.toString().trim();
 }
 
+/** @return {string} */
 function getVersion() {
   return prjConfig.version;
   // const buf = fs.readFileSync(versionFileName);
   // return buf.toString().trim();
 }
 
+/** @return {string} */
 function getCurrentTimeStr() {
   return formatDate(now, timeZone, timeFormat);
 }
 
+/** @return {string} */
 function getCurrentTimeTag() {
   return formatDate(now, timeZone, tagFormat);
 }
 
+/** @return {string} */
 function getGitCommitHash() {
   const buf = execSync('git rev-parse --short HEAD');
   return buf.toString().trim();
 }
 
+/** @return {string} */
 function getGitBranch() {
   const buf = execSync('git rev-parse --abbrev-ref HEAD');
   return buf.toString().trim();
@@ -113,6 +123,12 @@ function allData() {
   return allData;
 }
 
+/**
+ * @param {number | Date} date
+ * @param {string | undefined} timeZone
+ * @param {string} fmt
+ * @return {string}
+ */
 function formatDate(date, timeZone, fmt) {
   if (timeZone) {
     return formatInTimeZone(date, timeZone, fmt);
@@ -121,6 +137,11 @@ function formatDate(date, timeZone, fmt) {
   }
 }
 
+/**
+ * @param {string} file
+ * @param {string} basePath
+ * @return {string}
+ */
 function getRelativeFileName(file, basePath) {
   if (file && file.startsWith(basePath)) {
     const basePathHasFinalFlash = basePath.endsWith('/') || basePath.endsWith('\\');
@@ -131,20 +152,30 @@ function getRelativeFileName(file, basePath) {
   return file;
 }
 
+/**
+ * @param {string} file
+ * @return {string}
+ */
 function getProjectRelativeFileName(file) {
   return getRelativeFileName(file, prjPath);
 }
 
+/**
+ * @param {unknown} val
+ * @return {boolean}
+ */
 function truthyValue(val) {
   // Process value
-  if (!isNaN(val)) {
+  if (!val) {
+    val = false;
+  } else if (typeof val === 'number' && !isNaN(val)) {
     val = Number(val);
   } else if (val === 'false') {
     val = false;
   } else if (val === 'true') {
     val = true;
   }
-  return val;
+  return !!val;
 }
 
 function readProjectEnv() {
@@ -176,6 +207,10 @@ function readProjectEnv() {
   return data;
 }
 
+/**
+ * @param {string} key
+ * @return {string | undefined}
+ */
 function getEnvVariable(key) {
   return process.env[key] != undefined ? process.env[key] : envData[key];
 }
