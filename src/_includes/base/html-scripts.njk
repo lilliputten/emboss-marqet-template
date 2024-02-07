@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="/vendor/js/jquery.maskedinput@1.4.1/jasmine-be-calm.css">
 
   {# Main template script #}
-  <script type="text/javascript" src="/vendor/js/script.js"></script>
+  <script type="text/javascript" src="/vendor/js/script.js?{{ buildInfo.hash }}"></script>
 
   {# Custom scripts... #}
-  <script src="{{ '/js/scripts.js' | url }}"></script>
+  <script src="{{ '/js/scripts.js' | url }}?{{ buildInfo.hash }}"></script>

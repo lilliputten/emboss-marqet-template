@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="/vendor/css/font-awesome/css/font-awesome.min.css">
 
 {# Custom styles... #}
-<link rel="stylesheet" href="/vendor/css/stylesheet.css">
+<link rel="stylesheet" href="/vendor/css/stylesheet.css?{{ buildInfo.hash }}">
 
-<link rel="preload" href="/css/page.css" as="style" />
-<link rel="stylesheet" href="/css/page.css" />
+<link rel="preload" href="/css/page.css?{{ buildInfo.hash }}" as="style" />
+<link rel="stylesheet" href="/css/page.css?{{ buildInfo.hash }}" />
