@@ -1,6 +1,6 @@
 Project: emboss-studio-site
 Version: 0.0.30
-Branch: master
-Commit: 8fed271
+Branch: 3-add-hash-tags
+Commit: 79b92a0
 Fixed: 2024.02.02, 11:33 GMT+3
-Built: 2024.02.02, 12:38 GMT+3
+Built: 2024.02.07, 15:51 GMT+3
