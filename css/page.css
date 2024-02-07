@@ -895,7 +895,7 @@ section {
     #shopping-cart-list .col-price { width: 6em; }
     #shopping-cart-list .col-total { width: 6em; }
   }
-/* Display as a non-table on narrow screens*/
+/* Adaptive layout: Display as a non-table on narrow screens*/
 @media (max-width: 768px) {
     #shopping-cart-list .fixed-table-scroll-wrapper {
       overflow: visible;
@@ -913,9 +913,10 @@ section {
         display: none;
       }
       #shopping-cart-list table tr {
-        padding-right: 50px;
+        padding-right: 50px; /* Space for buttons*/
         border-bottom: 1px solid rgb(0 0 0 / 10%);
         position: relative;
+        overflow: hidden;
       }
         #shopping-cart-list table tr:after {
           clear: both;
@@ -923,10 +924,22 @@ section {
           display: block;
         }
       #shopping-cart-list table td {
+        float: left;
         border: none;
         width: auto !important;
         text-align: left !important;
       }
+      #shopping-cart-list table .price {
+        padding: 1px 0;
+      }
+      #shopping-cart-list table .col-product {
+        width: 100% !important;
+      }
+        #shopping-cart-list table .col-product:after {
+          clear: both;
+          content: '';
+          display: block;
+        }
       #shopping-cart-list table .col-actions {
         position: absolute;
         top: 0;
@@ -948,6 +961,7 @@ section {
     }
           #shopping-cart-list table tr {
             padding-left: 120px;
+            min-height: 120px;
           }
           #shopping-cart-list table .col-preview {
             width: 120px !important;
@@ -955,6 +969,7 @@ section {
         @media (max-width: 480px) {
           #shopping-cart-list table tr {
             padding-left: 90px;
+            min-height: 90px;
           }
           #shopping-cart-list table .col-preview {
             width: 90px !important;
@@ -963,6 +978,7 @@ section {
         @media (max-width: 380px) {
           #shopping-cart-list table tr {
             padding-left: 60px;
+            min-height: 60px;
           }
           #shopping-cart-list table .col-preview {
             width: 60px !important;
@@ -1589,23 +1605,6 @@ div.pp_default .pp_nav {
       padding-left: 6px;
       padding-right: 6px;
     }
-#section-profile-orders-list #profile-orders-list-table .orderSummaryBlock {
-      display: flex;
-      align-items: center;
-      padding: 20px 8px;
-      margin-top: 20px;
-    }
-#section-profile-orders-list #profile-orders-list-table .totalSum {
-      flex: 1;
-    }
-#section-profile-orders-list #profile-orders-list-table .totalSum .totalLabel {
-        font-size: 16px;
-        /* opacity: .5; */
-      }
-#section-profile-orders-list #profile-orders-list-table .totalSum .price {
-        font-size: 20px;
-        font-weight: 600 !important;
-      }
 #section-profile-orders-list #profile-orders-list-table #cell-pay {
       width: 10em;
     }
@@ -1626,14 +1625,81 @@ div.pp_default .pp_nav {
         margin: 0 auto;
   }
     }
+#section-profile-orders-list .orderSummaryBlock {
+    display: flex;
+    align-items: center;
+    /* padding: 20px 8px;*/
+    margin-top: 10px;
+  }
+#section-profile-orders-list .totalSum {
+    flex: 1;
+  }
+#section-profile-orders-list .totalSum .totalLabel {
+      font-size: 16px;
+    }
 #section-profile-orders-list .totalSum {
     font-size: 16px;
     line-height: 1.2;
     margin-top: 5px;
-  }
+}
 #section-profile-orders-list .totalSum .price {
-    font-size: 20px;
-    font-weight: 600;
+      font-size: 20px;
+      font-weight: 600 !important;
+    }
+/* Adaptive layout: Display as a non-table on narrow screens*/
+@media (max-width: 768px) {
+#section-profile-orders-list {
+    /* Adaptive layout: end*/
+}
+    #section-profile-orders-list .fixed-table-scroll-wrapper {
+      overflow: visible;
+    }
+      #section-profile-orders-list table tbody,
+      #section-profile-orders-list table thead,
+      #section-profile-orders-list table tr,
+      #section-profile-orders-list table th,
+      #section-profile-orders-list table td,
+      #section-profile-orders-list table {
+        display: block;
+        min-width: auto !important;
+      }
+      #section-profile-orders-list table thead {
+        display: none;
+      }
+      #section-profile-orders-list table tr {
+        padding: 5px 0;
+        padding-right: 50px; /* Space for buttons*/
+        border-bottom: 1px solid rgb(0 0 0 / 10%);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0 10px;
+        min-height: 50px;
+      }
+      #section-profile-orders-list table td {
+        padding: 5px;
+        border: none;
+      }
+        #section-profile-orders-list table td#cell-order div {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+          #section-profile-orders-list table td#cell-order div > span {
+            padding: 0;
+            margin: 0;
+          }
+        #section-profile-orders-list table td#cell-pay {
+          position: absolute;
+          top: 5px;
+          right: -7px;
+        }
+        #section-profile-orders-list table td > div {
+          padding: 0;
+        }
   }
 .products-controls-group #products-controls-button {
     margin-bottom: 10px;
