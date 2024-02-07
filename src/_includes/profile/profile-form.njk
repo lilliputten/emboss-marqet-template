@@ -101,8 +101,8 @@
         <button id="formSubmit" type="submit" class="le-btn"><i class="fa fa-check"></i> {{ 'profile.logon' | i18n }}</button>
       </div>
       <div class="field-group profile-secondary-links">
-        <a href="{{ langRootUrl }}/profile-login" class="btn">{{ 'profile.login' | i18n }}</a>
-        <a href="{{ langRootUrl }}/profile-restore-password" class="btn">{{ 'profile.forgotPassword' | i18n }}</a>
+        <a href="{{ langRootUrl }}/profile-login?{{ buildInfo.hash }}" class="btn">{{ 'profile.login' | i18n }}</a>
+        <a href="{{ langRootUrl }}/profile-restore-password?{{ buildInfo.hash }}" class="btn">{{ 'profile.forgotPassword' | i18n }}</a>
       </div>
     {% else %}
       <div class="field-group">

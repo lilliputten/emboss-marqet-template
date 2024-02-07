@@ -14,9 +14,9 @@ layout: page.njk
         <div class="accordion-widget profile-accordion widget">
           <h2 class="mt-2">{{ 'profile.menu' | i18n }}</h2>
           <ul class="profile-links-holder">
-            <li><a href="{{ langRootUrl }}/profile-page">{{ 'profile.editProfile' | i18n }}</a></li>
-            <li><a href="{{ langRootUrl }}/profile-orders">{{ 'profile.myOrders' | i18n }}</a></li>
-            <li><a href="{{ langRootUrl }}/profile-wishlist">{{ 'profile.myWishlist' | i18n }}</a></li>
+            <li><a href="{{ langRootUrl }}/profile-page?{{ buildInfo.hash }}">{{ 'profile.editProfile' | i18n }}</a></li>
+            <li><a href="{{ langRootUrl }}/profile-orders?{{ buildInfo.hash }}">{{ 'profile.myOrders' | i18n }}</a></li>
+            <li><a href="{{ langRootUrl }}/profile-wishlist?{{ buildInfo.hash }}">{{ 'profile.myWishlist' | i18n }}</a></li>
           </ul>
         </div>
       </div>

@@ -13,12 +13,12 @@
       <div class="row">
         <div class="col-xs-12 col-sm-4">
           <div class="thumb">
-            <a href="{{ langRootUrl }}/single-product"><img alt="" src="{{ item.image }}" /></a>
+            <a href="{{ langRootUrl }}/single-product?{{ buildInfo.hash }}"><img alt="" src="{{ item.image }}" /></a>
             {# <img alt="" src="/vendor/images/products/products-on-white/product01.png" /> #}
           </div>
         </div>
         <div class="col-xs-12 col-sm-8">
-          <div class="title"><a href="{{ langRootUrl }}/single-product">{{ item.name }}</a></div>
+          <div class="title"><a href="{{ langRootUrl }}/single-product?{{ buildInfo.hash }}">{{ item.name }}</a></div>
           <div class="priceBlock">
             <span class="text-label">{{ 'products.price' | i18n }}:</span> <span class="price">{% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}</span>
           </div>

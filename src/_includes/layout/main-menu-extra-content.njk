@@ -9,10 +9,10 @@
         {{ 'headerLinks.homepages' | i18n }}</h2>
       <ul>
         <li>
-          <a href="{{ langRootUrl }}/">{{ 'headerLinks.homepage' | i18n }}</a>
+          <a href="{{ langRootUrl }}/?{{ buildInfo.hash }}">{{ 'headerLinks.homepage' | i18n }}</a>
         </li>
         <li>
-          <a href="{{ langRootUrl }}/test">{{ 'headerLinks.testPage' | i18n }}</a>
+          <a href="{{ langRootUrl }}/test?{{ buildInfo.hash }}">{{ 'headerLinks.testPage' | i18n }}</a>
         </li>
       </ul>
       <h2 class="iconic-head">
@@ -23,13 +23,13 @@
         {{ 'headerLinks.products' | i18n }}</h2>
       <ul>
         <li>
-          <a href="{{ langRootUrl }}/products-grid">{{ 'pages.productsGrid' | i18n }}</a>
+          <a href="{{ langRootUrl }}/products-grid?{{ buildInfo.hash }}">{{ 'pages.productsGrid' | i18n }}</a>
         </li>
         <li>
-          <a href="{{ langRootUrl }}/single-product">{{ 'pages.singleProduct' | i18n }}</a>
+          <a href="{{ langRootUrl }}/single-product?{{ buildInfo.hash }}">{{ 'pages.singleProduct' | i18n }}</a>
         </li>
         <li>
-          <a href="{{ langRootUrl }}/products-search">{{ 'pages.productsSearch' | i18n }}</a>
+          <a href="{{ langRootUrl }}/products-search?{{ buildInfo.hash }}">{{ 'pages.productsSearch' | i18n }}</a>
         </li>
       </ul>
     </div>

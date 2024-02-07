@@ -35,14 +35,14 @@
                 {{ item.extra | safe }}
               {% endif %}
               <div class="thumb">
-                <a href="{{ langRootUrl }}/single-product"><img alt="" src="{{ item.image }}" /></a>
+                <a href="{{ langRootUrl }}/single-product?{{ buildInfo.hash }}"><img alt="" src="{{ item.image }}" /></a>
               </div>
               <div class="floated-actions">
                 <button class="btn icon-btn" title="{ 'products.wishlist' | i18n }"><i class="fa fa-{% if item.favorite %}heart{% else %}heart-o{% endif %}"></i></button>
               </div>
             </div>
             <div class="body">
-              <h3><a href="{{ langRootUrl }}/single-product">{{ item.name }}</a></h3>
+              <h3><a href="{{ langRootUrl }}/single-product?{{ buildInfo.hash }}">{{ item.name }}</a></h3>
               <!--
               <div class="excerpt">
                 {{ item.excerpt }}

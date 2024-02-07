@@ -5,7 +5,7 @@
   <div class="container header-row">
     <div class="logo-cell col-xs-12 col-md-4">
       <div class="logo">
-        <a href="{{ langRootUrl }}/" title="{{ 'site.name' | i18n }}">
+        <a href="{{ langRootUrl }}/?{{ buildInfo.hash }}" title="{{ 'site.name' | i18n }}">
           <img src="/images/logo/logo3-min.svg" alt="{{ 'site.name' | i18n }}" />
         </a>
       </div>
@@ -75,7 +75,7 @@
                 <!-- Cart actions (for non-empty one) -->
                 <li class="checkout">
                   <div align="center">
-                    <a href="{{ langRootUrl }}/shopping-cart" class="btn-add-to-wishlist le-btn">{{ 'headerLinks.showCart' | i18n }}</a>
+                    <a href="{{ langRootUrl }}/shopping-cart?{{ buildInfo.hash }}" class="btn-add-to-wishlist le-btn">{{ 'headerLinks.showCart' | i18n }}</a>
                   </div>
                 </li>
                 <!-- Cart end -->
