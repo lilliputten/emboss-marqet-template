@@ -146,6 +146,8 @@
         padding-right: 50px;
         border-bottom: 1px solid rgb(0 0 0 / 10%);
         position: relative;
+        overflow: hidden;
+        // display: flex;
         &:after {
           clear: both;
           content: '';
@@ -153,9 +155,21 @@
         }
       }
       td {
+        float: left;
         border: none;
         width: auto !important;
         text-align: left !important;
+      }
+      .price {
+        padding: 1px 0;
+      }
+      .col-product {
+        width: 100% !important;
+        &:after {
+          clear: both;
+          content: '';
+          display: block;
+        }
       }
       .col-actions {
         position: absolute;
@@ -180,6 +194,7 @@
         & {
           tr {
             padding-left: $previewWidth;
+            min-height: $previewWidth;
           }
           .col-preview {
             width: $previewWidth !important;
@@ -188,6 +203,7 @@
         @media (max-width: 480px) {
           tr {
             padding-left: $previewWidthMd;
+            min-height: $previewWidthMd;
           }
           .col-preview {
             width: $previewWidthMd !important;
@@ -196,6 +212,7 @@
         @media (max-width: 380px) {
           tr {
             padding-left: $previewWidthSm;
+            min-height: $previewWidthSm;
           }
           .col-preview {
             width: $previewWidthSm !important;
