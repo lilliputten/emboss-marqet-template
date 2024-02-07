@@ -13,9 +13,9 @@
   <div id="decals" class="{{ bodyClass  }}">
     <div class="accordion-inner">
       <ul>
-        <li><a href="{{ langRootUrl }}/products/decals/aircrafts">{{ 'productsMenu.aircrafts' | i18n }}</a></li>
-        <li><a href="{{ langRootUrl }}/products/decals/helicopters">{{ 'productsMenu.helicopters' | i18n }}</a></li>
-        <li><a href="{{ langRootUrl }}/products/decals/cars">{{ 'productsMenu.cars' | i18n }}</a></li>
+        <li><a href="{{ langRootUrl }}/products/decals/aircrafts?{{ buildInfo.hash }}">{{ 'productsMenu.aircrafts' | i18n }}</a></li>
+        <li><a href="{{ langRootUrl }}/products/decals/helicopters?{{ buildInfo.hash }}">{{ 'productsMenu.helicopters' | i18n }}</a></li>
+        <li><a href="{{ langRootUrl }}/products/decals/cars?{{ buildInfo.hash }}">{{ 'productsMenu.cars' | i18n }}</a></li>
       </ul>
     </div>
   </div>
@@ -50,8 +50,8 @@
   <div id="discounts" class="{{ bodyClass }}">
     <div class="accordion-inner">
       <ul>
-        <li><a href="{{ langRootUrl }}/products/discounts/new">{{ 'productsMenu.new' | i18n }}</a></li>
-        <li><a href="{{ langRootUrl }}/products/discounts/hits">{{ 'productsMenu.hits' | i18n }}</a></li>
+        <li><a href="{{ langRootUrl }}/products/discounts/new?{{ buildInfo.hash }}">{{ 'productsMenu.new' | i18n }}</a></li>
+        <li><a href="{{ langRootUrl }}/products/discounts/hits?{{ buildInfo.hash }}">{{ 'productsMenu.hits' | i18n }}</a></li>
       </ul>
     </div>
   </div>

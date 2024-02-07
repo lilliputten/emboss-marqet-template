@@ -44,12 +44,12 @@
         <tr>
           <td class="col-preview">
             <div class="thumb">
-              <a href="{{ langRootUrl }}/single-product"><img alt="" src="{{ item.image }}" /></a>
+              <a href="{{ langRootUrl }}/single-product?{{ buildInfo.hash }}"><img alt="" src="{{ item.image }}" /></a>
             </div>
           </td>
           <td class="col-product">
             <div class="desc">
-              <a href="{{ langRootUrl }}/single-product">
+              <a href="{{ langRootUrl }}/single-product?{{ buildInfo.hash }}">
                 <h3>{{ item.name }}</h3>
                 <div class="pid">{{ 'shoppingCart.productCode' | i18n }}: {{ item.id }}</div>
               </a>
@@ -109,12 +109,12 @@
     {% endif %}
     {% if showCheckoutButton %}
       <div class="actions">
-        <a class="le-btn" href="{{ langRootUrl }}/checkout"><i class="fa fa-credit-card"></i> {{ 'ordersTable.pay' | i18n }}</a>
+        <a class="le-btn" href="{{ langRootUrl }}/checkout?{{ buildInfo.hash }}"><i class="fa fa-credit-card"></i> {{ 'ordersTable.pay' | i18n }}</a>
       </div>
     {% elif showCartButtons %}
       <div class="merged-buttons">
-        <a href="{{ langRootUrl }}/products-grid" class="le-btn">{{ 'shoppingCart.continueShoppingShort' | i18n }}</a>
-        <a href="{{ langRootUrl }}/checkout" class="le-btn">{{ 'shoppingCart.checkout' | i18n }}</a>
+        <a href="{{ langRootUrl }}/products-grid?{{ buildInfo.hash }}" class="le-btn">{{ 'shoppingCart.continueShoppingShort' | i18n }}</a>
+        <a href="{{ langRootUrl }}/checkout?{{ buildInfo.hash }}" class="le-btn">{{ 'shoppingCart.checkout' | i18n }}</a>
       </div>
     {% endif %}
   </div>
