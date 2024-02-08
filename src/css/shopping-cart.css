@@ -90,7 +90,6 @@
   td.col-preview { padding-right: 10px; }
 
   .col-preview { width: 10em; }
-  // .col-product { }
   .col-price { width: 9em; }
   .col-inStock { width: 8em; }
   .col-quantity { width: 9em; }
@@ -126,6 +125,7 @@
   }
   // Adaptive layout: Display as a non-table on narrow screens
   @media (max-width: 768px) {
+    $rightButtonSize: 50px;
     .fixed-table-scroll-wrapper {
       overflow: visible;
     }
@@ -143,7 +143,6 @@
         display: none;
       }
       tr {
-        padding-right: 50px; // Space for buttons
         border-bottom: 1px solid rgb(0 0 0 / 10%);
         position: relative;
         overflow: hidden;
@@ -164,6 +163,8 @@
       }
       .col-product {
         width: 100% !important;
+        min-height: $rightButtonSize;
+        padding-right: $rightButtonSize; // Space for buttons
         &:after {
           clear: both;
           content: '';
