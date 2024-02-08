@@ -31,6 +31,7 @@
             <tr>
               <td id="cell-order"><div>
                 <span class="orderNo">
+                  <span class="collapsedTitle">{{ 'ordersTable.order' | i18n }} №</span>
                   {# <span class="number">№</span> #}
                   <a href="{{ langRootUrl }}/profile-order/?{{ item.orderNo }}">{{ item.orderNo }}</a>
                 </span>
@@ -39,10 +40,13 @@
               <td id="cell-orderPrice"><div>
                 {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.orderPrice }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
               </div></td>
-              <td id="cell-tracking"><div>{{ item.tracking if item.tracking else '—' }}</div></td>
-              <td id="cell-orderStatus" class="{{ item.orderStatus }}"><div>{{ ('ordersTable.' + item.orderStatus) | i18n }}</div></td>
+              <td id="cell-tracking"><div>
+                <span class="collapsedTitle">{{ 'ordersTable.tracking' | i18n }}:</span>
+                {{ item.tracking if item.tracking else '—' }}
+              </div></td>
+              <td id="cell-orderStatus" class="{{ item.orderStatus }}"><div><span class="status">{{ ('ordersTable.' + item.orderStatus) | i18n }}</span></div></td>
               <td id="cell-paymentMethod"><div>{{ ('paymentMethods.' + item.paymentMethod) | i18n }}</div></td>
-              <td id="cell-paymentState" class="{{ item.paymentState }}"><div>{{ ('ordersTable.' + item.paymentState) | i18n }}</div></td>
+              <td id="cell-paymentState" class="{{ item.paymentState }}"><div><span class="status">{{ ('ordersTable.' + item.paymentState) | i18n }}</span></div></td>
               <td id="cell-delivery"><div>{{ ('deliveryMethods.' + item.delivery) | i18n }}</div></td>
               <td id="cell-pay">
                 {% if item.paymentState !== 'paid' %}

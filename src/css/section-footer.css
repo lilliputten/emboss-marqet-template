@@ -21,8 +21,8 @@
   width: 100%;
   &:before,
   &:after {
-    content: " ";
+    content: ' ';
     display: table;
     clear: both;
   }
- }
+}

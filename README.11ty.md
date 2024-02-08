@@ -6,14 +6,14 @@ A simple landing page built with 11ty and Tailwind CSS.
 
 ## How to use this template
 
-__Requirements:__
+**Requirements:**
 
 1. Eleventy (developed and tested with version 0.12.1)
 2. Tailwind CSS
 
 All other dependencies are either linked from a CDN or included in this repository.
 
-__Setup:__
+**Setup:**
 
 1. Fork, clone or download
 2. `cd` into the root folder
@@ -21,7 +21,7 @@ __Setup:__
 4. run `npm run serve`
 5. open a browser and go to `http://localhost:8080`
 
-__Basic configuration:__
+**Basic configuration:**
 
 1. Eleventy -> `./.eleventy.js`
 2. Tailwind -> `./tailwind.config.js`
@@ -31,7 +31,7 @@ CSS is built via PostCSS and based on `./src/_includes/css/_page.css`. Building 
 
 Please note that this CSS build _does not_ include the `normalize.css` file used for the 2 regular pages (imprint, privacy) - a minified production version is stored in `./src/static/css` and gets included in the build by default.
 
-__Change Content:__
+**Change Content:**
 
 Page content is stored in
 
@@ -39,7 +39,7 @@ Page content is stored in
 - `./src/sections/`
 - `./src/_data/features.json`
 
-__Change Templates/Layout:__
+**Change Templates/Layout:**
 
 Page structure and templates are stored in `./src/_layouts/` and can be edited there.
 
@@ -47,6 +47,6 @@ Best have a look at `./layouts/base.njk` first to understand how it all comes to
 
 `index.njk` in `./src/` arranges everything, meaning that sections can be added/re-ordered/removed/... there.
 
-__Change images:__
+**Change images:**
 
 Images are stored in `./static/img/`; everything in there can be considered a placeholder that should eventually be replaced with your actual production images.
