@@ -29,7 +29,8 @@
     }
   }
   &.simple-grid {
-    &, .row {
+    &,
+    .row {
       display: flex;
       flex-wrap: wrap;
       align-items: stretch;
@@ -38,7 +39,8 @@
   &.list-view {
     .product-item.wide {
       @media (min-width: 992px) {
-        .row, .row > * {
+        .row,
+        .row > * {
           display: flex;
           flex-wrap: nowrap;
           align-items: stretch;

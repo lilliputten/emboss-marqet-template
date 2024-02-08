@@ -43,7 +43,7 @@
   $cellStatusSize: 8px;
   @define-mixin cellWithStatusColor {
     white-space: nowrap;
-    & > div:before {
+    & > div > .status:before {
       content: ' ';
       display: inline-block;
       border-radius: 50%;
@@ -55,12 +55,16 @@
     }
   }
   @define-mixin cellStatusColor $color {
-    & > div:before {
+    & > div > .status:before {
       background-color: $color;
     }
   }
   td#cell-paymentState,
   td#cell-orderStatus {
+
+    // \<\(cell-paymentState\|cell-orderStatus\)\>
+    // \<\(paid\|unpaid\|unknown\|cancelled\|confirmed\|unknown\|unpaid\|cancelled\|paid\|confirmed\)\>
+
     &.paid,
     &.unpaid,
     &.unknown,
@@ -80,7 +84,14 @@
       @mixin cellStatusColor var(--common-success-color);
     }
   }
-  td#cell-pay {
-    /* min-width: 110px; */
+  .collapsedTitle {
+    font-weight: normal;
+    opacity: 0.5;
+    margin-right: 4px;
+    display: inline-block;
+    // Show only on mobile screens
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 }

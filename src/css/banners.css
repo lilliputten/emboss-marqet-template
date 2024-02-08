@@ -2,7 +2,7 @@
 .circular-icon {
   border-radius: 500px;
   border: 2px solid #ffffff;
-  float: none!important;
+  float: none !important;
   padding: 20px;
 }
 .circular-icon:before {
@@ -13,7 +13,7 @@
 }
 .circular-icon,
 .circular-icon:hover {
-  background-color: transparent!important;
+  background-color: transparent !important;
 }
 .circular-icon:hover {
   border-color: #1da796;

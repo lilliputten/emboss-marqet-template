@@ -52,4 +52,3 @@ Viewable builds are posted to site:
 - [Checkout - EN](https://emboss-studio.lilliputten.ru/en/checkout/)
 - [Payment - EN](https://emboss-studio.lilliputten.ru/en/payment/)
 - [Shopping cart - EN](https://emboss-studio.lilliputten.ru/en/shopping-cart/)
-

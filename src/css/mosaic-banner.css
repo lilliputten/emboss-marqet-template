@@ -67,7 +67,7 @@
   letter-spacing: 3px;
 }
 .mosaic-banner .caption h1 .light {
-  font-weight: 100!important;
+  font-weight: 100 !important;
 }
 .mosaic-banner:hover img {
   filter: grayscale(0%);
@@ -163,5 +163,3 @@
 .ie .mosaic-banner img {
   max-width: 100%;
 }
-
-
