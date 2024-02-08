@@ -862,7 +862,6 @@ section {
   }
 #shopping-cart-list td.col-preview { padding-right: 10px; }
 #shopping-cart-list .col-preview { width: 10em; }
-/* .col-product { }*/
 #shopping-cart-list .col-price { width: 9em; }
 #shopping-cart-list .col-inStock { width: 8em; }
 #shopping-cart-list .col-quantity { width: 9em; }
@@ -897,6 +896,8 @@ section {
   }
 /* Adaptive layout: Display as a non-table on narrow screens*/
 @media (max-width: 768px) {
+#shopping-cart-list {
+}
     #shopping-cart-list .fixed-table-scroll-wrapper {
       overflow: visible;
     }
@@ -913,7 +914,6 @@ section {
         display: none;
       }
       #shopping-cart-list table tr {
-        padding-right: 50px; /* Space for buttons*/
         border-bottom: 1px solid rgb(0 0 0 / 10%);
         position: relative;
         overflow: hidden;
@@ -934,7 +934,9 @@ section {
       }
       #shopping-cart-list table .col-product {
         width: 100% !important;
-      }
+        min-height: 50px;
+        padding-right: 50px;
+      } /* Space for buttons*/
         #shopping-cart-list table .col-product:after {
           clear: both;
           content: '';
@@ -1558,11 +1560,11 @@ div.pp_default .pp_nav {
     font-weight: 600 !important;
   }
 .orders-table {
-    }
+}
 .orders-table {
-    }
+}
 .orders-table {
-    }
+}
 .orders-table td#cell-paymentState.paid,
     .orders-table td#cell-paymentState.unpaid,
     .orders-table td#cell-paymentState.unknown,
