@@ -1686,7 +1686,6 @@ div.pp_default .pp_nav {
       }
       #section-profile-orders-list table tr {
         padding: 5px 0;
-        padding-right: 50px; /* Space for buttons*/
         border-bottom: 1px solid rgb(0 0 0 / 10%);
         position: relative;
         overflow: hidden;
@@ -1717,6 +1716,12 @@ div.pp_default .pp_nav {
         }
         #section-profile-orders-list table td > div {
           padding: 0;
+        }
+        #section-profile-orders-list table td#cell-tracking,
+        #section-profile-orders-list table td#cell-orderPrice,
+        #section-profile-orders-list table td#cell-order {
+          width: 100%;
+          padding-right: 50px; /* Space for float button at right*/
         }
   }
 .products-controls-group #products-controls-button {
