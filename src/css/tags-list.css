@@ -1,0 +1,21 @@
+// vim: ft=scss
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 10px;
+  > .tag {
+    text-transform: uppercase;
+    white-space: nowrap;
+    a {
+      opacity: .8;
+      transition: all var(--transition-timeout);
+      &:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.tags-holder {
+  margin: 0 20px;
+}

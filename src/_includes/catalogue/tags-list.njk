@@ -1,0 +1,11 @@
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+
+<div class="tags-list">
+  <span class="tag"><a href="{{ langRootUrl }}/products-grid?{{ buildInfo.hash }}">#1:85</a></span>
+  <span class="tag"><a href="{{ langRootUrl }}/products-grid?{{ buildInfo.hash }}">#{{ 'tags.veapon' | i18n }}</a></span>
+  <span class="tag"><a href="{{ langRootUrl }}/products-grid?{{ buildInfo.hash }}">#{{ 'tags.mig21' | i18n }}</a></span>
+  <span class="tag"><a href="{{ langRootUrl }}/products-grid?{{ buildInfo.hash }}">#{{ 'tags.mig23' | i18n }}</a></span>
+  <span class="tag"><a href="{{ langRootUrl }}/products-grid?{{ buildInfo.hash }}">#{{ 'tags.mig25' | i18n }}</a></span>
+  <span class="tag"><a href="{{ langRootUrl }}/products-grid?{{ buildInfo.hash }}">#{{ 'tags.mig27' | i18n }}</a></span>
+  <span class="tag"><a href="{{ langRootUrl }}/products-grid?{{ buildInfo.hash }}">#{{ 'tags.mig29' | i18n }}</a></span>
+</div>
