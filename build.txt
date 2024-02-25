@@ -1,6 +1,6 @@
 Project: emboss-studio-site
-Version: 0.0.33
+Version: 0.0.34
 Branch: master
-Commit: 201d7a5
-Fixed: 2024.02.09, 07:59 GMT+3
-Built: 2024.02.09, 08:00 GMT+3
+Commit: 7eed6a1
+Fixed: 2024.02.25, 06:00 GMT+3
+Built: 2024.02.25, 06:01 GMT+3
