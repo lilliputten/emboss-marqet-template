@@ -1,4 +1,4 @@
-// vim: ic
+// vim: ic fdm=indent
 
 const site = require('../site.js');
 
@@ -37,6 +37,12 @@ const en = {
     profileRestorePassword: 'Restore password',
     shoppingCart: 'Shopping cart',
     singleProduct: 'Single product',
+    profileSuccesfulRegistration: 'You have successfully registered',
+    profileRestorePasswordMessageSent: 'Password recovery message sent',
+    profileEnterNewPassword: 'Enter a new password',
+    profileRestorePasswordDone: 'The password was successfully changed',
+    profileDataSuccessfulyUpdated: 'Profile information successfully updated',
+    orderLoginRequired: 'You must register',
   },
   rubrics: {
     contacts: 'Contacts',
@@ -244,6 +250,7 @@ const en = {
     fullName: 'Full name',
     emailAddress: 'E-mail address',
     phone: 'Phone',
+    orderLoginRequiredText: 'To complete your purchase you must register on the site.',
   },
   payment: {
     sampleName: 'John Smith',
@@ -300,6 +307,10 @@ const en = {
     restorePassword: 'Restore password',
     restorePasswordText: 'Restore password for previously created account.',
     save: 'Save',
+    profileSuccesfulRegistrationText: 'Thank you for registering! We are glad to see you among our clients.',
+    profileRestorePasswordMessageSentText: 'You will receive instructions for resetting your password.',
+    continue: 'Continue',
+    return: 'Return',
   },
   ordersTable: {
     order: 'Order',

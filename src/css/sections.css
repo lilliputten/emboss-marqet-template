@@ -1,0 +1,15 @@
+.section-icon-visual {
+  $size: 64px;
+  margin: 20px auto;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .fa {
+    color: #fff;
+    font-size: 48px;
+  }
+}
