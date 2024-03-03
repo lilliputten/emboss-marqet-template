@@ -1,8 +1,8 @@
 {
   "name": "emboss-studio-site",
-  "version": "0.0.34",
-  "timetag": "240225-0600",
-  "timestamp": "2024.02.25, 06:00 GMT+3",
+  "version": "0.0.35",
+  "timetag": "240303-2016",
+  "timestamp": "2024.03.03, 20:16 GMT+3",
   "changed": "2023.09.29, 21:01",
   "license": "MIT",
   "devDependencies": {
