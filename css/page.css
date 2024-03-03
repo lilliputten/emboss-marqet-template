@@ -167,6 +167,20 @@ section {
 .table-responsive {
   overflow: auto;
 }
+.section-icon-visual {
+  margin: 20px auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-icon-visual .fa {
+    color: #fff;
+    font-size: 48px;
+  }
 .page-header {
   border: 0;
   padding-bottom: 0;

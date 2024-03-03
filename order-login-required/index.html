@@ -62,12 +62,12 @@ Built: 2024.03.03, 20:19 GMT+3
     <link rel="stylesheet" href="../css/page.css?17831a1" />
 
     <meta property="og:site_name" content="Emboss" />
-    <meta property="og:title" content="headerLinks.wholesalers" />
+    <meta property="og:title" content="pages.orderLoginRequired" />
     <meta property="og:description" content="Описание сайта" />
-    <meta property="og:url" content="/wholesalers/" />
+    <meta property="og:url" content="/order-login-required/" />
     <meta name="twitter:card" content="summary" />
     <meta name="theme-color" content="#ffffff" />
-    <title>Оптовикам</title>
+    <title>Необходимо зарегистрироваться</title>
   </head>
   <body
     class="font-sans text-gray-800 bg-gray-100 noscript"
@@ -110,13 +110,19 @@ Built: 2024.03.03, 20:19 GMT+3
                   </a>
                   <ul class="dropdown-menu">
                     <li>
-                      <a href="/wholesalers/" rel="alternate" hreflang="ru"
+                      <a
+                        href="/order-login-required/"
+                        rel="alternate"
+                        hreflang="ru"
                         >Русский</a
                       >
                     </li>
 
                     <li>
-                      <a href="/en/wholesalers/" rel="alternate" hreflang="en"
+                      <a
+                        href="/en/order-login-required/"
+                        rel="alternate"
+                        hreflang="en"
                         >English</a
                       >
                     </li>
@@ -139,7 +145,25 @@ Built: 2024.03.03, 20:19 GMT+3
                 </div>
               </li>
 
-              <li><a href="/profile-login?17831a1">Войти</a></li>
+              <li>
+                <div class="btn-group le-dropdown">
+                  <a class="dropdown-toggle" href="#" data-hover="dropdown">
+                    <i class="fa fa-user"></i> Пётр Иванов
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/profile-page?17831a1">Профиль</a></li>
+                    <li><a href="/profile-orders?17831a1">Мои заказы</a></li>
+                    <li>
+                      <a href="/profile-wishlist?17831a1">Список желаний</a>
+                    </li>
+                    <li>
+                      <a href="/profile-logout?17831a1"
+                        ><i class="fa fa-sign-out"></i> Выйти</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -349,8 +373,35 @@ Built: 2024.03.03, 20:19 GMT+3
                   <li>
                     <a href="/"> Главная </a>
                   </li>
-                  <li class="active">Оптовикам</li>
+                  <li class="active">Необходимо зарегистрироваться</li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-order-login-required">
+        <div class="container no-padding">
+          <div class="col-xs-12">
+            <div class="box">
+              <div class="box-holder" align="center">
+                <div class="section-icon-visual">
+                  <i class="fa fa-exclamation"></i>
+                </div>
+                <h2>Необходимо зарегистрироваться</h2>
+                <p>
+                  Для завершения покупки необходимо зарегистрироваться на сайте
+                </p>
+                <!-- Action buttons -->
+                <div class="field-group" align="center">
+                  <a class="le-btn" href="/?17831a1"
+                    ><i class="fa fa-check"></i> Регистрация</a
+                  >
+                </div>
+                <div class="field-group profile-secondary-links">
+                  <a href="/shopping-cart?17831a1" class="btn">Вернуться</a>
+                </div>
               </div>
             </div>
           </div>
