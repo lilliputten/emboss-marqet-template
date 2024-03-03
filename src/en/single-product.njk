@@ -8,7 +8,7 @@ hideBacklink: true
 {% set breadcrumb = [
   { link: '/', name: 'breadcrumbLinks.homepage' },
   { link: '/products-grid', name: 'breadcrumbLinks.catalogue' },
-  { name: 'breadcrumbLinks.product', class: 'active' }
+  { name: title, class: 'active' }
 ] %}
 {% include "shared/section-breadcrumb.njk" %}
 

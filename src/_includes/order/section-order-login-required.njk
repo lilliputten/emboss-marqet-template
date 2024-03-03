@@ -1,0 +1,22 @@
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+
+<section id="section-order-login-required">
+  <div class="container no-padding">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-holder" align="center">
+          <div class="section-icon-visual"><i class="fa fa-exclamation"></i></div>
+          <h2>{{ 'pages.orderLoginRequired' | i18n }}</h2>
+          <p>{{ 'checkout.orderLoginRequiredText' | i18n }}</p>
+          <!-- Action buttons -->
+          <div class="field-group" align="center">
+            <a class="le-btn" href="{{ langRootUrl }}/?{{ buildInfo.hash }}"><i class="fa fa-check"></i> {{ 'profile.logon' | i18n }}</a>
+          </div>
+          <div class="field-group profile-secondary-links">
+            <a href="{{ langRootUrl }}/shopping-cart?{{ buildInfo.hash }}" class="btn">{{ 'profile.return' | i18n }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,5 +1,6 @@
 @import './globals.css';
 @import './stylesheet-fixes.css';
+@import './sections.css';
 @import './page-header.css';
 @import './section-copyright.css';
 @import './section-footer.css';
