@@ -56,9 +56,21 @@
             </div>
           </td>
           <td class="col-price">
+            <div class="price-plain">
+              <div class="price-current">
+                {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+              </div>
+              {% if item.priceOld %}
+              <div class="price-old">
+                {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.priceOld }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
+              </div>
+              {% endif %}
+            </div>
+<!--
             <div class="price">
               {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}<span class="shopping-cart-price" id="price">{{ item.price }}</span>{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
             </div>
+-->
           </td>
           {% if showInStockColumn %}
             <td class="col-inStock"><div>{% if item.inStock %}{{ 'products.inStockYes' | i18n }}{% else %}{{ 'products.inStockNo' | i18n }}{% endif %}</div></td>
