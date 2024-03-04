@@ -4,11 +4,11 @@
   <head>
     <!--
 Project: emboss-studio-site
-Version: 0.0.35
+Version: 0.0.36
 Branch: 25-changes-240303
-Commit: 17831a1
-Fixed: 2024.03.03, 20:16 GMT+3
-Built: 2024.03.03, 20:23 GMT+3
+Commit: 7d0c587
+Fixed: 2024.03.04, 17:51 GMT+3
+Built: 2024.03.04, 17:52 GMT+3
 -->
     <meta name="robots" content="noindex" />
     <meta charset="utf-8" />
@@ -56,10 +56,10 @@ Built: 2024.03.03, 20:23 GMT+3
       href="../../vendor/css/font-awesome/css/font-awesome.min.css"
     />
 
-    <link rel="stylesheet" href="../../vendor/css/stylesheet.css?17831a1" />
+    <link rel="stylesheet" href="../../vendor/css/stylesheet.css?7d0c587" />
 
-    <link rel="preload" href="../../css/page.css?17831a1" as="style" />
-    <link rel="stylesheet" href="../../css/page.css?17831a1" />
+    <link rel="preload" href="../../css/page.css?7d0c587" as="style" />
+    <link rel="stylesheet" href="../../css/page.css?7d0c587" />
 
     <meta property="og:site_name" content="Emboss" />
     <meta property="og:title" content="pages.profile" />
@@ -69,17 +69,13 @@ Built: 2024.03.03, 20:23 GMT+3
     <meta name="theme-color" content="#ffffff" />
     <title>Profile</title>
   </head>
-  <body
-    class="font-sans text-gray-800 bg-gray-100 noscript"
-    bgcolor="#fff"
-    onLoad="onLoad()"
-  >
+  <body class="font-sans text-gray-800 bg-gray-100 noscript" bgcolor="#fff">
     <div class="wrapper">
       <header class="page-header">
         <div class="container header-row">
           <div class="logo-cell col-xs-12 col-md-4">
             <div class="logo">
-              <a href="/en/?17831a1" title="Emboss">
+              <a href="/en/?7d0c587" title="Emboss">
                 <img src="../../images/logo/logo3-min.svg" alt="Emboss" />
               </a>
             </div>
@@ -111,7 +107,7 @@ Built: 2024.03.03, 20:23 GMT+3
                   <ul class="dropdown-menu">
                     <li>
                       <a
-                        href="/profile-page/?17831a1"
+                        href="/profile-page/?7d0c587"
                         rel="alternate"
                         hreflang="ru"
                         >Русский</a
@@ -120,7 +116,7 @@ Built: 2024.03.03, 20:23 GMT+3
 
                     <li>
                       <a
-                        href="/en/profile-page/?17831a1"
+                        href="/en/profile-page/?7d0c587"
                         rel="alternate"
                         hreflang="en"
                         >English</a
@@ -151,13 +147,13 @@ Built: 2024.03.03, 20:23 GMT+3
                     <i class="fa fa-user"></i> Peter Johnson
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a href="/en/profile-page?17831a1">My account</a></li>
-                    <li><a href="/en/profile-orders?17831a1">My orders</a></li>
+                    <li><a href="/en/profile-page?7d0c587">My account</a></li>
+                    <li><a href="/en/profile-orders?7d0c587">My orders</a></li>
                     <li>
-                      <a href="/en/profile-wishlist?17831a1">My wishlist</a>
+                      <a href="/en/profile-wishlist?7d0c587">My wishlist</a>
                     </li>
                     <li>
-                      <a href="/en/profile-logout?17831a1"
+                      <a href="/en/profile-logout?7d0c587"
                         ><i class="fa fa-sign-out"></i> Log out</a
                       >
                     </li>
@@ -176,15 +172,15 @@ Built: 2024.03.03, 20:23 GMT+3
 
                   <ul class="nav">
                     <li>
-                      <a class="active" href="/en/products-grid?17831a1"
+                      <a class="active" href="/en/products-grid?7d0c587"
                         >Catalog</a
                       >
                     </li>
                     <li>
-                      <a href="/en/delivery?17831a1">Delivery and payment</a>
+                      <a href="/en/delivery?7d0c587">Delivery and payment</a>
                     </li>
-                    <li><a href="/en/wholesalers?17831a1">Wholesalers</a></li>
-                    <li><a href="/en/contacts?17831a1">Contacts</a></li>
+                    <li><a href="/en/wholesalers?7d0c587">Wholesalers</a></li>
+                    <li><a href="/en/contacts?7d0c587">Contacts</a></li>
                   </ul>
                 </nav>
               </div>
@@ -207,15 +203,15 @@ Built: 2024.03.03, 20:23 GMT+3
                   <div class="dropdown-menu">
                     <ul class="nav">
                       <li>
-                        <a class="active" href="/en/products-grid?17831a1"
+                        <a class="active" href="/en/products-grid?7d0c587"
                           >Catalog</a
                         >
                       </li>
                       <li>
-                        <a href="/en/delivery?17831a1">Delivery and payment</a>
+                        <a href="/en/delivery?7d0c587">Delivery and payment</a>
                       </li>
-                      <li><a href="/en/wholesalers?17831a1">Wholesalers</a></li>
-                      <li><a href="/en/contacts?17831a1">Contacts</a></li>
+                      <li><a href="/en/wholesalers?7d0c587">Wholesalers</a></li>
+                      <li><a href="/en/contacts?7d0c587">Contacts</a></li>
                     </ul>
                   </div>
                 </div>
@@ -233,7 +229,7 @@ Built: 2024.03.03, 20:23 GMT+3
                 </div>
               </div>
               <div class="col-xs-3 col-sm-1 col-md-1 col-lg-1 basket-holder">
-                <div class="basket">
+                <div class="basket" id="basket">
                   <div class="dropdown">
                     <a class="dropdown-toggle" data-hover="dropdown" href="#">
                       <div class="basket-icon">
@@ -248,12 +244,19 @@ Built: 2024.03.03, 20:23 GMT+3
                     <ul class="dropdown-menu">
                       <!-- Cart items -->
 
-                      <li>
+                      <li
+                        class="cart-item-data-node"
+                        data-id="389645"
+                        data-image="/vendor/images/products/products-modelist-1/product02.png"
+                        data-price="245"
+                        data-name="Man sport Hiking shoe"
+                        data-count="2"
+                      >
                         <div class="basket-item">
                           <div class="row">
                             <div class="col-xs-12 col-sm-4">
                               <div class="thumb">
-                                <a href="/en/single-product?17831a1"
+                                <a href="/en/single-product?7d0c587"
                                   ><img
                                     alt=""
                                     src="../../vendor/images/products/products-modelist-1/product02.png"
@@ -262,30 +265,44 @@ Built: 2024.03.03, 20:23 GMT+3
                             </div>
                             <div class="col-xs-12 col-sm-8">
                               <div class="title">
-                                <a href="/en/single-product?17831a1"
+                                <a href="/en/single-product?7d0c587"
                                   >Man sport Hiking shoe</a
                                 >
                               </div>
                               <div class="priceBlock">
                                 <span class="text-label">Price:</span>
                                 <span class="price"
-                                  ><span class="currency">$</span>245</span
+                                  ><span class="currency">$</span
+                                  ><span class="price-content">245</span></span
                                 >
                               </div>
                               <div class="countBlock">
-                                <span class="text-label">Count:</span> 2
+                                <span class="text-label">Count:</span>
+                                <span class="count-content">2</span>
                               </div>
                             </div>
                           </div>
-                          <a class="close-btn" href="#" title="Remove"></a>
+                          <a
+                            class="close-btn"
+                            href="javascript:void(0)"
+                            onClick="window.removeFromCart(this)"
+                            title="Remove"
+                          ></a>
                         </div>
                       </li>
-                      <li>
+                      <li
+                        class="cart-item-data-node"
+                        data-id="8464759"
+                        data-image="/vendor/images/products/products-modelist-1/product03.png"
+                        data-price="245"
+                        data-name="Woman highheel shoe"
+                        data-count="1"
+                      >
                         <div class="basket-item">
                           <div class="row">
                             <div class="col-xs-12 col-sm-4">
                               <div class="thumb">
-                                <a href="/en/single-product?17831a1"
+                                <a href="/en/single-product?7d0c587"
                                   ><img
                                     alt=""
                                     src="../../vendor/images/products/products-modelist-1/product03.png"
@@ -294,30 +311,44 @@ Built: 2024.03.03, 20:23 GMT+3
                             </div>
                             <div class="col-xs-12 col-sm-8">
                               <div class="title">
-                                <a href="/en/single-product?17831a1"
+                                <a href="/en/single-product?7d0c587"
                                   >Woman highheel shoe</a
                                 >
                               </div>
                               <div class="priceBlock">
                                 <span class="text-label">Price:</span>
                                 <span class="price"
-                                  ><span class="currency">$</span>245</span
+                                  ><span class="currency">$</span
+                                  ><span class="price-content">245</span></span
                                 >
                               </div>
                               <div class="countBlock">
-                                <span class="text-label">Count:</span> 1
+                                <span class="text-label">Count:</span>
+                                <span class="count-content">1</span>
                               </div>
                             </div>
                           </div>
-                          <a class="close-btn" href="#" title="Remove"></a>
+                          <a
+                            class="close-btn"
+                            href="javascript:void(0)"
+                            onClick="window.removeFromCart(this)"
+                            title="Remove"
+                          ></a>
                         </div>
                       </li>
-                      <li>
+                      <li
+                        class="cart-item-data-node"
+                        data-id="83925602"
+                        data-image="/vendor/images/products/products-modelist-1/product04.png"
+                        data-price="95"
+                        data-name="Woman highheel shoe"
+                        data-count="1"
+                      >
                         <div class="basket-item">
                           <div class="row">
                             <div class="col-xs-12 col-sm-4">
                               <div class="thumb">
-                                <a href="/en/single-product?17831a1"
+                                <a href="/en/single-product?7d0c587"
                                   ><img
                                     alt=""
                                     src="../../vendor/images/products/products-modelist-1/product04.png"
@@ -326,22 +357,29 @@ Built: 2024.03.03, 20:23 GMT+3
                             </div>
                             <div class="col-xs-12 col-sm-8">
                               <div class="title">
-                                <a href="/en/single-product?17831a1"
+                                <a href="/en/single-product?7d0c587"
                                   >Woman highheel shoe</a
                                 >
                               </div>
                               <div class="priceBlock">
                                 <span class="text-label">Price:</span>
                                 <span class="price"
-                                  ><span class="currency">$</span>95</span
+                                  ><span class="currency">$</span
+                                  ><span class="price-content">95</span></span
                                 >
                               </div>
                               <div class="countBlock">
-                                <span class="text-label">Count:</span> 1
+                                <span class="text-label">Count:</span>
+                                <span class="count-content">1</span>
                               </div>
                             </div>
                           </div>
-                          <a class="close-btn" href="#" title="Remove"></a>
+                          <a
+                            class="close-btn"
+                            href="javascript:void(0)"
+                            onClick="window.removeFromCart(this)"
+                            title="Remove"
+                          ></a>
                         </div>
                       </li>
 
@@ -351,7 +389,7 @@ Built: 2024.03.03, 20:23 GMT+3
                       <li class="checkout">
                         <div align="center">
                           <a
-                            href="/en/shopping-cart?17831a1"
+                            href="/en/shopping-cart?7d0c587"
                             class="btn-add-to-wishlist le-btn"
                             >Show cart</a
                           >
@@ -804,16 +842,16 @@ Built: 2024.03.03, 20:23 GMT+3
                 <h2>Informations</h2>
                 <ul class="footer-links-holder">
                   <li>
-                    <a href="/en/about-our-shop?17831a1">About our shop</a>
+                    <a href="/en/about-our-shop?7d0c587">About our shop</a>
                   </li>
                   <li>
-                    <a href="/en/payment-informations?17831a1"
+                    <a href="/en/payment-informations?7d0c587"
                       >Payment informations</a
                     >
                   </li>
 
                   <li>
-                    <a href="/en/delivery-informations?17831a1"
+                    <a href="/en/delivery-informations?7d0c587"
                       >Delivery informations</a
                     >
                   </li>
@@ -838,6 +876,34 @@ Built: 2024.03.03, 20:23 GMT+3
     </div>
 
     <a class="goto-top" href="#gotop"></a>
+
+    <script type="text/javascript">
+      window.devEnv = "";
+      window.isDev = false;
+
+      window.buildHash = "7d0c587";
+      window.buildProjectName = "emboss-studio-site";
+      window.buildTimestamp = "2024.03.04, 17:51 GMT+3";
+      window.buildTimetag = "240304-1751";
+      window.buildVersion = "0.0.36";
+      window.buildCurrentTimeStr = "2024.03.04, 17:52 GMT+3";
+      window.buildCurrentTimeTag = "240304-1752";
+      window.buildGitBranch = "25-changes-240303";
+
+      window.langRootUrl = "/en";
+
+      window.currencyId = "usd";
+      window.currency = "$";
+      window.currencyAfter = "false";
+
+      window.i18n = {
+        products: {
+          price: "Price",
+          count: "Count",
+          remove: "Remove",
+        },
+      };
+    </script>
 
     <script
       type="text/javascript"
@@ -904,8 +970,10 @@ Built: 2024.03.03, 20:23 GMT+3
       href="../../vendor/js/jquery.maskedinput@1.4.1/jasmine-be-calm.css"
     />
 
-    <script type="text/javascript" src="../../vendor/js/script.js?17831a1"></script>
+    <script type="text/javascript" src="../../vendor/js/script.js?7d0c587"></script>
 
-    <script src="../../js/scripts.js?17831a1"></script>
+    <script type="text/javascript" src="../../js/scripts.js?7d0c587"></script>
+
+    <script type="text/javascript" src="../../js/cart.js?7d0c587"></script>
   </body>
 </html>

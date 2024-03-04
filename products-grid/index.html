@@ -4,11 +4,11 @@
   <head>
     <!--
 Project: emboss-studio-site
-Version: 0.0.35
+Version: 0.0.36
 Branch: 25-changes-240303
-Commit: 17831a1
-Fixed: 2024.03.03, 20:16 GMT+3
-Built: 2024.03.03, 20:23 GMT+3
+Commit: 7d0c587
+Fixed: 2024.03.04, 17:51 GMT+3
+Built: 2024.03.04, 17:52 GMT+3
 -->
     <meta name="robots" content="noindex" />
     <meta charset="utf-8" />
@@ -56,10 +56,10 @@ Built: 2024.03.03, 20:23 GMT+3
       href="../vendor/css/font-awesome/css/font-awesome.min.css"
     />
 
-    <link rel="stylesheet" href="../vendor/css/stylesheet.css?17831a1" />
+    <link rel="stylesheet" href="../vendor/css/stylesheet.css?7d0c587" />
 
-    <link rel="preload" href="../css/page.css?17831a1" as="style" />
-    <link rel="stylesheet" href="../css/page.css?17831a1" />
+    <link rel="preload" href="../css/page.css?7d0c587" as="style" />
+    <link rel="stylesheet" href="../css/page.css?7d0c587" />
 
     <meta property="og:site_name" content="Emboss" />
     <meta property="og:title" content="pages.productsGrid" />
@@ -69,17 +69,13 @@ Built: 2024.03.03, 20:23 GMT+3
     <meta name="theme-color" content="#ffffff" />
     <title>Каталог</title>
   </head>
-  <body
-    class="font-sans text-gray-800 bg-gray-100 noscript"
-    bgcolor="#fff"
-    onLoad="onLoad()"
-  >
+  <body class="font-sans text-gray-800 bg-gray-100 noscript" bgcolor="#fff">
     <div class="wrapper">
       <header class="page-header">
         <div class="container header-row">
           <div class="logo-cell col-xs-12 col-md-4">
             <div class="logo">
-              <a href="/?17831a1" title="Emboss">
+              <a href="/?7d0c587" title="Emboss">
                 <img src="../images/logo/logo3-min.svg" alt="Emboss" />
               </a>
             </div>
@@ -111,7 +107,7 @@ Built: 2024.03.03, 20:23 GMT+3
                   <ul class="dropdown-menu">
                     <li>
                       <a
-                        href="/products-grid/?17831a1"
+                        href="/products-grid/?7d0c587"
                         rel="alternate"
                         hreflang="ru"
                         >Русский</a
@@ -120,7 +116,7 @@ Built: 2024.03.03, 20:23 GMT+3
 
                     <li>
                       <a
-                        href="/en/products-grid/?17831a1"
+                        href="/en/products-grid/?7d0c587"
                         rel="alternate"
                         hreflang="en"
                         >English</a
@@ -145,7 +141,7 @@ Built: 2024.03.03, 20:23 GMT+3
                 </div>
               </li>
 
-              <li><a href="/profile-login?17831a1">Войти</a></li>
+              <li><a href="/profile-login?7d0c587">Войти</a></li>
             </ul>
           </div>
         </div>
@@ -158,13 +154,13 @@ Built: 2024.03.03, 20:23 GMT+3
 
                   <ul class="nav">
                     <li>
-                      <a class="active" href="/products-grid?17831a1"
+                      <a class="active" href="/products-grid?7d0c587"
                         >Каталог</a
                       >
                     </li>
-                    <li><a href="/delivery?17831a1">Доставка и оплата</a></li>
-                    <li><a href="/wholesalers?17831a1">Оптовикам</a></li>
-                    <li><a href="/contacts?17831a1">Контакты</a></li>
+                    <li><a href="/delivery?7d0c587">Доставка и оплата</a></li>
+                    <li><a href="/wholesalers?7d0c587">Оптовикам</a></li>
+                    <li><a href="/contacts?7d0c587">Контакты</a></li>
                   </ul>
                 </nav>
               </div>
@@ -187,13 +183,13 @@ Built: 2024.03.03, 20:23 GMT+3
                   <div class="dropdown-menu">
                     <ul class="nav">
                       <li>
-                        <a class="active" href="/products-grid?17831a1"
+                        <a class="active" href="/products-grid?7d0c587"
                           >Каталог</a
                         >
                       </li>
-                      <li><a href="/delivery?17831a1">Доставка и оплата</a></li>
-                      <li><a href="/wholesalers?17831a1">Оптовикам</a></li>
-                      <li><a href="/contacts?17831a1">Контакты</a></li>
+                      <li><a href="/delivery?7d0c587">Доставка и оплата</a></li>
+                      <li><a href="/wholesalers?7d0c587">Оптовикам</a></li>
+                      <li><a href="/contacts?7d0c587">Контакты</a></li>
                     </ul>
                   </div>
                 </div>
@@ -208,7 +204,7 @@ Built: 2024.03.03, 20:23 GMT+3
                 </div>
               </div>
               <div class="col-xs-3 col-sm-1 col-md-1 col-lg-1 basket-holder">
-                <div class="basket">
+                <div class="basket" id="basket">
                   <div class="dropdown">
                     <a class="dropdown-toggle" data-hover="dropdown" href="#">
                       <div class="basket-icon">
@@ -223,12 +219,19 @@ Built: 2024.03.03, 20:23 GMT+3
                     <ul class="dropdown-menu">
                       <!-- Cart items -->
 
-                      <li>
+                      <li
+                        class="cart-item-data-node"
+                        data-id="389645"
+                        data-image="/vendor/images/products/products-modelist-1/product02.png"
+                        data-price="245"
+                        data-name="Man sport Hiking shoe"
+                        data-count="2"
+                      >
                         <div class="basket-item">
                           <div class="row">
                             <div class="col-xs-12 col-sm-4">
                               <div class="thumb">
-                                <a href="/single-product?17831a1"
+                                <a href="/single-product?7d0c587"
                                   ><img
                                     alt=""
                                     src="../vendor/images/products/products-modelist-1/product02.png"
@@ -237,30 +240,44 @@ Built: 2024.03.03, 20:23 GMT+3
                             </div>
                             <div class="col-xs-12 col-sm-8">
                               <div class="title">
-                                <a href="/single-product?17831a1"
+                                <a href="/single-product?7d0c587"
                                   >Man sport Hiking shoe</a
                                 >
                               </div>
                               <div class="priceBlock">
                                 <span class="text-label">Цена:</span>
                                 <span class="price"
-                                  >245<span class="currency">₽</span></span
+                                  ><span class="price-content">245</span
+                                  ><span class="currency">₽</span></span
                                 >
                               </div>
                               <div class="countBlock">
-                                <span class="text-label">Кол-во:</span> 2
+                                <span class="text-label">Кол-во:</span>
+                                <span class="count-content">2</span>
                               </div>
                             </div>
                           </div>
-                          <a class="close-btn" href="#" title="Удалить"></a>
+                          <a
+                            class="close-btn"
+                            href="javascript:void(0)"
+                            onClick="window.removeFromCart(this)"
+                            title="Удалить"
+                          ></a>
                         </div>
                       </li>
-                      <li>
+                      <li
+                        class="cart-item-data-node"
+                        data-id="8464759"
+                        data-image="/vendor/images/products/products-modelist-1/product03.png"
+                        data-price="245"
+                        data-name="Woman highheel shoe"
+                        data-count="1"
+                      >
                         <div class="basket-item">
                           <div class="row">
                             <div class="col-xs-12 col-sm-4">
                               <div class="thumb">
-                                <a href="/single-product?17831a1"
+                                <a href="/single-product?7d0c587"
                                   ><img
                                     alt=""
                                     src="../vendor/images/products/products-modelist-1/product03.png"
@@ -269,30 +286,44 @@ Built: 2024.03.03, 20:23 GMT+3
                             </div>
                             <div class="col-xs-12 col-sm-8">
                               <div class="title">
-                                <a href="/single-product?17831a1"
+                                <a href="/single-product?7d0c587"
                                   >Woman highheel shoe</a
                                 >
                               </div>
                               <div class="priceBlock">
                                 <span class="text-label">Цена:</span>
                                 <span class="price"
-                                  >245<span class="currency">₽</span></span
+                                  ><span class="price-content">245</span
+                                  ><span class="currency">₽</span></span
                                 >
                               </div>
                               <div class="countBlock">
-                                <span class="text-label">Кол-во:</span> 1
+                                <span class="text-label">Кол-во:</span>
+                                <span class="count-content">1</span>
                               </div>
                             </div>
                           </div>
-                          <a class="close-btn" href="#" title="Удалить"></a>
+                          <a
+                            class="close-btn"
+                            href="javascript:void(0)"
+                            onClick="window.removeFromCart(this)"
+                            title="Удалить"
+                          ></a>
                         </div>
                       </li>
-                      <li>
+                      <li
+                        class="cart-item-data-node"
+                        data-id="83925602"
+                        data-image="/vendor/images/products/products-modelist-1/product04.png"
+                        data-price="95"
+                        data-name="Woman highheel shoe"
+                        data-count="1"
+                      >
                         <div class="basket-item">
                           <div class="row">
                             <div class="col-xs-12 col-sm-4">
                               <div class="thumb">
-                                <a href="/single-product?17831a1"
+                                <a href="/single-product?7d0c587"
                                   ><img
                                     alt=""
                                     src="../vendor/images/products/products-modelist-1/product04.png"
@@ -301,22 +332,29 @@ Built: 2024.03.03, 20:23 GMT+3
                             </div>
                             <div class="col-xs-12 col-sm-8">
                               <div class="title">
-                                <a href="/single-product?17831a1"
+                                <a href="/single-product?7d0c587"
                                   >Woman highheel shoe</a
                                 >
                               </div>
                               <div class="priceBlock">
                                 <span class="text-label">Цена:</span>
                                 <span class="price"
-                                  >95<span class="currency">₽</span></span
+                                  ><span class="price-content">95</span
+                                  ><span class="currency">₽</span></span
                                 >
                               </div>
                               <div class="countBlock">
-                                <span class="text-label">Кол-во:</span> 1
+                                <span class="text-label">Кол-во:</span>
+                                <span class="count-content">1</span>
                               </div>
                             </div>
                           </div>
-                          <a class="close-btn" href="#" title="Удалить"></a>
+                          <a
+                            class="close-btn"
+                            href="javascript:void(0)"
+                            onClick="window.removeFromCart(this)"
+                            title="Удалить"
+                          ></a>
                         </div>
                       </li>
 
@@ -326,7 +364,7 @@ Built: 2024.03.03, 20:23 GMT+3
                       <li class="checkout">
                         <div align="center">
                           <a
-                            href="/shopping-cart?17831a1"
+                            href="/shopping-cart?7d0c587"
                             class="btn-add-to-wishlist le-btn"
                             >Купить</a
                           >
@@ -391,17 +429,17 @@ Built: 2024.03.03, 20:23 GMT+3
                         <div class="accordion-inner">
                           <ul>
                             <li>
-                              <a href="/products/decals/aircrafts?17831a1"
+                              <a href="/products/decals/aircrafts?7d0c587"
                                 >Самолеты</a
                               >
                             </li>
                             <li>
-                              <a href="/products/decals/helicopters?17831a1"
+                              <a href="/products/decals/helicopters?7d0c587"
                                 >Вертолеты</a
                               >
                             </li>
                             <li>
-                              <a href="/products/decals/cars?17831a1"
+                              <a href="/products/decals/cars?7d0c587"
                                 >Автомобили</a
                               >
                             </li>
@@ -448,12 +486,12 @@ Built: 2024.03.03, 20:23 GMT+3
                         <div class="accordion-inner">
                           <ul>
                             <li>
-                              <a href="/products/discounts/new?17831a1"
+                              <a href="/products/discounts/new?7d0c587"
                                 >Новинки</a
                               >
                             </li>
                             <li>
-                              <a href="/products/discounts/hits?17831a1"
+                              <a href="/products/discounts/hits?7d0c587"
                                 >Хит продаж</a
                               >
                             </li>
@@ -474,25 +512,25 @@ Built: 2024.03.03, 20:23 GMT+3
 
                   <div class="tags-list">
                     <span class="tag"
-                      ><a href="/products-grid?17831a1">#1:85</a></span
+                      ><a href="/products-grid?7d0c587">#1:85</a></span
                     >
                     <span class="tag"
-                      ><a href="/products-grid?17831a1">#Вооружение</a></span
+                      ><a href="/products-grid?7d0c587">#Вооружение</a></span
                     >
                     <span class="tag"
-                      ><a href="/products-grid?17831a1">#Миг-21</a></span
+                      ><a href="/products-grid?7d0c587">#Миг-21</a></span
                     >
                     <span class="tag"
-                      ><a href="/products-grid?17831a1">#Миг-23</a></span
+                      ><a href="/products-grid?7d0c587">#Миг-23</a></span
                     >
                     <span class="tag"
-                      ><a href="/products-grid?17831a1">#Миг-25</a></span
+                      ><a href="/products-grid?7d0c587">#Миг-25</a></span
                     >
                     <span class="tag"
-                      ><a href="/products-grid?17831a1">#Миг-27</a></span
+                      ><a href="/products-grid?7d0c587">#Миг-27</a></span
                     >
                     <span class="tag"
-                      ><a href="/products-grid?17831a1">#Миг-29</a></span
+                      ><a href="/products-grid?7d0c587">#Миг-29</a></span
                     >
                   </div>
                 </div>
@@ -595,7 +633,7 @@ Built: 2024.03.03, 20:23 GMT+3
                           </div>
 
                           <div class="thumb">
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               ><img
                                 alt=""
                                 src="../vendor/images/products/products-real/real-x300.png"
@@ -612,7 +650,7 @@ Built: 2024.03.03, 20:23 GMT+3
                         </div>
                         <div class="body">
                           <h3>
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               >RFSQS-48186 Red Fox Studio 1/48 3D Декаль
                               Приборная Панель Для MiGG-17F (Ammo)</a
                             >
@@ -651,7 +689,7 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="product-item">
                         <div class="head">
                           <div class="thumb">
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               ><img
                                 alt=""
                                 src="../vendor/images/products/products-modelist-1/product02.png"
@@ -668,7 +706,7 @@ Built: 2024.03.03, 20:23 GMT+3
                         </div>
                         <div class="body">
                           <h3>
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               >Man sport hiking shoe</a
                             >
                           </h3>
@@ -710,7 +748,7 @@ Built: 2024.03.03, 20:23 GMT+3
                           </div>
 
                           <div class="thumb">
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               ><img
                                 alt=""
                                 src="../vendor/images/products/products-modelist-1/product03.png"
@@ -727,7 +765,7 @@ Built: 2024.03.03, 20:23 GMT+3
                         </div>
                         <div class="body">
                           <h3>
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               >Женская обувь на высоком каблуке</a
                             >
                           </h3>
@@ -767,7 +805,7 @@ Built: 2024.03.03, 20:23 GMT+3
                           <div class="le-badge green"><span>New</span></div>
 
                           <div class="thumb">
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               ><img
                                 alt=""
                                 src="../vendor/images/products/products-modelist-1/product04.png"
@@ -784,7 +822,7 @@ Built: 2024.03.03, 20:23 GMT+3
                         </div>
                         <div class="body">
                           <h3>
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               >Красочные крутые кроссовки для бега</a
                             >
                           </h3>
@@ -822,7 +860,7 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="product-item">
                         <div class="head">
                           <div class="thumb">
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               ><img
                                 alt=""
                                 src="../vendor/images/products/products-modelist-1/product03.png"
@@ -839,7 +877,7 @@ Built: 2024.03.03, 20:23 GMT+3
                         </div>
                         <div class="body">
                           <h3>
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               >Woman highheel shoe</a
                             >
                           </h3>
@@ -877,7 +915,7 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="product-item">
                         <div class="head">
                           <div class="thumb">
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               ><img
                                 alt=""
                                 src="../vendor/images/products/products-modelist-1/product02.png"
@@ -894,7 +932,7 @@ Built: 2024.03.03, 20:23 GMT+3
                         </div>
                         <div class="body">
                           <h3>
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               >Man sport hiking shoe</a
                             >
                           </h3>
@@ -928,7 +966,7 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="product-item">
                         <div class="head">
                           <div class="thumb">
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               ><img
                                 alt=""
                                 src="../vendor/images/products/products-modelist-1/product04.png"
@@ -945,7 +983,7 @@ Built: 2024.03.03, 20:23 GMT+3
                         </div>
                         <div class="body">
                           <h3>
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               >colorful cool runnig shoes</a
                             >
                           </h3>
@@ -979,7 +1017,7 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="product-item">
                         <div class="head">
                           <div class="thumb">
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               ><img
                                 alt=""
                                 src="../vendor/images/products/products-modelist-1/product01.png"
@@ -996,7 +1034,7 @@ Built: 2024.03.03, 20:23 GMT+3
                         </div>
                         <div class="body">
                           <h3>
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               >consectetur adipiscing elit</a
                             >
                           </h3>
@@ -1039,8 +1077,8 @@ Built: 2024.03.03, 20:23 GMT+3
                           </div>
 
                           <div class="thumb">
-                            <a href="/single-product?17831a1">
-                              <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587">
+                              <a href="/single-product?7d0c587"
                                 ><img
                                   alt=""
                                   src="../vendor/images/products/products-real/real-x300.png"
@@ -1060,7 +1098,7 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="col-xs-12 col-md-8 no-margin">
                         <div class="body">
                           <h3>
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               >RFSQS-48186 Red Fox Studio 1/48 3D Декаль
                               Приборная Панель Для MiGG-17F (Ammo)</a
                             >
@@ -1098,8 +1136,8 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="col-xs-12 col-md-4 no-margin">
                         <div class="head">
                           <div class="thumb">
-                            <a href="/single-product?17831a1">
-                              <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587">
+                              <a href="/single-product?7d0c587"
                                 ><img
                                   alt=""
                                   src="../vendor/images/products/products-modelist-1/product02.png"
@@ -1119,7 +1157,7 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="col-xs-12 col-md-8 no-margin">
                         <div class="body">
                           <h3>
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               >Man sport hiking shoe</a
                             >
                           </h3>
@@ -1160,8 +1198,8 @@ Built: 2024.03.03, 20:23 GMT+3
                           </div>
 
                           <div class="thumb">
-                            <a href="/single-product?17831a1">
-                              <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587">
+                              <a href="/single-product?7d0c587"
                                 ><img
                                   alt=""
                                   src="../vendor/images/products/products-modelist-1/product03.png"
@@ -1181,7 +1219,7 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="col-xs-12 col-md-8 no-margin">
                         <div class="body">
                           <h3>
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               >Женская обувь на высоком каблуке</a
                             >
                           </h3>
@@ -1220,8 +1258,8 @@ Built: 2024.03.03, 20:23 GMT+3
                           <div class="le-badge green"><span>New</span></div>
 
                           <div class="thumb">
-                            <a href="/single-product?17831a1">
-                              <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587">
+                              <a href="/single-product?7d0c587"
                                 ><img
                                   alt=""
                                   src="../vendor/images/products/products-modelist-1/product04.png"
@@ -1241,7 +1279,7 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="col-xs-12 col-md-8 no-margin">
                         <div class="body">
                           <h3>
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               >Красочные крутые кроссовки для бега</a
                             >
                           </h3>
@@ -1278,8 +1316,8 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="col-xs-12 col-md-4 no-margin">
                         <div class="head">
                           <div class="thumb">
-                            <a href="/single-product?17831a1">
-                              <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587">
+                              <a href="/single-product?7d0c587"
                                 ><img
                                   alt=""
                                   src="../vendor/images/products/products-modelist-1/product03.png"
@@ -1299,7 +1337,7 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="col-xs-12 col-md-8 no-margin">
                         <div class="body">
                           <h3>
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               >Woman highheel shoe</a
                             >
                           </h3>
@@ -1336,8 +1374,8 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="col-xs-12 col-md-4 no-margin">
                         <div class="head">
                           <div class="thumb">
-                            <a href="/single-product?17831a1">
-                              <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587">
+                              <a href="/single-product?7d0c587"
                                 ><img
                                   alt=""
                                   src="../vendor/images/products/products-modelist-1/product02.png"
@@ -1357,7 +1395,7 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="col-xs-12 col-md-8 no-margin">
                         <div class="body">
                           <h3>
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               >Man sport hiking shoe</a
                             >
                           </h3>
@@ -1390,8 +1428,8 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="col-xs-12 col-md-4 no-margin">
                         <div class="head">
                           <div class="thumb">
-                            <a href="/single-product?17831a1">
-                              <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587">
+                              <a href="/single-product?7d0c587"
                                 ><img
                                   alt=""
                                   src="../vendor/images/products/products-modelist-1/product04.png"
@@ -1411,7 +1449,7 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="col-xs-12 col-md-8 no-margin">
                         <div class="body">
                           <h3>
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               >colorful cool runnig shoes</a
                             >
                           </h3>
@@ -1444,8 +1482,8 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="col-xs-12 col-md-4 no-margin">
                         <div class="head">
                           <div class="thumb">
-                            <a href="/single-product?17831a1">
-                              <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587">
+                              <a href="/single-product?7d0c587"
                                 ><img
                                   alt=""
                                   src="../vendor/images/products/products-modelist-1/product01.png"
@@ -1465,7 +1503,7 @@ Built: 2024.03.03, 20:23 GMT+3
                       <div class="col-xs-12 col-md-8 no-margin">
                         <div class="body">
                           <h3>
-                            <a href="/single-product?17831a1"
+                            <a href="/single-product?7d0c587"
                               >consectetur adipiscing elit</a
                             >
                           </h3>
@@ -1525,16 +1563,16 @@ Built: 2024.03.03, 20:23 GMT+3
                 <h2>Информация</h2>
                 <ul class="footer-links-holder">
                   <li>
-                    <a href="/about-our-shop?17831a1">О нашем магазине</a>
+                    <a href="/about-our-shop?7d0c587">О нашем магазине</a>
                   </li>
                   <li>
-                    <a href="/payment-informations?17831a1"
+                    <a href="/payment-informations?7d0c587"
                       >Информация об оплате</a
                     >
                   </li>
 
                   <li>
-                    <a href="/delivery-informations?17831a1"
+                    <a href="/delivery-informations?7d0c587"
                       >Информация о доставке</a
                     >
                   </li>
@@ -1559,6 +1597,34 @@ Built: 2024.03.03, 20:23 GMT+3
     </div>
 
     <a class="goto-top" href="#gotop"></a>
+
+    <script type="text/javascript">
+      window.devEnv = "";
+      window.isDev = false;
+
+      window.buildHash = "7d0c587";
+      window.buildProjectName = "emboss-studio-site";
+      window.buildTimestamp = "2024.03.04, 17:51 GMT+3";
+      window.buildTimetag = "240304-1751";
+      window.buildVersion = "0.0.36";
+      window.buildCurrentTimeStr = "2024.03.04, 17:52 GMT+3";
+      window.buildCurrentTimeTag = "240304-1752";
+      window.buildGitBranch = "25-changes-240303";
+
+      window.langRootUrl = "";
+
+      window.currencyId = "rub";
+      window.currency = "₽";
+      window.currencyAfter = "true";
+
+      window.i18n = {
+        products: {
+          price: "Цена",
+          count: "Кол-во",
+          remove: "Удалить",
+        },
+      };
+    </script>
 
     <script
       type="text/javascript"
@@ -1630,8 +1696,10 @@ Built: 2024.03.03, 20:23 GMT+3
       href="../vendor/js/jquery.maskedinput@1.4.1/jasmine-be-calm.css"
     />
 
-    <script type="text/javascript" src="../vendor/js/script.js?17831a1"></script>
+    <script type="text/javascript" src="../vendor/js/script.js?7d0c587"></script>
 
-    <script src="../js/scripts.js?17831a1"></script>
+    <script type="text/javascript" src="../js/scripts.js?7d0c587"></script>
+
+    <script type="text/javascript" src="../js/cart.js?7d0c587"></script>
   </body>
 </html>
