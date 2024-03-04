@@ -1,3 +1,38 @@
+{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
+{% set currencyId = 'rub' if lang === 'ru' else 'usd' %}
+{% set currency = '₽' if lang === 'ru' else '$' %}
+{# NOTE: To place currency sign after the price or before? #}
+{% set currencyAfter = lang === 'ru' %}
+
+  <script type="text/javascript">
+    window.devEnv = '{{ buildInfo.devEnv }}';
+    window.isDev = {{ 'true' if buildInfo.devEnv else 'false' }};
+
+    window.buildHash = '{{ buildInfo.hash }}';
+    window.buildProjectName = '{{ buildInfo.projectName }}';
+    window.buildTimestamp = '{{ buildInfo.timestamp }}';
+    window.buildTimetag = '{{ buildInfo.timetag }}';
+    window.buildVersion = '{{ buildInfo.version }}';
+    window.buildCurrentTimeStr = '{{ buildInfo.currentTimeStr }}';
+    window.buildCurrentTimeTag = '{{ buildInfo.currentTimeTag }}';
+    window.buildGitBranch = '{{ buildInfo.gitBranch }}';
+
+    window.langRootUrl = '{{ langRootUrl }}';
+
+    window.currencyId ='{{ currencyId }}';
+    window.currency ='{{ currency }}';
+    window.currencyAfter ='{{ currencyAfter }}';
+
+    window.i18n = {
+      products: {
+        price: '{{ 'products.price' | i18n }}',
+        count: '{{ 'products.count' | i18n }}',
+        remove: '{{ 'products.remove' | i18n }}',
+      },
+    };
+
+  </script>
+
   {# Template scripts... #}
   <script type="text/javascript" src="/vendor/js/jquery-1.11.1.min.js"></script>
   <script type="text/javascript" src="/vendor/js/jquery-migrate-1.2.1.min.js"></script>
@@ -34,4 +69,6 @@
   <script type="text/javascript" src="/vendor/js/script.js?{{ buildInfo.hash }}"></script>
 
   {# Custom scripts... #}
-  <script src="{{ '/js/scripts.js' | url }}?{{ buildInfo.hash }}"></script>
+  <script type="text/javascript" src="{{ '/js/scripts.js' | url }}?{{ buildInfo.hash }}"></script>
+  {# Shopping cart support #}
+  <script type="text/javascript" src="{{ '/js/cart.js' | url }}?{{ buildInfo.hash }}"></script>

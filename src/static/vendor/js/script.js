@@ -1,7 +1,5 @@
 // @ts-check
-
 /* eslint-env jquery */
-/* --global WOW */
 
 (function (/** @type {jQuery} */ $) {
   'use strict';
@@ -191,15 +189,17 @@
     }
 
     // top cart
-    $('.basket .close-btn').click(function () {
-      $(this)
-        .parent()
-        .parent()
-        .fadeOut(function () {
-          $(this).remove();
-          checkBasketDropdown(true);
-        });
-    });
+    /* // Removal method moved to `src/static/js/cart.js`
+     * $('.basket .close-btn').click(function () {
+     *   $(this)
+     *     .parent()
+     *     .parent()
+     *     .fadeOut(function () {
+     *       $(this).remove();
+     *       checkBasketDropdown(true);
+     *     });
+     * });
+     */
     var basketDropdown = $('[data-hover="dropdown"]');
     // @ts-ignore
     if (basketDropdown && basketDropdown.dropdownHover) {
@@ -207,24 +207,8 @@
       basketDropdown.dropdownHover();
     } else {
       // DEBUG?
+      // eslint-disable-next-line no-console
       console.warn('No basket dropdown has initialized!');
-    }
-    checkBasketDropdown();
-    /** @param {boolean} [remove] */
-    function checkBasketDropdown(remove) {
-      if (remove) {
-        var cn = parseInt($('.basket-item-count').text());
-        var nn = cn - 1;
-        $('.basket-item-count').text(nn);
-      }
-      var basketItems = $('.basket .basket-item');
-      var hasItems = !!basketItems.length;
-      var basket = $('.basket');
-      basket.toggleClass('has-items', hasItems);
-      /* // UNUSED: Direct basket options control
-       * var menu = $('.basket .dropdown-menu');
-       * menu.prepend('<li class="empty">Empty</li>');
-       */
     }
 
     // Quantity element in shopping cart list (TODO: Update for new dynamically added items?)
@@ -627,7 +611,7 @@
   // });
 })(jQuery);
 
-(function ($) {
+(function (/** @type {jQuery} */ $) {
   'use strict';
   var currentItemIndex;
   var time = 7; // time in seconds

@@ -1,31 +1,40 @@
 {% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
 {% set currencyId = 'rub' if lang === 'ru' else 'usd' %}
-
-{% set langRootUrl = '/' + lang if lang !== defaultLang else '' %}
-
 {% set currency = '₽' if lang === 'ru' else '$' %}
 {# NOTE: To place currency sign after the price or before? #}
 {% set currencyAfter = lang === 'ru' %}
 
+{# NOTE: Don't forget to update js-template in `src/static/js/cart.js` #}
+
 {% for item in basketItems -%}
-  <li>
+    <li
+      class="cart-item-data-node"
+      data-id="{{ item.id }}"
+      data-image="{{ item.image }}"
+      data-price="{{ item.price }}"
+      data-name="{{ item.name }}"
+      data-count="{{ item.count }}"
+    >
     <div class="basket-item">
       <div class="row">
         <div class="col-xs-12 col-sm-4">
           <div class="thumb">
             <a href="{{ langRootUrl }}/single-product?{{ buildInfo.hash }}"><img alt="" src="{{ item.image }}" /></a>
-            {# <img alt="" src="/vendor/images/products/products-on-white/product01.png" /> #}
           </div>
         </div>
         <div class="col-xs-12 col-sm-8">
           <div class="title"><a href="{{ langRootUrl }}/single-product?{{ buildInfo.hash }}">{{ item.name }}</a></div>
           <div class="priceBlock">
-            <span class="text-label">{{ 'products.price' | i18n }}:</span> <span class="price">{% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}{{ item.price }}{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}</span>
+            <span class="text-label">{{ 'products.price' | i18n }}:</span>
+<span class="price">{% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}<span class="price-content">{{ item.price }}</span>{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}</span>
           </div>
-          <div class="countBlock"><span class="text-label">{{ 'products.count' | i18n }}:</span> {{ item.count }}</div>
+          <div class="countBlock">
+            <span class="text-label">{{ 'products.count' | i18n }}:</span>
+            <span class="count-content">{{ item.count }}</span>
+          </div>
         </div>
       </div>
-      <a class="close-btn" href="#" title="{{ 'products.remove' | i18n }}"></a>
+      <a class="close-btn" href="javascript:void(0)" onClick="window.removeFromCart(this)" title="{{ 'products.remove' | i18n }}"></a>
     </div>
   </li>
 {% endfor %}

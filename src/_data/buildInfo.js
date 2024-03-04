@@ -15,6 +15,7 @@ const {
 } = allData();
 
 module.exports = {
+  devEnv: process.env.ELEVENTY_DEV,
   hash: gitCommitHash,
   projectName,
   timestamp,

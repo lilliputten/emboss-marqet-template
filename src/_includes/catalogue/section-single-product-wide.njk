@@ -4,7 +4,21 @@
   <div class="container">
     <div class="col-xs-12">
 
-      <div id="single-product" class="row">
+    {# Set sample item #}
+    {% set item = basketItems[0] %}
+
+    <!-- Data reference: @see:
+      - src/_data/@types/TBasketItem.d.ts
+      - src/static/js/scripts.js
+    -->
+    <div
+      id="single-product"
+      class="row cart-item-data-node"
+      data-id="{{ item.id }}"
+      data-image="{{ item.image }}"
+      data-price="{{ item.price }}"
+      data-name="{{ item.name }}"
+    >
         {% include "catalogue/section-single-product-gallery-holder.njk" %}
         {% include "catalogue/section-single-product-body-holder.njk" %}
       </div>

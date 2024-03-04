@@ -8,4 +8,14 @@ interface Window {
   oRequestAnimationFrame?: any;
   msRequestAnimationFrame?: any;
   WOW: any;
+  addToCart: function;
+  removeFromCart: function;
+  buildHash: string;
+  isDev: string;
+  langRootUrl: string;
+  onLoad: function;
+  i18n: Record<string, Record<string, string>>;
+  currencyId: string;
+  currency: string;
+  currencyAfter: string;
 }

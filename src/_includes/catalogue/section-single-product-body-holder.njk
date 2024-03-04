@@ -59,7 +59,7 @@
         <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCartWide' | i18n }}</button>
         <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlistFull' | i18n }}</button>
         -->
-        <button class="le-btn btn-iconic shopping-cart"><i class="fa fa-shopping-cart"></i> <span>{{ 'products.toCartWide' | i18n }}</span></button>
+        <button class="le-btn btn-iconic shopping-cart" onClick="window.addToCart(this)"><i class="fa fa-shopping-cart"></i> <span>{{ 'products.toCartWide' | i18n }}</span></button>
         <button class="le-btn btn-iconic heart"><i class="fa fa-heart"></i> <span>{{ 'products.wishlistFull' | i18n }}</span></button>
       </div>
       <div class="padded-buttons">
