@@ -41,7 +41,19 @@
         {% set total = item.count * item.price %}
         {% set totalSum = totalSum + total %}
 
-        <tr>
+        <!-- Data reference: @see:
+          - src/_data/@types/TBasketItem.d.ts
+          - src/static/js/scripts.js
+        -->
+        <tr
+          class="cart-item-data-node"
+          data-id="{{ item.id }}"
+          data-image="{{ item.image }}"
+          data-priceOld="{{ item.priceOld }}"
+          data-price="{{ item.price }}"
+          data-name="{{ item.name }}"
+          data-count="{{ item.count }}"
+        >
           <td class="col-preview">
             <div class="thumb">
               <a href="{{ langRootUrl }}/single-product?{{ buildInfo.hash }}"><img alt="" src="{{ item.image }}" /></a>
@@ -66,11 +78,6 @@
               </div>
               {% endif %}
             </div>
-<!--
-            <div class="price">
-              {% if not currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}<span class="shopping-cart-price" id="price">{{ item.price }}</span>{% if currencyAfter %}<span class="currency">{{ currency }}</span>{% endif %}
-            </div>
--->
           </td>
           {% if showInStockColumn %}
             <td class="col-inStock"><div>{% if item.inStock %}{{ 'products.inStockYes' | i18n }}{% else %}{{ 'products.inStockNo' | i18n }}{% endif %}</div></td>
@@ -94,12 +101,13 @@
           <td class="col-actions">
             <div class="actions">
               {% if showAddTopCartButton and (not showInStockColumn or item.inStock) %}
-                <button class="le-btn small btn-iconic" title="{{ 'products.addToCart' | i18n }}"><i class="fa fa-shopping-cart"></i> <span>{{ 'products.toCartWide' | i18n }}</span></button>
+                <button class="le-btn small btn-iconic" title="{{ 'products.addToCart' | i18n }}" onClick="window.addToCart(this)">
+                  <i class="fa fa-shopping-cart"></i> <span>{{ 'products.toCartWide' | i18n }}</span>
+                </button>
               {% endif %}
-              <button class="le-btn small btn-iconic" title="{{ 'products.remove' | i18n }}"><i class="fa fa-times"></i></button>
-              <!--
-              <a class="close-btn" href="#" title="{{ 'products.remove' | i18n }}"></a>
-              -->
+              <button class="le-btn small btn-iconic" title="{{ 'products.remove' | i18n }}">
+                <i class="fa fa-times"></i>
+              </button>
             </div>
           </td>
         </tr>

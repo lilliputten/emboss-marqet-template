@@ -103,6 +103,15 @@
     }
   }
 
+  .basket {
+    // Hide counter icon if no items...
+    &:not(.has-items) {
+      .basket-icon .item-count {
+        display: none;
+      }
+    }
+  }
+
   /* Basket & search row */
   @media all and (max-width: 299px) {
     .search-holder,
