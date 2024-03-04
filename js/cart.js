@@ -18,7 +18,7 @@
   } = window;
 
   /** Use fake api's */
-  const useDemoApi = isDev && true;
+  const useDemoApi = true;
   /** Don't make real api calls */
   const mockApi = isDev && false;
 
