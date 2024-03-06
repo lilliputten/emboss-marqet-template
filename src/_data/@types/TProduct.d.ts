@@ -1,4 +1,5 @@
 interface TProduct {
+  id: number | string;
   image: string;
   priceOld?: number;
   price: number;

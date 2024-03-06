@@ -55,10 +55,6 @@
         </div>
       </div>
       <div class="merged-buttons">
-        <!--
-        <button class="btn-add-to-cart le-btn btn-iconic">{{ 'products.toCartWide' | i18n }}</button>
-        <button class="btn-add-to-wishlist le-btn btn-iconic">{{ 'products.wishlistFull' | i18n }}</button>
-        -->
         <button class="le-btn btn-iconic shopping-cart" onClick="window.addToCart(this)"><i class="fa fa-shopping-cart"></i> <span>{{ 'products.toCartWide' | i18n }}</span></button>
         <button class="le-btn btn-iconic heart"><i class="fa fa-heart"></i> <span>{{ 'products.wishlistFull' | i18n }}</span></button>
       </div>
@@ -66,13 +62,6 @@
         <button class="btn-file-pdf le-btn btn-iconic">{{ 'products.downloadPdf' | i18n }}</button>
       </div>
     </div>
-    {# // NOTE: This section displayed as a zero-height block
-    <div class="social-row">
-      <span class="st_facebook_hcount"></span>
-      <span class="st_twitter_hcount"></span>
-      <span class="st_pinterest_hcount"></span>
-    </div>
-    #}
     {% include "catalogue/tags-list.njk" %}
   </div>
 </div>

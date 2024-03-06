@@ -3,6 +3,7 @@
 /** @type TProduct[] */
 const featuredProducts = [
   {
+    id: 892516,
     extra: '<div class="le-ribbon green right"><span>50%</span></div>',
     image: '/vendor/images/products/products-modelist-1/product01.png',
     priceOld: 2500,
@@ -14,6 +15,7 @@ const featuredProducts = [
     favorite: true,
   },
   {
+    id: 592900,
     image: '/vendor/images/products/products-modelist-1/product02.png',
     // priceOld: 350,
     price: 245,
@@ -22,6 +24,7 @@ const featuredProducts = [
     excerpt: 'Looking lorem round, to ascertain that they...',
   },
   {
+    id: 821072,
     extra: '<div class="le-badge orange"><span>50% off</span></div>',
     image: '/vendor/images/products/products-modelist-1/product03.png',
     priceOld: 450,
@@ -32,6 +35,7 @@ const featuredProducts = [
     favorite: true,
   },
   {
+    id: 295721,
     extra: '<div class="le-badge green"><span>New</span></div>',
     image: '/vendor/images/products/products-modelist-1/product04.png',
     priceOld: 120,
@@ -41,6 +45,7 @@ const featuredProducts = [
     excerpt: 'Looking lorem round, to ascertain that they...',
   },
   {
+    id: 206836,
     image: '/vendor/images/products/products-modelist-1/product03.png',
     priceOld: 450,
     price: 245,
@@ -49,6 +54,7 @@ const featuredProducts = [
     excerpt: 'Looking lorem round, to ascertain that they...',
   },
   {
+    id: 691082,
     image: '/vendor/images/products/products-modelist-1/product02.png',
     price: 245,
     stars: 4,
@@ -56,6 +62,7 @@ const featuredProducts = [
     excerpt: 'Looking lorem round, to ascertain that they...',
   },
   {
+    id: 320451,
     image: '/vendor/images/products/products-modelist-1/product04.png',
     price: 95,
     stars: 2,
@@ -63,6 +70,7 @@ const featuredProducts = [
     excerpt: 'Looking lorem round, to ascertain that they...',
   },
   {
+    id: 520172,
     image: '/vendor/images/products/products-modelist-1/product01.png',
     price: 145,
     stars: 3,
