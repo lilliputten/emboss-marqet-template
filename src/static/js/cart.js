@@ -25,6 +25,9 @@
   const productUrl = langRootUrl + '/single-product?hash=' + buildHash + '&id=';
 
   const addToCartApiUrl = useDemoApi ? '/api-demo/add-to-cart.json' : '/api/add-to-cart';
+  const removeFromWishlistApiUrl = useDemoApi
+    ? '/api-demo/remove-from-wishlist.json'
+    : '/api/remove-from-wishlist';
   const removeFromCartApiUrl = useDemoApi
     ? '/api-demo/remove-from-cart.json'
     : '/api/remove-to-cart';
@@ -88,14 +91,6 @@
       },
       redirect: 'follow', // manual, *follow, error
     };
-    /* console.log('[sendAddToCartApiRequest] Start', {
-     *   useDemoApi,
-     *   url,
-     *   postData,
-     *   itemData,
-     *   options,
-     * });
-     */
     return (
       fetchRequest(url, options)
         /* .then((data) => {
@@ -124,6 +119,50 @@
   }
 
   /** @param {TBasketItem} itemData */
+  function sendRemoveFromWishlistApiRequest(itemData) {
+    const url = removeFromWishlistApiUrl;
+    const { id } = itemData;
+    const postData = { id };
+    /** @type {RequestInit} */
+    const options = {
+      method: useDemoApi ? 'GET' : 'POST',
+      body: useDemoApi ? undefined : JSON.stringify(postData),
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      redirect: 'follow', // manual, *follow, error
+    };
+    return (
+      fetchRequest(url, options)
+        /* .then((data) => {
+         *   // Do something with response.
+         *   console.log('[sendRemoveFromWishlistApiRequest] Done', {
+         *     removeFromWishlistApiUrl,
+         *     itemData,
+         *     postData,
+         *     options,
+         *     data,
+         *   });
+         * })
+         */
+        .catch((error) => {
+          // eslint-disable-next-line no-console
+          console.error('[scripts:sendRemoveFromWishlistApiRequest]', {
+            error,
+            url,
+          });
+          // eslint-disable-next-line no-debugger
+          debugger;
+          // TODO: Show error message?
+          throw error;
+        })
+    );
+  }
+
+  /** @param {TBasketItem} itemData */
   function sendRemoveFromCartApiRequest(itemData) {
     const url = removeFromCartApiUrl;
     const { id } = itemData;
@@ -140,14 +179,6 @@
       },
       redirect: 'follow', // manual, *follow, error
     };
-    /* console.log('[sendRemoveFromCartApiRequest] Start', {
-     *   useDemoApi,
-     *   url,
-     *   itemData,
-     *   postData,
-     *   options,
-     * });
-     */
     return (
       fetchRequest(url, options)
         /* .then((data) => {
@@ -328,7 +359,26 @@
        * });
        */
       addCartDomItem(itemData);
-      checkBasketDropdown();
+      updateBasketDropdown();
+    });
+  }
+
+  /** @param {TBasketItem} itemData */
+  function removeItemDataFromWishlist(itemData) {
+    // @see src/_includes/layout/page-cart-items.njk
+    /* console.log('[removeItemDataFromWishlist] Start', {
+     *   buildHash,
+     *   ...itemData,
+     * });
+     */
+    sendRemoveFromWishlistApiRequest(itemData).then(() => {
+      /* console.log('[removeItemDataFromWishlist] Success', {
+       *   buildHash,
+       *   ...itemData,
+       * });
+       */
+      removeCartDomItem(itemData);
+      updateBasketDropdown();
     });
   }
 
@@ -347,7 +397,7 @@
        * });
        */
       removeCartDomItem(itemData);
-      checkBasketDropdown();
+      updateBasketDropdown();
     });
   }
 
@@ -383,6 +433,16 @@
   }
 
   /** @param {HTMLElement} node */
+  function removeNodeFromWishlist(node) {
+    const itemData = getCartNodeData(node);
+    removeItemDataFromWishlist(itemData);
+    // Remove dom node itself
+    node.remove();
+    // Update class names...
+    updateWishlist();
+  }
+
+  /** @param {HTMLElement} node */
   function removeNodeFromCart(node) {
     const itemData = getCartNodeData(node);
     removeItemDataFromCart(itemData);
@@ -398,7 +458,35 @@
   }
 
   /** @param {HTMLElement} node */
-  function addToCart(node) {
+  function removeFromWishlist(node) {
+    // Get table row or cart list item...
+    const row = getCartItemDataNode(node);
+    const id = row.getAttribute('data-id');
+    if (!id) {
+      const error = new Error('Target node does not contain id attribute');
+      // eslint-disable-next-line no-console
+      console.error('[removeFromWishlist]: error', {
+        error,
+      });
+      // eslint-disable-next-line no-debugger
+      debugger;
+      throw error;
+    }
+    /** console.log('[removeFromWishlist]', {
+     *   id,
+     *   row,
+     *   node,
+     * });
+     */
+    // Send request, add to cart
+    removeNodeFromWishlist(row);
+  }
+
+  /**
+   * @param {HTMLElement} node
+   * @param {boolean} [removeThisFromWishlist]
+   */
+  function addToCart(node, removeThisFromWishlist) {
     // Get table row or cart list item...
     const row = getCartItemDataNode(node);
     const id = row.getAttribute('data-id');
@@ -412,13 +500,18 @@
       debugger;
       throw error;
     }
-    console.log('[addToCart]', {
-      id,
-      row,
-      node,
-    });
+    /** console.log('[addToCart]', {
+     *   id,
+     *   row,
+     *   node,
+     *   removeThisFromWishlist,
+     * });
+     */
     // Send request, add to cart
     addNodeToCart(row);
+    if (removeThisFromWishlist) {
+      removeNodeFromWishlist(row);
+    }
   }
 
   /** @param {HTMLElement} node */
@@ -435,16 +528,17 @@
       debugger;
       throw error;
     }
-    console.log('[removeFromCart]', {
-      id,
-      row,
-      node,
-    });
+    /* console.log('[removeFromCart]', {
+     *   id,
+     *   row,
+     *   node,
+     * });
+     */
     // Send request, remove from cart
     removeNodeFromCart(row);
   }
 
-  function checkBasketDropdown() {
+  function updateBasketDropdown() {
     const cartNode = document.getElementById('basket');
     const items = cartNode.querySelectorAll('.basket-item');
     // Calculate multiple items (`count-content`)
@@ -460,8 +554,18 @@
     countContainer.innerHTML = String(itemsCount);
   }
 
+  function updateWishlist() {
+    const rootNode = document.getElementById('section-profile-wishlist-page');
+    if (rootNode) {
+      const items = rootNode.querySelectorAll('.cart-item-data-node');
+      const hasItems = !!(items && items.length);
+      rootNode.classList.toggle('has-items', hasItems);
+    }
+  }
+
   function onCartLoad() {
-    checkBasketDropdown();
+    updateBasketDropdown();
+    updateWishlist();
   }
 
   window.addEventListener('load', onCartLoad);
@@ -469,4 +573,5 @@
   // Expose to global object...
   window.addToCart = addToCart;
   window.removeFromCart = removeFromCart;
+  window.removeFromWishlist = removeFromWishlist;
 })(jQuery);

@@ -189,17 +189,6 @@
     }
 
     // top cart
-    /* // Removal method moved to `src/static/js/cart.js`
-     * $('.basket .close-btn').click(function () {
-     *   $(this)
-     *     .parent()
-     *     .parent()
-     *     .fadeOut(function () {
-     *       $(this).remove();
-     *       checkBasketDropdown(true);
-     *     });
-     * });
-     */
     var basketDropdown = $('[data-hover="dropdown"]');
     // @ts-ignore
     if (basketDropdown && basketDropdown.dropdownHover) {

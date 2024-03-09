@@ -176,6 +176,7 @@ const ru = {
     toCartWide: 'В корзину',
     wishlist: 'Желания',
     wishlistFull: 'В лист желаний',
+    listIsEmpty: 'Список пуст',
     yearsOld: 'лет',
   },
   productsSample: {

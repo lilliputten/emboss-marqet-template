@@ -1,0 +1,9 @@
+.section-profile-wishlist-page {
+  &:not(.has-items) > #shopping-cart-list,
+  &.has-items > .no-items {
+    display: none;
+  }
+  .no-items {
+    text-align: center;
+  }
+}

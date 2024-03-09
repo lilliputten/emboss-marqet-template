@@ -101,11 +101,11 @@
           <td class="col-actions">
             <div class="actions">
               {% if showAddTopCartButton and (not showInStockColumn or item.inStock) %}
-                <button class="le-btn small btn-iconic" title="{{ 'products.addToCart' | i18n }}" onClick="window.addToCart(this)">
+                <button class="le-btn small btn-iconic" title="{{ 'products.addToCart' | i18n }}" onClick="window.addToCart(this, true)">
                   <i class="fa fa-shopping-cart"></i> <span>{{ 'products.toCartWide' | i18n }}</span>
                 </button>
               {% endif %}
-              <button class="le-btn small btn-iconic" title="{{ 'products.remove' | i18n }}">
+              <button class="le-btn small btn-iconic" title="{{ 'products.remove' | i18n }}" onClick="window.removeFromWishlist(this)">
                 <i class="fa fa-times"></i>
               </button>
             </div>

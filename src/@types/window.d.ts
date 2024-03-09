@@ -10,6 +10,7 @@ interface Window {
   WOW: any;
   addToCart: function;
   removeFromCart: function;
+  removeFromWishlist: function;
   buildHash: string;
   isDev: string;
   langRootUrl: string;

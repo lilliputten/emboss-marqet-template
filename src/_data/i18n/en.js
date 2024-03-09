@@ -174,6 +174,7 @@ const en = {
     toCartWide: 'To cart',
     wishlist: 'Wishlist',
     wishlistFull: 'Save to wishlist',
+    listIsEmpty: 'The list is empty',
     yearsOld: 'years old',
   },
   productsSample: {

@@ -8,13 +8,17 @@
   <div class="box-holder mt-1">
     <h2 align="center">{{ 'profile.myWishlist' | i18n }}</h2>
 
-    <div class="section-profile-wishlist-page">
+    <div class="section-profile-wishlist-page" id="section-profile-wishlist-page">
 
       {% set hideQuantityColumn = true %}
       {% set showAddTopCartButton = true %}
       {% set showInStockColumn = true %}
 
       {% include "order/shopping-cart-list.njk" %}
+
+      <div class="no-items info">
+        {{ 'products.listIsEmpty' | i18n }}
+      </div>
 
     </div>
 
