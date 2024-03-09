@@ -1816,7 +1816,7 @@ div.pp_default .pp_nav {
     white-space: nowrap;
   }
 .tags-list > .tag a {
-      opacity: .8;
+      opacity: 0.8;
       transition: all var(--transition-timeout);
     }
 .tags-list > .tag a:hover {
@@ -1826,3 +1826,10 @@ div.pp_default .pp_nav {
 .tags-holder {
   margin: 0 20px;
 }
+.section-profile-wishlist-page:not(.has-items) > #shopping-cart-list,
+  .section-profile-wishlist-page.has-items > .no-items {
+    display: none;
+  }
+.section-profile-wishlist-page .no-items {
+    text-align: center;
+  }
