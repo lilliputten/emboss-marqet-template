@@ -309,7 +309,8 @@ const ru = {
     restorePassword: 'Восстановить пароль',
     restorePasswordText: 'Восстановить пароль для ранее созданной учётной записи.',
     save: 'Сохранить',
-    profileSuccesfulRegistrationText: 'Спасибо за регистрацию! Мы рады видеть вас среди наших клиентов.',
+    profileSuccesfulRegistrationText:
+      'Спасибо за регистрацию! Мы рады видеть вас среди наших клиентов.',
     profileRestorePasswordMessageSentText: 'Вы получите инструкции по сбросу пароля.',
     continue: 'Продолжить',
     return: 'Вернуться',

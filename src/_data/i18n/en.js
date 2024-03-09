@@ -308,8 +308,10 @@ const en = {
     restorePassword: 'Restore password',
     restorePasswordText: 'Restore password for previously created account.',
     save: 'Save',
-    profileSuccesfulRegistrationText: 'Thank you for registering! We are glad to see you among our clients.',
-    profileRestorePasswordMessageSentText: 'You will receive instructions for resetting your password.',
+    profileSuccesfulRegistrationText:
+      'Thank you for registering! We are glad to see you among our clients.',
+    profileRestorePasswordMessageSentText:
+      'You will receive instructions for resetting your password.',
     continue: 'Continue',
     return: 'Return',
   },

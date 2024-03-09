@@ -7,7 +7,7 @@
     text-transform: uppercase;
     white-space: nowrap;
     a {
-      opacity: .8;
+      opacity: 0.8;
       transition: all var(--transition-timeout);
       &:hover {
         opacity: 1;
